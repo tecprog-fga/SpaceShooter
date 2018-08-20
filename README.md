@@ -1,11 +1,9 @@
-# Double Wings: GammaDust
+# SpaceShooter 
 
-## Bem-vindo ao nosso _game_!
+## Técnicas de Programação 2/2018
 
-Este é um projeto desenvolvido por alunos de Engenharia de Software, da Universidade de Brasília (UnB), dentro da disciplina de Desenho de Software, no segundo semestre de 2017.
+Este projeto visa aplicar Boas Pŕáticas de Programação, Programação Defensiva, Tratamento de Erros e Depuração de Código no projeto SpaceShooter, um _game_ desenvolvido em Java para a disciplina de Desenho de Software.
 
-O desenvolvimento do jogo __Double Wings: GammaDust__ é fruto de um primeiro projeto da disciplina mencionada. Atualmente, existe a previsão de um projeto para a transformação do _game_ em um _framework_ criador de _games_ no estilo _space shooter_.
+Projeto alvo (A ser trabalhado as técnicas): https://github.com/DesenhoMaster2017/SpaceShooter 
 
-Para mais informações sobre o desenvolvimento do nosso projeto, consulte nossa _wiki_.
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/9fc5d74611f0ecb00368/maintainability)](https://codeclimate.com/github/DesenhoMaster2017/SpaceShooter/maintainability)
+A documentação do projeto se encontra na _wiki_ do repositório.
