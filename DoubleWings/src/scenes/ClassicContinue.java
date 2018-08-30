@@ -13,20 +13,28 @@ import util.CountDownTimerEnds;
 public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 		
 	
-	private Sprite countdown;
-	private Sprite enter;
-	private Parallax parallax;
-
 	@Override
 	protected void viewSetup() {
 		// TODO Auto-generated method stub
 	}
 	
 	/**
-	 * Sprite for build graph object of continue screen
+	 * Sprite for build first screen of game's continue
 	 */
-	private Sprite continueScreen; //T1 T5 T7
+	private Sprite continueScreen; //T01 T05 T07
+	/**
+	 * This sprite build screen for countdown of game's continue
+	 */
+	private Sprite countdownScreen; //T01 T05 T07
+	/**
+	 * This sprite build enter screen after the limit game's continue is done
+	 */
+	private Sprite enterScreen; //T01 T05 T07
 	
+	/**
+	 * This object represent the building delpth scene screen
+	 */
+	private Parallax delpthScene; //T01 T05 T07
 	
 	public void initialSetup() {
 		
@@ -34,22 +42,19 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 		this.keyboard.setBehavior(Keyboard.ENTER_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
 		this.keyboard.setBehavior(Keyboard.ESCAPE_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
 		
-		//Create image background
-		//background = new GameImage("src/assets/img/temp_background.png");
-		
 		//Creation a object to class Parallax
-        this.parallax = new Parallax();
+        this.delpthScene = new Parallax();
 		
         //The first one added will be the last one to be painted.
-		this.parallax.add("src/assets/img/temp_background.png"); //$NON-NLS-1$
-		this.parallax.add("src/assets/img/universe1.png"); //$NON-NLS-1$
-		this.parallax.add("src/assets/img/universe2.jpg"); //$NON-NLS-1$
-		this.parallax.add("src/assets/img/universe3.jpg"); //$NON-NLS-1$
+		this.delpthScene.add("src/assets/img/temp_background.png"); //$NON-NLS-1$
+		this.delpthScene.add("src/assets/img/universe1.png"); //$NON-NLS-1$
+		this.delpthScene.add("src/assets/img/universe2.jpg"); //$NON-NLS-1$
+		this.delpthScene.add("src/assets/img/universe3.jpg"); //$NON-NLS-1$
 		//Since universe4.jpg was the last to be added to the list, it will be the main layer (mainLayer).
-		this.parallax.add("src/assets/img/universe4.jpg"); //$NON-NLS-1$
+		this.delpthScene.add("src/assets/img/universe4.jpg"); //$NON-NLS-1$
 		
 		//Adjusts the speed of all layers from the main layer
-		this.parallax.setVelAllLayers(0, 1);
+		this.delpthScene.setVelAllLayers(0, 1);
 		
 		/*Define scenes elements position
 		 *Continue sprite upper-center position*/
@@ -58,14 +63,14 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 		this.continueScreen.y = WindowConstants.HEIGHT/2 - this.continueScreen.height;
 		
 		//Number sprite positions
-		this.countdown = new Sprite("src/assets/img/continue/number_9.png"); //$NON-NLS-1$
-		this.countdown.x = WindowConstants.WIDTH/2 - this.countdown.width/2;
-		this.countdown.y = WindowConstants.HEIGHT/1.5 - this.countdown.height/2;
+		this.countdownScreen = new Sprite("src/assets/img/continue/number_9.png"); //$NON-NLS-1$
+		this.countdownScreen.x = WindowConstants.WIDTH/2 - this.countdownScreen.width/2;
+		this.countdownScreen.y = WindowConstants.HEIGHT/1.5 - this.countdownScreen.height/2;
 		
 		//Enter Sprite displays Screen
-		this.enter = new Sprite("src/assets/img/continue/Enter-Download-PNG.png"); //$NON-NLS-1$
-		this.enter.x = WindowConstants.WIDTH/2 - this.enter.width/2;
-		this.enter.y = WindowConstants.HEIGHT/500 - this.enter.height/20;
+		this.enterScreen = new Sprite("src/assets/img/continue/Enter-Download-PNG.png"); //$NON-NLS-1$
+		this.enterScreen.x = WindowConstants.WIDTH/2 - this.enterScreen.width/2;
+		this.enterScreen.y = WindowConstants.HEIGHT/500 - this.enterScreen.height/20;
 		
 		timeWait();
 	}
@@ -84,21 +89,21 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	//Update image Sprite on Screen and check button at keyboard
 	public void update() {
 		
-		final int PIXELS_DOWN = 800; //
+		final int PIXELS_DOWN = 800; //T08
 		final int PIXELS_UP = 600;
 		
 		//Print all layers that have been added
-        this.parallax.drawLayers();
+        this.delpthScene.drawLayers();
 		
         //The method below is responsible for maintaining infinite repetition of the layers.
-		this.parallax.repeatLayers(PIXELS_DOWN, PIXELS_UP, false);
+		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_UP, false);
 		
 		//Move the parallax orientation vertically
-		this.parallax.moveLayersStandardY(false);
+		this.delpthScene.moveLayersStandardY(false);
 		
 		this.continueScreen.draw();
-		this.countdown.draw();
-		this.enter.draw();
+		this.countdownScreen.draw();
+		this.enterScreen.draw();
 		
 		checkButtonSelection();
 		
@@ -117,7 +122,7 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	//Update number continue on Screen
 	@Override
 	public void updateImageForIndex(int index) {
-		this.countdown.loadImage("src/assets/img/continue/number_" + String.valueOf(index) + ".png");  //$NON-NLS-1$//$NON-NLS-2$
+		this.countdownScreen.loadImage("src/assets/img/continue/number_" + String.valueOf(index) + ".png");  //$NON-NLS-1$//$NON-NLS-2$
 	}
 	
 	//Method to catch click on keyboard
