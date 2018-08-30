@@ -12,18 +12,21 @@ import util.CountDownTimerEnds;
 
 public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 		
-	private Sprite wantToContinue;
-	private Sprite counter;
-	private Sprite enter;
-	private Parallax parallax;       //Creation variable to instance a new parallax
 	
-	//Thread counter
-	//static Thread thread = new Thread(); 
+	private Sprite countdown;
+	private Sprite enter;
+	private Parallax parallax;
 
 	@Override
 	protected void viewSetup() {
 		// TODO Auto-generated method stub
 	}
+	
+	/**
+	 * Sprite for build graph object of continue screen
+	 */
+	private Sprite continueScreen; //T1 T5 T7
+	
 	
 	public void initialSetup() {
 		
@@ -50,14 +53,14 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 		
 		/*Define scenes elements position
 		 *Continue sprite upper-center position*/
-		this.wantToContinue = new Sprite("src/assets/img/continue/continue.png"); //$NON-NLS-1$
-		this.wantToContinue.x = WindowConstants.WIDTH/2 - this.wantToContinue.width/2;
-		this.wantToContinue.y = WindowConstants.HEIGHT/2 - this.wantToContinue.height;
+		this.continueScreen = new Sprite("src/assets/img/continue/continue.png"); //$NON-NLS-1$
+		this.continueScreen.x = WindowConstants.WIDTH/2 - this.continueScreen.width/2;
+		this.continueScreen.y = WindowConstants.HEIGHT/2 - this.continueScreen.height;
 		
 		//Number sprite positions
-		this.counter = new Sprite("src/assets/img/continue/number_9.png"); //$NON-NLS-1$
-		this.counter.x = WindowConstants.WIDTH/2 - this.counter.width/2;
-		this.counter.y = WindowConstants.HEIGHT/1.5 - this.counter.height/2;
+		this.countdown = new Sprite("src/assets/img/continue/number_9.png"); //$NON-NLS-1$
+		this.countdown.x = WindowConstants.WIDTH/2 - this.countdown.width/2;
+		this.countdown.y = WindowConstants.HEIGHT/1.5 - this.countdown.height/2;
 		
 		//Enter Sprite displays Screen
 		this.enter = new Sprite("src/assets/img/continue/Enter-Download-PNG.png"); //$NON-NLS-1$
@@ -81,19 +84,20 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	//Update image Sprite on Screen and check button at keyboard
 	public void update() {
 		
-		//background.draw();
+		final int PIXELS_DOWN = 800; //
+		final int PIXELS_UP = 600;
 		
 		//Print all layers that have been added
         this.parallax.drawLayers();
 		
         //The method below is responsible for maintaining infinite repetition of the layers.
-		this.parallax.repeatLayers(800, 600, false);
+		this.parallax.repeatLayers(PIXELS_DOWN, PIXELS_UP, false);
 		
 		//Move the parallax orientation vertically
 		this.parallax.moveLayersStandardY(false);
 		
-		this.wantToContinue.draw();
-		this.counter.draw();
+		this.continueScreen.draw();
+		this.countdown.draw();
 		this.enter.draw();
 		
 		checkButtonSelection();
@@ -113,7 +117,7 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	//Update number continue on Screen
 	@Override
 	public void updateImageForIndex(int index) {
-		this.counter.loadImage("src/assets/img/continue/number_" + String.valueOf(index) + ".png");  //$NON-NLS-1$//$NON-NLS-2$
+		this.countdown.loadImage("src/assets/img/continue/number_" + String.valueOf(index) + ".png");  //$NON-NLS-1$//$NON-NLS-2$
 	}
 	
 	//Method to catch click on keyboard
