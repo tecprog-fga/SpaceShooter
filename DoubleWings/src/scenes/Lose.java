@@ -9,12 +9,6 @@ import util.CountDownTimerEnds;
 
 public class Lose extends GameScene implements CountDownTimerEnds {
 	
-	private Sprite lose;
-	private Sprite lifeRemaining;
-	private int lifePlayer;                      //Variable to check how many lives the player has remain
-	private Parallax parallax;                   //Creation variable to instance a new parallax
-	
-	
 	/**
 	 * Initialize paths
 	 */
@@ -28,33 +22,52 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	private final static String TWO_LIFE_PATH = "src/assets/img/continue/2life.png"; //$NON-NLS-1$
 	private final static String THREE_LIFE_PATH = "src/assets/img/continue/3life.png"; //$NON-NLS-1$
 	
+	/**
+	 * This object represent the building delpth scene screen
+	 */
+	private Parallax delpthScene = null; //T01 T05 T07 T06
+	
+	/**
+	 * This object build sprite for life remaining
+	 */
+	private Sprite lifeRemaining = null;
+	
+	/**
+	 * This object build sprite for lose screen
+	 */
+	private Sprite loseScreen = null;
+	
+	/**
+	 * Variable to check how many lives the player has remain
+	*/
+	private int lifePlayer;
 	
 	public void initialSetup() {
 		
+        this.delpthScene = new Parallax();
 		
+        /* The first one added will be the last one to be painted.*/
+		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
+		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
+		this.delpthScene.add(DELPTH_UNIVERSE1_PATH);
+		this.delpthScene.add(DELPTH_UNIVERSE2_PATH);
+		this.delpthScene.add(DELPTH_UNIVERSE3_PATH);
 		
-		//Creation a object to class Parallax
-        this.parallax = new Parallax();
-		
-        //The first one added will be the last one to be painted.
-		this.parallax.add(DELPTH_BACKGROUND_PATH);
-		this.parallax.add(DELPTH_BACKGROUND_PATH);
-		this.parallax.add(DELPTH_UNIVERSE1_PATH);
-		this.parallax.add(DELPTH_UNIVERSE2_PATH);
-		this.parallax.add(DELPTH_UNIVERSE3_PATH);
-		//Since universe4.jpg was the last to be added to the list, it will be the main layer (mainLayer).
-		this.parallax.add(DELPTH_UNIVERSE4_PATH);
+		/* Since universe4.jpg was the last to be added to the list, 
+		 * it will be the main layer (mainLayer).
+		 */
+		this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
 		
 		//Adjusts the speed of all layers from the main layer
-		this.parallax.setVelAllLayers(0, 1);
+		this.delpthScene.setVelAllLayers(0, 1);
 		
 		/*Define scenes elements position
 		 *Continue sprite upper-center position*/
-		this.lose = new Sprite(LOSE_PATH);
-		this.lose.x = WindowConstants.WIDTH/2 - this.lose.width/2;
-		this.lose.y = WindowConstants.HEIGHT/500 - this.lose.height/20;
+		this.loseScreen = new Sprite(LOSE_PATH);
+		this.loseScreen.x = WindowConstants.WIDTH/2 - this.loseScreen.width/2;
+		this.loseScreen.y = WindowConstants.HEIGHT/500 - this.loseScreen.height/20;
 		
-		//Check how many lives the player has to instantiate the specific sprite.
+		/* Check how many lives the player has to instantiate the specific sprite.*/
 		if(getLifePlayer() == 1){
 			this.lifeRemaining = new Sprite(ONE_LIFE_PATH);
 		}
@@ -67,7 +80,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 			this.lifeRemaining = new Sprite(THREE_LIFE_PATH);
 		}
 		
-		//Define position lifeRemaining on the Screen
+		/* Define position lifeRemaining on the Screen*/
 		this.lifeRemaining.x = WindowConstants.WIDTH/2 - this.lifeRemaining.width/2;
 		this.lifeRemaining.y = WindowConstants.HEIGHT/2 - this.lifeRemaining.height/2;
 		
@@ -80,17 +93,19 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		
 	}
 	
-	//Method created for the StageTest Class to be able to pass the remaining life of the player
+	/* 
+	 * Method created for the StageTest Class to be able to pass the remaining life of the player
+	 */
 	public void setLifePlayer(int lifePlayer){
 		 this.lifePlayer = lifePlayer;
 	}
 	
-	//Get life Player to create Sprite
+	/* Get life Player to create Sprite */
 	public int getLifePlayer(){
 		 return this.lifePlayer;
 	}
 	
-	//Time wait to transit between scene
+	/* Time wait to transit between scene */
 	public void timeWait(){
 		
 		Timer timer = new Timer();
@@ -101,27 +116,27 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	
 	}
 	
-	//Update Sprite on Screen
+	/* Update Sprite on Screen */
 	public void update() {
 		
-		//background.draw();
-        
 		//Print all layers that have been added
-		this.parallax.drawLayers();
+		this.delpthScene.drawLayers();
 		
 		//The method below is responsible for maintaining infinite repetition of the layers.
-		this.parallax.repeatLayers(800, 600, false);
+		this.delpthScene.repeatLayers(800, 600, false);
 		
 		//Move the parallax orientation vertically
-		this.parallax.moveLayersStandardY(false);
+		this.delpthScene.moveLayersStandardY(false);
 		
-		this.lose.draw();
+		this.loseScreen.draw();
 		
 		this.lifeRemaining.draw();
 		
 	}
 	
-	//Method that after the end of the time transit to the screen of Classic Continue.
+	/* Method that after the end of the time transit to the screen of Classic 
+	 * Continue.
+	 */
 	@Override
 	public void terminate() {
 		if (this.game != null){
