@@ -36,6 +36,18 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	 */
 	private Parallax delpthScene = null; //T01 T05 T07 T06
 
+	/**
+	 * Initialize paths
+	 */
+	private final static String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png"; //$NON-NLS-1$
+	private final static String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png"; //$NON-NLS-1$
+	private final static String DELPTH_UNIVERSE2_PATH = "src/assets/img/universe2.jpg"; //$NON-NLS-1$
+	private final static String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg"; //$NON-NLS-1$
+	private final static String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg"; //$NON-NLS-1$
+	private final static String CONTINUE_PATH = "src/assets/img/continue/continue.png"; //$NON-NLS-1$
+	private final static String COUNTDOWN_PATH = "src/assets/img/continue/number_9.png"; //$NON-NLS-1$
+	private final static String ENTER_PATH = "src/assets/img/continue/Enter-Download-PNG.png";	 //$NON-NLS-1$
+	
 	public void initialSetup() {
 
 		//Configure enter key and escape
@@ -46,29 +58,29 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 		this.delpthScene = new Parallax();
 
 		//The first one added will be the last one to be painted.
-		this.delpthScene.add("src/assets/img/temp_background.png"); //$NON-NLS-1$
-		this.delpthScene.add("src/assets/img/universe1.png"); //$NON-NLS-1$
-		this.delpthScene.add("src/assets/img/universe2.jpg"); //$NON-NLS-1$
-		this.delpthScene.add("src/assets/img/universe3.jpg"); //$NON-NLS-1$
+		this.delpthScene.add(DELPTH_BACKGROUND_PATH); 
+		this.delpthScene.add(DELPTH_UNIVERSE1_PATH); 
+		this.delpthScene.add(DELPTH_UNIVERSE2_PATH); 
+		this.delpthScene.add(DELPTH_UNIVERSE3_PATH); 
 		//Since universe4.jpg was the last to be added to the list, it will be the main layer (mainLayer).
-		this.delpthScene.add("src/assets/img/universe4.jpg"); //$NON-NLS-1$
+		this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
 
 		//Adjusts the speed of all layers from the main layer
 		this.delpthScene.setVelAllLayers(0, 1);
 
 		/*Define scenes elements position
 		 *Continue sprite upper-center position*/
-		this.continueScreen = new Sprite("src/assets/img/continue/continue.png"); //$NON-NLS-1$
+		this.continueScreen = new Sprite(CONTINUE_PATH);
 		this.continueScreen.x = WindowConstants.WIDTH/2 - this.continueScreen.width/2;
 		this.continueScreen.y = WindowConstants.HEIGHT/2 - this.continueScreen.height;
 
 		//Number sprite positions
-		this.countdownScreen = new Sprite("src/assets/img/continue/number_9.png"); //$NON-NLS-1$
+		this.countdownScreen = new Sprite(COUNTDOWN_PATH);
 		this.countdownScreen.x = WindowConstants.WIDTH/2 - this.countdownScreen.width/2;
 		this.countdownScreen.y = WindowConstants.HEIGHT/1.5 - this.countdownScreen.height/2;
 
 		//Enter Sprite displays Screen
-		this.enterScreen = new Sprite("src/assets/img/continue/Enter-Download-PNG.png"); //$NON-NLS-1$
+		this.enterScreen = new Sprite(ENTER_PATH);
 		this.enterScreen.x = WindowConstants.WIDTH/2 - this.enterScreen.width/2;
 		this.enterScreen.y = WindowConstants.HEIGHT/500 - this.enterScreen.height/20;
 
@@ -116,7 +128,10 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	@Override
 	public void terminate() {
 		if (this.game != null){
-			System.out.println("Timer Ended"); //$NON-NLS-1$
+			
+			final String MSG_TIMER = "Timer Ended"; //$NON-NLS-1$
+			System.out.println(MSG_TIMER);
+			
 			GameScene gameOver = null; //T06 T07 T08
 			gameOver = new GameOver();
 			this.game.transitTo(gameOver);
@@ -126,7 +141,10 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	// Update number continue on Screen
 	@Override
 	public void updateImageForIndex(int index) {
-		this.countdownScreen.loadImage("src/assets/img/continue/number_" + String.valueOf(index) + ".png");  //$NON-NLS-1$//$NON-NLS-2$
+		final String LOAD_IMAGE_PATH = "src/assets/img/continue/number_"; //$NON-NLS-1$
+		final String PNG_EXTENSION = ".png"; //$NON-NLS-1$
+		
+		this.countdownScreen.loadImage(LOAD_IMAGE_PATH + String.valueOf(index) + PNG_EXTENSION); 
 	}
 
 	// Method to catch click on keyboard
