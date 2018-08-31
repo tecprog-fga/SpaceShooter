@@ -33,8 +33,8 @@ public class GenerateBehavior {
 	 */
 	public final ArrayList<Command> processBehavior() throws IOException {
 		ArrayList<Command> commandsList = new ArrayList<Command>();
-		try (Scanner commands =  new Scanner(scriptPath, ENCODING.name())){
-			while (commands.hasNextLine()){
+		try (Scanner commands = new Scanner(scriptPath, ENCODING.name())) {
+			while (commands.hasNextLine()) {
 				commandsList.add(processLine(commands.nextLine()));
 			}
 		}
@@ -66,7 +66,7 @@ public class GenerateBehavior {
 			String commandOutput = commandInput.next();
 			log("Command received: " + quote(commandOutput.trim()));
 			commandInput.close();
-			Command command = CommandCreator.createCommand(CommandType.valueOf(commandOutput));
+			Command command = CommandCreator.createPlayerCommand(CommandType.valueOf(commandOutput));
 
 			return command;
 

@@ -12,8 +12,8 @@ public class HUD implements GameEntityObserver {
 	private float barSizeMax = WindowConstants.WIDTH;
 	private Sprite shieldLifeBar;
 	private Sprite shieldLifeBarOrnament;
-	private Sprite chancesSimbol;
-	private Score scoreText;
+	private Sprite numberOfLivesImage;
+	private HudScore scoreText;
 
 	public HUD() {
 		/**
@@ -27,15 +27,15 @@ public class HUD implements GameEntityObserver {
 		this.shieldLifeBarOrnament.x = 0;
 		this.shieldLifeBarOrnament.y = WindowConstants.HEIGHT - this.shieldLifeBarOrnament.height;
 
-		chancesSimbol = new Sprite("src/assets/img/hud/chances.png", 4);
-		this.chancesSimbol.setCurrFrame(3);
-		this.chancesSimbol.x = WindowConstants.WIDTH - chancesSimbol.width;
-		this.chancesSimbol.y = 0;
+		numberOfLivesImage = new Sprite("src/assets/img/hud/chances.png", 4);
+		this.numberOfLivesImage.setCurrFrame(3);
+		this.numberOfLivesImage.x = WindowConstants.WIDTH - numberOfLivesImage.width;
+		this.numberOfLivesImage.y = 0;
 
-		scoreText = new Score(10, 40);
+		scoreText = new HudScore(10, 40);
 		scoreText.setColor(Color.WHITE);
 		scoreText.setFont(new Font("Arial",Font.TRUETYPE_FONT, 40));
-		scoreText.setScore(0);
+		scoreText.setScreenScore(0);
 	}
 
 	/**
@@ -45,10 +45,10 @@ public class HUD implements GameEntityObserver {
 
 	}
 
-	public void draw() {
+	public void drawHudInformation() {
 		shieldLifeBar.draw();
 		shieldLifeBarOrnament.draw();
-		chancesSimbol.draw();
+		numberOfLivesImage.draw();
 		scoreText.draw();
 	}
 
@@ -58,11 +58,11 @@ public class HUD implements GameEntityObserver {
 		 * 		System.out.println("Shield changed in the hud");
 		 * 		System.out.println(shieldLife);
 		 */
-		float proportion = ((float)shield.getLife()/(float)shield.maxLife);
+		float shieldLifeBarProportion = ((float)shield.getLife()/(float)shield.maxLife);
 		/**
 		 * 		System.out.println(proportion);
 		 */
-		float newLifeBarWidth = proportion * barSizeMax;
+		float newLifeBarWidth = shieldLifeBarProportion * barSizeMax;
 		this.shieldLifeBar.width = (int) newLifeBarWidth;
 		/**
 		 * 	System.out.println(shieldLifeBar.width);
@@ -74,13 +74,13 @@ public class HUD implements GameEntityObserver {
 	 * Update player chances on HUD
 	 * @param playerChances
 	 */
-	public void updateChances(int playerChances) {
-		if (playerChances <= 3 && playerChances >= 0) {
-			this.chancesSimbol.setCurrFrame(playerChances);
+	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
+		if (playerNumberOfLives <= 3 && playerNumberOfLives >= 0) {
+			this.numberOfLivesImage.setCurrFrame(playerNumberOfLives);
 
 		} else {
 			System.out.println("HUD log: Player chances number is out of range.");
-			this.chancesSimbol.setCurrFrame(0);
+			this.numberOfLivesImage.setCurrFrame(0);
 		}
 	}
 
@@ -88,8 +88,8 @@ public class HUD implements GameEntityObserver {
 	 * Update player score on HUD
 	 * @param score
 	 */
-	public void updateScore(int score) {
-		scoreText.setScore(score);
+	public void updateScoreOnScreen(int score) {
+		scoreText.setScreenScore(score);
 	}
 
 	/**
@@ -107,8 +107,8 @@ public class HUD implements GameEntityObserver {
 			 * System.out.println("HUD log: Player class identified.");
 			 */
 			Player player = (Player) entity;
-			updateChances(player.getChances());
-			updateScore(player.getScore());
+			updateNumberOfLivesOnScreen(player.getChances());
+			updateScoreOnScreen(player.getScore());
 		} else {
 			System.out.println("HUD log: No class identified.");
 		}	

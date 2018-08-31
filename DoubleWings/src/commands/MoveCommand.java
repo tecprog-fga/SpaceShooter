@@ -6,7 +6,7 @@ public class MoveCommand implements Command {
 	/**
 	 * The distance yet to be traveled by the actor of this command.
 	 * */
-	private double distanceToGo = 50;
+	private double distanceToMove = 50;
 	private CommandType direction;
 
 	/**
@@ -22,10 +22,10 @@ public class MoveCommand implements Command {
 	 * @param actor the actor to be moved by the command.
 	 * @return true if movement is completed, false otherwise. 
 	 */
-	public boolean execute(Sprite actor) {
-		if (this.distanceToGo > 0) {
+	public boolean executeDisplacement(Sprite actor) {
+		if (this.distanceToMove > 0) {
 			moveActor(actor);
-			this.distanceToGo -= 1;
+			this.distanceToMove -= 1;
 			return false;
 		} else {
 			return true;
@@ -37,12 +37,12 @@ public class MoveCommand implements Command {
 	 * @param actor the actor to be moved by the command.
 	 * @return true if movement is completed, false otherwise. 
 	 */
-	public boolean execute(Sprite[] actors) {
-		if (this.distanceToGo > 0) {
+	public boolean executeDisplacement(Sprite[] actors) {
+		if (this.distanceToMove > 0) {
 			for(Sprite actor: actors) {
 				moveActor(actor);
 			}
-			this.distanceToGo -= 1;
+			this.distanceToMove -= 1;
 			return false;
 		} else {
 			return true;

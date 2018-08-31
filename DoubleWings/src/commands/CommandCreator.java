@@ -2,7 +2,7 @@ package commands;
 
 public class CommandCreator {
 	
-	public static Command createCommand(CommandType type) {
+	public static Command createPlayerCommand(CommandType type) {
 		switch(type) {
 			case SHOOT:
 				/**

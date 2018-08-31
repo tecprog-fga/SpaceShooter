@@ -14,13 +14,13 @@ public class Main {
 		/**
 		 * It creates an windows with 800 pixels of width and 600 pixels of height   
 		 */
-		Window window = new Window(WindowConstants.WIDTH,WindowConstants.HEIGHT);
+		Window gameScreen = new Window(WindowConstants.WIDTH,WindowConstants.HEIGHT);
 
 		/**
 		 * Game controller handles game states, screen changes, stages...
 		 */
 		GameController game = new GameController();
-		game.keyboard = window.getKeyboard();
+		game.keyboard = gameScreen.getKeyboard();
 
 		/**
 		 * Should transit first to menu... but for development purposes...
@@ -28,36 +28,36 @@ public class Main {
 		GameScene scene = new MenuScene();
 		game.transitTo(scene);
 
-		boolean isRunning = true;
+		boolean gameIsRunning = true;
 
 		/**
 		 * Game main loop
 		 */
-		while(isRunning) {
+		while(gameIsRunning) {
 			/**
 			 * Delay to keep 60 FPS
 			 */
-			window.delay(16);
+			gameScreen.delay(16);
 
 			/**
 			 * Clear screen
 			 */
-			window.clear(Color.black);
+			gameScreen.clear(Color.black);
 
 			/**
 			 *  update game
 			 */
-			isRunning = game.update();
+			gameIsRunning = game.update();
 
 			/**
 			 * Refresh the screen
 			 */
-			window.update();
+			gameScreen.update();
 		}
 
 		/**
 		 * Leaving the game
 		 */
-		window.exit();
+		gameScreen.exit();
 	}
 }

@@ -18,7 +18,7 @@ public class Enemy extends GameEntity {
 	
 	public void executeBehavior(Command[] commands) {
 		if (commandCount < commands.length) {
-			if (commands[commandCount].execute(this)) {
+			if (commands[commandCount].executeDisplacement(this)) {
 				commandCount += 1;
 			} else {/*donot*/}
 		System.out.println("x: " + this.x + " y: " + this.y);
