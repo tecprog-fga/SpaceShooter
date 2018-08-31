@@ -8,22 +8,28 @@ import scenes.menu.MenuScene;
 import util.CountDownTimer;
 import util.CountDownTimerEnds;
 
+
+
 public class GameOver extends GameScene implements CountDownTimerEnds {
 
-	// Sprite on scene
+	
 	private GameImage background = null; //T06
 	private Sprite gameOver = null; //T06
-
+	
+	
+	private final static String BACKGROUND_PATH = "src/assets/img/temp_background.png"; //$NON-NLS-1$
+	private final static String GAME_OVER_PATH = "src/assets/img/continue/3540295891_logo.jpg"; //$NON-NLS-1$
+	
 	public void initialSetup() {
 
 		//Set game controller elements
 		this.keyboard = this.game.keyboard;
 
 		//Creation image background
-		this.background = new GameImage("src/assets/img/temp_background.png"); //$NON-NLS-1$
+		this.background = new GameImage(BACKGROUND_PATH);
 
 		//Creation image Game Over
-		this.gameOver = new Sprite("src/assets/img/continue/3540295891_logo.jpg"); //$NON-NLS-1$
+		this.gameOver = new Sprite(GAME_OVER_PATH);
 		
 		//Game over sprite center position
 		this.gameOver.x = WindowConstants.WIDTH/2 - this.gameOver.width/2;
@@ -61,7 +67,8 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	//Method to return to main Menu
 	@Override
 	public void terminate() {
-		System.out.println("Timer Ended"); //$NON-NLS-1$
+		final String MSG_TIMER = "Timer Ended"; //$NON-NLS-1$
+		System.out.println(MSG_TIMER);
 		
 		GameScene menu = null;
 		menu = new MenuScene();

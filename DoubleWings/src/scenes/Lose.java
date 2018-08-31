@@ -8,47 +8,63 @@ import util.CountDownTimer;
 import util.CountDownTimerEnds;
 
 public class Lose extends GameScene implements CountDownTimerEnds {
-		
+	
 	private Sprite lose;
 	private Sprite lifeRemaining;
 	private int lifePlayer;                      //Variable to check how many lives the player has remain
 	private Parallax parallax;                   //Creation variable to instance a new parallax
 	
+	
+	/**
+	 * Initialize paths
+	 */
+	private final static String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png"; //$NON-NLS-1$
+	private final static String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png"; //$NON-NLS-1$
+	private final static String DELPTH_UNIVERSE2_PATH = "src/assets/img/universe2.jpg"; //$NON-NLS-1$
+	private final static String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg"; //$NON-NLS-1$
+	private final static String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg"; //$NON-NLS-1$
+	private final static String LOSE_PATH = "src/assets/img/continue/YOU-LOSE.png"; //$NON-NLS-1$
+	private final static String ONE_LIFE_PATH = "src/assets/img/continue/1life.png"; //$NON-NLS-1$
+	private final static String TWO_LIFE_PATH = "src/assets/img/continue/2life.png"; //$NON-NLS-1$
+	private final static String THREE_LIFE_PATH = "src/assets/img/continue/3life.png"; //$NON-NLS-1$
+	
+	
 	public void initialSetup() {
 		
-		//background = new GameImage("src/assets/img/temp_background.png");
+		
 		
 		//Creation a object to class Parallax
         this.parallax = new Parallax();
 		
         //The first one added will be the last one to be painted.
-		this.parallax.add("src/assets/img/temp_background.png"); //$NON-NLS-1$
-		this.parallax.add("src/assets/img/universe1.png"); //$NON-NLS-1$
-		this.parallax.add("src/assets/img/universe2.jpg"); //$NON-NLS-1$
-		this.parallax.add("src/assets/img/universe3.jpg"); //$NON-NLS-1$
+		this.parallax.add(DELPTH_BACKGROUND_PATH);
+		this.parallax.add(DELPTH_BACKGROUND_PATH);
+		this.parallax.add(DELPTH_UNIVERSE1_PATH);
+		this.parallax.add(DELPTH_UNIVERSE2_PATH);
+		this.parallax.add(DELPTH_UNIVERSE3_PATH);
 		//Since universe4.jpg was the last to be added to the list, it will be the main layer (mainLayer).
-		this.parallax.add("src/assets/img/universe4.jpg"); //$NON-NLS-1$
+		this.parallax.add(DELPTH_UNIVERSE4_PATH);
 		
 		//Adjusts the speed of all layers from the main layer
 		this.parallax.setVelAllLayers(0, 1);
 		
 		/*Define scenes elements position
 		 *Continue sprite upper-center position*/
-		this.lose = new Sprite("src/assets/img/continue/YOU-LOSE.png"); //$NON-NLS-1$
+		this.lose = new Sprite(LOSE_PATH);
 		this.lose.x = WindowConstants.WIDTH/2 - this.lose.width/2;
 		this.lose.y = WindowConstants.HEIGHT/500 - this.lose.height/20;
 		
 		//Check how many lives the player has to instantiate the specific sprite.
 		if(getLifePlayer() == 1){
-			this.lifeRemaining = new Sprite("src/assets/img/continue/1life.png");	 //$NON-NLS-1$
+			this.lifeRemaining = new Sprite(ONE_LIFE_PATH);
 		}
 		
 		else if(getLifePlayer() == 2){
-			this.lifeRemaining = new Sprite("src/assets/img/continue/2life.png"); //$NON-NLS-1$
+			this.lifeRemaining = new Sprite(TWO_LIFE_PATH);
 		}
 		
 		else if(getLifePlayer() == 3){
-			this.lifeRemaining = new Sprite("src/assets/img/continue/3life.png"); //$NON-NLS-1$
+			this.lifeRemaining = new Sprite(THREE_LIFE_PATH);
 		}
 		
 		//Define position lifeRemaining on the Screen
@@ -109,8 +125,12 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	@Override
 	public void terminate() {
 		if (this.game != null){
-			System.out.println("Timer Ended"); //$NON-NLS-1$
-			ClassicContinue classicContinue = new ClassicContinue();
+			final String END_TIMER = "Timer Ended"; //$NON-NLS-1$
+			System.out.println(END_TIMER);
+			
+			ClassicContinue classicContinue = null;
+			classicContinue = new ClassicContinue();
+			
 			this.game.transitTo(classicContinue);
 		}
 	}

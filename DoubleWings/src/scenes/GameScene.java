@@ -14,8 +14,8 @@ public abstract class GameScene {
 		
 		this.game = game;
 		this.keyboard = game.keyboard;
-
-		System.out.println("keyboard: " + this.keyboard); //$NON-NLS-1$
+		final String MSG_KEYBOARD = "keyboard: "; //$NON-NLS-1$
+		System.out.println(MSG_KEYBOARD + this.keyboard); 
 
 		initialSetup();
 		viewSetup();
