@@ -10,18 +10,14 @@ public class Shield extends GameEntity {
 	private int regeneration;
 	private GameEntity player;
 	private GameEntityObserver observer = null;
-	
     
 	//Creation constructor to Shield
 	public Shield(GameEntity player) {
-
 		//Initialization with shield image
 		super(spriteFilePath);
-
 		//Getting the player from the StageTest class
 		this.player = player;
 		this.life = maxLife;
-
 		//Putting shield on the screen with reference the player position
 		this.x = player.x;
 		this.y = player.y;
@@ -31,13 +27,12 @@ public class Shield extends GameEntity {
 	public void update() {
 		
 		//System.out.println(this.observer);
-		
 		if(this.isCollidable == false){
 			this.x = -500;
 			this.y = -500;
 			return;
 		}
-		
+
 		super.update();
 		
 		//Shield movement
@@ -52,8 +47,8 @@ public class Shield extends GameEntity {
 	// Handle when contact happen
 	@Override
 	public void didContact(GameEntity entity){
+		
 		if (entity.getClass() == Enemy.class){
-
 			entity.receiveDamage(100);
 			this.receiveDamage(10);
 			System.out.println("hit enemy");
@@ -62,9 +57,7 @@ public class Shield extends GameEntity {
 
 	@Override
 	public void setLife(int newLife){
-		
 		this.life = newLife;
-		
 		//System.out.println(life);
 		
 		if (life <= 0) {
@@ -94,9 +87,7 @@ public class Shield extends GameEntity {
 		super.reborn();
 		this.x = this.player.x;
 		this.y = this.player.y;
-		
 		this.isCollidable = true;
-		
 		observer.notifyObserver(this);
 	}
 }

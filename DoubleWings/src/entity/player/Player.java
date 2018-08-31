@@ -1,11 +1,8 @@
 package entity.player;
 
-
 import entity.Bullet;
 import observer.GameEntityObserver;
 import util.DelayTimer;
-
-
 
 public class Player {
 
@@ -15,34 +12,29 @@ public class Player {
 	private int chances = initialChances;
 	private PlayerSpaceship spaceship;
 	public PlayerSceneDelegate delegate = null;
-
 	private int score;
 	private GameEntityObserver observer = null; //Temp solution to the observer
-	
-	//Respawn
-	public double initialPositionX = 0;
+	public double initialPositionX = 0; //Respawn
 	public double initialPositionY = 0;
-	
+
 	public Player() {
 		super();
 		this.score = 0;
 	}
 
-
-	// HUD observer getter and setter 
-	public GameEntityObserver getObserver() {
+	public GameEntityObserver getObserver() { // HUD observer getter and setter 
 		return this.observer;
 	}
 
 	public void setObserver(GameEntityObserver observer) {
-  		//Adding HUD observer to the shield
-  		spaceship.getShield().setObserver(observer);
+		//Adding HUD observer to the shield
+		spaceship.getShield().setObserver(observer);
 		this.observer = observer;
 	}
 
-	//Chances setters and getters
-	public void setChances(int chances){
+	public void setChances(int chances){ //Chances setters and getters
 		this.chances = chances;
+		
 		//Notifying HUD to update chances shower
 		if (observer != null) {
 			observer.notifyObserver(this);	
@@ -55,14 +47,14 @@ public class Player {
 		return this.chances;
 	}
 
-	//Score setters and getters
-	public int getScore() {
+	public int getScore() { 	//Score setters and getters
 		return score;
 	}
 
 	public void increaseScore(int score) {
-//		this.score.increaseScore(score);
+		//this.score.increaseScore(score);
 		this.score += score;
+		
 		//Notifying HUD to update score shower
 		if (observer != null) {
 			observer.notifyObserver(this);	
@@ -86,7 +78,7 @@ public class Player {
 		setChances(this.chances - 1);
 		//System.out.println("LOST A LIIIIIIIIIFE");
 		System.out.println("lifes on player: " + this.chances);
-		
+
 		if (this.chances < 0) {
 			loseGame();
 		} else {
@@ -101,6 +93,7 @@ public class Player {
 	}
 
 	public void loseGame() {
+		
 		if (this.canContinue) {
 			useContinue();
 		} else {
@@ -119,8 +112,6 @@ public class Player {
 		if (spaceship == null){
 			spaceship = new PlayerSpaceship(this, this.initialPositionY, this.initialPositionY, true);
 		}
-		
 		return spaceship;
 	}
-
 }
