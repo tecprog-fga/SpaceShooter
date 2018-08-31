@@ -12,21 +12,9 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	// default sprite file path
 	private static final String SPRITE_IMAGE_PATH = "src/assets/img/player_lvl1.png"; 
 	private static final int DEFAULT_MOVEMENT_VELOCITY = 4;
-	
+		
 	private Shield shield = null;
 	private Player player = null;
-	
-	// Default values for keys. Can be reset using setKeySet 
-	private int upKey = Keyboard.UP_KEY;
-	private int downKey = Keyboard.DOWN_KEY;
-	private int leftKey = Keyboard.LEFT_KEY;
-	private int rightKey = Keyboard.RIGHT_KEY;
-	private int shootKey = 0;
-	public int shootCooldown = 100;
-	private boolean canShoot = true;
-	private DelayTimer shootCDTimer = new DelayTimer(this, 1);
-	public double movimentVel = DEFAULT_MOVEMENT_VELOCITY; // default value
-	private boolean didDie = false;
 
 	public PlayerSpaceship(Player player, double x, double y, boolean adjust) {
 		super(SPRITE_IMAGE_PATH);
@@ -64,6 +52,13 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		return this.player;
 	}
 	
+	// Default values for keys. Can be reset using setKeySet 
+	private int upKey = Keyboard.UP_KEY;
+	private int downKey = Keyboard.DOWN_KEY;
+	private int leftKey = Keyboard.LEFT_KEY;
+	private int rightKey = Keyboard.RIGHT_KEY;
+	private int shootKey = 0;
+	
 	public void setKeySet(int upKey, int downKey, int rightKey, int leftKey, int shootKey) {
 		this.upKey = upKey;
 		this.downKey = downKey;
@@ -71,6 +66,8 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		this.leftKey = leftKey;
 		this.shootKey = shootKey;
 	}
+	
+	private boolean didDie = false;
 
 	@Override
 	public void update() {
@@ -109,6 +106,10 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		return false;
 	}
 	
+	public int shootCooldown = 100;
+	private boolean canShoot = true;
+	private DelayTimer shootCDTimer = new DelayTimer(this, 1);
+	
 	public void fireBullet(){
 		
 		if (canShoot){
@@ -120,6 +121,8 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 			gameWorld.add(bullet);
 		}
 	}
+	
+	public double movimentVel = DEFAULT_MOVEMENT_VELOCITY; // default value
 	
 	public void checkInput(){
 		//Player movement

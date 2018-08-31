@@ -7,10 +7,11 @@ import observer.GameEntityObserver;
 public class Shield extends GameEntity {
 
 	private static final String SPRITE_FILE_PATH = "src/assets/img/forceshield.png";
+	
 	private int regeneration = 0;
+
 	private GameEntity player = null;
-	private GameEntityObserver observer = null;
-    
+	
 	//Creation constructor to Shield
 	public Shield(GameEntity player) {
 		//Initialization with shield image
@@ -54,6 +55,8 @@ public class Shield extends GameEntity {
 			System.out.println("hit enemy");
 		}
 	}
+	
+	private GameEntityObserver observer = null;
 
 	@Override
 	public void setLife(int newLife){

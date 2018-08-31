@@ -7,30 +7,29 @@ import util.DelayTimer;
 public class Player {
 
 	private static final int INITIAL_CHANCES = 3; // Initially the player will have three lifes
-
-	private boolean canContinue = true;
-	private int chances = INITIAL_CHANCES;
-	private PlayerSpaceship spaceship = null;
-	public PlayerSceneDelegate delegate = null;
+	
 	private int score = 0;
-	private GameEntityObserver observer = null; //Temp solution to the observer
-	public double initialPositionX = 0; //Respawn
-	public double initialPositionY = 0;
 
 	public Player() {
 		super();
 		this.score = 0;
 	}
 
+	private GameEntityObserver observer = null; //Temp solution to the observer
+	
 	public GameEntityObserver getObserver() { // HUD observer getter and setter 
 		return this.observer;
 	}
+	
+	private PlayerSpaceship spaceship = null;
 
 	public void setObserver(GameEntityObserver observer) {
 		//Adding HUD observer to the shield
 		spaceship.getShield().setObserver(observer);
 		this.observer = observer;
 	}
+	
+	private int chances = INITIAL_CHANCES;
 
 	public void setChances(int chances){ //Chances setters and getters
 		this.chances = chances;
@@ -62,6 +61,9 @@ public class Player {
 			System.out.println("Player log: HUD is null :(");
 		}
 	}
+	
+	public double initialPositionX = 0; //Respawn
+	public double initialPositionY = 0;
 
 	private void resetSpaceship() {
 		this.spaceship.reborn();
@@ -92,6 +94,9 @@ public class Player {
 		System.out.println("Player log: life reset to: " + this.chances);
 	}
 
+	private boolean canContinue = true;
+	public PlayerSceneDelegate delegate = null;
+	
 	public void loseGame() {
 		
 		if (this.canContinue) {
