@@ -6,10 +6,10 @@ import util.DelayTimer;
 
 public class Player {
 
-	private static final int initialChances = 3; // Initially the player will have three lifes
+	private static final int INITIAL_CHANCES = 3; // Initially the player will have three lifes
 
 	private boolean canContinue = true;
-	private int chances = initialChances;
+	private int chances = INITIAL_CHANCES;
 	private PlayerSpaceship spaceship = null;
 	public PlayerSceneDelegate delegate = null;
 	private int score = 0;
@@ -87,7 +87,7 @@ public class Player {
 	}
 
 	public void resetLife() {
-		setChances(initialChances);
+		setChances(INITIAL_CHANCES);
 		resetSpaceship();
 		System.out.println("Player log: life reset to: " + this.chances);
 	}

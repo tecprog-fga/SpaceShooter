@@ -6,7 +6,7 @@ import observer.GameEntityObserver;
 
 public class Shield extends GameEntity {
 
-	private static String spriteFilePath = "src/assets/img/forceshield.png";
+	private static final String SPRITE_FILE_PATH = "src/assets/img/forceshield.png";
 	private int regeneration = 0;
 	private GameEntity player = null;
 	private GameEntityObserver observer = null;
@@ -14,7 +14,7 @@ public class Shield extends GameEntity {
 	//Creation constructor to Shield
 	public Shield(GameEntity player) {
 		//Initialization with shield image
-		super(spriteFilePath);
+		super(SPRITE_FILE_PATH);
 		//Getting the player from the StageTest class
 		this.player = player;
 		this.life = maxLife;

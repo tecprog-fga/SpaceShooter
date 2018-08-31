@@ -10,8 +10,8 @@ import util.DelayTimer;
 public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	
 	// default sprite file path
-	private static final String spriteImagePath = "src/assets/img/player_lvl1.png"; 
-	private static final int defaultMovimentVel = 4;
+	private static final String SPRITE_IMAGE_PATH = "src/assets/img/player_lvl1.png"; 
+	private static final int DEFAULT_MOVEMENT_VELOCITY = 4;
 	
 	private Shield shield = null;
 	private Player player = null;
@@ -25,11 +25,11 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	public int shootCooldown = 100;
 	private boolean canShoot = true;
 	private DelayTimer shootCDTimer = new DelayTimer(this, 1);
-	public double movimentVel = defaultMovimentVel; // default value
+	public double movimentVel = DEFAULT_MOVEMENT_VELOCITY; // default value
 	private boolean didDie = false;
 
 	public PlayerSpaceship(Player player, double x, double y, boolean adjust) {
-		super(spriteImagePath);
+		super(SPRITE_IMAGE_PATH);
 		this.life = maxLife;
 		this.shield = new Shield(this);
 		this.player = player;
