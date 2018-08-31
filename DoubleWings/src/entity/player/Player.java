@@ -5,7 +5,7 @@ import observer.GameEntityObserver;
 import util.DelayTimer;
 
 public class Player {
-
+	
 	private static final int INITIAL_CHANCES = 3; // Initially the player will have three lifes
 	
 	private int score = 0;
