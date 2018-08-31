@@ -10,9 +10,9 @@ public class Player {
 
 	private boolean canContinue = true;
 	private int chances = initialChances;
-	private PlayerSpaceship spaceship;
+	private PlayerSpaceship spaceship = null;
 	public PlayerSceneDelegate delegate = null;
-	private int score;
+	private int score = 0;
 	private GameEntityObserver observer = null; //Temp solution to the observer
 	public double initialPositionX = 0; //Respawn
 	public double initialPositionY = 0;

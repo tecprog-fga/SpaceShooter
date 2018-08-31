@@ -3,11 +3,11 @@ package entity.pool;
 import java.util.ArrayList;
 
 public abstract class ObjectPool<Type> {
-
+	
 	private ArrayList<Type> objects = new ArrayList<Type>();
 	
 	public Type release(){
-		Type obj;
+		Type obj = null;
 		
 		if (objects.isEmpty()){
 			//placeholder
@@ -16,7 +16,6 @@ public abstract class ObjectPool<Type> {
 			int last = objects.size() -1;
 			obj = objects.remove(last);
 		}
-		
 		return obj;
 	}
 	
@@ -28,5 +27,4 @@ public abstract class ObjectPool<Type> {
 			objects.add(obj);
 		}
 	}
-	
 }

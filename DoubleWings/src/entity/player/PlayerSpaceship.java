@@ -13,8 +13,8 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	private static final String spriteImagePath = "src/assets/img/player_lvl1.png"; 
 	private static final int defaultMovimentVel = 4;
 	
-	private Shield shield;
-	private Player player;
+	private Shield shield = null;
+	private Player player = null;
 	
 	// Default values for keys. Can be reset using setKeySet 
 	private int upKey = Keyboard.UP_KEY;

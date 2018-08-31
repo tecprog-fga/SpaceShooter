@@ -7,8 +7,8 @@ import observer.GameEntityObserver;
 public class Shield extends GameEntity {
 
 	private static String spriteFilePath = "src/assets/img/forceshield.png";
-	private int regeneration;
-	private GameEntity player;
+	private int regeneration = 0;
+	private GameEntity player = null;
 	private GameEntityObserver observer = null;
     
 	//Creation constructor to Shield
