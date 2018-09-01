@@ -32,7 +32,7 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
   	
 
   	@Override
-  	public void initialSetup(){
+  	public void buildInitialScene(){
 
   		gameWorld = new World();
   		gameWorld.keyboard = this.keyboard;
@@ -146,7 +146,7 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
   	}
 
   	@Override
-  	public void update(){
+  	public void updateScene(){
   		updateParalax();
 
   		gameWorld.update(); // Updates and draw all entities added in game world

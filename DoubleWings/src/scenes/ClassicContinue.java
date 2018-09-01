@@ -48,7 +48,7 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	private final static String COUNTDOWN_PATH = "src/assets/img/continue/number_9.png"; //$NON-NLS-1$
 	private final static String ENTER_PATH = "src/assets/img/continue/Enter-Download-PNG.png";	 //$NON-NLS-1$
 	
-	public void initialSetup() {
+	public void buildInitialScene() {
 
 		//Configure enter key and escape
 		this.keyboard.setBehavior(Keyboard.ENTER_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
@@ -102,7 +102,7 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	}
 
 	// Update image Sprite on Screen and check button at keyboard
-	public void update() {
+	public void updateScene() {
 
 		final int PIXELS_DOWN = 800; //T07 T08
 		final int PIXELS_UP = 600; //T07 T08

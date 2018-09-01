@@ -27,7 +27,7 @@ public class MenuScene extends GameScene {
 	private Sprite arrow;
 	private ArrayList<Sprite> buttons = new ArrayList<Sprite>();
 	
-	protected void initialSetup(){
+	protected void buildInitialScene(){
 		
 		//Reset option menu
 		selectedMenuOption = OptionMenu.Start_Game;
@@ -154,7 +154,7 @@ public class MenuScene extends GameScene {
 		}
 	}
 	
-	public void update(){
+	public void updateScene(){
 		
 		// Control menu option selection
 		checkMenuOption();

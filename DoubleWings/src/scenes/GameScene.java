@@ -5,7 +5,7 @@ import jplay.Keyboard;
 
 public abstract class GameScene {
 
-	public abstract void update();
+	public abstract void updateScene();
 	
 	protected GameController game = null;
 	protected Keyboard keyboard = null;
@@ -17,10 +17,10 @@ public abstract class GameScene {
 		final String MSG_KEYBOARD = "keyboard: "; //$NON-NLS-1$
 		System.out.println(MSG_KEYBOARD + this.keyboard); 
 
-		initialSetup();
+		buildInitialScene();
 		viewSetup();
 	}
-	protected abstract void initialSetup();
+	protected abstract void buildInitialScene();
 	protected abstract void viewSetup();
 
 	public void destroy() {

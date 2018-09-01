@@ -20,7 +20,7 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	private final static String BACKGROUND_PATH = "src/assets/img/temp_background.png"; //$NON-NLS-1$
 	private final static String GAME_OVER_PATH = "src/assets/img/continue/3540295891_logo.jpg"; //$NON-NLS-1$
 	
-	public void initialSetup() {
+	public void buildInitialScene() {
 
 		//Set game controller elements
 		this.keyboard = this.game.keyboard;
@@ -59,7 +59,7 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	}
 
 	//Update image Sprite on Screen
-	public void update() {
+	public void updateScene() {
 		this.background.draw();
 		this.gameOver.draw();
 	}

@@ -42,7 +42,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	*/
 	private int lifePlayer;
 	
-	public void initialSetup() {
+	public void buildInitialScene() {
 		
         this.delpthScene = new Parallax();
 		
@@ -117,7 +117,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	}
 	
 	/* Update Sprite on Screen */
-	public void update() {
+	public void updateScene() {
 		
 		//Print all layers that have been added
 		this.delpthScene.drawLayers();

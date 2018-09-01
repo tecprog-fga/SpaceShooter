@@ -34,7 +34,7 @@ public class GameController {
 		
 		//Updates current scene
 		if (currentScene != null){
-			currentScene.update();
+			currentScene.updateScene();
 		}
 		
 		return isRunning; 
