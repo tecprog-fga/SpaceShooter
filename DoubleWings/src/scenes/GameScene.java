@@ -10,7 +10,7 @@ public abstract class GameScene {
 	protected GameController game = null;
 	protected Keyboard keyboard = null;
 
-	public void configure(GameController game) {
+	public void configureGameScene(GameController game) {
 		
 		this.game = game;
 		this.keyboard = game.keyboard;
@@ -23,7 +23,7 @@ public abstract class GameScene {
 	protected abstract void buildInitialScene();
 	protected abstract void viewSetup();
 
-	public void destroy() {
+	public void destroyScene() {
 		
 		this.game = null;
 		this.keyboard = null;

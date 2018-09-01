@@ -19,11 +19,11 @@ public class GameController {
 		  return;
 		
 		else if(currentScene != null){
-			currentScene.destroy();
+			currentScene.destroyScene();
 		}
 
 		//run initial setup
-		scene.configure(this);
+		scene.configureGameScene(this);
 		
 		//Update current scene variable
 		currentScene = scene;
