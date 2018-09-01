@@ -10,10 +10,10 @@ import entity.player.*;
 public class HUD implements GameEntityObserver {
 
 	private float barSizeMax = WindowConstants.WIDTH;
-	private Sprite shieldLifeBar;
-	private Sprite shieldLifeBarOrnament;
-	private Sprite numberOfLivesImage;
-	private HudScore scoreText;
+	private Sprite shieldLifeBar = null;
+	private Sprite shieldLifeBarOrnament = null;
+	private Sprite numberOfLivesImage = null;
+	private HudScore scoreText = null;
 
 	public HUD() {
 		/**

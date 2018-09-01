@@ -18,7 +18,8 @@ public class ScriptHandler {
 	}
 
 	public static ArrayList<Command> receiveInput(String scriptInput) throws IOException {
-		GenerateBehavior parser = new GenerateBehavior(SCRIPT_PATH);
+		GenerateBehavior parser = null;
+		parser = new GenerateBehavior(SCRIPT_PATH);
 		ArrayList<Command> commandList = parser.processBehavior();
 		log("Done.");
 

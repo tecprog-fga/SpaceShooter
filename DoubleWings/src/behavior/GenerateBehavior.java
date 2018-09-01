@@ -32,7 +32,8 @@ public class GenerateBehavior {
 	 * @throws IOException
 	 */
 	public final ArrayList<Command> processBehavior() throws IOException {
-		ArrayList<Command> commandsList = new ArrayList<Command>();
+		ArrayList<Command> commandsList = null;
+		commandsList = new ArrayList<Command>();
 		try (Scanner commands = new Scanner(scriptPath, ENCODING.name())) {
 			while (commands.hasNextLine()) {
 				commandsList.add(processLine(commands.nextLine()));
@@ -57,7 +58,8 @@ public class GenerateBehavior {
 		/**
 		 * use a second Scanner to parse the content of each line 
 		 */
-		Scanner commandInput = new Scanner(commandLine);
+		Scanner commandInput = null;
+		commandInput = new Scanner(commandLine);
 		
 		if (commandInput.hasNext()) {
 			/**

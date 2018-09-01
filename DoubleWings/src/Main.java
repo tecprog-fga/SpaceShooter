@@ -14,18 +14,21 @@ public class Main {
 		/**
 		 * It creates an windows with 800 pixels of width and 600 pixels of height   
 		 */
-		Window gameScreen = new Window(WindowConstants.WIDTH,WindowConstants.HEIGHT);
+		Window gameScreen = null;
+		gameScreen = new Window(WindowConstants.WIDTH,WindowConstants.HEIGHT);
 
 		/**
 		 * Game controller handles game states, screen changes, stages...
 		 */
-		GameController game = new GameController();
+		GameController game = null;
+		game = new GameController();
 		game.keyboard = gameScreen.getKeyboard();
 
 		/**
 		 * Should transit first to menu... but for development purposes...
 		 */
-		GameScene scene = new MenuScene();
+		GameScene scene = null;
+		scene = new MenuScene();
 		game.transitTo(scene);
 
 		boolean gameIsRunning = true;

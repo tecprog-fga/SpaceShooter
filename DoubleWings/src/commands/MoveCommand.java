@@ -7,7 +7,7 @@ public class MoveCommand implements Command {
 	 * The distance yet to be traveled by the actor of this command.
 	 * */
 	private double distanceToMove = 50;
-	private CommandType direction;
+	private CommandType direction = null;
 
 	/**
 	 * 
