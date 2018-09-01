@@ -5,10 +5,10 @@ import jplay.Keyboard;
 
 public abstract class GameScene {
 
-	protected GameController game;
-	protected Keyboard keyboard;
-
 	public abstract void update();
+	
+	protected GameController game = null;
+	protected Keyboard keyboard = null;
 
 	public void configure(GameController game) {
 		
