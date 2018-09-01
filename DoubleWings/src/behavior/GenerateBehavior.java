@@ -17,6 +17,9 @@ import java.util.ArrayList;
  * 
  */
 public class GenerateBehavior {
+	
+	private final Path scriptPath;
+	private final static Charset ENCODING = StandardCharsets.UTF_8;  
 
 	/**
 	 * Constructor.
@@ -82,9 +85,6 @@ public class GenerateBehavior {
 	/**
 	 *  PRIVATE 
 	 */
-	private final Path scriptPath;
-	private final static Charset ENCODING = StandardCharsets.UTF_8;  
-
 	private String quote(String aText) {
 		String QUOTE = "'";
 		return QUOTE + aText + QUOTE;

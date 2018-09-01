@@ -77,7 +77,6 @@ public class HUD implements GameEntityObserver {
 	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
 		if (playerNumberOfLives <= 3 && playerNumberOfLives >= 0) {
 			this.numberOfLivesImage.setCurrFrame(playerNumberOfLives);
-
 		} else {
 			System.out.println("HUD log: Player chances number is out of range.");
 			this.numberOfLivesImage.setCurrFrame(0);

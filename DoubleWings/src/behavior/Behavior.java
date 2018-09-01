@@ -5,6 +5,7 @@ import commands.Command;
 
 public class Behavior {
 
+	private static ArrayList<Command> COMMAND_LIST;
 	/**
 	 * Constructor.
 	 * @param commandList list of commands to be executed for an specific behavior.
@@ -20,9 +21,4 @@ public class Behavior {
 	public static void setCommandList(ArrayList<Command> commandList) {
 		Behavior.COMMAND_LIST = commandList;
 	}
-
-	/**
-	 *  PRIVATE
-	 */
-	private static ArrayList<Command> COMMAND_LIST;
 }
