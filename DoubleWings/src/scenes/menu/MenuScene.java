@@ -17,19 +17,19 @@ public class MenuScene extends GameScene {
 	//GameScene constants
 	private static final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
 	private static final int DISTANCE_BETWEEN_BUTTONS = WindowConstants.HEIGHT/48;
-	
+
 	private OptionMenu selectedMenuOption = OptionMenu.Start_Game;//Define initial menu option
-	
+
 	protected void buildInitialScene(){
-		
+
 		//Reset option menu
 		selectedMenuOption = OptionMenu.Start_Game;
-		
+
 		//Configure up and down keys
 		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 	}
-	
+
 	private GameImage background = null;
 	private Sprite title = null;
 	private Sprite arrow = null;
@@ -48,95 +48,95 @@ public class MenuScene extends GameScene {
 		arrow.x = 10;
 		arrow.y = 10;
 	}
-	
+
 	private ArrayList<Sprite> buttons = new ArrayList<Sprite>();
-	
+
 	//Add buttons to array
 	private void appendButtons() {
 		Sprite startButton = new Sprite("src/assets/img/menu/start_button.png");
 		Sprite rankingButton = new Sprite("src/assets/img/menu/ranking.png");
 		Sprite settingsButton = new Sprite("src/assets/img/menu/settings.png");
 		Sprite quitButton = new Sprite("src/assets/img/menu/quit.png");
-		
+
 		buttons.add(startButton);
 		buttons.add(rankingButton);
 		buttons.add(settingsButton);
 		buttons.add(quitButton);
-		
+
 		for(OptionMenu option : OptionMenu.values()) {
 			int currentButtonIndex = option.ordinal(); //Integer value of variable option
-			
+
 			//Define the position of the first element according to the title
 			if(currentButtonIndex == 0) {
 				buttons.get(currentButtonIndex).x = WindowConstants.WIDTH/2 - startButton.width/2;
 				buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
-			//Define the position of the element according to the last element
+				//Define the position of the element according to the last element
 			} else {
 				buttons.get(currentButtonIndex).x = buttons.get(currentButtonIndex - 1).x;
 				buttons.get(currentButtonIndex).y = buttons.get(currentButtonIndex - 1).y + buttons.get(currentButtonIndex - 1).height + DISTANCE_BETWEEN_BUTTONS;
 			}
 		}
 	}
-	
+
 	//Check keyboard and update Menu option
 	private void checkMenuOption() {
 		// Down selection
-				if (keyboard.keyDown(Keyboard.DOWN_KEY)){
-					System.out.println("down");
-					//Change current menu option
-					selectedMenuOption = selectedMenuOption.next();
-					System.out.println(selectedMenuOption);
-				}
-				
-				// Up selection		
-				if (keyboard.keyDown(Keyboard.UP_KEY)){
-					System.out.println("up");
-					//Change current menu option
-					selectedMenuOption = selectedMenuOption.back();
-					System.out.println(selectedMenuOption);
-				}
+		if (keyboard.keyDown(Keyboard.DOWN_KEY)){
+			System.out.println("down");
+			//Change current menu option
+			selectedMenuOption = selectedMenuOption.next();
+			System.out.println(selectedMenuOption);
+		}
+
+		// Up selection		
+		if (keyboard.keyDown(Keyboard.UP_KEY)){
+			System.out.println("up");
+			//Change current menu option
+			selectedMenuOption = selectedMenuOption.back();
+			System.out.println(selectedMenuOption);
+		}
 	}
-	
+
 	private void moveArrow() {
 		int currentButtonIndex = 0;
 		currentButtonIndex = this.selectedMenuOption.ordinal();
-		
+
 		Sprite currentButton = null;
 		currentButton = this.buttons.get(currentButtonIndex);
-		
+
 		this.arrow.x = currentButton.x - arrow.width - DISTANCE_BETWEEN_BUTTONS;
 		this.arrow.y = currentButton.y;
-		
+
 	}
-	
+
 	//Draw scene elements
 	private void draw() {
 		background.draw();
 		title.draw();
 		arrow.draw();
-		
+
 		for(Sprite button: this.buttons) {
 			button.draw();
 		}
 	}
-	
+
 	private static GameScene firstLevel = null;
-	
+
 	public GameScene firstStage(){
 		if(firstLevel == null){
-	      firstLevel = new StageTest();
-		  return firstLevel;
+			firstLevel = new StageTest();
+			return firstLevel;
 		} 	
 		else{
 			return firstLevel;
 		}
-		  
+
 	}
-	
+
 	//Check keyboard enter and dispatch new scene
 	private void checkButtonSelection(){
 		if (keyboard.keyDown(Keyboard.ENTER_KEY)){
-			
+
 			switch(selectedMenuOption){
 
 			case Start_Game:
@@ -156,17 +156,17 @@ public class MenuScene extends GameScene {
 			}
 		}
 	}
-	
+
 	public void updateScene(){
-		
+
 		// Control menu option selection
 		checkMenuOption();
-		
+
 		//Define current arrow position
 		moveArrow();
-		
+
 		checkButtonSelection();
-		
+
 		// Draw menu elements
 		draw();
 	}

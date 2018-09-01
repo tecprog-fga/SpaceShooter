@@ -46,11 +46,11 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	}
 
 	private Parallax parallax = null;
-	
+
 	protected void viewSetup(){
-	    final String LAYER0_PATH = "src/assets/img/background_layer_0.png"; //$NON-NLS-1$
-	    final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; //$NON-NLS-1$
-	    final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; //$NON-NLS-1$
+		final String LAYER0_PATH = "src/assets/img/background_layer_0.png"; //$NON-NLS-1$
+		final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; //$NON-NLS-1$
+		final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; //$NON-NLS-1$
 		//Creation a object to class Parallax
 		parallax = new Parallax();
 
@@ -74,7 +74,7 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 
 	private ArrayList<Command> commands = null;
 	private Command currentCommand = null;
-	
+
 	private void creatingCommands(){
 		commands = new ArrayList<Command>();
 
@@ -86,10 +86,10 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 
 		currentCommand = commands.remove(commands.size() - 1); // return removed object
 	}
-	
+
 	private HUD hud = null;
 	private Player player = new Player();
-	
+
 	private void configureEntities(){
 		//Create the HUD and adding it as player's observer
 		hud = new HUD();
@@ -124,14 +124,14 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 		gameWorld.add(spaceship);
 		gameWorld.add(spaceship.getShield());
 	}
-	
+
 	public final static int LIFES = 10;
-	
+
 	public void createAsteroid(double velY) {
 		final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //$NON-NLS-1$
 		Enemy asteroid = null;
-		
-		
+
+
 		asteroid = this.gameWorld.createEnemy();
 		asteroid.loadImage(ASTEROID_PATH);
 		asteroid.setLife(LIFES);
@@ -143,7 +143,7 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	}
 
 	private Enemy asteroid1 = null;
-	
+
 	public void createTestAsteroid() {
 		asteroid1 = new Enemy("src/assets/img/asteroid.png");
 		asteroid1.setLife(LIFES);
@@ -167,10 +167,10 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	public void updateParalax(){
 		//Print all layers that have been added
 		parallax.drawLayers();
-		
+
 		final int PIXELS_DOWN = 800;
 		final int PIXELS_SIDES = 600;
-		
+
 		//The method below is responsible for maintaining infinite repetition of the layers.
 		parallax.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
@@ -179,9 +179,9 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	}
 
 	private int commandCount = 0;
-	
+
 	public final static int MAX_COMMANDS = 50;
-	
+
 	public void executeAsteroidCommand(){
 
 		//Asteroid command execute
