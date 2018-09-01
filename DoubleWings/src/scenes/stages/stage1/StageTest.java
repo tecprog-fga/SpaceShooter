@@ -20,13 +20,6 @@ import game.evolver.GameEventCallback;
 public class StageTest extends GameScene implements GameEventCallback, PlayerSceneDelegate {
 
 	private World gameWorld = null;
-	private HUD hud = null;
-	private Player player = new Player();
-	private ArrayList<Command> commands = null;
-	private Command currentCommand = null;
-	private int commandCount = 0;
-	private Enemy asteroid1 = null;
-	private Parallax parallax = null;
 
 	@Override
 	public void buildInitialScene(){
@@ -52,6 +45,8 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 		this.configureEvents();
 	}
 
+	private Parallax parallax = null;
+	
 	protected void viewSetup(){
 
 		//Creation a object to class Parallax
@@ -75,6 +70,9 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 
 	}
 
+	private ArrayList<Command> commands = null;
+	private Command currentCommand = null;
+	
 	private void creatingCommands(){
 		commands = new ArrayList<Command>();
 
@@ -86,7 +84,10 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 
 		currentCommand = commands.remove(commands.size() - 1); // return removed object
 	}
-
+	
+	private HUD hud = null;
+	private Player player = new Player();
+	
 	private void configureEntities(){
 		//Create the HUD and adding it as player's observer
 		hud = new HUD();
@@ -134,6 +135,7 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 		gameWorld.add(asteroid);
 	}
 
+	private Enemy asteroid1 = null;
 	public void createTestAsteroid() {
 		asteroid1 = new Enemy("src/assets/img/asteroid.png");
 		asteroid1.setLife(10);
@@ -165,6 +167,8 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 		parallax.moveLayersStandardY(false);
 	}
 
+	private int commandCount = 0;
+	
 	public void executeAsteroidCommand(){
 
 		//Asteroid command execute

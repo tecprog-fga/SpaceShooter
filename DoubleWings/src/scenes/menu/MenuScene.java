@@ -17,15 +17,8 @@ public class MenuScene extends GameScene {
 	//GameScene constants
 	private static final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
 	private static final int DISTANCE_BETWEEN_BUTTONS = WindowConstants.HEIGHT/48;
-	private static GameScene firstLevel = null;
 	
 	private OptionMenu selectedMenuOption = OptionMenu.Start_Game;//Define initial menu option
-	
-	// Sprites on scene
-	private GameImage background = null;
-	private Sprite title = null;
-	private Sprite arrow = null;
-	private ArrayList<Sprite> buttons = new ArrayList<Sprite>();
 	
 	protected void buildInitialScene(){
 		
@@ -37,6 +30,9 @@ public class MenuScene extends GameScene {
 		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 	}
 	
+	private GameImage background = null;
+	private Sprite title = null;
+	private Sprite arrow = null;
 	protected void viewSetup(){
 		//Define Scene elements
 		background = new GameImage("src/assets/img/menu/background.png");
@@ -52,6 +48,8 @@ public class MenuScene extends GameScene {
 		arrow.x = 10;
 		arrow.y = 10;
 	}
+	
+	private ArrayList<Sprite> buttons = new ArrayList<Sprite>();
 	
 	//Add buttons to array
 	private void appendButtons() {
@@ -121,6 +119,8 @@ public class MenuScene extends GameScene {
 			button.draw();
 		}
 	}
+	
+	private static GameScene firstLevel = null;
 	
 	public GameScene firstStage(){
 		if(firstLevel == null){
