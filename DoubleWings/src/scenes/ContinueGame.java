@@ -83,19 +83,19 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		this.enterScreen.x = WindowConstants.WIDTH/2 - this.enterScreen.width/2;
 		this.enterScreen.y = WindowConstants.HEIGHT/500 - this.enterScreen.height/20;
 
-		timeWait();
+		buildWaitScene();
 	}
 
 	// Time wait to transit between scene
-	public void timeWait(){
+	public void buildWaitScene(){
 
-		Timer timer = null; //T06
+		Timer timer = null; 
 		timer = new Timer();
 
 		CountDownTimer countDown = new CountDownTimer();
 		countDown.delegate = this;
 
-		final int DELAY = 1000; //T07 T08 
+		final int DELAY = 1000; 
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 
 	}
@@ -103,8 +103,8 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	// Update image Sprite on Screen and check button at keyboard
 	public void updateScene() {
 
-		final int PIXELS_DOWN = 800; //T07 T08
-		final int PIXELS_SIDES = 600; //T07 T08
+		final int PIXELS_DOWN = 800; 
+		final int PIXELS_SIDES = 600;
 
 		//Print all layers that have been added
 		this.delpthScene.drawLayers();
@@ -152,12 +152,12 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		if(this.game != null && this.keyboard != null){
 			if (this.keyboard.keyDown(Keyboard.ENTER_KEY)) {
 				//Transit to a continue state of the game
-				MenuScene transitScene = null; //T06 T07 T08
+				MenuScene transitScene = null;
 				transitScene = new MenuScene();
 				this.game.transitTo(transitScene.firstStage());
 
 			} else if (this.keyboard.keyDown(Keyboard.ESCAPE_KEY)) {
-				GameScene menu = null; //T06 T07 T08
+				GameScene menu = null;
 				menu = new MenuScene();
 				this.game.transitTo(menu);
 			}

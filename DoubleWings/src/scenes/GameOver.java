@@ -10,13 +10,11 @@ import util.CountDownTimerEnds;
 
 public class GameOver extends GameScene implements CountDownTimerEnds {
 
-	private GameImage background = null; //T06
-	private Sprite gameOver = null; //T06
-
-
 	private final static String BACKGROUND_PATH = "src/assets/img/temp_background.png"; //$NON-NLS-1$
 	private final static String GAME_OVER_PATH = "src/assets/img/continue/3540295891_logo.jpg"; //$NON-NLS-1$
 
+	private GameImage background = null;
+	private Sprite gameOver = null;
 	public void buildInitialScene() {
 
 		//Set game controller elements
@@ -51,8 +49,8 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		countDown = new CountDownTimer();
 		countDown.delegate = this;
 
-		final int delay = 1000;
-		timer.scheduleAtFixedRate(countDown, delay, delay);
+		final int DELAY = 1000;
+		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
 
 	//Update image Sprite on Screen

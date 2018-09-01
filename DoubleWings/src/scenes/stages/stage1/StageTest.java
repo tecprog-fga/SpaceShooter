@@ -48,14 +48,16 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	private Parallax parallax = null;
 	
 	protected void viewSetup(){
-
+	    final String LAYER0_PATH = "src/assets/img/background_layer_0.png"; //$NON-NLS-1$
+	    final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; //$NON-NLS-1$
+	    final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; //$NON-NLS-1$
 		//Creation a object to class Parallax
 		parallax = new Parallax();
 
 		//The first one added will be the last one to be painted.
-		parallax.add("src/assets/img/background_layer_0.png");
-		parallax.add("src/assets/img/background_layer_1.png");
-		parallax.add("src/assets/img/background_layer_2.png");
+		parallax.add(LAYER0_PATH);
+		parallax.add(LAYER1_PATH);
+		parallax.add(LAYER2_PATH);
 		//  		parallax.add("src/assets/img/universe2.jpg");
 		//  		parallax.add("src/assets/img/universe3.jpg");
 		//  		//Since universe4.jpg was the last to be added to the list, it will be the main layer (mainLayer).
@@ -122,12 +124,17 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 		gameWorld.add(spaceship);
 		gameWorld.add(spaceship.getShield());
 	}
-
+	
+	public final static int LIFES = 10;
+	
 	public void createAsteroid(double velY) {
+		final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //$NON-NLS-1$
 		Enemy asteroid = null;
+		
+		
 		asteroid = this.gameWorld.createEnemy();
-		asteroid.loadImage("src/assets/img/asteroid.png");
-		asteroid.setLife(10);
+		asteroid.loadImage(ASTEROID_PATH);
+		asteroid.setLife(LIFES);
 		asteroid.x = Math.random() * (WindowConstants.WIDTH - asteroid.width*2) + asteroid.width;
 		asteroid.y = -200;
 		asteroid.vely = velY;
@@ -136,9 +143,10 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	}
 
 	private Enemy asteroid1 = null;
+	
 	public void createTestAsteroid() {
 		asteroid1 = new Enemy("src/assets/img/asteroid.png");
-		asteroid1.setLife(10);
+		asteroid1.setLife(LIFES);
 		asteroid1.x = WindowConstants.WIDTH/2 - asteroid1.width/2;
 		asteroid1.y = 0;
 		asteroid1.vely = 2.0;
@@ -159,9 +167,12 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	public void updateParalax(){
 		//Print all layers that have been added
 		parallax.drawLayers();
-
+		
+		final int PIXELS_DOWN = 800;
+		final int PIXELS_SIDES = 600;
+		
 		//The method below is responsible for maintaining infinite repetition of the layers.
-		parallax.repeatLayers(800, 600, false);
+		parallax.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
 		//Move the parallax orientation vertically
 		parallax.moveLayersStandardY(false);
@@ -169,12 +180,14 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 
 	private int commandCount = 0;
 	
+	public final static int MAX_COMMANDS = 50;
+	
 	public void executeAsteroidCommand(){
 
 		//Asteroid command execute
 		commandCount += 1;
 
-		if (commandCount >= 50 && commands.size() > 0){
+		if (commandCount >= MAX_COMMANDS && commands.size() > 0){
 
 			//			System.out.println("Commands: " + commands.size());
 			currentCommand = commands.remove(commands.size() - 1); // return removed object

@@ -25,7 +25,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	/**
 	 * This object represent the building delpth scene screen
 	 */
-	private Parallax delpthScene = null; //T01 T05 T07 T06
+	private Parallax delpthScene = null;
 	
 	/**
 	 * This object build sprite for life remaining
@@ -111,8 +111,8 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		Timer timer = new Timer();
 		CountDownTimer countDownn = new CountDownTimer();
 		countDownn.delegate = this;
-		long delay = 1000;
-		timer.scheduleAtFixedRate(countDownn, delay, delay);
+		long DELAY = 1000;
+		timer.scheduleAtFixedRate(countDownn, DELAY, DELAY);
 	
 	}
 	
