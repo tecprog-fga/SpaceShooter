@@ -20,20 +20,20 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	/**
 	 * Sprite for build first screen of game's continue
 	 */
-	private Sprite continueScreen = null; //T01 T05 T07 T06
+	private Sprite continueScreen = null;
 	/**
 	 * This sprite build screen for countdown of game's continue
 	 */
-	private Sprite countdownScreen = null; //T01 T05 T07 T06
+	private Sprite countdownScreen = null;
 	/**
 	 * This sprite build enter screen after the limit game's continue is done
 	 */
-	private Sprite enterScreen = null; //T01 T05 T07 T06
+	private Sprite enterScreen = null;
 
 	/**
 	 * This object represent the building delpth scene screen
 	 */
-	private Parallax delpthScene = null; //T01 T05 T07 T06
+	private Parallax delpthScene = null;
 
 	/**
 	 * Initialize paths
@@ -131,7 +131,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			final String MSG_TIMER = "Timer Ended"; //$NON-NLS-1$
 			System.out.println(MSG_TIMER);
 
-			GameScene gameOver = null; //T06 T07 T08
+			GameScene gameOver = null;
 			gameOver = new GameOver();
 			this.game.transitTo(gameOver);
 		}
@@ -154,7 +154,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 				//Transit to a continue state of the game
 				MenuScene transitScene = null;
 				transitScene = new MenuScene();
-				this.game.transitTo(transitScene.firstStage());
+				this.game.transitTo(transitScene.firstStageScene());
 
 			} else if (this.keyboard.keyDown(Keyboard.ESCAPE_KEY)) {
 				GameScene menu = null;

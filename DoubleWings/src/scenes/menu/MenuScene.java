@@ -97,7 +97,7 @@ public class MenuScene extends GameScene {
 		}
 	}
 
-	private void moveArrow() {
+	private void currentArrow() {
 		int currentButtonIndex = 0;
 		currentButtonIndex = this.selectedMenuOption.ordinal();
 
@@ -110,7 +110,7 @@ public class MenuScene extends GameScene {
 	}
 
 	//Draw scene elements
-	private void draw() {
+	private void drawScenes() {
 		background.draw();
 		title.draw();
 		arrow.draw();
@@ -122,7 +122,7 @@ public class MenuScene extends GameScene {
 
 	private static GameScene firstLevel = null;
 
-	public GameScene firstStage(){
+	public GameScene firstStageScene(){
 		if(firstLevel == null){
 			firstLevel = new StageTest();
 			return firstLevel;
@@ -141,7 +141,7 @@ public class MenuScene extends GameScene {
 
 			case Start_Game:
 				//transit to game
-				game.transitTo(firstStage());
+				game.transitTo(firstStageScene());
 				break;
 			case Ranking:
 				//transit to ranking
@@ -163,11 +163,11 @@ public class MenuScene extends GameScene {
 		checkMenuOption();
 
 		//Define current arrow position
-		moveArrow();
+		currentArrow();
 
 		checkButtonSelection();
 
 		// Draw menu elements
-		draw();
+		drawScenes();
 	}
 }
