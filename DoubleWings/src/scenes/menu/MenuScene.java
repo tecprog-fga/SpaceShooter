@@ -1,6 +1,6 @@
 package scenes.menu;
 
-import scenes.ClassicContinue;
+import scenes.ContinueGame;
 import scenes.GameScene;
 import scenes.stages.stage1.StageTest;
 

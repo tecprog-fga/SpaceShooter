@@ -10,8 +10,7 @@ import scenes.menu.MenuScene;
 import util.CountDownTimer;
 import util.CountDownTimerEnds;
 
-public class ClassicContinue extends GameScene implements CountDownTimerEnds {
-
+public class ContinueGame extends GameScene implements CountDownTimerEnds {
 
 	@Override
 	protected void viewSetup() {
@@ -47,7 +46,7 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	private final static String CONTINUE_PATH = "src/assets/img/continue/continue.png"; //$NON-NLS-1$
 	private final static String COUNTDOWN_PATH = "src/assets/img/continue/number_9.png"; //$NON-NLS-1$
 	private final static String ENTER_PATH = "src/assets/img/continue/Enter-Download-PNG.png";	 //$NON-NLS-1$
-	
+
 	public void buildInitialScene() {
 
 		//Configure enter key and escape
@@ -96,8 +95,8 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 		CountDownTimer countDown = new CountDownTimer();
 		countDown.delegate = this;
 
-		final int delay = 1000; //T07 T08 
-		timer.scheduleAtFixedRate(countDown, delay, delay);
+		final int DELAY = 1000; //T07 T08 
+		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 
 	}
 
@@ -105,13 +104,13 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	public void updateScene() {
 
 		final int PIXELS_DOWN = 800; //T07 T08
-		final int PIXELS_UP = 600; //T07 T08
+		final int PIXELS_SIDES = 600; //T07 T08
 
 		//Print all layers that have been added
 		this.delpthScene.drawLayers();
 
 		//The method below is responsible for maintaining infinite repetition of the layers.
-		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_UP, false);
+		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
 		//Move the parallax orientation vertically
 		this.delpthScene.moveLayersStandardY(false);
@@ -126,12 +125,12 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 
 	// Method that after the end of the time transit to the screen of game over.
 	@Override
-	public void terminate() {
+	public void finishScene() {
 		if (this.game != null){
-			
+
 			final String MSG_TIMER = "Timer Ended"; //$NON-NLS-1$
 			System.out.println(MSG_TIMER);
-			
+
 			GameScene gameOver = null; //T06 T07 T08
 			gameOver = new GameOver();
 			this.game.transitTo(gameOver);
@@ -143,7 +142,7 @@ public class ClassicContinue extends GameScene implements CountDownTimerEnds {
 	public void updateImageForIndex(int index) {
 		final String LOAD_IMAGE_PATH = "src/assets/img/continue/number_"; //$NON-NLS-1$
 		final String PNG_EXTENSION = ".png"; //$NON-NLS-1$
-		
+
 		this.countdownScreen.loadImage(LOAD_IMAGE_PATH + String.valueOf(index) + PNG_EXTENSION); 
 	}
 

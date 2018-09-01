@@ -14,7 +14,7 @@ public class CountDownTimer extends TimerTask {
 		count -= 1;
 		delegate.updateImageForIndex(count);
 		if(count < 0) {
-			delegate.terminate();
+			delegate.finishScene();
 			delegate = null;
 			this.cancel();
 		}

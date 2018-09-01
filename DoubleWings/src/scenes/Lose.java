@@ -84,7 +84,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		this.lifeRemaining.x = WindowConstants.WIDTH/2 - this.lifeRemaining.width/2;
 		this.lifeRemaining.y = WindowConstants.HEIGHT/2 - this.lifeRemaining.height/2;
 		
-		timeWait();
+		buildWaitScene();
 	}
 	
 	@Override
@@ -106,7 +106,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	}
 	
 	/* Time wait to transit between scene */
-	public void timeWait(){
+	public void buildWaitScene(){
 		
 		Timer timer = new Timer();
 		CountDownTimer countDownn = new CountDownTimer();
@@ -138,13 +138,13 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 * Continue.
 	 */
 	@Override
-	public void terminate() {
+	public void finishScene() {
 		if (this.game != null){
 			final String END_TIMER = "Timer Ended"; //$NON-NLS-1$
 			System.out.println(END_TIMER);
 			
-			ClassicContinue classicContinue = null;
-			classicContinue = new ClassicContinue();
+			ContinueGame classicContinue = null;
+			classicContinue = new ContinueGame();
 			
 			this.game.transitTo(classicContinue);
 		}

@@ -11,7 +11,7 @@ import entity.Enemy;
 import entity.player.*;
 import commands.*;
 import constants.WindowConstants;
-import scenes.ClassicContinue;
+import scenes.ContinueGame;
 import scenes.GameOver;
 import scenes.GameScene;
 import game.evolver.GameEvent;
@@ -247,7 +247,7 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 
 	@Override
 	public void transitToContinue() {
-		GameScene scene = new ClassicContinue();
+		GameScene scene = new ContinueGame();
 		this.game.transitTo(scene);
 	}
 }
