@@ -7,6 +7,8 @@ import game.GameController;
 
 public class Main {
 	
+	public final static int KEEP_FRAMERATE = 16;
+	
 	public static void main(String[] args) {
 
 		System.out.println("It's running!");
@@ -32,7 +34,7 @@ public class Main {
 		game.transitTo(scene);
 
 		boolean gameIsRunning = true;
-
+		
 		/**
 		 * Game main loop
 		 */
@@ -40,7 +42,7 @@ public class Main {
 			/**
 			 * Delay to keep 60 FPS
 			 */
-			gameScreen.delay(16);
+			gameScreen.delay(KEEP_FRAMERATE);
 
 			/**
 			 * Clear screen

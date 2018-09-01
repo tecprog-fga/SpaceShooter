@@ -8,6 +8,7 @@ public class MoveCommand implements Command {
 	 * */
 	private double distanceToMove = 50;
 	private CommandType direction = null;
+	private final int UNITARY_DISPLACEMENT = 1;
 
 	/**
 	 * 
@@ -25,7 +26,7 @@ public class MoveCommand implements Command {
 	public boolean executeDisplacement(Sprite actor) {
 		if (this.distanceToMove > 0) {
 			moveActor(actor);
-			this.distanceToMove -= 1;
+			this.distanceToMove -= UNITARY_DISPLACEMENT;
 			return false;
 		} else {
 			return true;
@@ -42,7 +43,7 @@ public class MoveCommand implements Command {
 			for(Sprite actor: actors) {
 				moveActor(actor);
 			}
-			this.distanceToMove -= 1;
+			this.distanceToMove -= UNITARY_DISPLACEMENT;
 			return false;
 		} else {
 			return true;
@@ -56,19 +57,19 @@ public class MoveCommand implements Command {
 	private void moveActor(Sprite actor) {
 		switch(this.direction) {
 		case LEFT:
-			actor.x -= 1;
+			actor.x -= UNITARY_DISPLACEMENT;
 			break;
 			
 		case DOWN:
-			actor.y += 1;
+			actor.y += UNITARY_DISPLACEMENT;
 			break;
 			
 		case RIGHT:
-			actor.x += 1;
+			actor.x += UNITARY_DISPLACEMENT;
 			break;
 			
 		case UP:
-			actor.y -= 1;
+			actor.y -= UNITARY_DISPLACEMENT;
 			break;
 		}
 	}

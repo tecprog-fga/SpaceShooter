@@ -14,27 +14,31 @@ public class HUD implements GameEntityObserver {
 	private Sprite shieldLifeBarOrnament = null;
 	private Sprite numberOfLivesImage = null;
 	private HudScore scoreText = null;
-
+	final String ENERGY = "src/assets/img/hud/energy.png"; //$NON-NLS-1$
+	final String SHIELD_BAR_ORNAMENT = "src/assets/img/hud/shield_bar_ornament.png"; //$NON-NLS-1$
+	final String LIVES = "src/assets/img/hud/chances.png"; //$NON-NLS-1$
+	final int SCORE_FONT_SIZE = 40;
+	
 	public HUD() {
 		/**
 		 * Setting HUD elements initial setups
 		 */
-		shieldLifeBar = new Sprite("src/assets/img/hud/energy.png");
+		shieldLifeBar = new Sprite(ENERGY);
 		this.shieldLifeBar.x = WindowConstants.WIDTH/2 - this.shieldLifeBar.width/2;
 		this.shieldLifeBar.y = WindowConstants.HEIGHT - this.shieldLifeBar.height;
 
-		shieldLifeBarOrnament = new Sprite("src/assets/img/hud/shield_bar_ornament.png");
+		shieldLifeBarOrnament = new Sprite(SHIELD_BAR_ORNAMENT);
 		this.shieldLifeBarOrnament.x = 0;
 		this.shieldLifeBarOrnament.y = WindowConstants.HEIGHT - this.shieldLifeBarOrnament.height;
 
-		numberOfLivesImage = new Sprite("src/assets/img/hud/chances.png", 4);
+		numberOfLivesImage = new Sprite(LIVES, 4);
 		this.numberOfLivesImage.setCurrFrame(3);
 		this.numberOfLivesImage.x = WindowConstants.WIDTH - numberOfLivesImage.width;
 		this.numberOfLivesImage.y = 0;
 
 		scoreText = new HudScore(10, 40);
 		scoreText.setColor(Color.WHITE);
-		scoreText.setFont(new Font("Arial",Font.TRUETYPE_FONT, 40));
+		scoreText.setFont(new Font("Arial",Font.TRUETYPE_FONT, SCORE_FONT_SIZE));
 		scoreText.setScreenScore(0);
 	}
 
@@ -69,13 +73,16 @@ public class HUD implements GameEntityObserver {
 		 */
 		this.shieldLifeBar.x = WindowConstants.WIDTH/2 - this.shieldLifeBar.width/2;
 	}
+	
+	final int MAX_NUMBER_OF_LIVES = 3;
+	final int MIN_NUMBER_OF_LIVES = 0;
 
 	/**
 	 * Update player chances on HUD
 	 * @param playerChances
 	 */
 	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
-		if (playerNumberOfLives <= 3 && playerNumberOfLives >= 0) {
+		if (playerNumberOfLives <= MAX_NUMBER_OF_LIVES && playerNumberOfLives >= MIN_NUMBER_OF_LIVES) {
 			this.numberOfLivesImage.setCurrFrame(playerNumberOfLives);
 		} else {
 			System.out.println("HUD log: Player chances number is out of range.");

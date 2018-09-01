@@ -18,7 +18,7 @@ import java.util.ArrayList;
  */
 public class GenerateBehavior {
 	
-	private final Path scriptPath;
+	private final Path SCRIPT_PATH;
 	private final static Charset ENCODING = StandardCharsets.UTF_8;  
 
 	/**
@@ -26,7 +26,7 @@ public class GenerateBehavior {
 	 *@param scriptPath path of an existing, readable file.
 	 */
 	public GenerateBehavior(Path scriptPath) {
-		this.scriptPath = scriptPath;
+		this.SCRIPT_PATH = scriptPath;
 	}
 
 	/**
@@ -37,7 +37,7 @@ public class GenerateBehavior {
 	public final ArrayList<Command> processBehavior() throws IOException {
 		ArrayList<Command> commandsList = null;
 		commandsList = new ArrayList<Command>();
-		try (Scanner commands = new Scanner(scriptPath, ENCODING.name())) {
+		try (Scanner commands = new Scanner(SCRIPT_PATH, ENCODING.name())) {
 			while (commands.hasNextLine()) {
 				commandsList.add(processLine(commands.nextLine()));
 			}
