@@ -20,14 +20,13 @@ public class Enemy extends GameEntity {
 		if (commandCount < commands.length) {
 			if (commands[commandCount].executeDisplacement(this)) {
 				commandCount += 1;
-			} else {/*donot*/}
+				} else {/*donot*/}
 		System.out.println("x: " + this.x + " y: " + this.y);
 		} else {/*donot*/}
 	}
 	
 	public Enemy(String fileName) {
 		super(fileName);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -38,7 +37,9 @@ public class Enemy extends GameEntity {
 			Bullet bullet = (Bullet) entity;
 			PlayerSpaceship spaceship = (PlayerSpaceship) bullet.owner;
 			
-			//Increase Player Score
+			/*
+			 * Increase Player Score
+			 */
 			spaceship.getPlayer().increaseScore(100);
 		}
 	}
