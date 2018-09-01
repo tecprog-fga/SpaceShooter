@@ -19,14 +19,14 @@ import game.evolver.GameEventCallback;
 
 public class StageTest extends GameScene implements GameEventCallback, PlayerSceneDelegate {
 
-	private World gameWorld;
-	private HUD hud;
+	private World gameWorld = null;
+	private HUD hud = null;
 	private Player player = new Player();
-	private ArrayList<Command> commands;
+	private ArrayList<Command> commands = null;
 	private Command currentCommand = null;
 	private int commandCount = 0;
-	private Enemy asteroid1;
-	private Parallax parallax;
+	private Enemy asteroid1 = null;
+	private Parallax parallax = null;
 
 	@Override
 	public void buildInitialScene(){
@@ -108,7 +108,8 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 
 	public void createSpaceShip() {
 		//Creating player sprite
-		PlayerSpaceship spaceship = player.getSpaceship();
+		PlayerSpaceship spaceship = null;
+		spaceship = player.getSpaceship();
 
 		spaceship.gameWorld = this.gameWorld;
 		spaceship.setKeySet(Keyboard.UP_KEY, 
@@ -122,7 +123,8 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	}
 
 	public void createAsteroid(double velY) {
-		Enemy asteroid = this.gameWorld.createEnemy();
+		Enemy asteroid = null;
+		asteroid = this.gameWorld.createEnemy();
 		asteroid.loadImage("src/assets/img/asteroid.png");
 		asteroid.setLife(10);
 		asteroid.x = Math.random() * (WindowConstants.WIDTH - asteroid.width*2) + asteroid.width;
@@ -241,13 +243,15 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	// Player Scene Delegate
 	@Override
 	public void transitToGameOver() {
-		GameOver gameOver = new GameOver();
+		GameOver gameOver = null;
+		gameOver = new GameOver();
 		this.game.transitTo(gameOver);
 	}
 
 	@Override
 	public void transitToContinue() {
-		GameScene scene = new ContinueGame();
+		GameScene scene = null;
+		scene = new ContinueGame();
 		this.game.transitTo(scene);
 	}
 }
