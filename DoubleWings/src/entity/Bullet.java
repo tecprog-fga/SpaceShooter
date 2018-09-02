@@ -25,7 +25,7 @@ public class Bullet extends GameEntity {
 	}
 	
 	@Override
-	public void reborn(){
+	public void reborn() {
 		super.reborn();
 		this.owner = null;
 	}
