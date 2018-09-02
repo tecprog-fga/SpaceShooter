@@ -3,7 +3,6 @@ package entity;
 import jplay.Sprite;
 import game.World;
 
-
 public class GameEntity extends Sprite {
 
 	public String name;
@@ -19,8 +18,7 @@ public class GameEntity extends Sprite {
 	 * Kill entity after leaving bounds
 	 */
 	private double entityLimit = 1000; 
-	
-	
+		
 	public GameEntity(String fileName) {
 		super(fileName);
 		name = fileName;
@@ -42,7 +40,7 @@ public class GameEntity extends Sprite {
 	}
 	
 	@Override
-	public void update(){
+	public void update() {
 		super.update();
 		
 		if ( Math.abs(this.x) > this.entityLimit) {

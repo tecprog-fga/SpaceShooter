@@ -7,12 +7,13 @@ public class GameEvent {
 	public int time = 0;
 	private GameEventCallback callback;
 	
-	public void setCallback(GameEventCallback callback){
+	public void setCallback(GameEventCallback callback) {
 		this.callback = callback;
 	}
 	
-	public void run(){
-		if (callback != null){
+	public void run() {
+		
+		if (callback != null) {
 			callback.eventCallback(this);
 		}
 	}
