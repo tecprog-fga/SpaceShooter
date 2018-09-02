@@ -4,11 +4,11 @@ import entity.player.PlayerSpaceship;
 
 public class Bullet extends GameEntity {
 	
-	private static String imageFile = "src/assets/img/bullet_player.png";
+	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";
 	public GameEntity owner = null;
 	
 	public Bullet() {
-		super(imageFile);
+		super(IMAGE_BULLET);
 	}
 	
 	public void fireBy(GameEntity owner, double vely) {
