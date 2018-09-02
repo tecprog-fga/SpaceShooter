@@ -8,13 +8,14 @@ import entity.player.PlayerSpaceship;
 public class Enemy extends GameEntity {
 
 	static private String IMAGE_TEMP_PLAYER = "src/assets/img/temp_player.png";
-	private int commandCount = 0;
 
 	public Enemy(int x, int y) {
 		super(Enemy.IMAGE_TEMP_PLAYER);
 		this.x = x;
 		this.y = y;
 	}
+	
+	private int commandCount = 0;
 	
 	public void executeBehavior(Command[] commands) {
 		if (commandCount < commands.length) {
@@ -24,6 +25,7 @@ public class Enemy extends GameEntity {
 		System.out.println("x: " + this.x + " y: " + this.y);
 		} else {/*donot*/}
 	}
+	
 	
 	public Enemy(String fileName) {
 		super(fileName);

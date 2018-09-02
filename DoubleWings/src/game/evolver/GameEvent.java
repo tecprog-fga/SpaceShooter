@@ -2,7 +2,7 @@ package game.evolver;
 
 public class GameEvent {
 	
-	public String name = "";
+	public String name = null;
 	public int type = 0;
 	public int time = 0;
 	private GameEventCallback callback;

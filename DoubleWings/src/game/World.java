@@ -12,11 +12,6 @@ import scenes.GameScene;
 
 public class World {
 	
-	private ArrayList<GameEntity> objs = null;
-	private ArrayList<GameEntity> deadObjs = null; /*Array that Handles dead entities*/
-	private GameEvolver evolver = new GameEvolver();
-	private EnemyPool enemyPool = new EnemyPool();
-	private BulletPool bulletPool = new BulletPool();
 	public Keyboard keyboard = null;
 	
 	public World() {
@@ -102,6 +97,9 @@ public class World {
 		deadObjs.clear();
 	}
 	
+	private BulletPool bulletPool = new BulletPool();
+	private EnemyPool enemyPool = new EnemyPool();
+	
 	/*
 	 * GameEvent Facade
 	 */
@@ -137,4 +135,8 @@ public class World {
 	public void releaseEnemy(Enemy enemy) {
 		enemyPool.acquire(enemy);
 	}
+	
+	private ArrayList<GameEntity> objs = null;
+	private ArrayList<GameEntity> deadObjs = null; /*Array that Handles dead entities*/
+	private GameEvolver evolver = new GameEvolver();
 }

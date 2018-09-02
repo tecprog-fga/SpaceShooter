@@ -4,25 +4,21 @@ import jplay.Sprite;
 import game.World;
 
 public class GameEntity extends Sprite {
-
-	public String name = null;
-	protected int life = 1;
-	private boolean isDead = false;
-	public Double velx = 0.0;
-	public Double vely = 0.0;
-	public int maxLife = 1;
-	public boolean isCollidable = true;
-	public World gameWorld = null;
 	
 	/*
 	 * Kill entity after leaving bounds
 	 */
 	private double entityLimit = 1000; 
-		
+	
+	public String name = null;
+	
 	public GameEntity(String fileName) {
 		super(fileName);
 		name = fileName;
 	}
+	
+	protected int life = 1;
+	private boolean isDead = false;
 
 	/*
 	 * Life getter and setter
@@ -76,6 +72,10 @@ public class GameEntity extends Sprite {
 		
 	}
 
+	public Double velx = 0.0;
+	public Double vely = 0.0;
+	public int maxLife = 1;		
+	
 	public void reborn(){
 		this.isDead = false;
 		this.x = 0;
@@ -85,4 +85,7 @@ public class GameEntity extends Sprite {
 		this.setLife(maxLife);
 		this.name = "empty entity";
 	}
+	
+	public boolean isCollidable = true;
+	public World gameWorld = null;
 }

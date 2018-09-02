@@ -5,7 +5,6 @@ import entity.player.PlayerSpaceship;
 public class Bullet extends GameEntity {
 	
 	private static String IMAGE_BULLET = "src/assets/img/bullet_player.png";
-	public GameEntity owner = null;
 	
 	public Bullet() {
 		super(IMAGE_BULLET);
@@ -29,4 +28,5 @@ public class Bullet extends GameEntity {
 		super.reborn();
 		this.owner = null;
 	}
+	public GameEntity owner = null; 
 }

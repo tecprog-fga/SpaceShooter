@@ -4,15 +4,13 @@ import java.util.ArrayList;
 
 public class GameEvolver {
 
-	private ArrayList<GameEvent> history = new ArrayList<GameEvent>();
-	private ArrayList<GameEvent> aux = new ArrayList<GameEvent>();
-	private ArrayList<GameEvent> events = new ArrayList<GameEvent>();
-	private int iterator = 0; 
 	private boolean isPaused = true;
 	
 	public void start() {
 		isPaused = false;
 	}
+	
+	private ArrayList<GameEvent> events = new ArrayList<GameEvent>();
 	
 	public void add(GameEvent event) {
 		if (event != null){
@@ -20,6 +18,8 @@ public class GameEvolver {
 			events.add(event);
 		}
 	}
+	
+	private int iterator = 0;
 	
 	public int getCurrentIteration() {
 		return iterator;
@@ -43,6 +43,9 @@ public class GameEvolver {
 	public void pause() {
 		isPaused = true;
 	}
+	
+	private ArrayList<GameEvent> history = new ArrayList<GameEvent>();
+	private ArrayList<GameEvent> aux = new ArrayList<GameEvent>();
 	
 	private void checkEvents() {
 		

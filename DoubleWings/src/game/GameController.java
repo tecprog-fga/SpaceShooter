@@ -5,11 +5,7 @@ import scenes.stages.stage1.StageTest;
 import jplay.Keyboard;
 
 public class GameController {
-	
-	public GameScene currentScene = null;
-	public Keyboard keyboard = null;
-	private boolean isRunning = true; 
-	
+
 	/*
 	 * Transit to another scene
 	 */
@@ -35,6 +31,8 @@ public class GameController {
 		currentScene = scene;
 	}
 	
+	private boolean isRunning = true;
+	
 	/*
 	 *  Updates current scene and control running status
 	 */
@@ -56,4 +54,7 @@ public class GameController {
 		isRunning = false;
 	}
 	
+	public GameScene currentScene = null;
+	public Keyboard keyboard = null;
+
 }
