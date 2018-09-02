@@ -4,7 +4,7 @@ import entity.player.PlayerSpaceship;
 
 public class Bullet extends GameEntity {
 	
-	private static String IMAGE_BULLET = "src/assets/img/bullet_player.png";
+	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";
 	
 	public Bullet() {
 		super(IMAGE_BULLET);

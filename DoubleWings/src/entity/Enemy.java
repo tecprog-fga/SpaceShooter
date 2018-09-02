@@ -7,7 +7,7 @@ import entity.player.PlayerSpaceship;
 
 public class Enemy extends GameEntity {
 
-	static private String IMAGE_TEMP_PLAYER = "src/assets/img/temp_player.png";
+	static private final String IMAGE_TEMP_PLAYER = "src/assets/img/temp_player.png";
 
 	public Enemy(int x, int y) {
 		super(Enemy.IMAGE_TEMP_PLAYER);
