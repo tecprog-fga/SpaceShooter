@@ -12,8 +12,8 @@ import scenes.GameScene;
 
 public class World {
 	
-	private ArrayList<GameEntity> objs;
-	private ArrayList<GameEntity> deadObjs; /*Array that Handles dead entities*/
+	private ArrayList<GameEntity> objs = null;
+	private ArrayList<GameEntity> deadObjs = null; /*Array that Handles dead entities*/
 	private GameEvolver evolver = new GameEvolver();
 	private EnemyPool enemyPool = new EnemyPool();
 	private BulletPool bulletPool = new BulletPool();

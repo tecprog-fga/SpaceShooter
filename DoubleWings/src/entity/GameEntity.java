@@ -5,7 +5,7 @@ import game.World;
 
 public class GameEntity extends Sprite {
 
-	public String name;
+	public String name = null;
 	protected int life = 1;
 	private boolean isDead = false;
 	public Double velx = 0.0;
