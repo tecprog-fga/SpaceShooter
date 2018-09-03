@@ -1,5 +1,6 @@
 package commands;
 
+import entity.Enemy;
 import jplay.Sprite;
 
 public class MoveCommand implements Command {
@@ -73,4 +74,5 @@ public class MoveCommand implements Command {
 			break;
 		}
 	}
+
 }
