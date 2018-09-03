@@ -8,24 +8,24 @@ enum OptionsMenu {
 
 	private final int currentOption; //Current option on menu
 
-	OptionsMenu(int currentOption){
+	OptionsMenu(int currentOption) {
 		this.currentOption = currentOption;
 	}
 
-	OptionsMenu next(){
+	OptionsMenu next() {
 
 		int chosenOption = currentOption;
-		if (currentOption < 3){
+		if (currentOption < 3) {
 			chosenOption += 1;
 		}
 
 		return defineOption(chosenOption);
 	}
 
-	OptionsMenu back(){
+	OptionsMenu back() {
 
 		int chosenOption = currentOption;
-		if (currentOption > 0){
+		if (currentOption > 0) {
 			chosenOption -= 1;
 		}
 
@@ -34,7 +34,7 @@ enum OptionsMenu {
 
 	private OptionsMenu defineOption(int chosenOption) {
 
-		switch(chosenOption){
+		switch(chosenOption) {
 
 		case 0:
 			return OptionsMenu.START_GAME;

@@ -18,7 +18,7 @@ public class MenuScene extends GameScene {
 
 	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;//Define initial menu option
 
-	protected void buildInitialScene(){
+	protected void buildInitialScene() {
 
 		//Reset option menu
 		selectedMenuOption = OptionsMenu.START_GAME;
@@ -31,7 +31,8 @@ public class MenuScene extends GameScene {
 	private GameImage background = null;
 	private Sprite title = null;
 	private Sprite arrow = null;
-	protected void viewSetup(){
+	
+	protected void viewSetup() {
 		//Define Scene elements
 		final String BACKGROUNG_PATH = "src/assets/img/menu/background.png";
 		background = new GameImage(BACKGROUNG_PATH);
@@ -90,7 +91,7 @@ public class MenuScene extends GameScene {
 	//Check keyboard and update Menu option
 	private void checkMenuOption() {
 		// Down selection
-		if (keyboard.keyDown(Keyboard.DOWN_KEY)){
+		if (keyboard.keyDown(Keyboard.DOWN_KEY)) {
 			String MSG_DOWN = "down";
 			System.out.println(MSG_DOWN);
 			//Change current menu option
@@ -99,7 +100,7 @@ public class MenuScene extends GameScene {
 		}
 
 		// Up selection		
-		if (keyboard.keyDown(Keyboard.UP_KEY)){
+		if (keyboard.keyDown(Keyboard.UP_KEY)) {
 			String MSG_UP = "up";
 			System.out.println(MSG_UP);
 			//Change current menu option
@@ -133,7 +134,7 @@ public class MenuScene extends GameScene {
 
 	private static GameScene firstLevel = null;
 
-	public GameScene firstStageScene(){
+	public GameScene firstStageScene() {
 		if(firstLevel == null){
 			firstLevel = new FirstStage();
 			return firstLevel;
@@ -145,7 +146,7 @@ public class MenuScene extends GameScene {
 	}
 
 	//Check keyboard enter and dispatch new scene
-	private void checkButtonSelection(){
+	private void checkButtonSelection() {
 		if (keyboard.keyDown(Keyboard.ENTER_KEY)){
 
 			switch(selectedMenuOption){
@@ -168,7 +169,7 @@ public class MenuScene extends GameScene {
 		}
 	}
 
-	public void updateScene(){
+	public void updateScene() {
 
 		// Control menu option selection
 		checkMenuOption();
