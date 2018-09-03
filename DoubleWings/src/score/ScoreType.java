@@ -12,4 +12,5 @@ public enum ScoreType {
 	public int getValue() {
 		return this.scoreValue;
 	}
+
 }

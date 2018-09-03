@@ -1,7 +1,7 @@
 package game;
 
 import scenes.GameScene;
-import scenes.stages.stage1.StageTest;
+import scenes.stages.stage1.FirstStage;
 import jplay.Keyboard;
 
 public class GameController {
@@ -16,14 +16,12 @@ public class GameController {
 		 */
 		if (scene == null || keyboard == null) { 
 		  return;
-		} else if (currentScene != null) {
-			currentScene.destroy();
+		} else if(currentScene != null){
+			currentScene.destroyScene();
 		}
 
-		/*
-		 * Run initial setup
-		 */
-		scene.configure(this);
+		//run initial setup
+		scene.configureGameScene(this);
 		
 		/*
 		 * Update current scene variable
@@ -38,11 +36,9 @@ public class GameController {
 	 */
 	public boolean update() {
 		
-		/*
-		 * Updates current scene
-		 */
-		if (currentScene != null) {
-			currentScene.update();
+		//Updates current scene
+		if (currentScene != null){
+			currentScene.updateScene();
 		}
 		return isRunning; 
 	}

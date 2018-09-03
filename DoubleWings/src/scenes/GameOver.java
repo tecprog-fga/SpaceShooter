@@ -9,60 +9,67 @@ import util.CountDownTimer;
 import util.CountDownTimerEnds;
 
 public class GameOver extends GameScene implements CountDownTimerEnds {
-		
-	// Sprite on scene
-	private GameImage background;
-	private Sprite gameOver;
 	
-	public void initialSetup() {
-		
-		//Set game controller elements
-		keyboard = game.keyboard;
-		
-		//Creation image background
-		background = new GameImage("src/assets/img/temp_background.png");
-	
-		//Creation image Game Over
-		gameOver = new Sprite("src/assets/img/continue/3540295891_logo.jpg");
-		//Game over sprite center position
-		gameOver.x = WindowConstants.WIDTH/2 - gameOver.width/2;
-		gameOver.y = WindowConstants.HEIGHT/2 - gameOver.height/2;
-		
-		timeWait();
-	}
+	private GameImage background = null;
+	private Sprite gameOver = null;
+	public void buildInitialScene() {
 
+		//Set game controller elements
+		this.keyboard = this.game.keyboard;
+
+		//Creation image background
+		final String BACKGROUND_PATH = "src/assets/img/temp_background.png"; //$NON-NLS-1$
+		this.background = new GameImage(BACKGROUND_PATH);
+
+		//Creation image Game Over
+		final String GAME_OVER_PATH = "src/assets/img/continue/3540295891_logo.jpg"; //$NON-NLS-1$
+		this.gameOver = new Sprite(GAME_OVER_PATH);
+
+		//Game over sprite center position
+		this.gameOver.x = WindowConstants.WIDTH/2 - this.gameOver.width/2;
+		this.gameOver.y = WindowConstants.HEIGHT/2 - this.gameOver.height/2;
+
+		buildWaitScene();
+	}
 
 	@Override
 	protected void viewSetup() {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 	//Time wait to transit between scene
-	public void timeWait(){
-		Timer timer = new Timer();
-		CountDownTimer countDownn = new CountDownTimer();
-		countDownn.delegate = this;
-		long delay = 1000;
-		timer.scheduleAtFixedRate(countDownn, delay, delay);
+	public void buildWaitScene(){
+
+		Timer timer = null;
+		timer = new Timer();
+
+		CountDownTimer countDown = null;
+		countDown = new CountDownTimer();
+		countDown.delegateAction = this;
+
+		final int DELAY = 1000;
+		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
-	
+
 	//Update image Sprite on Screen
-	public void update() {
-		
-		background.draw();
-		gameOver.draw();
-		
+	public void updateScene() {
+		this.background.draw();
+		this.gameOver.draw();
 	}
-	
+
 	//Method to return to main Menu
 	@Override
-	public void terminate() {
-		System.out.println("Timer Ended");
-		GameScene menu = new MenuScene();
-		game.transitTo(menu);
+	public void finishScene() {
+		final String MSG_TIMER = "Timer Ended"; //$NON-NLS-1$
+		System.out.println(MSG_TIMER);
+
+		GameScene menu = null;
+		menu = new MenuScene();
+
+		this.game.transitTo(menu);
 	}
-	
+
 	@Override
 	public void updateImageForIndex(int index) {
 		//Nothing to do

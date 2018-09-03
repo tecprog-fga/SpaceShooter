@@ -7,7 +7,7 @@ import jplay.Keyboard;
 import entity.Bullet;
 import entity.Enemy;
 import entity.GameEntity;
-import scenes.ClassicContinue;
+import scenes.ContinueGame;
 import scenes.GameScene;
 
 public class World {
