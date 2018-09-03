@@ -53,17 +53,25 @@ public class MenuScene extends GameScene {
 
 	//Add buttons to array
 	private void appendButtons() {
-		Sprite startButton = new Sprite("src/assets/img/menu/start_button.png");
-		Sprite rankingButton = new Sprite("src/assets/img/menu/ranking.png");
-		Sprite settingsButton = new Sprite("src/assets/img/menu/settings.png");
-		Sprite quitButton = new Sprite("src/assets/img/menu/quit.png");
+		final String START_BUTTON_PATH = "src/assets/img/menu/start_button.png";
+		Sprite startButton = null;
+		startButton = new Sprite(START_BUTTON_PATH);
+		final String RANKING_PATH = "src/assets/img/menu/ranking.png";
+		Sprite rankingButton = null;
+		rankingButton = new Sprite(RANKING_PATH);		
+		final String SETTINGS_PATH = "src/assets/img/menu/settings.png";
+		Sprite settingsButton = null;
+		settingsButton = new Sprite(SETTINGS_PATH);
+		final String QUIT_PATH = "src/assets/img/menu/quit.png";
+		Sprite quitButton = null;
+		quitButton = new Sprite(QUIT_PATH);
 
 		buttons.add(startButton);
 		buttons.add(rankingButton);
 		buttons.add(settingsButton);
 		buttons.add(quitButton);
 
-		for(OptionMenu option : OptionMenu.values()) {
+		for(OptionsMenu option : OptionsMenu.values()) {
 			int currentButtonIndex = option.ordinal(); //Integer value of variable option
 
 			//Define the position of the first element according to the title

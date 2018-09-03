@@ -92,7 +92,8 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		Timer timer = null; 
 		timer = new Timer();
 
-		CountDownTimer countDown = new CountDownTimer();
+		CountDownTimer countDown = null;
+		countDown = new CountDownTimer();
 		countDown.delegate = this;
 
 		final int DELAY = 1000; 
