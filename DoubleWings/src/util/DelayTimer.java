@@ -5,7 +5,7 @@ import java.util.TimerTask;
 
 public class DelayTimer extends Timer implements DelayDelegate {
 
-	private DelayDelegate delegate;
+	private DelayDelegate delegate = null;
 	private int type = 0;
 
 	public DelayTimer(DelayDelegate delegate, int type) {
@@ -16,7 +16,8 @@ public class DelayTimer extends Timer implements DelayDelegate {
 
 	public void schedule(long delay) {
 		
-		Task task = new Task(this);
+		Task task = null;
+		task = new Task(this);
 		this.schedule(task, delay);
 	}
 
@@ -33,7 +34,7 @@ public class DelayTimer extends Timer implements DelayDelegate {
 
 	private class Task extends TimerTask {
 
-		private DelayDelegate delegate;
+		private DelayDelegate delegate = null;
 
 		public Task(DelayDelegate delegate) {
 			this.delegate = delegate;
