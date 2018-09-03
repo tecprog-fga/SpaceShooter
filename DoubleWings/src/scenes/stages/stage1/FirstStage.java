@@ -129,10 +129,10 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	}
 
 	public final static int LIFES = 10;
+	final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //$NON-NLS-1$
 
 	public void createAsteroid(double velY) {
 		
-		final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //$NON-NLS-1$
 		Enemy asteroid = null;
 
 		asteroid = this.gameWorld.createEnemy();
@@ -149,7 +149,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 	public void createTestAsteroid() {
 		
-		asteroid1 = new Enemy("src/assets/img/asteroid.png");
+		asteroid1 = new Enemy(ASTEROID_PATH);
 		asteroid1.setLife(LIFES);
 		asteroid1.x = WindowConstants.WIDTH / 2 - asteroid1.width / 2;
 		asteroid1.y = 0;
