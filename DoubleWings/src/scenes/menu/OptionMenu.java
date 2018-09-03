@@ -19,7 +19,7 @@ enum OptionsMenu {
 			chosenOption += 1;
 		}
 
-		return OptionsMenu(chosenOption);
+		return defineOption(chosenOption);
 	}
 
 	OptionsMenu back(){
@@ -29,10 +29,10 @@ enum OptionsMenu {
 			chosenOption -= 1;
 		}
 
-		return OptionsMenu(chosenOption);
+		return defineOption(chosenOption);
 	}
 
-	private OptionsMenu OptionsMenu(int chosenOption) {
+	private OptionsMenu defineOption(int chosenOption) {
 
 		switch(chosenOption){
 
