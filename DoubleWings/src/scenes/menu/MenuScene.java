@@ -18,12 +18,12 @@ public class MenuScene extends GameScene {
 	private static final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
 	private static final int DISTANCE_BETWEEN_BUTTONS = WindowConstants.HEIGHT/48;
 
-	private OptionMenu selectedMenuOption = OptionMenu.Start_Game;//Define initial menu option
+	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;//Define initial menu option
 
 	protected void buildInitialScene(){
 
 		//Reset option menu
-		selectedMenuOption = OptionMenu.Start_Game;
+		selectedMenuOption = OptionsMenu.START_GAME;
 
 		//Configure up and down keys
 		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
@@ -35,9 +35,11 @@ public class MenuScene extends GameScene {
 	private Sprite arrow = null;
 	protected void viewSetup(){
 		//Define Scene elements
-		background = new GameImage("src/assets/img/menu/background.png");
+		final String BACKGROUNG_PATH = "src/assets/img/menu/background.png";
+		background = new GameImage(BACKGROUNG_PATH);
 
-		title = new Sprite("src/assets/img/menu/title.png");
+		final String TITLE_PATH = "src/assets/img/menu/title.png";
+		title = new Sprite(TITLE_PATH);
 		title.x = WindowConstants.WIDTH/2 - title.width/2;
 		title.y = WindowConstants.HEIGHT/3 - title.height/2;
 
@@ -147,17 +149,17 @@ public class MenuScene extends GameScene {
 
 			switch(selectedMenuOption){
 
-			case Start_Game:
+			case START_GAME:
 				//transit to game
 				game.transitTo(firstStageScene());
 				break;
-			case Ranking:
+			case RANKING:
 				//transit to ranking
 				break;
-			case Settings:
+			case SETTINGS:
 				//transit to settings
 				break;
-			case Quit:
+			case QUIT:
 				//quit game
 				game.quit();
 				break;
