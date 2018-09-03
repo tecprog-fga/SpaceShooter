@@ -14,8 +14,6 @@ import jplay.Sprite;
 
 // MenuScene 
 public class MenuScene extends GameScene {
-	//GameScene constants
-	private static final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
 	private static final int DISTANCE_BETWEEN_BUTTONS = WindowConstants.HEIGHT/48;
 
 	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;//Define initial menu option
@@ -45,8 +43,8 @@ public class MenuScene extends GameScene {
 
 		//Define buttons position
 		appendButtons();
-
-		arrow = new Sprite("src/assets/img/menu/arrow.png");
+		final String ARROW_PATH = "src/assets/img/menu/arrow.png";
+		arrow = new Sprite(ARROW_PATH);
 		arrow.x = 10;
 		arrow.y = 10;
 	}
@@ -79,6 +77,7 @@ public class MenuScene extends GameScene {
 			//Define the position of the first element according to the title
 			if(currentButtonIndex == 0) {
 				buttons.get(currentButtonIndex).x = WindowConstants.WIDTH/2 - startButton.width/2;
+				final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
 				buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
 				//Define the position of the element according to the last element
 			} else {
@@ -92,7 +91,8 @@ public class MenuScene extends GameScene {
 	private void checkMenuOption() {
 		// Down selection
 		if (keyboard.keyDown(Keyboard.DOWN_KEY)){
-			System.out.println("down");
+			String MSG_DOWN = "down";
+			System.out.println(MSG_DOWN);
 			//Change current menu option
 			selectedMenuOption = selectedMenuOption.next();
 			System.out.println(selectedMenuOption);
@@ -100,7 +100,8 @@ public class MenuScene extends GameScene {
 
 		// Up selection		
 		if (keyboard.keyDown(Keyboard.UP_KEY)){
-			System.out.println("up");
+			String MSG_UP = "up";
+			System.out.println(MSG_UP);
 			//Change current menu option
 			selectedMenuOption = selectedMenuOption.back();
 			System.out.println(selectedMenuOption);
