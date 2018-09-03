@@ -7,27 +7,28 @@ import entity.player.PlayerSpaceship;
 
 public class Enemy extends GameEntity {
 
-	static private String spriteImagePath = "src/assets/img/temp_player.png";
-	private int commandCount = 0;
+	static private final String IMAGE_TEMP_PLAYER = "src/assets/img/temp_player.png";
 
 	public Enemy(int x, int y) {
-		super(Enemy.spriteImagePath);
+		super(Enemy.IMAGE_TEMP_PLAYER);
 		this.x = x;
 		this.y = y;
 	}
 	
+	private int commandCount = 0;
+	
 	public void executeBehavior(Command[] commands) {
 		if (commandCount < commands.length) {
-			if (commands[commandCount].execute(this)) {
+			if (commands[commandCount].executeDisplacement(this)) {
 				commandCount += 1;
-			} else {/*donot*/}
+				} else {/*donot*/}
 		System.out.println("x: " + this.x + " y: " + this.y);
 		} else {/*donot*/}
 	}
 	
+	
 	public Enemy(String fileName) {
 		super(fileName);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -38,7 +39,9 @@ public class Enemy extends GameEntity {
 			Bullet bullet = (Bullet) entity;
 			PlayerSpaceship spaceship = (PlayerSpaceship) bullet.owner;
 			
-			//Increase Player Score
+			/*
+			 * Increase Player Score
+			 */
 			spaceship.getPlayer().increaseScore(100);
 		}
 	}

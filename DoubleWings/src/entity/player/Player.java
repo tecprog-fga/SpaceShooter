@@ -1,48 +1,39 @@
 package entity.player;
 
-
 import entity.Bullet;
 import observer.GameEntityObserver;
 import util.DelayTimer;
 
-
-
 public class Player {
-
-	private static final int initialChances = 3; // Initially the player will have three lifes
-
-	private boolean canContinue = true;
-	private int chances = initialChances;
-	private PlayerSpaceship spaceship;
-	public PlayerSceneDelegate delegate = null;
-
-	private int score;
-	private GameEntityObserver observer = null; //Temp solution to the observer
 	
-	//Respawn
-	public double initialPositionX = 0;
-	public double initialPositionY = 0;
+	private static final int INITIAL_CHANCES = 3; // Initially the player will have three lifes
 	
+	private int score = 0;
+
 	public Player() {
 		super();
 		this.score = 0;
 	}
 
-
-	// HUD observer getter and setter 
-	public GameEntityObserver getObserver() {
+	private GameEntityObserver observer = null; //Temp solution to the observer
+	
+	public GameEntityObserver getObserver() { // HUD observer getter and setter 
 		return this.observer;
 	}
+	
+	private PlayerSpaceship spaceship = null;
 
 	public void setObserver(GameEntityObserver observer) {
-  		//Adding HUD observer to the shield
-  		spaceship.getShield().setObserver(observer);
+		//Adding HUD observer to the shield
+		spaceship.getShield().setObserver(observer);
 		this.observer = observer;
 	}
+	
+	private int chances = INITIAL_CHANCES;
 
-	//Chances setters and getters
-	public void setChances(int chances){
+	public void setChances(int chances){ //Chances setters and getters
 		this.chances = chances;
+		
 		//Notifying HUD to update chances shower
 		if (observer != null) {
 			observer.notifyObserver(this);	
@@ -55,14 +46,14 @@ public class Player {
 		return this.chances;
 	}
 
-	//Score setters and getters
-	public int getScore() {
+	public int getScore() { 	//Score setters and getters
 		return score;
 	}
 
 	public void increaseScore(int score) {
-//		this.score.increaseScore(score);
+		//this.score.increaseScore(score);
 		this.score += score;
+		
 		//Notifying HUD to update score shower
 		if (observer != null) {
 			observer.notifyObserver(this);	
@@ -70,6 +61,9 @@ public class Player {
 			System.out.println("Player log: HUD is null :(");
 		}
 	}
+	
+	public double initialPositionX = 0; //Respawn
+	public double initialPositionY = 0;
 
 	private void resetSpaceship() {
 		this.spaceship.reborn();
@@ -86,7 +80,7 @@ public class Player {
 		setChances(this.chances - 1);
 		//System.out.println("LOST A LIIIIIIIIIFE");
 		System.out.println("lifes on player: " + this.chances);
-		
+
 		if (this.chances < 0) {
 			loseGame();
 		} else {
@@ -95,12 +89,16 @@ public class Player {
 	}
 
 	public void resetLife() {
-		setChances(initialChances);
+		setChances(INITIAL_CHANCES);
 		resetSpaceship();
 		System.out.println("Player log: life reset to: " + this.chances);
 	}
 
+	private boolean canContinue = true;
+	public PlayerSceneDelegate delegate = null;
+	
 	public void loseGame() {
+		
 		if (this.canContinue) {
 			useContinue();
 		} else {
@@ -119,8 +117,6 @@ public class Player {
 		if (spaceship == null){
 			spaceship = new PlayerSpaceship(this, this.initialPositionY, this.initialPositionY, true);
 		}
-		
 		return spaceship;
 	}
-
 }

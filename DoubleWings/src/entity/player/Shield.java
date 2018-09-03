@@ -6,22 +6,19 @@ import observer.GameEntityObserver;
 
 public class Shield extends GameEntity {
 
-	private static String spriteFilePath = "src/assets/img/forceshield.png";
-	private int regeneration;
-	private GameEntity player;
-	private GameEntityObserver observer = null;
+	private static final String SPRITE_FILE_PATH = "src/assets/img/forceshield.png";
 	
-    
+	private int regeneration = 0;
+
+	private GameEntity player = null;
+	
 	//Creation constructor to Shield
 	public Shield(GameEntity player) {
-
 		//Initialization with shield image
-		super(spriteFilePath);
-
+		super(SPRITE_FILE_PATH);
 		//Getting the player from the StageTest class
 		this.player = player;
 		this.life = maxLife;
-
 		//Putting shield on the screen with reference the player position
 		this.x = player.x;
 		this.y = player.y;
@@ -31,13 +28,12 @@ public class Shield extends GameEntity {
 	public void update() {
 		
 		//System.out.println(this.observer);
-		
 		if(this.isCollidable == false){
 			this.x = -500;
 			this.y = -500;
 			return;
 		}
-		
+
 		super.update();
 		
 		//Shield movement
@@ -52,19 +48,19 @@ public class Shield extends GameEntity {
 	// Handle when contact happen
 	@Override
 	public void didContact(GameEntity entity){
+		
 		if (entity.getClass() == Enemy.class){
-
 			entity.receiveDamage(100);
 			this.receiveDamage(10);
 			System.out.println("hit enemy");
 		}
 	}
+	
+	private GameEntityObserver observer = null;
 
 	@Override
 	public void setLife(int newLife){
-		
 		this.life = newLife;
-		
 		//System.out.println(life);
 		
 		if (life <= 0) {
@@ -94,9 +90,7 @@ public class Shield extends GameEntity {
 		super.reborn();
 		this.x = this.player.x;
 		this.y = this.player.y;
-		
 		this.isCollidable = true;
-		
 		observer.notifyObserver(this);
 	}
 }
