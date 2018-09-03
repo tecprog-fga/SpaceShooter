@@ -99,12 +99,11 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	// Update image Sprite on Screen and check button at keyboard
 	public void updateScene() {
 
-		final int PIXELS_DOWN = 800; 
-		final int PIXELS_SIDES = 600;
-
 		//Print all layers that have been added
 		this.delpthScene.drawLayers();
-
+		
+		final int PIXELS_DOWN = 800; 
+		final int PIXELS_SIDES = 600;
 		//The method below is responsible for maintaining infinite repetition of the layers.
 		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 

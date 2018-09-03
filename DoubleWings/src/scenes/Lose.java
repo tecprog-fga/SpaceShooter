@@ -104,21 +104,25 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	public void buildWaitScene(){
 		
 		Timer timer = new Timer();
-		CountDownTimer countDownn = new CountDownTimer();
-		countDownn.delegate = this;
+		CountDownTimer countDown = null;
+		countDown = new CountDownTimer();
+		countDown.delegate = this;
 		long DELAY = 1000;
-		timer.scheduleAtFixedRate(countDownn, DELAY, DELAY);
+		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	
 	}
 	
 	/* Update Sprite on Screen */
 	public void updateScene() {
 		
+		
 		//Print all layers that have been added
 		this.delpthScene.drawLayers();
 		
 		//The method below is responsible for maintaining infinite repetition of the layers.
-		this.delpthScene.repeatLayers(800, 600, false);
+		final int PIXELS_DOWN = 800; 
+		final int PIXELS_SIDES = 600;
+		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 		
 		//Move the parallax orientation vertically
 		this.delpthScene.moveLayersStandardY(false);
