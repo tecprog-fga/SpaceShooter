@@ -13,11 +13,12 @@ public class CountDownTimer extends TimerTask {
 
 		count -= 1;
 		delegate.updateImageForIndex(count);
-		if(count < 0) {
+		
+		if (count < 0) {
+			
 			delegate.finishScene();
 			delegate = null;
 			this.cancel();
 		}
 	}
-
 }
