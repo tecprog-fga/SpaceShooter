@@ -4,20 +4,21 @@ import java.util.TimerTask;
 import util.CountDownTimerEnds;
 
 public class CountDownTimer extends TimerTask {
-	
-	int count = 9;
-	public CountDownTimerEnds delegate;
+
+	int counterTime = 9;
+	public CountDownTimerEnds delegateAction = null;
 
 	@Override
 	public void run() {
+
+		counterTime -= 1;
+		delegateAction.updateImageForIndex(counterTime);
 		
-		count -= 1;
-		delegate.updateImageForIndex(count);
-		if(count < 0) {
-			delegate.terminate();
-			delegate = null;
+		if (counterTime < 0) {
+			
+			delegateAction.finishScene();
+			delegateAction = null;
 			this.cancel();
 		}
 	}
-
 }
