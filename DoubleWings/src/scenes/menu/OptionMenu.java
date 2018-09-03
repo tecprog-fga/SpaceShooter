@@ -1,37 +1,41 @@
 package scenes.menu;
 
-enum OptionMenu {  
-	Start_Game(0), Ranking(1), Settings(2), Quit(3);
+enum OptionMenu {
+	Start_Game(0), 
+	Ranking(1), 
+	Settings(2), 
+	Quit(3);
 
-	private final int value; //Current option on menu
+	private final int currentOption; //Current option on menu
 
-	OptionMenu(int option){
-		value = option;
+	OptionMenu(int currentOption){
+		this.currentOption = currentOption;
 	}
 
 	OptionMenu next(){
 
-		int option = value;
-		if (value < 3){
-			option += 1;
+		int chosenOption = currentOption;
+		
+		if (currentOption < 3){
+			chosenOption += 1;
 		}
 
-		return OptionMenu(option);
+		return OptionMenu(chosenOption);
 	}
 
 	OptionMenu back(){
 
-		int option = value;
-		if (value > 0){
-			option -= 1;
+		int chosenOption = currentOption;
+		if (currentOption > 0){
+			chosenOption -= 1;
 		}
 
-		return OptionMenu(option);
+		return OptionMenu(chosenOption);
 	}
 
-	private OptionMenu OptionMenu(int option) {
+	private OptionMenu OptionMenu(int chosenOption) {
 
-		switch(option){
+		switch(chosenOption){
 
 		case 0:
 			return OptionMenu.Start_Game;
