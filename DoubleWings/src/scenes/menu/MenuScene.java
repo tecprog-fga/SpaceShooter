@@ -2,7 +2,7 @@ package scenes.menu;
 
 import scenes.ContinueGame;
 import scenes.GameScene;
-import scenes.stages.stage1.StageTest;
+import scenes.stages.stage1.FirstStage;
 
 import jplay.GameImage;
 import jplay.Keyboard;
@@ -135,7 +135,7 @@ public class MenuScene extends GameScene {
 
 	public GameScene firstStageScene(){
 		if(firstLevel == null){
-			firstLevel = new StageTest();
+			firstLevel = new FirstStage();
 			return firstLevel;
 		} 	
 		else{

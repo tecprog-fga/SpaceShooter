@@ -1,7 +1,7 @@
 package game;
 
 import scenes.GameScene;
-import scenes.stages.stage1.StageTest;
+import scenes.stages.stage1.FirstStage;
 import jplay.Keyboard;
 
 public class GameController {

@@ -17,7 +17,7 @@ import scenes.GameScene;
 import game.evolver.GameEvent;
 import game.evolver.GameEventCallback;
 
-public class StageTest extends GameScene implements GameEventCallback, PlayerSceneDelegate {
+public class FirstStage extends GameScene implements GameEventCallback, PlayerSceneDelegate {
 
 	private World gameWorld = null;
 
@@ -45,7 +45,7 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 		this.configureEvents();
 	}
 
-	private Parallax parallax = null;
+	private Parallax parallaxEffect = null;
 
 	protected void viewSetup() {
 		
@@ -53,21 +53,21 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 		final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; //$NON-NLS-1$
 		final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; //$NON-NLS-1$
 		// Creation a object to class Parallax
-		parallax = new Parallax();
+		parallaxEffect = new Parallax();
 
 		// The first one added will be the last one to be painted.
-		parallax.add(LAYER0_PATH);
-		parallax.add(LAYER1_PATH);
-		parallax.add(LAYER2_PATH);
+		parallaxEffect.add(LAYER0_PATH);
+		parallaxEffect.add(LAYER1_PATH);
+		parallaxEffect.add(LAYER2_PATH);
 		// parallax.add("src/assets/img/universe2.jpg");
 		// parallax.add("src/assets/img/universe3.jpg");
 		// //Since universe4.jpg was the last to be added to the list, it will be the
 		// main layer (mainLayer).
 		// parallax.add("src/assets/img/universe4.jpg");
 
-		parallax.getLayer(0).setVelY(0.5);
-		parallax.getLayer(1).setVelY(4.5);
-		parallax.getLayer(2).setVelY(5);
+		parallaxEffect.getLayer(0).setVelY(0.5);
+		parallaxEffect.getLayer(1).setVelY(4.5);
+		parallaxEffect.getLayer(2).setVelY(5);
 		// parallax.getLayer(2).setVelY(2);
 		// parallax.getLayer(3).setVelY(5);
 		// parallax.getLayer(4).setVelY(10);
@@ -172,17 +172,17 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	public void updateParalax() {
 		
 		// Print all layers that have been added
-		parallax.drawLayers();
+		parallaxEffect.drawLayers();
 
 		final int PIXELS_DOWN = 800;
 		final int PIXELS_SIDES = 600;
 
 		// The method below is responsible for maintaining infinite repetition of the
 		// layers.
-		parallax.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
+		parallaxEffect.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
 		// Move the parallax orientation vertically
-		parallax.moveLayersStandardY(false);
+		parallaxEffect.moveLayersStandardY(false);
 	}
 
 	private int commandCount = 0;
@@ -223,7 +223,7 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 			launchEnemyCrazy();
 			break;
 		default:
-			this.script1();
+			this.addEvents();
 			break;
 		}
 	}
@@ -239,10 +239,10 @@ public class StageTest extends GameScene implements GameEventCallback, PlayerSce
 	}
 
 	public void configureEvents() {
-		this.script1();
+		this.addEvents();
 	}
 
-	public void script1() {
+	public void addEvents() {
 
 		// 200 = default
 		// 1 = first enemy
