@@ -46,7 +46,7 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
-		countDown.delegate = this;
+		countDown.delegateAction = this;
 
 		final int DELAY = 1000;
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);

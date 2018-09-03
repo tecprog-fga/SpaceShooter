@@ -106,7 +106,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		Timer timer = new Timer();
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
-		countDown.delegate = this;
+		countDown.delegateAction = this;
 		long DELAY = 1000;
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	

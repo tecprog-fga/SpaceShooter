@@ -5,19 +5,19 @@ import util.CountDownTimerEnds;
 
 public class CountDownTimer extends TimerTask {
 
-	int count = 9;
-	public CountDownTimerEnds delegate;
+	int counterTime = 9;
+	public CountDownTimerEnds delegateAction = null;
 
 	@Override
 	public void run() {
 
-		count -= 1;
-		delegate.updateImageForIndex(count);
+		counterTime -= 1;
+		delegateAction.updateImageForIndex(counterTime);
 		
-		if (count < 0) {
+		if (counterTime < 0) {
 			
-			delegate.finishScene();
-			delegate = null;
+			delegateAction.finishScene();
+			delegateAction = null;
 			this.cancel();
 		}
 	}
