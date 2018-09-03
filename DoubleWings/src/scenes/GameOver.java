@@ -9,10 +9,7 @@ import util.CountDownTimer;
 import util.CountDownTimerEnds;
 
 public class GameOver extends GameScene implements CountDownTimerEnds {
-
-	private final static String BACKGROUND_PATH = "src/assets/img/temp_background.png"; //$NON-NLS-1$
-	private final static String GAME_OVER_PATH = "src/assets/img/continue/3540295891_logo.jpg"; //$NON-NLS-1$
-
+	
 	private GameImage background = null;
 	private Sprite gameOver = null;
 	public void buildInitialScene() {
@@ -21,9 +18,11 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		this.keyboard = this.game.keyboard;
 
 		//Creation image background
+		final String BACKGROUND_PATH = "src/assets/img/temp_background.png"; //$NON-NLS-1$
 		this.background = new GameImage(BACKGROUND_PATH);
 
 		//Creation image Game Over
+		final String GAME_OVER_PATH = "src/assets/img/continue/3540295891_logo.jpg"; //$NON-NLS-1$
 		this.gameOver = new Sprite(GAME_OVER_PATH);
 
 		//Game over sprite center position

@@ -10,19 +10,6 @@ import util.CountDownTimerEnds;
 public class Lose extends GameScene implements CountDownTimerEnds {
 	
 	/**
-	 * Initialize paths
-	 */
-	private final static String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png"; //$NON-NLS-1$
-	private final static String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png"; //$NON-NLS-1$
-	private final static String DELPTH_UNIVERSE2_PATH = "src/assets/img/universe2.jpg"; //$NON-NLS-1$
-	private final static String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg"; //$NON-NLS-1$
-	private final static String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg"; //$NON-NLS-1$
-	private final static String LOSE_PATH = "src/assets/img/continue/YOU-LOSE.png"; //$NON-NLS-1$
-	private final static String ONE_LIFE_PATH = "src/assets/img/continue/1life.png"; //$NON-NLS-1$
-	private final static String TWO_LIFE_PATH = "src/assets/img/continue/2life.png"; //$NON-NLS-1$
-	private final static String THREE_LIFE_PATH = "src/assets/img/continue/3life.png"; //$NON-NLS-1$
-	
-	/**
 	 * This object represent the building delpth scene screen
 	 */
 	private Parallax delpthScene = null;
@@ -45,17 +32,21 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	public void buildInitialScene() {
 		
         this.delpthScene = new Parallax();
-		
+        final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
         /* The first one added will be the last one to be painted.*/
 		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
 		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
+		final String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png";
 		this.delpthScene.add(DELPTH_UNIVERSE1_PATH);
+		final String DELPTH_UNIVERSE2_PATH = "src/assets/img/universe2.jpg";
 		this.delpthScene.add(DELPTH_UNIVERSE2_PATH);
+		final String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg";
 		this.delpthScene.add(DELPTH_UNIVERSE3_PATH);
 		
 		/* Since universe4.jpg was the last to be added to the list, 
 		 * it will be the main layer (mainLayer).
 		 */
+		final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
 		this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
 		
 		//Adjusts the speed of all layers from the main layer
@@ -63,20 +54,24 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		
 		/*Define scenes elements position
 		 *Continue sprite upper-center position*/
+		final String LOSE_PATH = "src/assets/img/continue/YOU-LOSE.png";
 		this.loseScreen = new Sprite(LOSE_PATH);
 		this.loseScreen.x = WindowConstants.WIDTH/2 - this.loseScreen.width/2;
 		this.loseScreen.y = WindowConstants.HEIGHT/500 - this.loseScreen.height/20;
 		
 		/* Check how many lives the player has to instantiate the specific sprite.*/
 		if(getLifePlayer() == 1){
+			final String ONE_LIFE_PATH = "src/assets/img/continue/1life.png";
 			this.lifeRemaining = new Sprite(ONE_LIFE_PATH);
 		}
 		
 		else if(getLifePlayer() == 2){
+			final String TWO_LIFE_PATH = "src/assets/img/continue/2life.png";
 			this.lifeRemaining = new Sprite(TWO_LIFE_PATH);
 		}
 		
 		else if(getLifePlayer() == 3){
+			final String THREE_LIFE_PATH = "src/assets/img/continue/3life.png";
 			this.lifeRemaining = new Sprite(THREE_LIFE_PATH);
 		}
 		
