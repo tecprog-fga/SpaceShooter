@@ -49,7 +49,7 @@ public class HUD implements GameEntityObserver {
 
 	}
 
-	public void drawHudInformation() {
+	public void draw() {
 		shieldLifeBar.draw();
 		shieldLifeBarOrnament.draw();
 		numberOfLivesImage.draw();
@@ -119,4 +119,5 @@ public class HUD implements GameEntityObserver {
 			System.out.println("HUD log: No class identified.");
 		}	
 	}
+
 }

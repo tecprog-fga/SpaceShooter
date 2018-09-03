@@ -81,11 +81,11 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		
 		commands = new ArrayList<Command>();
 
-		commands.add(CommandCreator.createCommand(CommandType.LEFT));
-		commands.add(CommandCreator.createCommand(CommandType.DOWN));
-		commands.add(CommandCreator.createCommand(CommandType.RIGHT));
-		commands.add(CommandCreator.createCommand(CommandType.RIGHT));
-		commands.add(CommandCreator.createCommand(CommandType.RIGHT));
+		commands.add(CommandCreator.createPlayerCommand(CommandType.LEFT));
+		commands.add(CommandCreator.createPlayerCommand(CommandType.DOWN));
+		commands.add(CommandCreator.createPlayerCommand(CommandType.RIGHT));
+		commands.add(CommandCreator.createPlayerCommand(CommandType.RIGHT));
+		commands.add(CommandCreator.createPlayerCommand(CommandType.RIGHT));
 
 		currentCommand = commands.remove(commands.size() - 1); // return removed object
 	}
@@ -205,7 +205,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 		if (currentCommand != null) {
 			
-			currentCommand.execute(asteroid1);
+			currentCommand.executeDisplacement(asteroid1);
 		}
 	}
 	
