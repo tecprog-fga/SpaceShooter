@@ -10,9 +10,16 @@ import scenes.menu.MenuScene;
 import util.CountDownTimer;
 import util.CountDownTimerEnds;
 
+/**
+ * This class build scene for continue game using sprites.
+ */
 public class ContinueGame extends GameScene implements CountDownTimerEnds {
-
-	@Override
+	
+	/*
+	 * This void method was declarated in GameScene abstract class, it used for configurated the scene
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#viewSetup()
+	 */
 	protected void viewSetup() {
 		// TODO Auto-generated method stub
 	}
@@ -26,15 +33,19 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	 */
 	private Sprite countdownScreen = null;
 	/**
-	 * This sprite build enter screen after the limit game's continue is done
+	 * This sprite display screen for "click enter"
 	 */
 	private Sprite enterScreen = null;
 
 	/**
-	 * This object represent the building delpth scene screen
+	 * This object display delpth scene
 	 */
 	private Parallax delpthScene = null;	
 	
+	/* This void method build all sprites for show scenes of class .
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#buildInitialScene()
+	 */
 	public void buildInitialScene() {
 
 		//Configure enter key and escape
@@ -81,29 +92,53 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		buildWaitScene();
 	}
 
-	// Time wait to transit between scene
+	/**
+	 * This method build the scene of waiting countdown.
+	 */
 	public void buildWaitScene(){
 
+		/*
+		 * This object is instance of Timer class, this object work with configuration of time of game.
+		 */
 		Timer timer = null; 
 		timer = new Timer();
 
+		/*
+		 * This object is instance of CountDown class, this object realize count down instruments in timer configuration.
+		 */
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
+		
 		countDown.delegateAction = this;
 
+		/*
+		 * Define the time in miliseconds.
+		 */
 		final int DELAY = 1000; 
+		
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
-
 	}
 
-	// Update image Sprite on Screen and check button at keyboard
+	/* 
+	 * Build the update image of sprite on screen
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#updateScene()
+	 */
 	public void updateScene() {
 
 		//Print all layers that have been added
 		this.delpthScene.drawLayers();
 		
+		/*
+		 * This constant define the value of pixels most bellow of screen.
+		 */
 		final int PIXELS_DOWN = 800; 
+		
+		/*
+		 * This constant define the value of pixels side of screen.
+		 */
 		final int PIXELS_SIDES = 600;
+		
 		//The method below is responsible for maintaining infinite repetition of the layers.
 		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
@@ -117,13 +152,19 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		checkButtonSelection();
 
 	}
-
-	// Method that after the end of the time transit to the screen of game over.
-	@Override
+	
+	/* 
+	 * Build final scene
+	 * (non-Javadoc)
+	 * @see util.CountDownTimerEnds#finishScene()
+	 */
 	public void finishScene() {
 		if (this.game != null){
 
-			final String MSG_TIMER = "Timer Ended"; //$NON-NLS-1$
+			/*
+			 * Message for show witch time ended.
+			 */
+			final String MSG_TIMER = "Timer Ended";
 			System.out.println(MSG_TIMER);
 
 			GameScene gameOver = null;
@@ -132,16 +173,27 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		}
 	}
 
-	// Update number continue on Screen
-	@Override
+	/* 
+	 * Given index update the image and build scene for this
+	 * (non-Javadoc)
+	 * @see util.CountDownTimerEnds#updateImageForIndex(int)
+	 */
 	public void updateImageForIndex(int index) {
-				
+		/*
+		 * This constant define the value of path where is the load image for continue
+		 */
 		final String LOAD_IMAGE_PATH = "src/assets/img/continue/number_";
-		final String PNG_EXTENSION = ".png"; //$NON-NLS-1$
+		/*
+		 * This constant define the final path of LOAD_IMAGE_PATH
+		 */
+		final String PNG_EXTENSION = ".png";
+		
 		this.countdownScreen.loadImage(LOAD_IMAGE_PATH + String.valueOf(index) + PNG_EXTENSION); 
 	}
-
-	// Method to catch click on keyboard
+	
+	/**
+	 * This method verify the click of keyboard.
+	 */
 	private void checkButtonSelection () {
 
 		if(this.game != null && this.keyboard != null){
