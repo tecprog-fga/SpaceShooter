@@ -7,6 +7,10 @@ import jplay.Sprite;
 import util.CountDownTimer;
 import util.CountDownTimerEnds;
 
+/**
+ * This class build scene for lose player using sprites. It's necessary because 
+ * this feature needs to show the movement scene in the screen.
+ */
 public class Lose extends GameScene implements CountDownTimerEnds {
 	
 	/**

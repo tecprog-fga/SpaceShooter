@@ -8,6 +8,10 @@ import scenes.menu.MenuScene;
 import util.CountDownTimer;
 import util.CountDownTimerEnds;
 
+/**
+ * This class build scene for game over. It's necessary because 
+ * this feature needs to show the movement scene in the screen.
+ */
 public class GameOver extends GameScene implements CountDownTimerEnds {
 	
 	private GameImage background = null;

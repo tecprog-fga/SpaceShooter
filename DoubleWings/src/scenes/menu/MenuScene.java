@@ -12,7 +12,11 @@ import java.util.ArrayList;
 import constants.WindowConstants;
 import jplay.Sprite;
 
-// MenuScene 
+
+/**
+ * This class build scene for menu screen. It's necessary because 
+ * this feature needs to show the movement scene in the screen.
+ */
 public class MenuScene extends GameScene {
 	private static final int DISTANCE_BETWEEN_BUTTONS = WindowConstants.HEIGHT/48;
 

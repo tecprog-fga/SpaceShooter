@@ -1,5 +1,9 @@
 package scenes.menu;
 
+/**
+ * This Enum create enumerations of options of menu in menu display. 
+ * For each code id there is a option for choose.
+ */
 enum OptionsMenu {
 	START_GAME(0), 
 	RANKING(1), 

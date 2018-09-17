@@ -11,7 +11,8 @@ import util.CountDownTimer;
 import util.CountDownTimerEnds;
 
 /**
- * This class build scene for continue game using sprites.
+ * This class build scene for continue games. It's necessary because 
+ * this feature needs to show the movement scene in the screen.
  */
 public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	
