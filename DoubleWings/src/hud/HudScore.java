@@ -5,6 +5,9 @@ import java.awt.Font;
 import jplay.Time;
 
 public class HudScore extends Time {
+	/**
+	 * Variable used to save the score information that will be displayed in hud
+	 */
 	private int screenScore = 0;
 
 	public HudScore(int x, int y) {
@@ -12,23 +15,10 @@ public class HudScore extends Time {
 	}
 
 	public String toString() {
-		/**
-		 * 	System.out.println("Score log: Transform score value to srting " + this.score);
-		 */
 		super.toString();
 		return Integer.toString(this.screenScore);
 	}
 
-	/**	
-	 *  public void draw() {
-	 *		super.draw(message);
-	 *	}
-	 */
-
-	/**
-	 * Score getter and setter
-	 * @return
-	 */
 	public int getScreenScore() {
 		return screenScore;
 	}

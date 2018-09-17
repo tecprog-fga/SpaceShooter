@@ -10,10 +10,6 @@ import commands.Command;
 public class ScriptHandler {
 
 	private static Path SCRIPT_PATH;
-	/**
-	 * Constructor.
-	 * @param scriptPath full path of an existing, readable file.
-	 */
 	public ScriptHandler(String scriptPath) {
 		ScriptHandler.SCRIPT_PATH = Paths.get(scriptPath);
 	}
@@ -27,10 +23,6 @@ public class ScriptHandler {
 		return commandList;
 	}
 
-	/**
-	 *  Arranjar uma classe pra deixar isso depois, tá repetida em generate Behavior.
-	 * @param aObject
-	 */
 	private static void log(Object aObject) {
 		System.out.println(String.valueOf(aObject));
 	}
