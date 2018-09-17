@@ -14,14 +14,23 @@ public class Main {
 	public static void main(String[] args) {
 
 		System.out.println("It's running!");
-
+		
+		/**
+		 * creates the game screen with the default dimensions
+		 */
 		Window gameScreen = null;
 		gameScreen = new Window(WindowConstants.WIDTH,WindowConstants.HEIGHT);
 
+		/**
+		 * controls changes in game states
+		 */
 		GameController game = null;
 		game = new GameController();
 		game.keyboard = gameScreen.getKeyboard();
 
+		/**
+		 * controls the scene changes, the stages of the game
+		 */
 		GameScene scene = null;
 		scene = new MenuScene();
 		game.transitTo(scene);
