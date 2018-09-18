@@ -79,6 +79,9 @@ public class HUD implements GameEntityObserver {
 		this.shieldLifeBar.x = WindowConstants.WIDTH/2 - this.shieldLifeBar.width/2;
 	}
 	
+	/**
+	 * number of player lives can not be negative
+	 */
 	final int MAX_NUMBER_OF_LIVES = 3;
 	final int MIN_NUMBER_OF_LIVES = 0;
 

@@ -4,10 +4,13 @@ import entity.Enemy;
 import jplay.Sprite;
 
 public class MoveCommand implements Command {
+	/**
+	 * Distance to enemy movimentation in pixels
+	 */
 	private double distanceToMove = 50;
 	private CommandType direction = null;
 	/**
-	 * player's on-screen movement of the game, in pixels
+	 * enemy's on-screen movement of the game, in pixels
 	 */
 	private final int UNITARY_DISPLACEMENT = 1;
 
