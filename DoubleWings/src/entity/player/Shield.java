@@ -4,6 +4,9 @@ import entity.Enemy;
 import entity.GameEntity;
 import observer.GameEntityObserver;
 
+/*
+ * Builds the player's Shield and the shield's life
+ */
 public class Shield extends GameEntity {
 
 	private static final String SPRITE_FILE_PATH = "src/assets/img/forceshield.png";

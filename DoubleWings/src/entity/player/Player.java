@@ -4,6 +4,10 @@ import entity.Bullet;
 import observer.GameEntityObserver;
 import util.DelayTimer;
 
+/*
+ * This class contains builds the player,
+ * it manages the player score and lives
+ */
 public class Player {
 	
 	private static final int INITIAL_CHANCES = 3; // Initially the player will have three lifes

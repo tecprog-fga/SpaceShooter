@@ -7,6 +7,10 @@ import entity.GameEntity;
 import jplay.Keyboard;
 import util.DelayTimer;
 
+/*
+ * This class builds the Player's Spaceship life,
+ * shield and movement across the XY axis
+ */
 public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	
 	// default sprite file path

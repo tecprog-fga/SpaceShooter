@@ -1,7 +1,10 @@
 package entity.pool;
 
 import java.util.ArrayList;
-
+/*
+ * Abstract class to create quantity lots of objects,
+ * like enemies and bullets
+ */
 public abstract class ObjectPool<Type> {
 	
 	private ArrayList<Type> objects = new ArrayList<Type>();
