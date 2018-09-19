@@ -33,6 +33,11 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	*/
 	private int lifePlayer;
 	
+	/* 
+	 * This void method was declarated in GameScene abstract class, it used for configurated the scene
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#buildInitialScene()
+	 */
 	public void buildInitialScene() {
 		
         this.delpthScene = new Parallax();

@@ -16,6 +16,12 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	
 	private GameImage background = null;
 	private Sprite gameOver = null;
+	
+	/*
+	 * This void method was declarated in GameScene abstract class, it used for configurated the scene
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#buildInitialScene()
+	 */
 	public void buildInitialScene() {
 
 		//Set game controller elements
@@ -36,13 +42,19 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		buildWaitScene();
 	}
 
-	@Override
+	/* 
+	 * This void method build all sprites for show scenes of class 
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#viewSetup()
+	 */
 	protected void viewSetup() {
 		// TODO Auto-generated method stub
 
 	}
 
-	//Time wait to transit between scene
+	/**
+	 * This method build the scene of waiting countdown
+	 */
 	public void buildWaitScene(){
 
 		Timer timer = null;
@@ -56,14 +68,21 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
 
-	//Update image Sprite on Screen
+	/* 
+	 * Build the update image of sprite on screen
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#updateScene()
+	 */
 	public void updateScene() {
 		this.background.draw();
 		this.gameOver.draw();
 	}
 
-	//Method to return to main Menu
-	@Override
+	/* 
+	 * This method return to main Menu
+	 * (non-Javadoc)
+	 * @see util.CountDownTimerEnds#finishScene()
+	 */
 	public void finishScene() {
 		final String MSG_TIMER = "Timer Ended"; //$NON-NLS-1$
 		System.out.println(MSG_TIMER);
@@ -74,7 +93,11 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		this.game.transitTo(menu);
 	}
 
-	@Override
+	/* 
+	 * Given index update the image and build scene for this
+	 * (non-Javadoc)
+	 * @see util.CountDownTimerEnds#updateImageForIndex(int)
+	 */
 	public void updateImageForIndex(int index) {
 		//Nothing to do
 	}
