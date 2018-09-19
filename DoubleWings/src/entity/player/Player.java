@@ -1,3 +1,8 @@
+/*****************************************************************
+ * File: Player.java
+ * Purpose: Player class implementation
+ *****************************************************************/
+
 package entity.player;
 
 import entity.Bullet;

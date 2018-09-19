@@ -1,3 +1,8 @@
+/*****************************************************************
+ * File: Shield.java
+ * Purpose: Player's Shield class implementation
+ *****************************************************************/
+
 package entity.player;
 
 import entity.Enemy;

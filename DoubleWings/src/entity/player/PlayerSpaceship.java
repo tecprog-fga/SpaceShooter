@@ -1,3 +1,9 @@
+/*****************************************************************
+ * File: PlayerSpaceship.java
+ * Purpose: Player's Spaceship class implementation
+ *****************************************************************/
+
+
 package entity.player;
 
 import entity.Bullet;

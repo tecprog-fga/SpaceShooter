@@ -1,3 +1,8 @@
+/*****************************************************************
+ * File: BulletPool.java
+ * Purpose: Spaceship's Bullet Poll class implementation
+ *****************************************************************/
+
 package entity.pool;
 
 import entity.Bullet;

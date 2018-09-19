@@ -1,3 +1,8 @@
+/*****************************************************************
+ * File: ObjectPool.java
+ * Purpose: Object Poll class implementation
+ *****************************************************************/
+
 package entity.pool;
 
 import java.util.ArrayList;

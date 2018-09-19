@@ -1,3 +1,8 @@
+/*****************************************************************
+ * File: EnemyPool.java
+ * Purpose: Enemy Pool class implementation
+ *****************************************************************/
+
 package entity.pool;
 
 import entity.Enemy;
