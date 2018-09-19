@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: GameEntity.java
+  * Purpose: GameEntity class implementation
+  *********************************************************/
+
 package entity;
 
 import jplay.Sprite;

@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: Bullet.java
+  * Purpose: Bullet class implementation
+  *********************************************************/
+
 package entity;
 
 import entity.player.PlayerSpaceship;

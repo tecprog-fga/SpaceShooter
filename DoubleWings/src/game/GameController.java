@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: GameController.java
+  * Purpose: GameController class implementation
+  *********************************************************/
+
 package game;
 
 import scenes.GameScene;

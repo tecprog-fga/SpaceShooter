@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: GameEvent.java
+  * Purpose: GameEvent class implementation
+  *********************************************************/
+
 package game.evolver;
 
 public class GameEvent {

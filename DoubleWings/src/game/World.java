@@ -1,3 +1,9 @@
+/*********************************************************
+  * File: World.java
+  * Purpose: World class implementation
+  *********************************************************/
+
+
 package game;
 
 import java.util.ArrayList;

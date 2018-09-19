@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: WindowConstants.java
+  * Purpose: WindowConstants class implementation
+  *********************************************************/
+
 package constants;
 
 public class WindowConstants {

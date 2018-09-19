@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: Enemy.java
+  * Purpose: Enemy class implementation
+  *********************************************************/
+
 package entity;
 
 //import Score.ScoreType;

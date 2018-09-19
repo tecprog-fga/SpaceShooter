@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: GameEvolver.java
+  * Purpose: GameEvolver class implementation
+  *********************************************************/
+
 package game.evolver;
 
 import java.util.ArrayList;
