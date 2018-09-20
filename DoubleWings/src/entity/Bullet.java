@@ -7,6 +7,10 @@ package entity;
 
 import entity.player.PlayerSpaceship;
 
+/**
+ * This class creates the project that leaves the spaceship
+ * It's necessary because it defines the position in which it should exit
+ */
 public class Bullet extends GameEntity {
 	
 	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";

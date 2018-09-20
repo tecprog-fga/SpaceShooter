@@ -9,6 +9,9 @@ import scenes.GameScene;
 import scenes.stages.stage1.FirstStage;
 import jplay.Keyboard;
 
+/**
+* This class initializes game control
+*/
 public class GameController {
 
 	/*

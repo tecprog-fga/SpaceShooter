@@ -16,6 +16,9 @@ import entity.GameEntity;
 import scenes.ContinueGame;
 import scenes.GameScene;
 
+/**
+ * This class projects the game scenario and its elements
+ */
 public class World {
 	
 	public Keyboard keyboard = null;

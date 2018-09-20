@@ -7,6 +7,10 @@ package game.evolver;
 
 import java.util.ArrayList;
 
+
+/**
+ * This class implements interactions with the game interface
+ */
 public class GameEvolver {
 
 	private boolean isPaused = true;

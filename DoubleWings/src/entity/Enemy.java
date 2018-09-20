@@ -5,11 +5,13 @@
 
 package entity;
 
-//import Score.ScoreType;
 import commands.Command;
 import entity.player.Player;
 import entity.player.PlayerSpaceship;
 
+/**
+ * This class creates the enemy in the scene
+ */
 public class Enemy extends GameEntity {
 
 	static private final String IMAGE_TEMP_PLAYER = "src/assets/img/temp_player.png";

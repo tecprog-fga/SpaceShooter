@@ -8,6 +8,10 @@ package entity;
 import jplay.Sprite;
 import game.World;
 
+/**
+ * This class defines the life and damage that the spacecraft suffers
+ */
+
 public class GameEntity extends Sprite {
 	
 	/*
