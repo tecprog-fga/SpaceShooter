@@ -13,6 +13,10 @@ import entity.Enemy;
 public class EnemyPool extends ObjectPool<Enemy>{
 
 	protected Enemy create(){
+		
+		/**
+		 * Enemy sprite directory
+		 */
 		Enemy enemy = new Enemy("src/assets/asteroid.png");
 		return enemy;
 	}

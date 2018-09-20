@@ -18,11 +18,17 @@ public abstract class ObjectPool<Type> {
 	 */
 	private ArrayList<Type> objects = new ArrayList<Type>();
 	
+	/**
+	 * Release the objects in the screen when it's empty
+	 * @return
+	 */
 	public Type release(){
 		Type obj = null;
 		
+		/*
+		 * Creation of objects when the screen is empty
+		 */
 		if (objects.isEmpty()){
-			//placeholder
 			obj = create();
 		}else{
 			int last = objects.size() -1;
@@ -36,6 +42,10 @@ public abstract class ObjectPool<Type> {
 	 */
 	protected abstract Type create();
 	
+	/**
+	 * Recovers the objects
+	 * @param obj when object's container is empty, it adds an object to it
+	 */
 	public void acquire(Type obj){
 		
 		if (objects.contains(obj) == false){
