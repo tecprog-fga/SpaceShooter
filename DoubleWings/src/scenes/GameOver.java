@@ -56,15 +56,26 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	 * This method build the scene of waiting countdown
 	 */
 	public void buildWaitScene(){
-
+		
+		/*
+		 * This object is necessary for schedule at fixed rate.
+		 */
 		Timer timer = null;
 		timer = new Timer();
 
+		/*
+		 * This object is necessary for delegate action for count down.
+		 */
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
 		countDown.delegateAction = this;
 
+		/*
+		 * This constant is value of time for delay on schedule.
+		 * Unit of measure: Miliseconds
+		 */
 		final int DELAY = 1000;
+		
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
 
@@ -84,9 +95,15 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	 * @see util.CountDownTimerEnds#finishScene()
 	 */
 	public void finishScene() {
+		/*
+		 * Show on console the message when the time is ended
+		 */
 		final String MSG_TIMER = "Timer Ended"; //$NON-NLS-1$
 		System.out.println(MSG_TIMER);
 
+		/*
+		 * This object build a menu scene for transit to menu
+		 */
 		GameScene menu = null;
 		menu = new MenuScene();
 

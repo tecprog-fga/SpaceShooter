@@ -13,22 +13,22 @@ import util.CountDownTimerEnds;
  */
 public class Lose extends GameScene implements CountDownTimerEnds {
 	
-	/**
+	/*
 	 * This object represent the building delpth scene screen
 	 */
 	private Parallax delpthScene = null;
 	
-	/**
+	/*
 	 * This object build sprite for life remaining
 	 */
 	private Sprite lifeRemaining = null;
 	
-	/**
+	/*
 	 * This object build sprite for lose screen
 	 */
 	private Sprite loseScreen = null;
 	
-	/**
+	/*
 	 * Variable to check how many lives the player has remain
 	*/
 	private int lifePlayer;
@@ -118,12 +118,24 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 * This method build the scene of waiting countdown
 	 */
 	public void buildWaitScene() {
-		
+		/*
+		 * This object is necessary for schedule at fixed rate.
+		 */
 		Timer timer = new Timer();
+		
+		/*
+		 * This object is necessary for delegate action for count down.
+		 */
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
 		countDown.delegateAction = this;
+		
+		/*
+		 * This constant is value of time for delay on schedule.
+		 * Unit of measure: Miliseconds
+		 */
 		long DELAY = 1000;
+		
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
 	
@@ -135,16 +147,20 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		//Print all layers that have been added
 		this.delpthScene.drawLayers();
 		
-		//The method below is responsible for maintaining infinite repetition of the layers.
+		/*
+		 * This constants is responsible for store of pixels value of screen.
+		 * Unit of measure: Pixels
+		 */
 		final int PIXELS_DOWN = 800; 
 		final int PIXELS_SIDES = 600;
+		
+		//Responsible for maintaining infinite repetition of the layers
 		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 		
 		//Move the parallax orientation vertically
 		this.delpthScene.moveLayersStandardY(false);
 		
-		this.loseScreen.draw();
-		
+		this.loseScreen.draw();		
 		this.lifeRemaining.draw();
 	}
 	
