@@ -11,6 +11,10 @@ public class Main {
 	 */
 	public final static int KEEP_FRAMERATE = 16;
 	
+	/**
+	 * Main method for execute the game
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		System.out.println("It's running!");

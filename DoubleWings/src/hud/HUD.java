@@ -29,6 +29,9 @@ public class HUD implements GameEntityObserver {
 	final String LIVES = "src/assets/img/hud/chances.png"; //$NON-NLS-1$
 	final int SCORE_FONT_SIZE = 40;
 	
+	/**
+	 * Constructor method of class HUD
+	 */
 	public HUD() {
 		/**
 		 * positions the life bar on the screen
@@ -65,6 +68,9 @@ public class HUD implements GameEntityObserver {
 
 	}
 
+	/**
+	 * Method that draws the HUD information on the screen
+	 */
 	public void draw() {
 		shieldLifeBar.draw();
 		shieldLifeBarOrnament.draw();
@@ -72,6 +78,10 @@ public class HUD implements GameEntityObserver {
 		scoreText.draw();
 	}
 
+	/**
+	 * Method that updates the shield life bar
+	 * @param shield object of class shield
+	 */
 	public void updateShieldLifeBar(Shield shield) {
 		float shieldLifeBarProportion = ((float)shield.getLife()/(float)shield.maxLife);
 		float newLifeBarWidth = shieldLifeBarProportion * barSizeMax;
@@ -85,6 +95,10 @@ public class HUD implements GameEntityObserver {
 	final int MAX_NUMBER_OF_LIVES = 3;
 	final int MIN_NUMBER_OF_LIVES = 0;
 
+	/**
+	 * Method that updates the number of lives
+	 * @param playerNumberOfLives goes from zero to three, can be changed up
+	 */
 	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
 		/**
 		 * the number of lives must be within the limit established above
@@ -97,10 +111,17 @@ public class HUD implements GameEntityObserver {
 		}
 	}
 
+	/**
+	 * method that tells the player their current score
+	 * @param score the player score at match
+	 */
 	public void updateScoreOnScreen(int score) {
 		scoreText.setScreenScore(score);
 	}
 
+	/**
+	 * Method that shows the updated information of shield on the console
+	 */
 	public void notifyObserver(Object entity) {
 
 		/**

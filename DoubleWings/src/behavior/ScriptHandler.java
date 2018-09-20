@@ -10,10 +10,20 @@ import commands.Command;
 public class ScriptHandler {
 
 	private static Path SCRIPT_PATH;
+	/**
+	 * Constructor of ScriptHandler class
+	 * @param scriptPath
+	 */
 	public ScriptHandler(String scriptPath) {
 		ScriptHandler.SCRIPT_PATH = Paths.get(scriptPath);
 	}
 
+	/**
+	 * receives the input to the commandList
+	 * @param scriptInput 
+	 * @return commandList
+	 * @throws IOException
+	 */
 	public static ArrayList<Command> receiveInput(String scriptInput) throws IOException {
 		GenerateBehavior parser = null;
 		parser = new GenerateBehavior(SCRIPT_PATH);
