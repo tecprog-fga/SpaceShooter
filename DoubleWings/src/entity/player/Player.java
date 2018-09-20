@@ -27,6 +27,9 @@ public class Player {
 	private int score = 0;
 
 	
+	/**
+	 * Constructor method to set the player scores to zero
+	 */
 	public Player() {
 		super();
 		this.score = 0;
@@ -37,6 +40,10 @@ public class Player {
 	 */
 	private GameEntityObserver observer = null;
 	
+	/**
+	 * Game HUD observer get the events
+	 * @return observer
+	 */
 	public GameEntityObserver getObserver() { // HUD observer getter and setter 
 		return this.observer;
 	}
@@ -47,6 +54,10 @@ public class Player {
 	 */
 	private PlayerSpaceship spaceship = null;
 
+	/**
+	 * Updates the observer to get the state of the shield
+	 * @param observer to update the game HUD
+	 */
 	public void setObserver(GameEntityObserver observer) {
 		//Adding HUD observer to the shield
 		spaceship.getShield().setObserver(observer);
@@ -58,7 +69,11 @@ public class Player {
 	 */
 	private int chances = INITIAL_CHANCES;
 
-	public void setChances(int chances){ //Chances setters and getters
+	/**
+	 * The player chances (lives) manager
+	 * @param chances is the number of chances the player has
+	 */
+	public void setChances(int chances){
 		this.chances = chances;
 		
 		//Notifying HUD to update chances shower
@@ -69,14 +84,26 @@ public class Player {
 		}
 	}
 
+	/**
+	 * Gets the number of chances
+	 * @return
+	 */
 	public int getChances() {
 		return this.chances;
 	}
 
-	public int getScore() { 	//Score setters and getters
+	/**
+	 * Get the player's score
+	 * @return
+	 */
+	public int getScore() {
 		return score;
 	}
 
+	/**
+	 * Increase the player's score after each enemy destroyed
+	 * @param score
+	 */
 	public void increaseScore(int score) {
 		//this.score.increaseScore(score);
 		this.score += score;
@@ -95,6 +122,9 @@ public class Player {
 	public double initialPositionX = 0;
 	public double initialPositionY = 0;
 
+	/**
+	 * Reset the spaceship's position after each death
+	 */
 	private void resetSpaceship() {
 		this.spaceship.reborn();
 		this.spaceship.x = initialPositionX;
@@ -103,8 +133,7 @@ public class Player {
 
 	/**
 	 * Lose one life. Handle losing life and game over scenarios. 
-	 * 
-	 * */
+	 */
 	public void loseLife() {
 		//System.out.println("entered here in loseLife ");
 		setChances(this.chances - 1);
@@ -118,6 +147,9 @@ public class Player {
 		}
 	}
 
+	/**
+	 * Reset the spaceship to it's initial position and reset the initial chances of the player
+	 */
 	public void resetLife() {
 		setChances(INITIAL_CHANCES);
 		resetSpaceship();
@@ -134,6 +166,9 @@ public class Player {
 	 */
 	public PlayerSceneDelegate delegate = null;
 	
+	/**
+	 * Delegate the player to game over or continue screen 
+	 */
 	public void loseGame() {
 		
 		if (this.canContinue) {
@@ -143,12 +178,19 @@ public class Player {
 		}
 	}
 
+	/**
+	 * Delegate the player to continue screen
+	 */
 	public void useContinue() {
 		this.canContinue = false;
 		resetLife();
 		this.delegate.transitToContinue();
 	}
 
+	/**
+	 * Constructs the spaceship and in it's initial position
+	 * @return
+	 */
 	public PlayerSpaceship getSpaceship() {
 		
 		if (spaceship == null){
