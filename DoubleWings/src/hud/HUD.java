@@ -86,6 +86,9 @@ public class HUD implements GameEntityObserver {
 	final int MIN_NUMBER_OF_LIVES = 0;
 
 	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
+		/**
+		 * the number of lives must be within the limit established above
+		 */
 		if (playerNumberOfLives <= MAX_NUMBER_OF_LIVES && playerNumberOfLives >= MIN_NUMBER_OF_LIVES) {
 			this.numberOfLivesImage.setCurrFrame(playerNumberOfLives);
 		} else {
@@ -100,6 +103,10 @@ public class HUD implements GameEntityObserver {
 
 	public void notifyObserver(Object entity) {
 
+		/**
+		 * should display the log on the console to make it easier
+		 * to verify that the shield is working as it should
+		 */
 		if (entity instanceof Shield) {
 			Shield shield = (Shield) entity;
 			System.out.println("HUD log: Shield class identified." + shield.getLife() + " " + shield.maxLife);

@@ -19,6 +19,9 @@ public class MoveCommand implements Command {
 	}
 
 	public boolean executeDisplacement(Sprite actor) {
+		/**
+		 * the enemy must move on the screen for a distance
+		 */
 		if (this.distanceToMove > 0) {
 			moveActor(actor);
 			this.distanceToMove -= UNITARY_DISPLACEMENT;
@@ -29,6 +32,9 @@ public class MoveCommand implements Command {
 	}
 
 	public boolean executeDisplacement(Sprite[] actors) {
+		/**
+		 * enemies must move on the screen for a distance limit
+		 */
 		if (this.distanceToMove > 0) {
 			for(Sprite actor: actors) {
 				moveActor(actor);
@@ -41,6 +47,9 @@ public class MoveCommand implements Command {
 	}
 
 	private void moveActor(Sprite actor) {
+		/**
+		 * must move the game object in one of the four main directions
+		 */
 		switch(this.direction) {
 		case LEFT:
 			actor.x -= UNITARY_DISPLACEMENT;

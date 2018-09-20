@@ -37,6 +37,9 @@ public class Main {
 
 		boolean gameIsRunning = true;
 		
+		/**
+		 * while the game is open, the screen must be loaded and updated constantly
+		 */
 		while(gameIsRunning) {
 			gameScreen.delay(KEEP_FRAMERATE);
 
