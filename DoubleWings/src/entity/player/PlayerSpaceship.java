@@ -3,7 +3,6 @@
  * Purpose: Player's Spaceship class implementation
  *****************************************************************/
 
-
 package entity.player;
 
 import entity.Bullet;
@@ -30,9 +29,13 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	private static final int DEFAULT_MOVEMENT_VELOCITY = 4;
 	
 	/**
-	 * 
+	 * Build's up the spaceship's Shield
 	 */
 	private Shield shield = null;
+	
+	/**
+	 * It's an object that receives the events of the game
+	 */
 	private Player player = null;
 
 	public PlayerSpaceship(Player player, double x, double y, boolean adjust) {
@@ -71,11 +74,17 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		return this.player;
 	}
 	
-	// Default values for keys. Can be reset using setKeySet 
+	/**
+	 * Set's the controls of the game on the keyboard
+	 */
 	private int upKey = Keyboard.UP_KEY;
 	private int downKey = Keyboard.DOWN_KEY;
 	private int leftKey = Keyboard.LEFT_KEY;
 	private int rightKey = Keyboard.RIGHT_KEY;
+	
+	/**
+	 * 
+	 */
 	private int shootKey = 0;
 	
 	public void setKeySet(int upKey, int downKey, int rightKey, int leftKey, int shootKey) {
@@ -86,6 +95,10 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		this.shootKey = shootKey;
 	}
 	
+	
+	/**
+	 * Verify if the player has died
+	 */
 	private boolean didDie = false;
 
 	@Override

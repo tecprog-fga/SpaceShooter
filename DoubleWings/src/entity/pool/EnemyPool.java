@@ -7,7 +7,7 @@ package entity.pool;
 
 import entity.Enemy;
 
-/*
+/**
  * Create lots of enemies
  */
 public class EnemyPool extends ObjectPool<Enemy>{
