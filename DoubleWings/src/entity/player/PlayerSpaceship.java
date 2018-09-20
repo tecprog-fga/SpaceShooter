@@ -38,6 +38,13 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	private Player player = null;
 
+	/**
+	 * Builds the the spaceship, setting the player, shield, life
+	 * @param player   Object player to build the spaceship
+	 * @param x        X position in the X axis
+	 * @param y        Y position in the Y axis
+	 * @param adjust   decide if the position needs ajustment
+	 */
 	public PlayerSpaceship(Player player, double x, double y, boolean adjust) {
 		super(SPRITE_IMAGE_PATH);
 		this.life = maxLife;
@@ -53,6 +60,11 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		this.y = y;
 	}
 
+	/* 
+	 * If the player makes contact, he will receive damage and decrease life and shield
+	 * (non-Javadoc)
+	 * @see entity.GameEntity#didContact(entity.GameEntity)
+	 */
 	@Override
 	public void didContact(GameEntity entity){
 		
@@ -66,10 +78,18 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		}
 	}
 
+	/**
+	 * Get the spaceship's shield
+	 * @return
+	 */
 	public Shield getShield() {
 		return this.shield;
 	}
 	
+	/**
+	 * Get the spaceship's player
+	 * @return
+	 */
 	public Player getPlayer() {
 		return this.player;
 	}
@@ -81,12 +101,16 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	private int downKey = Keyboard.DOWN_KEY;
 	private int leftKey = Keyboard.LEFT_KEY;
 	private int rightKey = Keyboard.RIGHT_KEY;
-	
-	/**
-	 * 
-	 */
 	private int shootKey = 0;
 	
+	/**
+	 * Keyboard configuration
+	 * @param upKey     Makes the spaceship go up
+	 * @param downKey   Makes the spaceship go down
+	 * @param rightKey  Makes the spaceship go right
+	 * @param leftKey   Makes the spaceship go left
+	 * @param shootKey  Makes the spaceship shoot
+	 */
 	public void setKeySet(int upKey, int downKey, int rightKey, int leftKey, int shootKey) {
 		this.upKey = upKey;
 		this.downKey = downKey;
@@ -101,6 +125,13 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	private boolean didDie = false;
 
+	
+	
+	/* 
+	 * Use the keyboard input to update the game
+	 * (non-Javadoc)
+	 * @see entity.GameEntity#update()
+	 */
 	@Override
 	public void update() {
 		super.update();
@@ -117,6 +148,11 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		}
 	}
 	
+	/* 
+	 * Reborn the spaceship and set it's shield to full
+	 * (non-Javadoc)
+	 * @see entity.GameEntity#reborn()
+	 */
 	@Override
 	public void reborn(){
 		super.reborn();
@@ -124,6 +160,12 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		this.didDie = false;
 	}
 	
+	/* 
+	 * Set the life to zero if it reaches negative 
+	 * (non-Javadoc)
+	 * @param newlife
+	 * @see entity.GameEntity#setLife(int)
+	 */
 	@Override
 	public void setLife(int newlife){
 		this.life = newlife;
@@ -133,6 +175,9 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		}
 	}
 	
+	/* (non-Javadoc)
+	 * @see entity.GameEntity#isDead()
+	 */
 	@Override
 	public boolean isDead(){
 		return false;
