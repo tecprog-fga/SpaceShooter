@@ -175,7 +175,10 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		}
 	}
 	
-	/* (non-Javadoc)
+	/* 
+	 * Controls if the player is dead or alive
+	 * @return
+	 * (non-Javadoc)
 	 * @see entity.GameEntity#isDead()
 	 */
 	@Override
@@ -183,10 +186,24 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		return false;
 	}
 	
+	/**
+	 * Time of cooldown of the spaceship weapon 
+	 */
 	public int shootCooldown = 100;
+	
+	/**
+	 * Controls if the spaceship can shoot or not 
+	 */
 	private boolean canShoot = true;
+	
+	/**
+	 * Delay from the keyboard to the screen
+	 */
 	private DelayTimer shootCDTimer = new DelayTimer(this, 1);
 	
+	/**
+	 * Action of shooting 
+	 */
 	public void fireBullet(){
 		
 		if (canShoot){
@@ -199,8 +216,14 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		}
 	}
 	
+	/**
+	 * Set the movement velocity to the default
+	 */
 	public double movimentVel = DEFAULT_MOVEMENT_VELOCITY; // default value
 	
+	/**
+	 * Checks the keyboard input
+	 */
 	public void checkInput(){
 		//Player movement
 		moveX(leftKey, rightKey, this.movimentVel);
@@ -215,6 +238,11 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		}
 	}
 	
+	/* 
+	 * Move in the X axis when receiving an input
+	 * (non-Javadoc)
+	 * @see jplay.Sprite#moveX(int, int, double)
+	 */
 	@Override
 	public void moveX(int leftKey, int rightKey, double vel){
 		
@@ -230,6 +258,11 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		}
 	}
 	
+	/* 
+	 * Move in the Y axis when receiving an input
+	 * (non-Javadoc)
+	 * @see jplay.Sprite#moveY(int, int, double)
+	 */
 	@Override
 	public void moveY(int upKey, int downKey, double vel){
 		
@@ -245,6 +278,11 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		}
 	}
 
+	/* 
+	 * The spaceship can shoot again when the delay ends
+	 * (non-Javadoc)
+	 * @see util.DelayDelegate#delayEnded(util.DelayTimer)
+	 */
 	@Override
 	public void delayEnded(DelayTimer timer) {
 		
