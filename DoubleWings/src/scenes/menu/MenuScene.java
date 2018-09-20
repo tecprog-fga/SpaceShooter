@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import constants.WindowConstants;
 import jplay.Sprite;
 
-
 /**
  * This class build scene for menu screen. It's necessary because 
  * this feature needs to show the movement scene in the screen.
@@ -22,6 +21,11 @@ public class MenuScene extends GameScene {
 
 	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;//Define initial menu option
 
+	/* This void method was declarated in GameScene abstract class, 
+	 * it used for configurated the scene
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#buildInitialScene()
+	 */
 	protected void buildInitialScene() {
 
 		//Reset option menu
@@ -36,6 +40,10 @@ public class MenuScene extends GameScene {
 	private Sprite title = null;
 	private Sprite arrow = null;
 	
+	/* This void method build the sprites for show background and title 
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#viewSetup()
+	 */
 	protected void viewSetup() {
 		//Define Scene elements
 		final String BACKGROUNG_PATH = "src/assets/img/menu/background.png";
@@ -56,7 +64,10 @@ public class MenuScene extends GameScene {
 
 	private ArrayList<Sprite> buttons = new ArrayList<Sprite>();
 
-	//Add buttons to array
+	/**
+	 * This method create the buttons with the sprites of buttons for define 
+	 * buttons positions.
+	 */
 	private void appendButtons() {
 		final String START_BUTTON_PATH = "src/assets/img/menu/start_button.png";
 		Sprite startButton = null;
@@ -92,7 +103,10 @@ public class MenuScene extends GameScene {
 		}
 	}
 
-	//Check keyboard and update Menu option
+	/**
+	 * This method to check keyboard for control the menu selection.
+	 * It's limited with Down and Up key 
+	 */
 	private void checkMenuOption() {
 		// Down selection
 		if (keyboard.keyDown(Keyboard.DOWN_KEY)) {
@@ -113,6 +127,10 @@ public class MenuScene extends GameScene {
 		}
 	}
 
+	/**
+	 * This method build the objects necessaries for define 
+	 * the current arrow of keyboard.
+	 */
 	private void currentArrow() {
 		int currentButtonIndex = 0;
 		currentButtonIndex = this.selectedMenuOption.ordinal();
@@ -125,7 +143,9 @@ public class MenuScene extends GameScene {
 
 	}
 
-	//Draw scene elements
+	/**
+	 * Build design of menu with the union of elements for show on screen.
+	 */
 	private void drawScenes() {
 		background.draw();
 		title.draw();
@@ -138,6 +158,10 @@ public class MenuScene extends GameScene {
 
 	private static GameScene firstLevel = null;
 
+	/**
+	 * This method build the scene of first stage of game.
+	 * @return object of scene builded of first stage
+	 */
 	public GameScene firstStageScene() {
 		if(firstLevel == null){
 			firstLevel = new FirstStage();
@@ -146,10 +170,12 @@ public class MenuScene extends GameScene {
 		else{
 			return firstLevel;
 		}
-
 	}
 
-	//Check keyboard enter and dispatch new scene
+	/**
+	 * Check keyboard enter for dispatch new scene.
+	 * Depends of selected menu option the scene it's transited.
+	 */
 	private void checkButtonSelection() {
 		if (keyboard.keyDown(Keyboard.ENTER_KEY)){
 
@@ -173,6 +199,10 @@ public class MenuScene extends GameScene {
 		}
 	}
 
+	/* Realize the sequence of actions developed.
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#updateScene()
+	 */
 	public void updateScene() {
 
 		// Control menu option selection

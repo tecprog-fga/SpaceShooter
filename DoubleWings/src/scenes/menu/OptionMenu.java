@@ -12,10 +12,18 @@ enum OptionsMenu {
 
 	private final int currentOption; //Current option on menu
 
+	/**
+	 * This constructor initialize the current option
+	 * @param currentOption
+	 */
 	OptionsMenu(int currentOption) {
 		this.currentOption = currentOption;
 	}
 
+	/**
+	 * This algorithm build the next option when the current option is less than 3
+	 * @return next option defined
+	 */
 	OptionsMenu next() {
 
 		int chosenOption = currentOption;
@@ -26,6 +34,10 @@ enum OptionsMenu {
 		return defineOption(chosenOption);
 	}
 
+	/**
+	 * This algorithm build the back option when the current option is greater than 0
+	 * @return back option defined
+	 */
 	OptionsMenu back() {
 
 		int chosenOption = currentOption;
@@ -36,6 +48,11 @@ enum OptionsMenu {
 		return defineOption(chosenOption);
 	}
 
+	/**
+	 * This method define the chosen option for return the enumerator related  
+	 * @param chosenOption
+	 * @return Enumerator related
+	 */
 	private OptionsMenu defineOption(int chosenOption) {
 
 		switch(chosenOption) {

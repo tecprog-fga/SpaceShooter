@@ -33,8 +33,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	*/
 	private int lifePlayer;
 	
-	/* 
-	 * This void method was declarated in GameScene abstract class, it used for configurated the scene
+	/* This void method was declarated in GameScene abstract class, it used for configurated the scene
 	 * (non-Javadoc)
 	 * @see scenes.GameScene#buildInitialScene()
 	 */
@@ -91,26 +90,34 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		buildWaitScene();
 	}
 	
-	@Override
+	/* This void method build all sprites for show scenes of class 
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#viewSetup()
+	 */
 	protected void viewSetup() {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub	
 	}
 	
-	/* 
-	 * Method created for the StageTest Class to be able to pass the remaining life of the player
+	/**
+	 * Method set created for using in other class to pass remaining life of the player
+	 * @param lifePlayer
 	 */
-	public void setLifePlayer(int lifePlayer){
+	public void setLifePlayer(int lifePlayer) {
 		 this.lifePlayer = lifePlayer;
 	}
-	
-	/* Get life Player to create Sprite */
-	public int getLifePlayer(){
+
+	/**
+	 * Get the value of player's life
+	 * @return  value of player's life as number
+	 */
+	public int getLifePlayer() {
 		 return this.lifePlayer;
 	}
 	
-	/* Time wait to transit between scene */
-	public void buildWaitScene(){
+	/**
+	 * This method build the scene of waiting countdown
+	 */
+	public void buildWaitScene() {
 		
 		Timer timer = new Timer();
 		CountDownTimer countDown = null;
@@ -118,13 +125,13 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		countDown.delegateAction = this;
 		long DELAY = 1000;
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
-	
 	}
 	
-	/* Update Sprite on Screen */
-	public void updateScene() {
-		
-		
+	/* Build the update image of sprite on screen
+	 * (non-Javadoc)
+	 * @see scenes.GameScene#updateScene()
+	 */
+	public void updateScene() {		
 		//Print all layers that have been added
 		this.delpthScene.drawLayers();
 		
@@ -139,13 +146,12 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		this.loseScreen.draw();
 		
 		this.lifeRemaining.draw();
-		
 	}
 	
-	/* Method that after the end of the time transit to the screen of Classic 
-	 * Continue.
+	/* Method that after the end of the time transit to the screen to ContinueGame class
+	 * (non-Javadoc)
+	 * @see util.CountDownTimerEnds#finishScene()
 	 */
-	@Override
 	public void finishScene() {
 		if (this.game != null){
 			final String END_TIMER = "Timer Ended"; //$NON-NLS-1$
@@ -158,7 +164,10 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		}
 	}
 	
-	@Override
+	/* Nothing to do in this class
+	 * (non-Javadoc)
+	 * @see util.CountDownTimerEnds#updateImageForIndex(int)
+	 */
 	public void updateImageForIndex(int index) {
 		//Nothing to do
 	}
