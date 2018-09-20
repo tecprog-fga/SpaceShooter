@@ -30,21 +30,27 @@ public class Shield extends GameEntity {
 	private GameEntity player = null;
 	
 	//Creation constructor to Shield
+	
+	/*
+	 * Build the shield with it's sprite, player, life and position
+	 */
 	public Shield(GameEntity player) {
-		//Initialization with shield image
 		super(SPRITE_FILE_PATH);
-		//Getting the player from the StageTest class
+		
 		this.player = player;
 		this.life = maxLife;
-		//Putting shield on the screen with reference the player position
+		
 		this.x = player.x;
 		this.y = player.y;
 	}
 
-	//Method to update the shield according the player
+	/**
+	 * Method to update the shield according the player
+	 * (non-Javadoc)
+	 * @see entity.GameEntity#update()
+	 */
 	public void update() {
 		
-		//System.out.println(this.observer);
 		if(this.isCollidable == false){
 			this.x = -500;
 			this.y = -500;
@@ -53,16 +59,24 @@ public class Shield extends GameEntity {
 
 		super.update();
 		
-		//Shield movement
+		/*
+		 * Shield movement in XY axis acording to the player position
+		 */
 		Integer horizontalCorrection = (this.width - player.width)/2;
 		Integer verticalCorrection = (this.height - player.height)/2;
 
-		//Adjusting position player with force shield
+		/*
+		 * Adjusting player position with force shield
+		 */
 		this.x = player.x - horizontalCorrection;
 		this.y = player.y - verticalCorrection;
 	}
 
-	// Handle when contact happen
+	/*
+	 * Handle when contact happen
+	 * (non-Javadoc)
+	 * @see entity.GameEntity#didContact(entity.GameEntity)
+	 */
 	@Override
 	public void didContact(GameEntity entity){
 		
@@ -81,14 +95,15 @@ public class Shield extends GameEntity {
 	@Override
 	public void setLife(int newLife){
 		this.life = newLife;
-		//System.out.println(life);
 		
 		if (life <= 0) {
 			life = 0;
 			this.isCollidable = false;
 		}
 		
-		//Notifing HUD to update shield life bar
+		/*
+		 * Notifing HUD to update shield life bar
+		 */
 		if (observer != null) {
 			observer.notifyObserver(this);
 		} else {
@@ -96,7 +111,10 @@ public class Shield extends GameEntity {
 		}
 	}
 
-	// HUD observer getter and setter 
+	/**
+	 * HUD observer getter and setter 
+	 * @return
+	 */
 	public GameEntityObserver getObserver() {
 		return this.observer;
 	}
@@ -105,6 +123,11 @@ public class Shield extends GameEntity {
 		this.observer = observer;
 	}
 
+	/*
+	 * reborn player and set his position, turning it collidable again 
+	 * (non-Javadoc)
+	 * @see entity.GameEntity#reborn()
+	 */
 	@Override
 	public void reborn(){
 		super.reborn();

@@ -51,8 +51,10 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		this.shield = new Shield(this);
 		this.player = player;
 		
+		/*
+		 * Adjusting x position to fit the sprite
+		 */
 		if (adjust) {
-			// x position fixed for sprite width
 			this.x = x - this.width / 2;	
 		} else {
 			this.x = x;
