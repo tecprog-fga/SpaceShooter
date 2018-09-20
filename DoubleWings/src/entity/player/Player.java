@@ -3,33 +3,48 @@
  * Purpose: Player class implementation
  *****************************************************************/
 
+
 package entity.player;
 
 import entity.Bullet;
 import observer.GameEntityObserver;
 import util.DelayTimer;
 
-/*
+/**
  * This class contains builds the player,
  * it manages the player score and lives
  */
 public class Player {
 	
-	private static final int INITIAL_CHANCES = 3; // Initially the player will have three lifes
+	/**
+	 * The initial lives of the player, in the beginning of the game
+	 */
+	private static final int INITIAL_CHANCES = 3;
 	
+	/**
+	 * The score variable to be increased as the player scores
+	 */
 	private int score = 0;
 
+	
 	public Player() {
 		super();
 		this.score = 0;
 	}
 
-	private GameEntityObserver observer = null; //Temp solution to the observer
+	/**
+	 * The Observer object receives the game live updates
+	 */
+	private GameEntityObserver observer = null;
 	
 	public GameEntityObserver getObserver() { // HUD observer getter and setter 
 		return this.observer;
 	}
 	
+	
+	/**
+	 * This object builds the spaceship of the game
+	 */
 	private PlayerSpaceship spaceship = null;
 
 	public void setObserver(GameEntityObserver observer) {
@@ -38,6 +53,9 @@ public class Player {
 		this.observer = observer;
 	}
 	
+	/**
+	 * Reset the player chances to 3
+	 */
 	private int chances = INITIAL_CHANCES;
 
 	public void setChances(int chances){ //Chances setters and getters
@@ -71,7 +89,10 @@ public class Player {
 		}
 	}
 	
-	public double initialPositionX = 0; //Respawn
+	/**
+	 * Sets the initial position of the spaceship in the XY axis
+	 */
+	public double initialPositionX = 0;
 	public double initialPositionY = 0;
 
 	private void resetSpaceship() {
@@ -102,8 +123,15 @@ public class Player {
 		resetSpaceship();
 		System.out.println("Player log: life reset to: " + this.chances);
 	}
-
+	
+	/**
+	 * Decides if the the player can continue playing after losing all lives
+	 */
 	private boolean canContinue = true;
+	
+	/**
+	 * Delegates game events on loseGame, and continue screens
+	 */
 	public PlayerSceneDelegate delegate = null;
 	
 	public void loseGame() {
