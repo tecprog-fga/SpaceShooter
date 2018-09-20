@@ -6,12 +6,16 @@
 package entity.pool;
 
 import java.util.ArrayList;
-/*
+
+/**
  * Abstract class to create quantity lots of objects,
  * like enemies and bullets
  */
 public abstract class ObjectPool<Type> {
 	
+	/**
+	 * Stores the objects, like bullets and enemies
+	 */
 	private ArrayList<Type> objects = new ArrayList<Type>();
 	
 	public Type release(){
@@ -27,6 +31,9 @@ public abstract class ObjectPool<Type> {
 		return obj;
 	}
 	
+	/*
+	 * Create's objects to keep in the ArrayLists objects 
+	 */
 	protected abstract Type create();
 	
 	public void acquire(Type obj){

@@ -9,15 +9,24 @@ import entity.Enemy;
 import entity.GameEntity;
 import observer.GameEntityObserver;
 
-/*
+/**
  * Builds the player's Shield and the shield's life
  */
 public class Shield extends GameEntity {
 
+	/**
+	 * The spaceship force shield sprite directory
+	 */
 	private static final String SPRITE_FILE_PATH = "src/assets/img/forceshield.png";
 	
+	/*
+	 * Unused variable
+	 */
 	private int regeneration = 0;
-
+	
+	/**
+	 * Creates the player entity, that receives
+	 */
 	private GameEntity player = null;
 	
 	//Creation constructor to Shield
@@ -64,6 +73,9 @@ public class Shield extends GameEntity {
 		}
 	}
 	
+	/**
+	 * The observer receives the game events and update all his dependents
+	 */
 	private GameEntityObserver observer = null;
 
 	@Override
