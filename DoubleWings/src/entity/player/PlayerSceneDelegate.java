@@ -10,6 +10,14 @@ package entity.player;
  * or the Continue scene
  */
 public interface PlayerSceneDelegate {
+	
+	/**
+	 * Takes the player to game over screen after loosing all his lives
+	 */
 	public void transitToGameOver();
+	
+	/**
+	 * Takes the player to continue game, after loosing all his chances (lives)
+	 */
 	public void transitToContinue();
 }
