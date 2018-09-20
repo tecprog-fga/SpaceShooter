@@ -1,5 +1,5 @@
 /*********************************************************
-  * File: GameEntity.java
+   * File: GameEntity.java
   * Purpose: GameEntity class implementation
   *********************************************************/
 
@@ -11,11 +11,11 @@ import game.World;
 /**
  * This class defines the life and damage that the spacecraft suffers
  */
-
 public class GameEntity extends Sprite {
 	
-	/*
-	 * Kill entity after leaving bounds
+	/**
+	 * eliminates asteroids not hit by 
+	 * the ship when they reach the limit 
 	 */
 	private double entityLimit = 1000; 
 	
@@ -81,8 +81,16 @@ public class GameEntity extends Sprite {
 		
 	}
 
+	
+	/**
+	 * birth position of the spacecraft sprit
+	 */
 	public Double velx = 0.0;
 	public Double vely = 0.0;
+	
+	/**
+	 * the number of times you will go through the continue menu
+	 */
 	public int maxLife = 1;		
 	
 	public void reborn(){
@@ -94,7 +102,7 @@ public class GameEntity extends Sprite {
 		this.setLife(maxLife);
 		this.name = "empty entity";
 	}
-	
+
 	public boolean isCollidable = true;
 	public World gameWorld = null;
 }

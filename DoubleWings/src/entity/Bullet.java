@@ -12,7 +12,10 @@ import entity.player.PlayerSpaceship;
  * It's necessary because it defines the position in which it should exit
  */
 public class Bullet extends GameEntity {
-	
+		
+	/**
+	 * spaceship bullet sprite
+	 */
 	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";
 	
 	public Bullet() {

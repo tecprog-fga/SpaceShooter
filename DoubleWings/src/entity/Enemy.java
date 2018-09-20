@@ -14,6 +14,10 @@ import entity.player.PlayerSpaceship;
  */
 public class Enemy extends GameEntity {
 
+	
+	/**
+	 * sprite of the enemy
+	 */
 	static private final String IMAGE_TEMP_PLAYER = "src/assets/img/temp_player.png";
 
 	public Enemy(int x, int y) {
@@ -22,13 +26,16 @@ public class Enemy extends GameEntity {
 		this.y = y;
 	}
 	
+	/**
+	 * initialization for the movements of the enemy
+	 */
 	private int commandCount = 0;
 	
 	public void executeBehavior(Command[] commands) {
 		if (commandCount < commands.length) {
 			if (commands[commandCount].executeDisplacement(this)) {
 				commandCount += 1;
-				} else {/*donot*/}
+				} else  {/*donot*/}
 		System.out.println("x: " + this.x + " y: " + this.y);
 		} else {/*donot*/}
 	}

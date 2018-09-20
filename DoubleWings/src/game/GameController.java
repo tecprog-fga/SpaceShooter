@@ -28,7 +28,9 @@ public class GameController {
 			currentScene.destroyScene();
 		}
 
-		//run initial setup
+		/*
+		 * Run initial setup
+		 */
 		scene.configureGameScene(this);
 		
 		/*
@@ -37,6 +39,9 @@ public class GameController {
 		currentScene = scene;
 	}
 	
+	/**
+	 * initialize the game 
+	 */
 	private boolean isRunning = true;
 	
 	/*
@@ -44,7 +49,9 @@ public class GameController {
 	 */
 	public boolean update() {
 		
-		//Updates current scene
+		/*
+		 * Updates current scene
+		 */
 		if (currentScene != null){
 			currentScene.updateScene();
 		}
