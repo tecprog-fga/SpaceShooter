@@ -55,11 +55,10 @@ public class Player {
 	private PlayerSpaceship spaceship = null;
 
 	/**
-	 * Updates the observer to get the state of the shield
+	 * Updates the HUD observer to get the state of the shield
 	 * @param observer to update the game HUD
 	 */
 	public void setObserver(GameEntityObserver observer) {
-		//Adding HUD observer to the shield
 		spaceship.getShield().setObserver(observer);
 		this.observer = observer;
 	}
@@ -76,7 +75,9 @@ public class Player {
 	public void setChances(int chances){
 		this.chances = chances;
 		
-		//Notifying HUD to update chances shower
+		/*
+		 * Notifying HUD to update the screen
+		 */
 		if (observer != null) {
 			observer.notifyObserver(this);	
 		} else {
@@ -105,10 +106,9 @@ public class Player {
 	 * @param score
 	 */
 	public void increaseScore(int score) {
-		//this.score.increaseScore(score);
+
 		this.score += score;
 		
-		//Notifying HUD to update score shower
 		if (observer != null) {
 			observer.notifyObserver(this);	
 		} else {
@@ -135,9 +135,8 @@ public class Player {
 	 * Lose one life. Handle losing life and game over scenarios. 
 	 */
 	public void loseLife() {
-		//System.out.println("entered here in loseLife ");
+		
 		setChances(this.chances - 1);
-		//System.out.println("LOST A LIIIIIIIIIFE");
 		System.out.println("lifes on player: " + this.chances);
 
 		if (this.chances < 0) {
@@ -151,6 +150,7 @@ public class Player {
 	 * Reset the spaceship to it's initial position and reset the initial chances of the player
 	 */
 	public void resetLife() {
+		
 		setChances(INITIAL_CHANCES);
 		resetSpaceship();
 		System.out.println("Player log: life reset to: " + this.chances);
