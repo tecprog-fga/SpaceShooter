@@ -170,9 +170,15 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 */
 	public void finishScene() {
 		if (this.game != null){
+			/*
+			 * Show on console the message when the time is ended
+			 */
 			final String END_TIMER = "Timer Ended"; //$NON-NLS-1$
 			System.out.println(END_TIMER);
 			
+			/*
+			 * This object build a classic continue screen for transit to this element
+			 */
 			ContinueGame classicContinue = null;
 			classicContinue = new ContinueGame();
 			

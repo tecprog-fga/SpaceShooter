@@ -10,7 +10,10 @@ enum OptionsMenu {
 	SETTINGS(2), 
 	QUIT(3);
 
-	private final int currentOption; //Current option on menu
+	/**
+	 * Current option on menu.
+	 */
+	private final int currentOption; 
 
 	/**
 	 * This constructor initialize the current option

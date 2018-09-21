@@ -17,10 +17,15 @@ import jplay.Sprite;
  * this feature needs to show the movement scene in the screen.
  */
 public class MenuScene extends GameScene {
+	/*
+	 * This constant store the result of calculation of distance between buttons
+	 */
 	private static final int DISTANCE_BETWEEN_BUTTONS = WindowConstants.HEIGHT/48;
-
-	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;//Define initial menu option
-
+	/*
+	 * Define initial menu option of selection menu
+	 */
+	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;
+	
 	/* This void method was declarated in GameScene abstract class, 
 	 * it used for configurated the scene
 	 * (non-Javadoc)
@@ -35,9 +40,17 @@ public class MenuScene extends GameScene {
 		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 	}
-
+	/*
+	 * Background object for construct background scenes
+	 */
 	private GameImage background = null;
+	/*
+	 * Title object for construct title sprite
+	 */
 	private Sprite title = null;
+	/*
+	 * Arrow object for construct arrow sprite
+	 */
 	private Sprite arrow = null;
 	
 	/* This void method build the sprites for show background and title 
@@ -45,7 +58,7 @@ public class MenuScene extends GameScene {
 	 * @see scenes.GameScene#viewSetup()
 	 */
 	protected void viewSetup() {
-		//Define Scene elements
+		
 		final String BACKGROUNG_PATH = "src/assets/img/menu/background.png";
 		background = new GameImage(BACKGROUNG_PATH);
 
@@ -132,6 +145,13 @@ public class MenuScene extends GameScene {
 	 * the current arrow of keyboard.
 	 */
 	private void currentArrow() {
+		/*
+		 * Value of current button index.
+		 * 0 = start button
+		 * 1 = ranking buton
+		 * 2 = settings button
+		 * 3 = quit button
+		 */
 		int currentButtonIndex = 0;
 		currentButtonIndex = this.selectedMenuOption.ordinal();
 
@@ -156,6 +176,9 @@ public class MenuScene extends GameScene {
 		}
 	}
 
+	/**
+	 * This object represent the first level.
+	 */
 	private static GameScene firstLevel = null;
 
 	/**
