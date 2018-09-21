@@ -40,12 +40,13 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		gameWorld = new World();
 		gameWorld.keyboard = this.keyboard;
 
-		// Configure up and down keys
+		/**
+		 * Configuring the up and down keys for player one and for player two
+		 */
 		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_EVERY_PRESS);
 		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_EVERY_PRESS);
 		keyboard.setBehavior(Keyboard.SPACE_KEY, Keyboard.DETECT_EVERY_PRESS);
 
-		// Second Player configuration
 		keyboard.addKey(KeyEvent.VK_A, Keyboard.DETECT_EVERY_PRESS);
 		keyboard.addKey(KeyEvent.VK_S, Keyboard.DETECT_EVERY_PRESS);
 		keyboard.addKey(KeyEvent.VK_D, Keyboard.DETECT_EVERY_PRESS);
