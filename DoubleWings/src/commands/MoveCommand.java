@@ -12,8 +12,8 @@ public class MoveCommand implements Command {
 	private final int UNITARY_DISPLACEMENT = 1;
 
 	/**
-	 * 
-	 * @param direction string specifying the direction to move the actor.
+	 * direction string specifying the direction to move the actor.
+	 * @param type
 	 */
 	public MoveCommand(CommandType type) {
 		this.direction = type;
@@ -36,7 +36,7 @@ public class MoveCommand implements Command {
 
 	/**
 	 * Move an array of actors by `distanceToGo` pixels in the command direction. Must be called inside the update() method to work properly.
-	 * @param actor the actor to be moved by the command.
+	 * @param actors actor the actor to be moved by the command.
 	 * @return true if movement is completed, false otherwise. 
 	 */
 	public boolean executeDisplacement(Sprite[] actors) {

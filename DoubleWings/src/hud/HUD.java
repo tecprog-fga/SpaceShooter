@@ -79,7 +79,7 @@ public class HUD implements GameEntityObserver {
 
 	/**
 	 * Update player chances on HUD
-	 * @param playerChances
+	 * @param playerNumberOfLives
 	 */
 	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
 		if (playerNumberOfLives <= MAX_NUMBER_OF_LIVES && playerNumberOfLives >= MIN_NUMBER_OF_LIVES) {

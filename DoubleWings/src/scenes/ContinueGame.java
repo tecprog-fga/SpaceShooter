@@ -159,10 +159,15 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		 */
 		final int PIXELS_SIDES = 600;
 		
-		//The method below is responsible for maintaining infinite repetition of the layers.
+		/*
+		 * The method below is responsible for maintaining infinite repetition 
+		 * of the layers.
+		 */
 		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
-		//Move the parallax orientation vertically
+		/*
+		 * Move the parallax orientation vertically
+		 */
 		this.delpthScene.moveLayersStandardY(false);
 
 		this.continueScreen.draw();
@@ -216,14 +221,22 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	 */
 	private void checkButtonSelection () {
 
+		/* This decision structure is necessary for check the button selected. 
+		 * If the game execute and keyboard is clicked then execute the algorithm
+		 */
 		if(this.game != null && this.keyboard != null){
+
+			/* This decision structure is necessary for decide what scene will be
+			 * transit. If selected enter key then transit to a continue state of 
+			 * the game, else if selected escape key then transit to a menu scene
+			 */
 			if (this.keyboard.keyDown(Keyboard.ENTER_KEY)) {
-				//Transit to a continue state of the game
 				MenuScene transitScene = null;
 				transitScene = new MenuScene();
 				this.game.transitTo(transitScene.firstStageScene());
 
 			} else if (this.keyboard.keyDown(Keyboard.ESCAPE_KEY)) {
+				
 				GameScene menu = null;
 				menu = new MenuScene();
 				this.game.transitTo(menu);
