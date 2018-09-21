@@ -49,14 +49,25 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	 */
 	public void buildInitialScene() {
 
-		//Configure enter key and escape
+		/*
+		 * Configure enter and escape key for detect initial press only 
+		 * because it's necessary set behavior this buttons
+		 */
 		this.keyboard.setBehavior(Keyboard.ENTER_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
 		this.keyboard.setBehavior(Keyboard.ESCAPE_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
 
-		//Creation a object to class Parallax
+		
+		/*
+		 * Creation a object to class Parallax
+		 */
 		this.delpthScene = new Parallax();
+		
+		
+		/*Realize the insertion of paths in delpthScene object.The first one added 
+		 * will be the last one to be painted and the last to be added to the list, 
+		 * it will be the main layer (mainLayer). 
+		 */
 		final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
-		//The first one added will be the last one to be painted.
 		this.delpthScene.add(DELPTH_BACKGROUND_PATH); 
 		final String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png";
 		this.delpthScene.add(DELPTH_UNIVERSE1_PATH); 
@@ -64,27 +75,35 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		this.delpthScene.add(DELPTH_UNIVERSE2_PATH); 
 	    final String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg";
 		this.delpthScene.add(DELPTH_UNIVERSE3_PATH); 
-		//Since universe4.jpg was the last to be added to the list, it will be the main layer (mainLayer).
 	    final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
 		this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
 		
-		//Adjusts the speed of all layers from the main layer
+		/*
+		 * ...Adjusts the speed of all layers from the main layer
+		 */
 		this.delpthScene.setVelAllLayers(0, 1);
 
-		/*Define scenes elements position
-		 *Continue sprite upper-center position*/
+		
+		/*Realize the position of images in continue screen, continue sprite 
+		 * upper-center position.
+		 */
 	    final String CONTINUE_PATH = "src/assets/img/continue/continue.png";
 		this.continueScreen = new Sprite(CONTINUE_PATH);
 		this.continueScreen.x = WindowConstants.WIDTH/2 - this.continueScreen.width/2;
 		this.continueScreen.y = WindowConstants.HEIGHT/2 - this.continueScreen.height;
 
-		//Number sprite positions
+		
+		/*Realize the position of images in countDown screen.
+		 */
 		final String COUNTDOWN_PATH = "src/assets/img/continue/number_9.png";
 		this.countdownScreen = new Sprite(COUNTDOWN_PATH);
 		this.countdownScreen.x = WindowConstants.WIDTH/2 - this.countdownScreen.width/2;
 		this.countdownScreen.y = WindowConstants.HEIGHT/1.5 - this.countdownScreen.height/2;
 
-		//Enter Sprite displays Screen
+		
+		
+		/*Realize the position of enter sprite displays screen.
+		 */
 	    final String ENTER_PATH = "src/assets/img/continue/Enter-Download-PNG.png";	 //$NON-NLS-1$
 		this.enterScreen = new Sprite(ENTER_PATH);
 		this.enterScreen.x = WindowConstants.WIDTH/2 - this.enterScreen.width/2;
