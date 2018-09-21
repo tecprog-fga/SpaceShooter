@@ -27,6 +27,9 @@ public class CountDownTimer extends TimerTask {
 		counterTime -= 1;
 		delegateAction.updateImageForIndex(counterTime);
 		
+		/**
+		 * This selection structure is used to show the screen game over if counterTime is less than zero
+		 */
 		if (counterTime < 0) {
 			
 			delegateAction.finishScene();
