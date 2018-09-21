@@ -20,6 +20,10 @@ public class Enemy extends GameEntity {
 	 */
 	static private final String IMAGE_TEMP_PLAYER = "src/assets/img/temp_player.png";
 
+	/** build the sprite of the enemy and define your position
+	 * @param x x-axis position
+	 * @param y y-axis position
+	 */
 	public Enemy(int x, int y) {
 		super(Enemy.IMAGE_TEMP_PLAYER);
 		this.x = x;
@@ -31,6 +35,10 @@ public class Enemy extends GameEntity {
 	 */
 	private int commandCount = 0;
 	
+	/** 
+	 * command executed by the enemy
+	 * @param commands 
+	 */
 	public void executeBehavior(Command[] commands) {
 		if (commandCount < commands.length) {
 			if (commands[commandCount].executeDisplacement(this)) {
@@ -41,10 +49,19 @@ public class Enemy extends GameEntity {
 	}
 	
 	
+	/** 
+	 * builds the enemy
+	 * @param fileName
+	 */
 	public Enemy(String fileName) {
 		super(fileName);
 	}
 
+	/* 
+	 * Damage done by the enemy
+	 * (non-Javadoc)
+	 * @see entity.GameEntity#didContact(entity.GameEntity)
+	 */
 	@Override
 	public void didContact(GameEntity entity){
 		if (entity.getClass() == Bullet.class) {

@@ -18,10 +18,18 @@ public class Bullet extends GameEntity {
 	 */
 	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";
 	
+	/**
+	 * builds the bullet sprite on the screen 
+	 */
 	public Bullet() {
 		super(IMAGE_BULLET);
 	}
 	
+	/**
+	 *  bullet firing position
+	 * @param owner bullet target
+	 * @param position of the y-axis running through the bullet
+	 */
 	public void fireBy(GameEntity owner, double vely) {
 		this.owner = owner;
 		this.vely = vely;
@@ -35,10 +43,16 @@ public class Bullet extends GameEntity {
 		}
 	}
 	
+	/*  
+	 * reborn bullet 
+	 * (non-Javadoc)
+	 * @see entity.GameEntity#reborn()
+	 */
 	@Override
 	public void reborn() {
 		super.reborn();
 		this.owner = null;
 	}
+	
 	public GameEntity owner = null; 
 }

@@ -29,16 +29,23 @@ public class World {
 		evolver.start();
 	}
 	
+	/**
+	 * adds an entity to the scenario
+	 * @param entity
+	 */
 	public void add(GameEntity entity) {
 		objs.add(entity);			
 	}
 	
+	/**
+	 * removes the entity to the scenario
+	 * @param entity
+	 */
 	public void remove(GameEntity entity) {
 		objs.remove(entity);
 	}
 	
-	public void update() {
-		
+	public void update() {	
 		evolver.update();
 		
 		/*
@@ -109,20 +116,39 @@ public class World {
 	private BulletPool bulletPool = new BulletPool();
 	private EnemyPool enemyPool = new EnemyPool();
 	
-	/*
-	 * GameEvent Facade
+	/**
+	 * GameEvent facade
+	 * @param callback
+	 * @param time
+	 * @param type
+	 * @param name
 	 */
 	public void addEvent(GameEventCallback callback, int time, int type, String name) {
 		GameEvent event = this.createNewEvent(callback, time, type, name);
 		this.evolver.add(event);
 	}
 	
+	/**
+	 * GameEvent Facade
+	 * @param callback
+	 * @param time
+	 * @param type
+	 * @param name
+	 */
 	public void addEventAfterCurrentTime(GameEventCallback callback, int time, int type, String name) {
 		GameEvent event = this.createNewEvent(callback, time, type, name);
 		event.time += evolver.getCurrentIteration();
 		this.evolver.add(event);
 	}
 	
+	/**
+	 * GameEvent facade
+	 * @param callback
+	 * @param time
+	 * @param type
+	 * @param name
+	 * @return
+	 */
 	private GameEvent createNewEvent(GameEventCallback callback, int time, int type, String name){
 		GameEvent event = new GameEvent();
 		event.setCallback(callback);
@@ -132,8 +158,9 @@ public class World {
 		return event;
 	}
 	
-	/*
-	 *  Object Pool facade
+	/**
+	 * object pool facade
+	 * @return
 	 */
 	public Enemy createEnemy() {
 		Enemy enemy = enemyPool.release();
@@ -141,6 +168,10 @@ public class World {
 		return enemy;
 	}
 	
+	/**
+	 * immediately launch the enemy on the scene
+	 * @param enemy
+	 */
 	public void releaseEnemy(Enemy enemy) {
 		enemyPool.acquire(enemy);
 	}

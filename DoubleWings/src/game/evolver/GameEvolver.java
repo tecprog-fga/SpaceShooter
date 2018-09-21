@@ -15,12 +15,19 @@ public class GameEvolver {
 
 	private boolean isPaused = true;
 	
+	/**
+	 * game initializer 
+	 */
 	public void start() {
 		isPaused = false;
 	}
 	
 	private ArrayList<GameEvent> events = new ArrayList<GameEvent>();
 	
+	/**
+	 * add event to scene
+	 * @param event
+	 */
 	public void add(GameEvent event) {
 		if (event != null){
 			System.out.println("Adding new event: " + event.name);
@@ -34,6 +41,10 @@ public class GameEvolver {
 		return iterator;
 	}
 	
+	/**
+	 * remove event to scene
+	 * @param event
+	 */
 	public void remove(GameEvent event) {
 		
 		if (event != null) {
@@ -43,7 +54,6 @@ public class GameEvolver {
 	
 	public void update() {
 		if (isPaused == false) {
-			/*System.out.println("GameIteration: " + iterator);*/
 			iterator += 1;
 			checkEvents();
 		}

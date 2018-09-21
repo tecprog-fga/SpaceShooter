@@ -14,8 +14,9 @@ import jplay.Keyboard;
 */
 public class GameController {
 
-	/*
-	 * Transit to another scene
+	/**
+	 * transit to another scene
+	 * @param scene
 	 */
 	public void transitTo(GameScene scene) {	
 		
@@ -47,6 +48,10 @@ public class GameController {
 	/*
 	 *  Updates current scene and control running status
 	 */
+	/**
+	 * start the game
+	 * @return isRunning
+	 */
 	public boolean update() {
 		
 		/*
@@ -58,8 +63,8 @@ public class GameController {
 		return isRunning; 
 	}
 	
-	/*
-	 *  Quit game Ending process
+	/**
+	 * quit game ending process
 	 */
 	public void quit() {
 		isRunning = false;
