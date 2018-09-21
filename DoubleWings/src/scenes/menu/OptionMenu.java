@@ -1,3 +1,8 @@
+/**
+ * File: OptionsMenu.java
+ * Purpose: Generate enumerators based on actions of game
+ */
+
 package scenes.menu;
 
 /**

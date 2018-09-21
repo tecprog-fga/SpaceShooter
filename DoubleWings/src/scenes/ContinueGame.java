@@ -48,22 +48,20 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	 */
 	private Parallax delpthScene = null;	
 	
-	/* This void method build all sprites for show scenes of class .
+	/* This void method build all sprites for show scenes of class ContinueGame.
 	 * (non-Javadoc)
 	 * @see scenes.GameScene#buildInitialScene()
 	 */
 	public void buildInitialScene() {
 
-		/*
-		 * Configure enter and escape key for detect initial press only 
-		 * because it's necessary set behavior this buttons
+		/* Configure enter and escape key for detect initial press only.
+		 * Because it's necessary set behavior this buttons for to go initial scene
 		 */
 		this.keyboard.setBehavior(Keyboard.ENTER_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
 		this.keyboard.setBehavior(Keyboard.ESCAPE_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
 
 		
-		/*
-		 * Creation a object to class Parallax
+		/* Creation a object to class Parallax
 		 */
 		this.delpthScene = new Parallax();
 		
@@ -83,8 +81,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	    final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
 		this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
 		
-		/*
-		 * ...Adjusts the speed of all layers from the main layer
+		/* ...Adjusts the speed of all layers from the main layer
 		 */
 		this.delpthScene.setVelAllLayers(0, 1);
 
@@ -113,6 +110,8 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		this.enterScreen.x = WindowConstants.WIDTH/2 - this.enterScreen.width/2;
 		this.enterScreen.y = WindowConstants.HEIGHT/500 - this.enterScreen.height/20;
 
+		/* Finally, build scene of count down
+		 */
 		buildWaitScene();
 	}
 
@@ -128,7 +127,8 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		timer = new Timer();
 
 		/*
-		 * This object is instance of CountDown class, this object realize count down instruments in timer configuration.
+		 * This object is instance of CountDown class, this object realize count down instruments in 
+		 * timer configuration.
 		 */
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
@@ -136,54 +136,57 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		countDown.delegateAction = this;
 
 		/*
-		 * Define the time in miliseconds.
+		 * Define the time in milliseconds.
 		 */
 		final int DELAY = 1000; 
 		
+		/*
+		 * Realize count with count down and delay of 1000 miliseconds
+		 */
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
 
 	/* 
-	 * Build the update image of sprite on screen
+	 * Build the update image of sprite on screen for repeat 
 	 * (non-Javadoc)
 	 * @see scenes.GameScene#updateScene()
 	 */
 	public void updateScene() {
 
-		//Print all layers that have been added
+		/* Print all layers that have been added
+		 */
 		this.delpthScene.drawLayers();
 		
-		/*
-		 * This constant define the value of pixels most bellow of screen.
+		/* This constant define the value of pixels most bellow of screen.
 		 */
 		final int PIXELS_DOWN = 800; 
 		
-		/*
-		 * This constant define the value of pixels side of screen.
+		/* This constant define the value of pixels side of screen.
 		 */
 		final int PIXELS_SIDES = 600;
 		
-		/*
-		 * The method below is responsible for maintaining infinite repetition 
+		/* The method below is responsible for maintaining infinite repetition 
 		 * of the layers.
 		 */
 		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
-		/*
-		 * Move the parallax orientation vertically
+		/* Move the parallax orientation vertically
 		 */
 		this.delpthScene.moveLayersStandardY(false);
 
+		/* Draw on screen with the continue, count down and enter images.
+		 */
 		this.continueScreen.draw();
 		this.countdownScreen.draw();
 		this.enterScreen.draw();
 
+		/* Check button for decision of transit screen
+		 */
 		checkButtonSelection();
-
 	}
 	
 	/* 
-	 * Build final scene
+	 * Build final scene for transit on Game over
 	 * (non-Javadoc)
 	 * @see util.CountDownTimerEnds#finishScene()
 	 */
@@ -203,7 +206,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	}
 
 	/* 
-	 * Given index update the image and build scene for this
+	 * Given index update the image and build scene.
 	 * (non-Javadoc)
 	 * @see util.CountDownTimerEnds#updateImageForIndex(int)
 	 */
