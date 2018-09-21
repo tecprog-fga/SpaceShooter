@@ -38,7 +38,15 @@ public abstract class GameScene {
 		buildInitialScene();
 		viewSetup();
 	}
+	
+	/**
+	 * This method build all initial sprites for show scenes.
+	 */
 	protected abstract void buildInitialScene();
+	
+	/**
+	 * This is a void method used for configure the scene.
+	 */
 	protected abstract void viewSetup();
 	
 	/**

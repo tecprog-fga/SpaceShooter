@@ -22,7 +22,7 @@ import util.CountDownTimerEnds;
 public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	
 	/*
-	 * This void method was declarated in GameScene abstract class, it used for configurated the scene
+	 * This void method was declarated in GameScene abstract class, it used for configurate the scene
 	 * (non-Javadoc)
 	 * @see scenes.GameScene#viewSetup()
 	 */
@@ -34,10 +34,12 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	 * Sprite for build first screen of game's continue
 	 */
 	private Sprite continueScreen = null;
+	
 	/**
 	 * This sprite build screen for countdown of game's continue
 	 */
 	private Sprite countdownScreen = null;
+	
 	/**
 	 * This sprite display screen for "click enter"
 	 */
@@ -48,7 +50,8 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	 */
 	private Parallax delpthScene = null;	
 	
-	/* This void method build all sprites for show scenes of class ContinueGame.
+	/* This void method build sprites for show scenes of class ContinueGame.
+	 * It's necessary for build the initial sprites for universe, continue, count down and enter images.
 	 * (non-Javadoc)
 	 * @see scenes.GameScene#buildInitialScene()
 	 */
@@ -66,7 +69,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		this.delpthScene = new Parallax();
 		
 		
-		/*Realize the insertion of paths in delpthScene object.The first one added 
+		/*Realize the insertion of paths in delpthScene object. The first one added 
 		 * will be the last one to be painted and the last to be added to the list, 
 		 * it will be the main layer (mainLayer). 
 		 */
@@ -133,6 +136,9 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
 		
+		/*
+		 * Delegate action for count down to execute
+		 */
 		countDown.delegateAction = this;
 
 		/*
@@ -141,13 +147,13 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		final int DELAY = 1000; 
 		
 		/*
-		 * Realize count with count down and delay of 1000 miliseconds
+		 * Realize count with count down and delay of 1000 milliseconds
 		 */
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
 
 	/* 
-	 * Build the update image of sprite on screen for repeat 
+	 * Build the update image of sprite on screen for repeat layers
 	 * (non-Javadoc)
 	 * @see scenes.GameScene#updateScene()
 	 */
