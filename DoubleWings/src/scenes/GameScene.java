@@ -1,3 +1,8 @@
+/**
+ * File: GameScene.java
+ * Purpose: Build the game main scene
+ */
+
 package scenes;
 
 import game.GameController;

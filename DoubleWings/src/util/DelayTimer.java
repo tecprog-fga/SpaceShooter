@@ -1,3 +1,8 @@
+/**
+ * File: DelayTimer.java
+ * Purpose: Delay the timer
+ */
+
 package util;
 
 import java.util.Timer;

@@ -1,3 +1,8 @@
+/**
+ * File: CountDownTimer.java
+ * Purpose: Counter the time in the game
+ */
+
 package util;
 
 import java.util.TimerTask;

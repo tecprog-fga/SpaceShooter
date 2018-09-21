@@ -1,3 +1,8 @@
+/**
+ * File: FirstStage.java
+ * Purpose: Create the first stage of the game
+ */
+
 package scenes.stages.stage1;
 
 import java.awt.event.KeyEvent;
