@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: ScriptHandler.java
+  * Purpose: ScriptHandler class implementation
+  ********************************************************/
+
 package behavior;
 
 import java.io.IOException;

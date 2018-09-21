@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: Main.java
+  * Purpose: Main class implementation
+  ********************************************************/
+
 import jplay.Window; 
 import java.awt.Color;
 import constants.WindowConstants;

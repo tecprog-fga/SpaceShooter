@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: CommandCreator.java
+  * Purpose: CommandCreator class implementation
+  ********************************************************/
+
 package commands;
 
 public class CommandCreator {

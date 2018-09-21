@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: Score.java
+  * Purpose: Score class implementation
+  ********************************************************/
+
 package score;
 
 public class Score {

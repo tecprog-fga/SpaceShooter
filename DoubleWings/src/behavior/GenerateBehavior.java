@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: GenerateBehavior.java
+  * Purpose: GenerateBehavior class implementation
+  ********************************************************/
+
 package behavior;
 
 import java.io.IOException;

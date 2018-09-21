@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: MoveCommand.java
+  * Purpose: MoveCommand class implementation
+  ********************************************************/
+
 package commands;
 
 import entity.Enemy;

@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: HUD.java
+  * Purpose: HUD class implementation
+  ********************************************************/
+
 package hud;
 
 import jplay.Sprite;

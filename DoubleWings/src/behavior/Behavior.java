@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: Behavior.java
+  * Purpose: Behavior class implementation
+  ********************************************************/
+
 package behavior;
 
 import java.util.ArrayList;

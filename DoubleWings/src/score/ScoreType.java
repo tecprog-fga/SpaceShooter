@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: ScoreType.java
+  * Purpose: ScoreType class implementation
+  ********************************************************/
+
 package score;
 
 public enum ScoreType {

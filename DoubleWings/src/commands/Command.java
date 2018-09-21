@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: Command.java
+  * Purpose: Command interface implementation
+  ********************************************************/
+
 package commands;
 
 import entity.Enemy;

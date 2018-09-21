@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: HudScore.java
+  * Purpose: HudScore class implementation
+  ********************************************************/
+
 package hud;
 
 import java.awt.Color;
