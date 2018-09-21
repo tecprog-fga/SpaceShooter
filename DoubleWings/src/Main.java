@@ -10,6 +10,9 @@ import scenes.GameScene;
 import scenes.menu.MenuScene;
 import game.GameController;
 
+/**
+ * This class initialize the game
+ */
 public class Main {
 	/**
 	 * variable that indicates how long the game is going to be in sleep mode

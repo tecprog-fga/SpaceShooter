@@ -16,6 +16,9 @@ import commands.CommandType;
 import commands.MoveCommand;
 import java.util.ArrayList;
 
+/**
+ * class that generates the behavior of game commands
+ */
 public class GenerateBehavior {
 	
 	private final Path SCRIPT_PATH;

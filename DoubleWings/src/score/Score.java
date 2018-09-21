@@ -5,6 +5,9 @@
 
 package score;
 
+/**
+ * Class related to the game score
+ */
 public class Score {
 	/**
 	 * Variable that saves the game's current score

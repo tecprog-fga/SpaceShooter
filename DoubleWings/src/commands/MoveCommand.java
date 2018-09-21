@@ -8,6 +8,9 @@ package commands;
 import entity.Enemy;
 import jplay.Sprite;
 
+/**
+ * class that manages the movements of objects on the screen
+ */
 public class MoveCommand implements Command {
 	/**
 	 * Distance to enemy movimentation in pixels

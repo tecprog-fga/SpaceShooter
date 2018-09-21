@@ -12,6 +12,9 @@ import java.awt.Font;
 import constants.WindowConstants;
 import entity.player.*;
 
+/**
+ * Class for all information displayed on the game screen for the player (HUD)
+ */
 public class HUD implements GameEntityObserver {
 	/**
 	 * creates the life bar with the maximum screen width

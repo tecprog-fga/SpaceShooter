@@ -8,6 +8,9 @@ package behavior;
 import java.util.ArrayList;
 import commands.Command;
 
+/**
+ * class responsible for behavior
+ */
 public class Behavior {
 
 	private static ArrayList<Command> COMMAND_LIST;

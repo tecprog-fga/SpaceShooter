@@ -9,6 +9,9 @@ import java.awt.Color;
 import java.awt.Font;
 import jplay.Time;
 
+/**
+ * class that controls the score that will be displayed on the HUD
+ */
 public class HudScore extends Time {
 	/**
 	 * Variable used to save the score information that will be displayed in hud

@@ -5,6 +5,9 @@
 
 package score;
 
+/**
+ * Enum for the types of scores present in the game
+ */
 public enum ScoreType {
 	/**
 	 * scores that can be made in the game to every downed enemy

@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import behavior.GenerateBehavior;
 import commands.Command;
 
+/**
+ * class that handles scripts
+ */
 public class ScriptHandler {
 
 	private static Path SCRIPT_PATH;

@@ -5,6 +5,9 @@
 
 package commands;
 
+/**
+ * class that manages the player commands
+ */
 public class CommandCreator {
 	
 	/**
