@@ -8,6 +8,11 @@ package util;
 import java.util.TimerTask;
 import util.CountDownTimerEnds;
 
+/**
+ * This class is responsible to counter the time  and
+ * delegate the action of finish the scene
+ */
+
 public class CountDownTimer extends TimerTask {
 
 	int counterTime = 9;

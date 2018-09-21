@@ -22,6 +22,11 @@ import scenes.GameScene;
 import game.evolver.GameEvent;
 import game.evolver.GameEventCallback;
 
+/**
+ * This class is responsible to create the scenario, 
+ * the parallax effect, the spaceship and the enemies
+ */
+
 public class FirstStage extends GameScene implements GameEventCallback, PlayerSceneDelegate {
 
 	private World gameWorld = null;

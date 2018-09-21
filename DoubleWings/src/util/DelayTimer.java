@@ -8,6 +8,10 @@ package util;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * This class is responsible to to delay the timer if is necessary
+ */
+
 public class DelayTimer extends Timer implements DelayDelegate {
 
 	private DelayDelegate delegate = null;

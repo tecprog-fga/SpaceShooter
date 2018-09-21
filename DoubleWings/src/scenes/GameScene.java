@@ -8,6 +8,11 @@ package scenes;
 import game.GameController;
 import jplay.Keyboard;
 
+/**
+ * This class build the game main scene and 
+ * release the keyboard to control the game
+ */
+
 public abstract class GameScene {
 
 	public abstract void updateScene();
