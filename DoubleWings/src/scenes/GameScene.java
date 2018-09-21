@@ -14,12 +14,20 @@ import jplay.Keyboard;
  */
 
 public abstract class GameScene {
-
+	
+	/**
+	 * This method Build the updated sprite image on the screen
+	 */
 	public abstract void updateScene();
 	
 	protected GameController game = null;
 	protected Keyboard keyboard = null;
-
+	
+	/**
+	 * This method Configure the controls in the keyboard and
+	 * the scene to show on the screen
+	 * @param game 
+	 */
 	public void configureGameScene(GameController game) {
 		
 		this.game = game;
@@ -32,7 +40,10 @@ public abstract class GameScene {
 	}
 	protected abstract void buildInitialScene();
 	protected abstract void viewSetup();
-
+	
+	/**
+	 * This method Destroy the current scene to show another scene 
+	 */
 	public void destroyScene() {
 		
 		this.game = null;

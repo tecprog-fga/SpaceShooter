@@ -31,6 +31,9 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 	private World gameWorld = null;
 
+	/**
+	 * This method set the keys to control the spaceship and configure the entities
+	 */
 	@Override
 	public void buildInitialScene() {
 
@@ -57,6 +60,9 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 	private Parallax parallaxEffect = null;
 
+	/**
+	 * This method set the parallax effect in the scenario
+	 */
 	protected void viewSetup() {
 		
 		final String LAYER0_PATH = "src/assets/img/background_layer_0.png"; //$NON-NLS-1$
@@ -87,6 +93,9 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	private ArrayList<Command> commands = null;
 	private Command currentCommand = null;
 
+	/**
+	 * This method create the commands left, down and right
+	 */
 	private void creatingCommands() {
 		
 		commands = new ArrayList<Command>();
@@ -102,7 +111,10 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 	private HUD hud = null;
 	private Player player = new Player();
-
+	
+	/**
+	 * This method creates the hud, the initial position of the spaceship and the asteroids 
+	 */
 	private void configureEntities() {
 		
 		// Create the HUD and adding it as player's observer
@@ -123,6 +135,9 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		createTestAsteroid();
 	}
 
+	/**
+	 * This method creates the spaceship and its configuration
+	 */
 	public void createSpaceShip() {
 		
 		// Creating player sprite
@@ -141,6 +156,10 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	public final static int LIFES = 10;
 	final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //$NON-NLS-1$
 
+	/**
+	 * This method creates the asteroids and its configuration
+	 * @param velY
+	 */
 	public void createAsteroid(double velY) {
 		
 		Enemy asteroid = null;
@@ -157,6 +176,9 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 	private Enemy asteroid1 = null;
 
+	/**
+	 * This method sets the asteroids in the scenario and its initial position 
+	 */
 	public void createTestAsteroid() {
 		
 		asteroid1 = new Enemy(ASTEROID_PATH);
@@ -168,6 +190,9 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		gameWorld.add(asteroid1);
 	}
 
+	/**
+	 * This method updates the parallax, updates and draw all entities added in the game
+	 */
 	@Override
 	public void updateScene() {
 		

@@ -18,6 +18,9 @@ public class CountDownTimer extends TimerTask {
 	int counterTime = 9;
 	public CountDownTimerEnds delegateAction = null;
 
+	/**
+	 * This method is extended of the library java.util.TimerTask. This method cannot be renamed
+	 */
 	@Override
 	public void run() {
 

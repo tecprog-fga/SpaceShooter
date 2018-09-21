@@ -17,6 +17,11 @@ public class DelayTimer extends Timer implements DelayDelegate {
 	private DelayDelegate delegate = null;
 	private int type = 0;
 
+	/**
+	 * This method is responsible to delegate the delay and the type
+	 * @param delegate
+	 * @param type
+	 */
 	public DelayTimer(DelayDelegate delegate, int type) {
 		
 		this.type = type;
