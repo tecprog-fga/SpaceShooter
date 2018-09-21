@@ -23,8 +23,6 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	
 	/*
 	 * This void method was declarated in GameScene abstract class, it used for configurated the scene
-	 * (non-Javadoc)
-	 * @see scenes.GameScene#buildInitialScene()
 	 */
 	public void buildInitialScene() {
 

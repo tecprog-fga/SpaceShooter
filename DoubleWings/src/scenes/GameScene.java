@@ -20,13 +20,20 @@ public abstract class GameScene {
 	 */
 	public abstract void updateScene();
 	
+	/**
+	 * Object for execute game
+	 */
 	protected GameController game = null;
-	protected Keyboard keyboard = null;
 	
+	/**
+	 * Object for control keyboard game
+	 */
+	protected Keyboard keyboard = null;
+
 	/**
 	 * This method Configure the controls in the keyboard and
 	 * the scene to show on the screen
-	 * @param game 
+	 * @param game - object for execute game
 	 */
 	public void configureGameScene(GameController game) {
 		
