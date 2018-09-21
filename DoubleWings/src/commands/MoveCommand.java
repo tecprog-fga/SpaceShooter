@@ -35,7 +35,7 @@ public class MoveCommand implements Command {
 	 * @param actor the actor
 	 */ 
 	public boolean executeDisplacement(Sprite actor) {
-		/**
+		/*
 		 * the actor must move on the screen for a distance
 		 */
 		if (this.distanceToMove > 0) {
@@ -53,7 +53,7 @@ public class MoveCommand implements Command {
 	 * @return
 	 */
 	public boolean executeDisplacement(Sprite[] actors) {
-		/**
+		/*
 		 * actors must move on the screen for a distance limit
 		 */
 		if (this.distanceToMove > 0) {
@@ -72,7 +72,7 @@ public class MoveCommand implements Command {
 	 * @param actor object that will be moved by the screen
 	 */
 	private void moveActor(Sprite actor) {
-		/**
+		/*
 		 * must move the game object in one of the four main directions
 		 */
 		switch(this.direction) {

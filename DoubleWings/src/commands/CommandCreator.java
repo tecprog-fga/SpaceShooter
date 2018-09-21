@@ -16,7 +16,7 @@ public class CommandCreator {
 	 * @return MoveCommand
 	 */
 	public static Command createPlayerCommand(CommandType type) {
-		/**
+		/*
 		 * executes the command equivalent to the key pressed by the player
 		 */
 		switch(type) {

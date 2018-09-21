@@ -29,7 +29,7 @@ public class HUD implements GameEntityObserver {
 	private Sprite numberOfLivesImage = null;
 	private HudScore scoreText = null;
 	
-	/**
+	/*
 	 * path of shield, shield ornament and lives images
 	 */
 	final String ENERGY = "src/assets/img/hud/energy.png"; //$NON-NLS-1$
@@ -41,21 +41,21 @@ public class HUD implements GameEntityObserver {
 	 * Constructor method of class HUD
 	 */
 	public HUD() {
-		/**
+		/*
 		 * positions the life bar on the screen
 		 */
 		shieldLifeBar = new Sprite(ENERGY);
 		this.shieldLifeBar.x = WindowConstants.WIDTH/2 - this.shieldLifeBar.width/2;
 		this.shieldLifeBar.y = WindowConstants.HEIGHT - this.shieldLifeBar.height;
 
-		/**
+		/*
 		 * positions the life bar ornament on the screen
 		 */
 		shieldLifeBarOrnament = new Sprite(SHIELD_BAR_ORNAMENT);
 		this.shieldLifeBarOrnament.x = 0;
 		this.shieldLifeBarOrnament.y = WindowConstants.HEIGHT - this.shieldLifeBarOrnament.height;
 
-		/**
+		/*
 		 * positions the number of lives on the screen
 		 */
 		numberOfLivesImage = new Sprite(LIVES, 4);
@@ -63,7 +63,7 @@ public class HUD implements GameEntityObserver {
 		this.numberOfLivesImage.x = WindowConstants.WIDTH - numberOfLivesImage.width;
 		this.numberOfLivesImage.y = 0;
 
-		/**
+		/*
 		 * formats the score and positions it on the screen
 		 */
 		scoreText = new HudScore(10, 40);
@@ -108,7 +108,7 @@ public class HUD implements GameEntityObserver {
 	 * @param playerNumberOfLives goes from zero to three, can be changed up
 	 */
 	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
-		/**
+		/*
 		 * the number of lives must be within the limit established above
 		 */
 		if (playerNumberOfLives <= MAX_NUMBER_OF_LIVES && playerNumberOfLives >= MIN_NUMBER_OF_LIVES) {
@@ -132,7 +132,7 @@ public class HUD implements GameEntityObserver {
 	 */
 	public void notifyObserver(Object entity) {
 
-		/**
+		/*
 		 * should display the log on the console to make it easier
 		 * to verify that the shield is working as it should
 		 */
