@@ -20,7 +20,7 @@ public class GameController {
 	 */
 	public void transitTo(GameScene scene) {	
 		
-		/*
+		/**
 		 * Leave transition if scene is null
 		 */
 		if (scene == null || keyboard == null) { 
@@ -45,17 +45,14 @@ public class GameController {
 	 */
 	private boolean isRunning = true;
 	
-	/*
-	 *  Updates current scene and control running status
-	 */
 	/**
-	 * start the game
+	 * updates current scene and control running status
 	 * @return isRunning
 	 */
 	public boolean update() {
 		
-		/*
-		 * Updates current scene
+		/**
+		 * updates current scene
 		 */
 		if (currentScene != null){
 			currentScene.updateScene();

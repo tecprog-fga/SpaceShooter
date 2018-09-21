@@ -48,14 +48,14 @@ public class World {
 	public void update() {	
 		evolver.update();
 		
-		/*
-		 * Check all collisions
+		/**
+		 * check all collisions
 		 */
 		for (int i = 0; i < objs.size(); i++) {
 			GameEntity obj1 = objs.get(i);
 			
-			/*
-			 *  i + 1 to not repeat obj collision check
+			/**
+			 * object crash test
 			 */
 			for (int k = i + 1; k < objs.size(); k++) {
 				GameEntity obj2 = objs.get(k);
@@ -67,19 +67,19 @@ public class World {
 			}
 			
 			/*
-			 * Draw and update all objects
+			 * draw and update all objects
 			 */
 			obj1.draw();
 			obj1.update();
 			
 			/*
-			 * Update object position
+			 * update object position
 			 */
 			obj1.x += obj1.velx;
 			obj1.y += obj1.vely;
 			
-			/*
-			 * Check if entity is dead
+			/**
+			 * check if entity is dead
 			 */
 			if (obj1.isDead()) {
 				deadObjs.add(obj1);
@@ -89,20 +89,23 @@ public class World {
 		for (GameEntity deadObj : deadObjs){
 			boolean didRemove = objs.remove(deadObj);
 			
-			/*
-			 * Enemy pool recycling
+			/**
+			 * enemy pool recycling
 			 */
 			if (deadObj.getClass() == Enemy.class) {
 				enemyPool.acquire((Enemy) deadObj);
 			}
 			
-			/*
-			 * Bullet pool recycling
+			/**
+			 * bullet pool recycling
 			 */
 			if (deadObj.getClass() == Bullet.class) {
 				bulletPool.acquire((Bullet) deadObj);
 			}
 			
+			/**
+			 * message stating the elimination of the entity from the game scene
+			 */
 			if (didRemove == true) {
 				System.out.println("Entity removed from the world");
 			} else {

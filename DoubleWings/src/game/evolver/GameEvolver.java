@@ -68,13 +68,12 @@ public class GameEvolver {
 	
 	private void checkEvents() {
 		
-		/*
-		 * Calling events
+		/**
+		 * calling events
 		 */
 		for (int i = 0; i < events.size(); i++) {
 			GameEvent e = events.get(i);
 			
-			/*System.out.println("e.name: " + e.time + " " + iterator);*/
 			if (e.time == iterator) {
 				history.add(e);
 				aux.add(e);				
@@ -83,8 +82,8 @@ public class GameEvolver {
 			}
 		}
 		
-		/*
-		 * Removing called events
+		/**
+		 * removing called events
 		 */
 		for (int k = 0; k < aux.size(); k++) {
 			GameEvent e = aux.get(k);

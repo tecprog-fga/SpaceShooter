@@ -69,11 +69,7 @@ public class Enemy extends GameEntity {
 			this.receiveDamage(20); // test purposes
 			Bullet bullet = (Bullet) entity;
 			PlayerSpaceship spaceship = (PlayerSpaceship) bullet.owner;
-			
-			/*
-			 * Increase Player Score
-			 */
-			spaceship.getPlayer().increaseScore(100);
+			spaceship.getPlayer().increaseScore(100);//Increase Player Score
 		}
 	}
 }
