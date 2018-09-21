@@ -12,22 +12,15 @@ import jplay.Keyboard;
  * This class build the game main scene and 
  * release the keyboard to control the game
  */
-
 public abstract class GameScene {
 	
-	/**
-	 * This method Build the updated sprite image on the screen
-	 */
+	// This method Build the updated sprite image on the screen
 	public abstract void updateScene();
 	
-	/**
-	 * Object for execute game
-	 */
+	// Object for execute game
 	protected GameController game = null;
-	
-	/**
-	 * Object for control keyboard game
-	 */
+		
+	// Object for control keyboard game
 	protected Keyboard keyboard = null;
 
 	/**
@@ -39,26 +32,20 @@ public abstract class GameScene {
 		
 		this.game = game;
 		this.keyboard = game.keyboard;
-		final String MSG_KEYBOARD = "keyboard: "; //$NON-NLS-1$
+		final String MSG_KEYBOARD = "keyboard: ";
 		System.out.println(MSG_KEYBOARD + this.keyboard); 
 
 		buildInitialScene();
 		viewSetup();
 	}
 	
-	/**
-	 * This method build all initial sprites for show scenes.
-	 */
+	// This method build all initial sprites for show scenes. 
 	protected abstract void buildInitialScene();
 	
-	/**
-	 * This is a void method used for configure the scene.
-	 */
+	// This is a void method used for configure the scene.	 
 	protected abstract void viewSetup();
 	
-	/**
-	 * This method Destroy the current scene to show another scene 
-	 */
+	// This method Destroy the current scene to show another scene  
 	public void destroyScene() {
 		
 		this.game = null;
