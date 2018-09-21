@@ -5,6 +5,10 @@ package score;
  * It's necessary because the feature needs count the final score.
  */
 public class Score {
+	/**
+	 * This variable store the value of counter.
+	 * It have unlimited.
+	 */
 	private int count = 0;
 
 	/**

@@ -9,6 +9,12 @@ public enum ScoreType {
 	MEDIUM(50), 
 	HIGH(100);
 
+	/**
+	 * This variable store the value of score.
+	 * 15 = Low
+	 * 50 = Medium
+	 * 100 = High
+	 */
 	int scoreValue = 0;
 
 	/**

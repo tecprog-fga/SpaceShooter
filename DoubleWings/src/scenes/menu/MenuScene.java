@@ -17,11 +17,11 @@ import jplay.Sprite;
  * this feature needs to show the movement scene in the screen.
  */
 public class MenuScene extends GameScene {
-	/*
+	/**
 	 * This constant store the result of calculation of distance between buttons
 	 */
 	private static final int DISTANCE_BETWEEN_BUTTONS = WindowConstants.HEIGHT/48;
-	/*
+	/**
 	 * Define initial menu option of selection menu
 	 */
 	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;
@@ -40,15 +40,15 @@ public class MenuScene extends GameScene {
 		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 	}
-	/*
+	/**
 	 * Background object for construct background scenes
 	 */
 	private GameImage background = null;
-	/*
+	/**
 	 * Title object for construct title sprite
 	 */
 	private Sprite title = null;
-	/*
+	/**
 	 * Arrow object for construct arrow sprite
 	 */
 	private Sprite arrow = null;
@@ -75,6 +75,9 @@ public class MenuScene extends GameScene {
 		arrow.y = 10;
 	}
 
+	/**
+	 * This object represent a array for build buttons
+	 */
 	private ArrayList<Sprite> buttons = new ArrayList<Sprite>();
 
 	/**

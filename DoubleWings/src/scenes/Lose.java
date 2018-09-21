@@ -13,22 +13,22 @@ import util.CountDownTimerEnds;
  */
 public class Lose extends GameScene implements CountDownTimerEnds {
 	
-	/*
+	/**
 	 * This object represent the building delpth scene screen
 	 */
 	private Parallax delpthScene = null;
 	
-	/*
+	/**
 	 * This object build sprite for life remaining
 	 */
 	private Sprite lifeRemaining = null;
 	
-	/*
+	/**
 	 * This object build sprite for lose screen
 	 */
 	private Sprite loseScreen = null;
 	
-	/*
+	/**
 	 * Variable to check how many lives the player has remain
 	*/
 	private int lifePlayer;
