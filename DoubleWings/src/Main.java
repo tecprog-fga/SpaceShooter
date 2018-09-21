@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: Main.java
+  * Purpose: Main class implementation
+  ********************************************************/
+
 import jplay.Window; 
 import java.awt.Color;
 import constants.WindowConstants;
@@ -5,12 +10,19 @@ import scenes.GameScene;
 import scenes.menu.MenuScene;
 import game.GameController;
 
+/**
+ * This class initialize the game
+ */
 public class Main {
 	/**
 	 * variable that indicates how long the game is going to be in sleep mode
 	 */
 	public final static int KEEP_FRAMERATE = 16;
 	
+	/**
+	 * Main method for execute the game
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		System.out.println("It's running!");
@@ -37,7 +49,7 @@ public class Main {
 
 		boolean gameIsRunning = true;
 		
-		/**
+		/*
 		 * while the game is open, the screen must be loaded and updated constantly
 		 */
 		while(gameIsRunning) {
