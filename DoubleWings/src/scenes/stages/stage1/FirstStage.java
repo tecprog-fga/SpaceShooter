@@ -71,19 +71,10 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		parallaxEffect.add(LAYER0_PATH);
 		parallaxEffect.add(LAYER1_PATH);
 		parallaxEffect.add(LAYER2_PATH);
-		// parallax.add("src/assets/img/universe2.jpg");
-		// parallax.add("src/assets/img/universe3.jpg");
-		// //Since universe4.jpg was the last to be added to the list, it will be the
-		// main layer (mainLayer).
-		// parallax.add("src/assets/img/universe4.jpg");
 
 		parallaxEffect.getLayer(0).setVelY(0.5);
 		parallaxEffect.getLayer(1).setVelY(4.5);
 		parallaxEffect.getLayer(2).setVelY(5);
-		// parallax.getLayer(2).setVelY(2);
-		// parallax.getLayer(3).setVelY(5);
-		// parallax.getLayer(4).setVelY(10);
-
 	}
 
 	private ArrayList<Command> commands = null;
@@ -198,8 +189,10 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		final int PIXELS_DOWN = 800;
 		final int PIXELS_SIDES = 600;
 
-		// The method below is responsible for maintaining infinite repetition of the
-		// layers.
+		/**
+		 * The method below is responsible for maintaining infinite 
+		 * repetition of the layers 
+		 */
 		parallaxEffect.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
 		// Move the parallax orientation vertically
@@ -217,9 +210,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 		if (commandCount >= MAX_COMMANDS && commands.size() > 0) {
 
-			// System.out.println("Commands: " + commands.size());
 			currentCommand = commands.remove(commands.size() - 1); // return removed object
-			// System.out.println("current: "+ String.valueOf(currentCommand));
 
 			commandCount = 0;
 		}
@@ -230,11 +221,9 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		}
 	}
 	
-	// Callback event handler
+	// Callback event handler. Adding different events for each case
 	@Override
 	public void eventCallback(GameEvent event) {
-
-		// System.out.println("Event callback received with type: " + event.type);
 
 		switch (event.type) {
 		case 1:
@@ -250,12 +239,10 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	}
 
 	public void launchEnemyDown() {
-		// System.out.println("Launch Enemy Down! \\o/");
 		this.createAsteroid(2.0);
 	}
 
 	public void launchEnemyCrazy() {
-		// System.out.println("Crazy enemy in sight! ò.Ó ");
 		this.createAsteroid(4.0);
 	}
 
@@ -265,9 +252,11 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 	public void addEvents() {
 
-		// 200 = default
-		// 1 = first enemy
-		// 2 = second type enemy
+		/**
+		 *  200 = default
+		 *  1 = first enemy
+		 *  2 = second type enemy
+		 */
 		this.gameWorld.addEventAfterCurrentTime(this, 700, 200, "Recursive script");
 
 		this.gameWorld.addEventAfterCurrentTime(this, 200, 1, "Enemy down");
@@ -284,7 +273,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		this.gameWorld.addEventAfterCurrentTime(this, 690, 2, "Enemy Crazy bastard");
 	}
 
-	// Player Scene Delegate
+	// Transition to game over screen
 	@Override
 	public void transitToGameOver() {
 		GameOver gameOver = null;
@@ -292,6 +281,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		this.game.transitTo(gameOver);
 	}
 
+	//Transition to the Continue screen
 	@Override
 	public void transitToContinue() {
 		GameScene scene = null;
