@@ -1,3 +1,7 @@
+/**
+ * File: GameOver.java
+ * Purpose: Build the game over game scene
+ */
 package scenes;
 
 import java.util.Timer;

@@ -1,3 +1,8 @@
+/**
+ * File: ContinueGame.java
+ * Purpose: Build the continue game scene
+ */
+
 package scenes;
 import java.util.Timer;
 
@@ -99,7 +104,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		this.countdownScreen = new Sprite(COUNTDOWN_PATH);
 		this.countdownScreen.x = WindowConstants.WIDTH/2 - this.countdownScreen.width/2;
 		this.countdownScreen.y = WindowConstants.HEIGHT/1.5 - this.countdownScreen.height/2;
-
 		
 		
 		/*Realize the position of enter sprite displays screen.

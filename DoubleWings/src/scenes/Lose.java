@@ -1,3 +1,8 @@
+/**
+ * File: Lose.java
+ * Purpose: Build the lose game scene
+ */
+
 package scenes;
 
 import java.util.Timer;

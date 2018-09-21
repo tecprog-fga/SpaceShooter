@@ -1,3 +1,8 @@
+/**
+ * File: Score.java
+ * Purpose: Count scores of player
+ */
+
 package score;
 
 /**

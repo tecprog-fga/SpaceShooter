@@ -1,3 +1,8 @@
+/**
+ * File: ScoreType.java
+ * Purpose: Generate enumerators what define types of score
+ */
+
 package score;
 
 /**

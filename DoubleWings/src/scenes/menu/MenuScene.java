@@ -1,3 +1,8 @@
+/**
+ * File: MenuScene.java
+ * Purpose: Build the menu scene
+ */
+
 package scenes.menu;
 
 import scenes.ContinueGame;
