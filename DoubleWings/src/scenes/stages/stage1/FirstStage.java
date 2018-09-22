@@ -61,9 +61,9 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	// This method set the parallax effect in the scenario
 	protected void viewSetup() {
 		
-		final String LAYER0_PATH = "src/assets/img/background_layer_0.png"; //$NON-NLS-1$
-		final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; //$NON-NLS-1$
-		final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; //$NON-NLS-1$
+		final String LAYER0_PATH = "src/assets/img/background_layer_0.png"; 
+		final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; 
+		final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; 
 		// Creation a object to class Parallax
 		parallaxEffect = new Parallax();
 
@@ -135,7 +135,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	}
 
 	public final static int LIFES = 10;
-	final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //$NON-NLS-1$
+	final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //Declaring constant with asteroid path
 
 	/**
 	 * This method creates the asteroids and its configuration
@@ -155,7 +155,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		gameWorld.add(asteroid);
 	}
 
-	private Enemy asteroid1 = null;
+	private Enemy asteroid1 = null; //declaring an asteroid of the type enemy
 
 	// This method sets the asteroids in the scenario and its initial position 
 	public void createTestAsteroid() {
@@ -181,6 +181,11 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		executeAsteroidCommand();
 	}
 
+	/**
+	 * The method below is responsible for maintaining infinite 
+	 * repetition of the layers 
+	 */
+	
 	public void updateParalax() {
 		
 		// Print all layers that have been added
@@ -189,10 +194,6 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		final int PIXELS_DOWN = 800;
 		final int PIXELS_SIDES = 600;
 
-		/**
-		 * The method below is responsible for maintaining infinite 
-		 * repetition of the layers 
-		 */
 		parallaxEffect.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
 		// Move the parallax orientation vertically
@@ -238,21 +239,28 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		}
 	}
 
+	//Creating the first type of enemy
 	public void launchEnemyDown() {
+		
 		this.createAsteroid(2.0);
 	}
 
+	//Creating the second type of enemy
 	public void launchEnemyCrazy() {
+		
 		this.createAsteroid(4.0);
 	}
-
+	
+	// Adding the events created
 	public void configureEvents() {
+		
 		this.addEvents();
 	}
 
 	public void addEvents() {
 
 		/**
+		 *  Adding events in the game world
 		 *  200 = default
 		 *  1 = first enemy
 		 *  2 = second type enemy

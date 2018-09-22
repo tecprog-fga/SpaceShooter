@@ -25,6 +25,10 @@ public class DelayTimer extends Timer implements DelayDelegate {
 		this.delegate = delegate;
 	}
 
+	/**
+	 * This void method is responsible to take the task and delay
+	 * @param delay
+	 */
 	public void schedule(long delay) {
 		
 		Task task = null;
@@ -32,6 +36,10 @@ public class DelayTimer extends Timer implements DelayDelegate {
 		this.schedule(task, delay);
 	}
 
+	/**
+	 * This void method is responsible to end the delay according to the time
+	 * @param timer
+	 */
 	@Override
 	public void delayEnded(DelayTimer timer) {
 		
@@ -43,14 +51,20 @@ public class DelayTimer extends Timer implements DelayDelegate {
 		return type;
 	}
 
+	//This private class is responsible to take the task and delegate an action
 	private class Task extends TimerTask {
 
 		private DelayDelegate delegate = null;
 
+		/**
+		 * This method is responsible to delegate according to the delay
+		 * @param delegate
+		 */
 		public Task(DelayDelegate delegate) {
 			this.delegate = delegate;
 		}
 
+		// This method is extended of the library java.util.TimerTask. This method cannot be renamed
 		public void run() {
 			
 			delegate.delayEnded(null);
