@@ -38,15 +38,12 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	*/
 	private int lifePlayer;
 	
-	/* This void method was declarated in GameScene abstract class, it used for configurated the scene
-	 * (non-Javadoc)
-	 * @see scenes.GameScene#buildInitialScene()
-	 */
+	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	public void buildInitialScene() {
 		
         this.delpthScene = new Parallax();
         final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
-        /* The first one added will be the last one to be painted.*/
+        //The first one added will be the last one to be painted.
 		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
 		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
 		final String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png";
@@ -56,23 +53,20 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		final String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg";
 		this.delpthScene.add(DELPTH_UNIVERSE3_PATH);
 		
-		/* Since universe4.jpg was the last to be added to the list, 
-		 * it will be the main layer (mainLayer).
-		 */
+		//Since universe4.jpg was the last to be added to the list, it will be the main layer (mainLayer).
 		final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
 		this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
 		
 		//Adjusts the speed of all layers from the main layer
 		this.delpthScene.setVelAllLayers(0, 1);
 		
-		/*Define scenes elements position
-		 *Continue sprite upper-center position*/
+		//Define scenes elements position. Continue sprite upper-center position
 		final String LOSE_PATH = "src/assets/img/continue/YOU-LOSE.png";
 		this.loseScreen = new Sprite(LOSE_PATH);
 		this.loseScreen.x = WindowConstants.WIDTH/2 - this.loseScreen.width/2;
 		this.loseScreen.y = WindowConstants.HEIGHT/500 - this.loseScreen.height/20;
 		
-		/* Check how many lives the player has to instantiate the specific sprite.*/
+		//Check how many lives the player has to instantiate the specific sprite.
 		if(getLifePlayer() == 1){
 			final String ONE_LIFE_PATH = "src/assets/img/continue/1life.png";
 			this.lifeRemaining = new Sprite(ONE_LIFE_PATH);
@@ -88,17 +82,14 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 			this.lifeRemaining = new Sprite(THREE_LIFE_PATH);
 		}
 		
-		/* Define position lifeRemaining on the Screen*/
+		//Define position lifeRemaining on the Screen
 		this.lifeRemaining.x = WindowConstants.WIDTH/2 - this.lifeRemaining.width/2;
 		this.lifeRemaining.y = WindowConstants.HEIGHT/2 - this.lifeRemaining.height/2;
 		
 		buildWaitScene();
 	}
 	
-	/* This void method build all sprites for show scenes of class 
-	 * (non-Javadoc)
-	 * @see scenes.GameScene#viewSetup()
-	 */
+	//This void method build all sprites for show scenes of class 
 	protected void viewSetup() {
 		// TODO Auto-generated method stub	
 	}
@@ -123,39 +114,26 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 * This method build the scene of waiting countdown
 	 */
 	public void buildWaitScene() {
-		/*
-		 * This object is necessary for schedule at fixed rate.
-		 */
+		//This object is necessary for schedule at fixed rate.
 		Timer timer = new Timer();
 		
-		/*
-		 * This object is necessary for delegate action for count down.
-		 */
+		//This object is necessary for delegate action for count down.
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
 		countDown.delegateAction = this;
 		
-		/*
-		 * This constant is value of time for delay on schedule.
-		 * Unit of measure: Miliseconds
-		 */
+		//This constant is value of time for delay on schedule. Unit of measure: Miliseconds
 		long DELAY = 1000;
 		
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
 	
-	/* Build the update image of sprite on screen
-	 * (non-Javadoc)
-	 * @see scenes.GameScene#updateScene()
-	 */
+	//Build the update image of sprite on screen
 	public void updateScene() {		
 		//Print all layers that have been added
 		this.delpthScene.drawLayers();
 		
-		/*
-		 * This constants is responsible for store of pixels value of screen.
-		 * Unit of measure: Pixels
-		 */
+		//This constants is responsible for store of pixels value of screen. Unit of measure: Pixels
 		final int PIXELS_DOWN = 800; 
 		final int PIXELS_SIDES = 600;
 		
@@ -169,21 +147,14 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		this.lifeRemaining.draw();
 	}
 	
-	/* Method that after the end of the time transit to the screen to ContinueGame class
-	 * (non-Javadoc)
-	 * @see util.CountDownTimerEnds#finishScene()
-	 */
+	//Method that after the end of the time transit to the screen to ContinueGame class
 	public void finishScene() {
 		if (this.game != null){
-			/*
-			 * Show on console the message when the time is ended
-			 */
-			final String END_TIMER = "Timer Ended"; //$NON-NLS-1$
+			//Show on console the message when the time is ended
+			final String END_TIMER = "Timer Ended";
 			System.out.println(END_TIMER);
 			
-			/*
-			 * This object build a classic continue screen for transit to this element
-			 */
+			//This object build a classic continue screen for transit to this element
 			ContinueGame classicContinue = null;
 			classicContinue = new ContinueGame();
 			
@@ -191,10 +162,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		}
 	}
 	
-	/* Nothing to do in this class
-	 * (non-Javadoc)
-	 * @see util.CountDownTimerEnds#updateImageForIndex(int)
-	 */
+	//Nothing to do in this class
 	public void updateImageForIndex(int index) {
 		//Nothing to do
 	}

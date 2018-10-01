@@ -21,9 +21,7 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	private GameImage background = null;
 	private Sprite gameOver = null;
 	
-	/*
-	 * This void method was declarated in GameScene abstract class, it used for configurated the scene
-	 */
+	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	public void buildInitialScene() {
 
 		//Set game controller elements
@@ -44,11 +42,7 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		buildWaitScene();
 	}
 
-	/* 
-	 * This void method build all sprites for show scenes of class 
-	 * (non-Javadoc)
-	 * @see scenes.GameScene#viewSetup()
-	 */
+	//This void method build all sprites for show scenes of class 
 	protected void viewSetup() {
 		// TODO Auto-generated method stub
 
@@ -59,64 +53,41 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	 */
 	public void buildWaitScene(){
 		
-		/*
-		 * This object is necessary for schedule at fixed rate.
-		 */
+		//This object is necessary for schedule at fixed rate.
 		Timer timer = null;
 		timer = new Timer();
 
-		/*
-		 * This object is necessary for delegate action for count down.
-		 */
+		//This object is necessary for delegate action for count down.
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
 		countDown.delegateAction = this;
 
-		/*
-		 * This constant is value of time for delay on schedule.
-		 * Unit of measure: Miliseconds
-		 */
+		//This constant is value of time for delay on schedule. Unit of measure: Miliseconds
 		final int DELAY = 1000;
 		
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
 
-	/* 
-	 * Build the update image of sprite on screen
-	 * (non-Javadoc)
-	 * @see scenes.GameScene#updateScene()
-	 */
+	//Build the update image of sprite on screen
 	public void updateScene() {
 		this.background.draw();
 		this.gameOver.draw();
 	}
 
-	/* 
-	 * This method return to main Menu
-	 * (non-Javadoc)
-	 * @see util.CountDownTimerEnds#finishScene()
-	 */
+	//This method return to main Menu
 	public void finishScene() {
-		/*
-		 * Show on console the message when the time is ended
-		 */
+		//Show on console the message when the time is ended
 		final String MSG_TIMER = "Timer Ended"; //$NON-NLS-1$
 		System.out.println(MSG_TIMER);
 
-		/*
-		 * This object build a menu scene for transit to menu
-		 */
+		//This object build a menu scene for transit to menu
 		GameScene menu = null;
 		menu = new MenuScene();
 
 		this.game.transitTo(menu);
 	}
 
-	/* 
-	 * Given index update the image and build scene for this
-	 * (non-Javadoc)
-	 * @see util.CountDownTimerEnds#updateImageForIndex(int)
-	 */
+	//Given index update the image and build scene for this
 	public void updateImageForIndex(int index) {
 		//Nothing to do
 	}

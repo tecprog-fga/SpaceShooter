@@ -31,11 +31,7 @@ public class MenuScene extends GameScene {
 	 */
 	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;
 	
-	/* This void method was declarated in GameScene abstract class, 
-	 * it used for configurated the scene
-	 * (non-Javadoc)
-	 * @see scenes.GameScene#buildInitialScene()
-	 */
+	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	protected void buildInitialScene() {
 
 		//Reset option menu
@@ -58,10 +54,7 @@ public class MenuScene extends GameScene {
 	 */
 	private Sprite arrow = null;
 	
-	/* This void method build the sprites for show background and title 
-	 * (non-Javadoc)
-	 * @see scenes.GameScene#viewSetup()
-	 */
+	//This void method build the sprites for show background and title 
 	protected void viewSetup() {
 		
 		final String BACKGROUNG_PATH = "src/assets/img/menu/background.png";
@@ -153,13 +146,7 @@ public class MenuScene extends GameScene {
 	 * the current arrow of keyboard.
 	 */
 	private void currentArrow() {
-		/*
-		 * Value of current button index.
-		 * 0 = start button
-		 * 1 = ranking buton
-		 * 2 = settings button
-		 * 3 = quit button
-		 */
+		//Value of current button index. 0 = start button;1 = ranking buton;2 = settings button;3 = quit button
 		int currentButtonIndex = 0;
 		currentButtonIndex = this.selectedMenuOption.ordinal();
 
@@ -168,7 +155,6 @@ public class MenuScene extends GameScene {
 
 		this.arrow.x = currentButton.x - arrow.width - DISTANCE_BETWEEN_BUTTONS;
 		this.arrow.y = currentButton.y;
-
 	}
 
 	/**
@@ -230,10 +216,7 @@ public class MenuScene extends GameScene {
 		}
 	}
 
-	/* Realize the sequence of actions developed.
-	 * (non-Javadoc)
-	 * @see scenes.GameScene#updateScene()
-	 */
+	//Realize the sequence of actions developed.
 	public void updateScene() {
 
 		// Control menu option selection

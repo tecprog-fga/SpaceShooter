@@ -21,9 +21,7 @@ import util.CountDownTimerEnds;
  */
 public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	
-	/*
-	 * This void method was declarated in GameScene abstract class, it used for configurate the scene
-	 */
+	//This void method was declarated in GameScene abstract class, it used for configurate the scene
 	protected void viewSetup() {
 		// TODO Auto-generated method stub
 	}
@@ -48,9 +46,8 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	 */
 	private Parallax delpthScene = null;	
 	
-	/* This void method build sprites for show scenes of class ContinueGame.
-	 * It's necessary for build the initial sprites for universe, continue, count down and enter images.
-	 */
+	//This void method build sprites for show scenes of class ContinueGame. 
+	//It's necessary for build the initial sprites for universe, continue, count down and enter images.
 	public void buildInitialScene() {
 
 		//It's necessary set behavior this buttons for to go initial scene
@@ -125,9 +122,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
 
-	/* 
-	 * Build the update image of sprite on screen for repeat layers
-	 */
+	//Build the update image of sprite on screen for repeat layers
 	public void updateScene() {
 
 		//Print all layers that have been added
@@ -154,9 +149,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		checkButtonSelection();
 	}
 	
-	/* 
-	 * Build final scene for transit on Game over
-	 */
+	//Build final scene for transit on Game over
 	public void finishScene() {
 		if (this.game != null){
 
@@ -170,9 +163,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		}
 	}
 
-	/* 
-	 * Given index update the image and build scene.
-	 */
+	//Given index update the image and build scene.
 	public void updateImageForIndex(int index) {
 		
 		//This constant define the value of path where is the load image for continue
@@ -201,7 +192,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 				this.game.transitTo(transitScene.firstStageScene());
 
 			} else if (this.keyboard.keyDown(Keyboard.ESCAPE_KEY)) {
-				
 				GameScene menu = null;
 				menu = new MenuScene();
 				this.game.transitTo(menu);
