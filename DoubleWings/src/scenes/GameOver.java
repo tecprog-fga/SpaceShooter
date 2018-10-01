@@ -18,7 +18,9 @@ import util.CountDownTimerEnds;
  */
 public class GameOver extends GameScene implements CountDownTimerEnds {
 	
+	//This object is necessary for build the temporary background image
 	private GameImage background = null;
+	//This object is necessary for build the game over image in screen
 	private Sprite gameOver = null;
 	
 	//This void method was declarated in GameScene abstract class, it used for configurated the scene

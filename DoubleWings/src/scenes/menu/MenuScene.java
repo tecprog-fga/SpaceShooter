@@ -34,7 +34,7 @@ public class MenuScene extends GameScene {
 	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	protected void buildInitialScene() {
 
-		//Reset option menu
+		//Reset option menu, when start game is ativated
 		selectedMenuOption = OptionsMenu.START_GAME;
 
 		//Configure up and down keys
@@ -67,6 +67,8 @@ public class MenuScene extends GameScene {
 
 		//Define buttons position
 		appendButtons();
+		
+		//Realize the build for have arrow image in screen.
 		final String ARROW_PATH = "src/assets/img/menu/arrow.png";
 		arrow = new Sprite(ARROW_PATH);
 		arrow.x = 10;
@@ -83,6 +85,7 @@ public class MenuScene extends GameScene {
 	 * buttons positions.
 	 */
 	private void appendButtons() {
+		//Realize the build for have buttons image in screen.
 		final String START_BUTTON_PATH = "src/assets/img/menu/start_button.png";
 		Sprite startButton = null;
 		startButton = new Sprite(START_BUTTON_PATH);
@@ -102,14 +105,14 @@ public class MenuScene extends GameScene {
 		buttons.add(quitButton);
 
 		for(OptionsMenu option : OptionsMenu.values()) {
-			int currentButtonIndex = option.ordinal(); //Integer value of variable option
-
+			//Integer value of variable option
+			int currentButtonIndex = option.ordinal(); 
 			//Define the position of the first element according to the title
 			if(currentButtonIndex == 0) {
 				buttons.get(currentButtonIndex).x = WindowConstants.WIDTH/2 - startButton.width/2;
 				final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
-				buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
 				//Define the position of the element according to the last element
+				buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
 			} else {
 				buttons.get(currentButtonIndex).x = buttons.get(currentButtonIndex - 1).x;
 				buttons.get(currentButtonIndex).y = buttons.get(currentButtonIndex - 1).y + buttons.get(currentButtonIndex - 1).height + DISTANCE_BETWEEN_BUTTONS;
@@ -122,16 +125,17 @@ public class MenuScene extends GameScene {
 	 * It's limited with Down and Up key 
 	 */
 	private void checkMenuOption() {
-		// Down selection
+		//Down selection
 		if (keyboard.keyDown(Keyboard.DOWN_KEY)) {
 			String MSG_DOWN = "down";
 			System.out.println(MSG_DOWN);
+			
 			//Change current menu option
 			selectedMenuOption = selectedMenuOption.next();
 			System.out.println(selectedMenuOption);
 		}
 
-		// Up selection		
+		//Up selection		
 		if (keyboard.keyDown(Keyboard.UP_KEY)) {
 			String MSG_UP = "up";
 			System.out.println(MSG_UP);
