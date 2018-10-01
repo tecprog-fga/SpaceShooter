@@ -35,15 +35,17 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	
 	/**
 	 * Variable to check how many lives the player has remain
-	*/
+	 */
 	private int lifePlayer;
 	
 	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	public void buildInitialScene() {
 		
+		//Creation a object to class Parallax
         this.delpthScene = new Parallax();
+        
+        //The first one added will be the last one to be painted and the last to be added to the list, it will be the main layer. 
         final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
-        //The first one added will be the last one to be painted.
 		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
 		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
 		final String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png";
@@ -52,21 +54,22 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		this.delpthScene.add(DELPTH_UNIVERSE2_PATH);
 		final String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg";
 		this.delpthScene.add(DELPTH_UNIVERSE3_PATH);
-		
-		//Since universe4.jpg was the last to be added to the list, it will be the main layer (mainLayer).
 		final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
 		this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
+		
 		
 		//Adjusts the speed of all layers from the main layer
 		this.delpthScene.setVelAllLayers(0, 1);
 		
-		//Define scenes elements position. Continue sprite upper-center position
+		//Define scenes elements position for lose sprite upper-center position
 		final String LOSE_PATH = "src/assets/img/continue/YOU-LOSE.png";
 		this.loseScreen = new Sprite(LOSE_PATH);
 		this.loseScreen.x = WindowConstants.WIDTH/2 - this.loseScreen.width/2;
 		this.loseScreen.y = WindowConstants.HEIGHT/500 - this.loseScreen.height/20;
 		
+		
 		//Check how many lives the player has to instantiate the specific sprite.
+		//Depends of lives is show the sprite related
 		if(getLifePlayer() == 1){
 			final String ONE_LIFE_PATH = "src/assets/img/continue/1life.png";
 			this.lifeRemaining = new Sprite(ONE_LIFE_PATH);
@@ -82,16 +85,18 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 			this.lifeRemaining = new Sprite(THREE_LIFE_PATH);
 		}
 		
+		
 		//Define position lifeRemaining on the Screen
 		this.lifeRemaining.x = WindowConstants.WIDTH/2 - this.lifeRemaining.width/2;
 		this.lifeRemaining.y = WindowConstants.HEIGHT/2 - this.lifeRemaining.height/2;
 		
+		//Finally, build scene of count down
 		buildWaitScene();
 	}
 	
 	//This void method build all sprites for show scenes of class 
 	protected void viewSetup() {
-		// TODO Auto-generated method stub	
+		//Nothing to do
 	}
 	
 	/**
@@ -149,6 +154,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	
 	//Method that after the end of the time transit to the screen to ContinueGame class
 	public void finishScene() {
+		//Case the game is run
 		if (this.game != null){
 			//Show on console the message when the time is ended
 			final String END_TIMER = "Timer Ended";

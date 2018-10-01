@@ -63,19 +63,19 @@ enum OptionsMenu {
 	 */
 	private OptionsMenu defineOption(int chosenOption) {
 
+		//Depending of chosen option realize action related
 		switch(chosenOption) {
-
-		case 0:
-			return OptionsMenu.START_GAME;
-
-		case 1:
-			return OptionsMenu.RANKING;
-
-		case 2:
-			return OptionsMenu.SETTINGS;
-
-		case 3:
-			return OptionsMenu.QUIT;
+			case 0:
+				return OptionsMenu.START_GAME;
+	
+			case 1:
+				return OptionsMenu.RANKING;
+	
+			case 2:
+				return OptionsMenu.SETTINGS;
+	
+			case 3:
+				return OptionsMenu.QUIT;
 		}
 
 		return OptionsMenu.START_GAME;

@@ -37,7 +37,7 @@ public class MenuScene extends GameScene {
 		//Reset option menu, when start game is ativated
 		selectedMenuOption = OptionsMenu.START_GAME;
 
-		//Configure up and down keys
+		//Configure up and down keys for detect press
 		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 	}
@@ -57,9 +57,11 @@ public class MenuScene extends GameScene {
 	//This void method build the sprites for show background and title 
 	protected void viewSetup() {
 		
+		//Realize the build for have background image in screen.
 		final String BACKGROUNG_PATH = "src/assets/img/menu/background.png";
 		background = new GameImage(BACKGROUNG_PATH);
 
+		//Realize the build for have title image in screen.
 		final String TITLE_PATH = "src/assets/img/menu/title.png";
 		title = new Sprite(TITLE_PATH);
 		title.x = WindowConstants.WIDTH/2 - title.width/2;
@@ -99,6 +101,7 @@ public class MenuScene extends GameScene {
 		Sprite quitButton = null;
 		quitButton = new Sprite(QUIT_PATH);
 
+		//Add this images in buttons really
 		buttons.add(startButton);
 		buttons.add(rankingButton);
 		buttons.add(settingsButton);
@@ -111,9 +114,9 @@ public class MenuScene extends GameScene {
 			if(currentButtonIndex == 0) {
 				buttons.get(currentButtonIndex).x = WindowConstants.WIDTH/2 - startButton.width/2;
 				final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
-				//Define the position of the element according to the last element
 				buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
-			} else {
+			} else { 
+				//Define the position of the element according to the last element
 				buttons.get(currentButtonIndex).x = buttons.get(currentButtonIndex - 1).x;
 				buttons.get(currentButtonIndex).y = buttons.get(currentButtonIndex - 1).y + buttons.get(currentButtonIndex - 1).height + DISTANCE_BETWEEN_BUTTONS;
 			}
