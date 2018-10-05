@@ -14,7 +14,7 @@ public class Score {
 	 * This variable store the value of counter.
 	 * It have unlimited.
 	 */
-	private int count = 0;
+	private int currentScore = 0;
 
 	/**
 	 * This method realize the increment of score for to count all score types
@@ -29,6 +29,6 @@ public class Score {
 	 * @return currentScore a integer with the amount count of scores
 	 */
 	public int getCount() {
-		return this.count;
+		return this.currentScore;
 	}
 }
