@@ -1,15 +1,35 @@
+/*********************************************************
+  * File: Bullet.java
+  * Purpose: Bullet class implementation
+  *********************************************************/
+
 package entity;
 
 import entity.player.PlayerSpaceship;
 
+/**
+ * This class creates the project that leaves the spaceship
+ * It's necessary because it defines the position in which it should exit
+ */
 public class Bullet extends GameEntity {
-	
+		
+	/**
+	 * spaceship bullet sprite
+	 */
 	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";
 	
+	/**
+	 * builds the bullet sprite on the screen 
+	 */
 	public Bullet() {
 		super(IMAGE_BULLET);
 	}
 	
+	/**
+	 *  bullet firing position
+	 * @param owner bullet target
+	 * @param position of the y-axis running through the bullet
+	 */
 	public void fireBy(GameEntity owner, double vely) {
 		this.owner = owner;
 		this.vely = vely;
@@ -23,10 +43,16 @@ public class Bullet extends GameEntity {
 		}
 	}
 	
+	/*  
+	 * reborn bullet 
+	 * (non-Javadoc)
+	 * @see entity.GameEntity#reborn()
+	 */
 	@Override
 	public void reborn() {
 		super.reborn();
 		this.owner = null;
 	}
+	
 	public GameEntity owner = null; 
 }

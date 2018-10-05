@@ -1,5 +1,14 @@
+/*********************************************************
+  * File: GameEvent.java
+  * Purpose: GameEvent class implementation
+  *********************************************************/
+
 package game.evolver;
 
+
+/**
+ * This class defines an interface that receives by return the GameEventCallback
+ */
 public class GameEvent {
 	
 	public String name = null;

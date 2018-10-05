@@ -1,13 +1,32 @@
+/*********************************************************
+  * File: Score.java
+  * Purpose: Score class implementation
+  ********************************************************/
+
 package score;
 
+/**
+ * Class related to the game score
+ */
 public class Score {
-	private int count = 0;
+	/**
+	 * Variable that saves the game's current score
+	 */
+	private int currentScore = 0;
 
+	/**
+	 * Method use to calculate game score
+	 * @param score value of player score
+	 */
 	public void increaseScore(ScoreType score) {
-		this.count += score.getValue();
+		this.currentScore += score.getValue();
 	}
 
-	public int getCount() {
-		return this.count;
+	/**
+	 * method that returns the game score
+	 * @return currentScore current score value
+	 */
+	public int getCurrentScore() {
+		return this.currentScore;
 	}
 }

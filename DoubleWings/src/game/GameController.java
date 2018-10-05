@@ -1,17 +1,26 @@
+/*********************************************************
+  * File: GameController.java
+  * Purpose: GameController class implementation
+  *********************************************************/
+
 package game;
 
 import scenes.GameScene;
 import scenes.stages.stage1.FirstStage;
 import jplay.Keyboard;
 
+/**
+* This class initializes game control
+*/
 public class GameController {
 
-	/*
-	 * Transit to another scene
+	/**
+	 * transit to another scene
+	 * @param scene
 	 */
 	public void transitTo(GameScene scene) {	
 		
-		/*
+		/**
 		 * Leave transition if scene is null
 		 */
 		if (scene == null || keyboard == null) { 
@@ -20,7 +29,9 @@ public class GameController {
 			currentScene.destroyScene();
 		}
 
-		//run initial setup
+		/*
+		 * Run initial setup
+		 */
 		scene.configureGameScene(this);
 		
 		/*
@@ -29,22 +40,28 @@ public class GameController {
 		currentScene = scene;
 	}
 	
+	/**
+	 * initialize the game 
+	 */
 	private boolean isRunning = true;
 	
-	/*
-	 *  Updates current scene and control running status
+	/**
+	 * updates current scene and control running status
+	 * @return isRunning
 	 */
 	public boolean update() {
 		
-		//Updates current scene
+		/**
+		 * updates current scene
+		 */
 		if (currentScene != null){
 			currentScene.updateScene();
 		}
 		return isRunning; 
 	}
 	
-	/*
-	 *  Quit game Ending process
+	/**
+	 * quit game ending process
 	 */
 	public void quit() {
 		isRunning = false;
