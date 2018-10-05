@@ -1,3 +1,8 @@
+/*********************************************************
+  * File: Main.java
+  * Purpose: Main class implementation
+  ********************************************************/
+
 import jplay.Window; 
 import java.awt.Color;
 import constants.WindowConstants;
@@ -5,29 +10,38 @@ import scenes.GameScene;
 import scenes.menu.MenuScene;
 import game.GameController;
 
+/**
+ * This class initialize the game
+ */
 public class Main {
-	
+	/**
+	 * variable that indicates how long the game is going to be in sleep mode
+	 */
 	public final static int KEEP_FRAMERATE = 16;
 	
+	/**
+	 * Main method for execute the game
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		System.out.println("It's running!");
-
+		
 		/**
-		 * It creates an windows with 800 pixels of width and 600 pixels of height   
+		 * creates the game screen with the default dimensions
 		 */
 		Window gameScreen = null;
 		gameScreen = new Window(WindowConstants.WIDTH,WindowConstants.HEIGHT);
 
 		/**
-		 * Game controller handles game states, screen changes, stages...
+		 * controls changes in game states
 		 */
 		GameController game = null;
 		game = new GameController();
 		game.keyboard = gameScreen.getKeyboard();
 
 		/**
-		 * Should transit first to menu... but for development purposes...
+		 * controls the scene changes, the stages of the game
 		 */
 		GameScene scene = null;
 		scene = new MenuScene();
@@ -35,34 +49,19 @@ public class Main {
 
 		boolean gameIsRunning = true;
 		
-		/**
-		 * Game main loop
+		/*
+		 * while the game is open, the screen must be loaded and updated constantly
 		 */
 		while(gameIsRunning) {
-			/**
-			 * Delay to keep 60 FPS
-			 */
 			gameScreen.delay(KEEP_FRAMERATE);
 
-			/**
-			 * Clear screen
-			 */
 			gameScreen.clear(Color.black);
 
-			/**
-			 *  update game
-			 */
 			gameIsRunning = game.update();
 
-			/**
-			 * Refresh the screen
-			 */
 			gameScreen.update();
 		}
 
-		/**
-		 * Leaving the game
-		 */
 		gameScreen.exit();
 	}
 }

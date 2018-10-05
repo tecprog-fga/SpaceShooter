@@ -1,17 +1,33 @@
+/*********************************************************
+  * File: GameEvolver.java
+  * Purpose: GameEvolver class implementation
+  *********************************************************/
+
 package game.evolver;
 
 import java.util.ArrayList;
 
+
+/**
+ * This class implements interactions with the game interface
+ */
 public class GameEvolver {
 
 	private boolean isPaused = true;
 	
+	/**
+	 * game initializer 
+	 */
 	public void start() {
 		isPaused = false;
 	}
 	
 	private ArrayList<GameEvent> events = new ArrayList<GameEvent>();
 	
+	/**
+	 * add event to scene
+	 * @param event
+	 */
 	public void add(GameEvent event) {
 		if (event != null){
 			System.out.println("Adding new event: " + event.name);
@@ -25,6 +41,10 @@ public class GameEvolver {
 		return iterator;
 	}
 	
+	/**
+	 * remove event to scene
+	 * @param event
+	 */
 	public void remove(GameEvent event) {
 		
 		if (event != null) {
@@ -34,7 +54,6 @@ public class GameEvolver {
 	
 	public void update() {
 		if (isPaused == false) {
-			/*System.out.println("GameIteration: " + iterator);*/
 			iterator += 1;
 			checkEvents();
 		}
@@ -49,13 +68,12 @@ public class GameEvolver {
 	
 	private void checkEvents() {
 		
-		/*
-		 * Calling events
+		/**
+		 * calling events
 		 */
 		for (int i = 0; i < events.size(); i++) {
 			GameEvent e = events.get(i);
 			
-			/*System.out.println("e.name: " + e.time + " " + iterator);*/
 			if (e.time == iterator) {
 				history.add(e);
 				aux.add(e);				
@@ -64,8 +82,8 @@ public class GameEvolver {
 			}
 		}
 		
-		/*
-		 * Removing called events
+		/**
+		 * removing called events
 		 */
 		for (int k = 0; k < aux.size(); k++) {
 			GameEvent e = aux.get(k);

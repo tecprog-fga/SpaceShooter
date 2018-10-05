@@ -1,30 +1,43 @@
+/*********************************************************
+  * File: MoveCommand.java
+  * Purpose: MoveCommand class implementation
+  ********************************************************/
+
 package commands;
 
 import entity.Enemy;
 import jplay.Sprite;
 
+/**
+ * class that manages the movements of objects on the screen
+ */
 public class MoveCommand implements Command {
 	/**
-	 * The distance yet to be traveled by the actor of this command.
-	 * */
+	 * Distance to enemy movimentation in pixels
+	 */
 	private double distanceToMove = 50;
 	private CommandType direction = null;
+	/**
+	 * enemy's on-screen movement of the game, in pixels
+	 */
 	private final int UNITARY_DISPLACEMENT = 1;
 
 	/**
-	 * direction string specifying the direction to move the actor.
-	 * @param type
+	 * Constructor method of class MoveCommand
+	 * @param type type of player input
 	 */
 	public MoveCommand(CommandType type) {
 		this.direction = type;
 	}
-
+	
 	/**
-	 * Move an actor by `distanceToGo` pixels in the command direction. Must be called inside the update() method to work properly.
-	 * @param actor the actor to be moved by the command.
-	 * @return true if movement is completed, false otherwise. 
-	 */
+	 * performs the displacement of the actor
+	 * @param actor the actor
+	 */ 
 	public boolean executeDisplacement(Sprite actor) {
+		/*
+		 * the actor must move on the screen for a distance
+		 */
 		if (this.distanceToMove > 0) {
 			moveActor(actor);
 			this.distanceToMove -= UNITARY_DISPLACEMENT;
@@ -40,6 +53,9 @@ public class MoveCommand implements Command {
 	 * @return true if movement is completed, false otherwise. 
 	 */
 	public boolean executeDisplacement(Sprite[] actors) {
+		/*
+		 * actors must move on the screen for a distance limit
+		 */
 		if (this.distanceToMove > 0) {
 			for(Sprite actor: actors) {
 				moveActor(actor);
@@ -52,10 +68,13 @@ public class MoveCommand implements Command {
 	}
 
 	/**
-	 * Define how the actor will be moved in each call to this command. Must override.
-	 * @param actor the actor to be moved by the command. 
+	 * move the actor across the screen
+	 * @param actor object that will be moved by the screen
 	 */
 	private void moveActor(Sprite actor) {
+		/*
+		 * must move the game object in one of the four main directions
+		 */
 		switch(this.direction) {
 		case LEFT:
 			actor.x -= UNITARY_DISPLACEMENT;

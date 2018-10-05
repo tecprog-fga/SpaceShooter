@@ -1,3 +1,9 @@
+/*********************************************************
+  * File: World.java
+  * Purpose: World class implementation
+  *********************************************************/
+
+
 package game;
 
 import java.util.ArrayList;
@@ -10,6 +16,9 @@ import entity.GameEntity;
 import scenes.ContinueGame;
 import scenes.GameScene;
 
+/**
+ * This class projects the game scenario and its elements
+ */
 public class World {
 	
 	public Keyboard keyboard = null;
@@ -20,26 +29,33 @@ public class World {
 		evolver.start();
 	}
 	
+	/**
+	 * adds an entity to the scenario
+	 * @param entity
+	 */
 	public void add(GameEntity entity) {
 		objs.add(entity);			
 	}
 	
+	/**
+	 * removes the entity to the scenario
+	 * @param entity
+	 */
 	public void remove(GameEntity entity) {
 		objs.remove(entity);
 	}
 	
-	public void update() {
-		
+	public void update() {	
 		evolver.update();
 		
-		/*
-		 * Check all collisions
+		/**
+		 * check all collisions
 		 */
 		for (int i = 0; i < objs.size(); i++) {
 			GameEntity obj1 = objs.get(i);
 			
-			/*
-			 *  i + 1 to not repeat obj collision check
+			/**
+			 * object crash test
 			 */
 			for (int k = i + 1; k < objs.size(); k++) {
 				GameEntity obj2 = objs.get(k);
@@ -51,19 +67,19 @@ public class World {
 			}
 			
 			/*
-			 * Draw and update all objects
+			 * draw and update all objects
 			 */
 			obj1.draw();
 			obj1.update();
 			
 			/*
-			 * Update object position
+			 * update object position
 			 */
 			obj1.x += obj1.velx;
 			obj1.y += obj1.vely;
 			
-			/*
-			 * Check if entity is dead
+			/**
+			 * check if entity is dead
 			 */
 			if (obj1.isDead()) {
 				deadObjs.add(obj1);
@@ -73,20 +89,23 @@ public class World {
 		for (GameEntity deadObj : deadObjs){
 			boolean didRemove = objs.remove(deadObj);
 			
-			/*
-			 * Enemy pool recycling
+			/**
+			 * enemy pool recycling
 			 */
 			if (deadObj.getClass() == Enemy.class) {
 				enemyPool.acquire((Enemy) deadObj);
 			}
 			
-			/*
-			 * Bullet pool recycling
+			/**
+			 * bullet pool recycling
 			 */
 			if (deadObj.getClass() == Bullet.class) {
 				bulletPool.acquire((Bullet) deadObj);
 			}
 			
+			/**
+			 * message stating the elimination of the entity from the game scene
+			 */
 			if (didRemove == true) {
 				System.out.println("Entity removed from the world");
 			} else {
@@ -100,20 +119,39 @@ public class World {
 	private BulletPool bulletPool = new BulletPool();
 	private EnemyPool enemyPool = new EnemyPool();
 	
-	/*
-	 * GameEvent Facade
+	/**
+	 * GameEvent facade
+	 * @param callback
+	 * @param time
+	 * @param type
+	 * @param name
 	 */
 	public void addEvent(GameEventCallback callback, int time, int type, String name) {
 		GameEvent event = this.createNewEvent(callback, time, type, name);
 		this.evolver.add(event);
 	}
 	
+	/**
+	 * GameEvent Facade
+	 * @param callback
+	 * @param time
+	 * @param type
+	 * @param name
+	 */
 	public void addEventAfterCurrentTime(GameEventCallback callback, int time, int type, String name) {
 		GameEvent event = this.createNewEvent(callback, time, type, name);
 		event.time += evolver.getCurrentIteration();
 		this.evolver.add(event);
 	}
 	
+	/**
+	 * GameEvent facade
+	 * @param callback
+	 * @param time
+	 * @param type
+	 * @param name
+	 * @return
+	 */
 	private GameEvent createNewEvent(GameEventCallback callback, int time, int type, String name){
 		GameEvent event = new GameEvent();
 		event.setCallback(callback);
@@ -123,8 +161,9 @@ public class World {
 		return event;
 	}
 	
-	/*
-	 *  Object Pool facade
+	/**
+	 * object pool facade
+	 * @return
 	 */
 	public Enemy createEnemy() {
 		Enemy enemy = enemyPool.release();
@@ -132,6 +171,10 @@ public class World {
 		return enemy;
 	}
 	
+	/**
+	 * immediately launch the enemy on the scene
+	 * @param enemy
+	 */
 	public void releaseEnemy(Enemy enemy) {
 		enemyPool.acquire(enemy);
 	}

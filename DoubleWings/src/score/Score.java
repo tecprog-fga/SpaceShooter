@@ -1,7 +1,7 @@
-/**
- * File: Score.java
- * Purpose: Count scores of player
- */
+/*********************************************************
+  * File: Score.java
+  * Purpose: Score class implementation
+  ********************************************************/
 
 package score;
 
@@ -18,15 +18,15 @@ public class Score {
 
 	/**
 	 * This method realize the increment of score for to count all score types
-	 * @param score
+	 * @param score value of player score
 	 */
 	public void increaseScore(ScoreType score) {
-		this.count += score.getValue();
+		this.currentScore += score.getValue();
 	}
 
 	/**
 	 * This method is used for get the result of count of scores
-	 * @return a integer with the amount count of scores
+	 * @return currentScore a integer with the amount count of scores
 	 */
 	public int getCount() {
 		return this.count;

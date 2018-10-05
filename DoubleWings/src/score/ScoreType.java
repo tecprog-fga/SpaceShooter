@@ -1,7 +1,7 @@
-/**
- * File: ScoreType.java
- * Purpose: Generate enumerators what define types of score
- */
+/*********************************************************
+  * File: ScoreType.java
+  * Purpose: ScoreType class implementation
+  ********************************************************/
 
 package score;
 
@@ -23,16 +23,16 @@ public enum ScoreType {
 	int scoreValue = 0;
 
 	/**
-	 * This constructor initialize the score value
-	 * @param scoreValue
+	 * This constructor method, create the score that will be used in the game
+	 * @param scoreValue score for each dead enemy
 	 */
 	ScoreType(int scoreValue) {
 		this.scoreValue = scoreValue;
 	}
 
 	/**
-	 * This method is used for get the type of scores
-	 * @return a integer with the value of type of scores
+	 * This method that returns the score value gained by eliminating an enemy
+	 * @return scoreValue
 	 */
 	public int getValue() {
 		return this.scoreValue;
