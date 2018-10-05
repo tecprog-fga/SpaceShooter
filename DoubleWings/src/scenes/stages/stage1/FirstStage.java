@@ -1,3 +1,8 @@
+/**
+ * File: FirstStage.java
+ * Purpose: Create the first stage of the game
+ */
+
 package scenes.stages.stage1;
 
 import java.awt.event.KeyEvent;
@@ -17,22 +22,28 @@ import scenes.GameScene;
 import game.evolver.GameEvent;
 import game.evolver.GameEventCallback;
 
+/**
+ * This class is responsible to create the scenario, 
+ * the parallax effect, the spaceship and the enemies
+ */
+
 public class FirstStage extends GameScene implements GameEventCallback, PlayerSceneDelegate {
 
 	private World gameWorld = null;
 
+	// This method set the keys to control the spaceship and configure the entities
 	@Override
 	public void buildInitialScene() {
 
 		gameWorld = new World();
 		gameWorld.keyboard = this.keyboard;
 
-		// Configure up and down keys
+		// Configuring the up and down keys for player one and for player two
+		
 		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_EVERY_PRESS);
 		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_EVERY_PRESS);
 		keyboard.setBehavior(Keyboard.SPACE_KEY, Keyboard.DETECT_EVERY_PRESS);
 
-		// Second Player configuration
 		keyboard.addKey(KeyEvent.VK_A, Keyboard.DETECT_EVERY_PRESS);
 		keyboard.addKey(KeyEvent.VK_S, Keyboard.DETECT_EVERY_PRESS);
 		keyboard.addKey(KeyEvent.VK_D, Keyboard.DETECT_EVERY_PRESS);
@@ -40,18 +51,19 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 		configureEntities();
 
-		// Development purposes
+		// Creating commands and configuring events that will be added
 		creatingCommands();
 		this.configureEvents();
 	}
 
 	private Parallax parallaxEffect = null;
 
+	// This method set the parallax effect in the scenario
 	protected void viewSetup() {
 		
-		final String LAYER0_PATH = "src/assets/img/background_layer_0.png"; //$NON-NLS-1$
-		final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; //$NON-NLS-1$
-		final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; //$NON-NLS-1$
+		final String LAYER0_PATH = "src/assets/img/background_layer_0.png"; 
+		final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; 
+		final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; 
 		// Creation a object to class Parallax
 		parallaxEffect = new Parallax();
 
@@ -59,24 +71,16 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		parallaxEffect.add(LAYER0_PATH);
 		parallaxEffect.add(LAYER1_PATH);
 		parallaxEffect.add(LAYER2_PATH);
-		// parallax.add("src/assets/img/universe2.jpg");
-		// parallax.add("src/assets/img/universe3.jpg");
-		// //Since universe4.jpg was the last to be added to the list, it will be the
-		// main layer (mainLayer).
-		// parallax.add("src/assets/img/universe4.jpg");
 
 		parallaxEffect.getLayer(0).setVelY(0.5);
 		parallaxEffect.getLayer(1).setVelY(4.5);
 		parallaxEffect.getLayer(2).setVelY(5);
-		// parallax.getLayer(2).setVelY(2);
-		// parallax.getLayer(3).setVelY(5);
-		// parallax.getLayer(4).setVelY(10);
-
 	}
 
 	private ArrayList<Command> commands = null;
 	private Command currentCommand = null;
 
+	// This method create the commands left, down and right
 	private void creatingCommands() {
 		
 		commands = new ArrayList<Command>();
@@ -92,7 +96,8 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 	private HUD hud = null;
 	private Player player = new Player();
-
+	
+	// This method creates the hud, the initial position of the spaceship and the asteroids 
 	private void configureEntities() {
 		
 		// Create the HUD and adding it as player's observer
@@ -113,6 +118,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		createTestAsteroid();
 	}
 
+	// This method creates the spaceship and its configuration
 	public void createSpaceShip() {
 		
 		// Creating player sprite
@@ -129,8 +135,12 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	}
 
 	public final static int LIFES = 10;
-	final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //$NON-NLS-1$
+	final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //Declaring constant with asteroid path
 
+	/**
+	 * This method creates the asteroids and its configuration
+	 * @param velY
+	 */
 	public void createAsteroid(double velY) {
 		
 		Enemy asteroid = null;
@@ -145,8 +155,9 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		gameWorld.add(asteroid);
 	}
 
-	private Enemy asteroid1 = null;
+	private Enemy asteroid1 = null; //declaring an asteroid of the type enemy
 
+	// This method sets the asteroids in the scenario and its initial position 
 	public void createTestAsteroid() {
 		
 		asteroid1 = new Enemy(ASTEROID_PATH);
@@ -158,6 +169,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		gameWorld.add(asteroid1);
 	}
 
+	// This method updates the parallax, updates and draw all entities added in the game
 	@Override
 	public void updateScene() {
 		
@@ -169,6 +181,11 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		executeAsteroidCommand();
 	}
 
+	/**
+	 * The method below is responsible for maintaining infinite 
+	 * repetition of the layers 
+	 */
+	
 	public void updateParalax() {
 		
 		// Print all layers that have been added
@@ -177,8 +194,6 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		final int PIXELS_DOWN = 800;
 		final int PIXELS_SIDES = 600;
 
-		// The method below is responsible for maintaining infinite repetition of the
-		// layers.
 		parallaxEffect.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
 		// Move the parallax orientation vertically
@@ -196,9 +211,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 		if (commandCount >= MAX_COMMANDS && commands.size() > 0) {
 
-			// System.out.println("Commands: " + commands.size());
 			currentCommand = commands.remove(commands.size() - 1); // return removed object
-			// System.out.println("current: "+ String.valueOf(currentCommand));
 
 			commandCount = 0;
 		}
@@ -209,11 +222,9 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		}
 	}
 	
-	// Callback event handler
+	// Callback event handler. Adding different events for each case
 	@Override
 	public void eventCallback(GameEvent event) {
-
-		// System.out.println("Event callback received with type: " + event.type);
 
 		switch (event.type) {
 		case 1:
@@ -228,25 +239,32 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		}
 	}
 
+	//Creating the first type of enemy
 	public void launchEnemyDown() {
-		// System.out.println("Launch Enemy Down! \\o/");
+		
 		this.createAsteroid(2.0);
 	}
 
+	//Creating the second type of enemy
 	public void launchEnemyCrazy() {
-		// System.out.println("Crazy enemy in sight! ò.Ó ");
+		
 		this.createAsteroid(4.0);
 	}
-
+	
+	// Adding the events created
 	public void configureEvents() {
+		
 		this.addEvents();
 	}
 
 	public void addEvents() {
 
-		// 200 = default
-		// 1 = first enemy
-		// 2 = second type enemy
+		/**
+		 *  Adding events in the game world
+		 *  200 = default
+		 *  1 = first enemy
+		 *  2 = second type enemy
+		 */
 		this.gameWorld.addEventAfterCurrentTime(this, 700, 200, "Recursive script");
 
 		this.gameWorld.addEventAfterCurrentTime(this, 200, 1, "Enemy down");
@@ -263,7 +281,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		this.gameWorld.addEventAfterCurrentTime(this, 690, 2, "Enemy Crazy bastard");
 	}
 
-	// Player Scene Delegate
+	// Transition to game over screen
 	@Override
 	public void transitToGameOver() {
 		GameOver gameOver = null;
@@ -271,6 +289,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		this.game.transitTo(gameOver);
 	}
 
+	//Transition to the Continue screen
 	@Override
 	public void transitToContinue() {
 		GameScene scene = null;

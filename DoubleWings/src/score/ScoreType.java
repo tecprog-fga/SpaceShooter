@@ -6,20 +6,24 @@
 package score;
 
 /**
- * Enum for the types of scores present in the game
+ * This enumerate represent the types of score. 
+ * Depending of size meteor destroyer there are a specific representation.
  */
 public enum ScoreType {
+	LOW(15), 
+	MEDIUM(50), 
+	HIGH(100);
+
 	/**
-	 * scores that can be made in the game to every downed enemy
-	 */
-	LOW(15), MEDIUM(50), HIGH(100);
-	/**
-	 * The score value gained by eliminating an enemy
+	 * This variable store the value of score.
+	 * 15 = Low
+	 * 50 = Medium
+	 * 100 = High
 	 */
 	int scoreValue = 0;
 
 	/**
-	 * class constructor method, create the score that will be used in the game
+	 * This constructor method, create the score that will be used in the game
 	 * @param scoreValue score for each dead enemy
 	 */
 	ScoreType(int scoreValue) {
@@ -27,7 +31,7 @@ public enum ScoreType {
 	}
 
 	/**
-	 * Class that returns the score value gained by eliminating an enemy
+	 * This method that returns the score value gained by eliminating an enemy
 	 * @return scoreValue
 	 */
 	public int getValue() {

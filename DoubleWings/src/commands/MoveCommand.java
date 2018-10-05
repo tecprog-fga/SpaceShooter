@@ -48,9 +48,9 @@ public class MoveCommand implements Command {
 	}
 
 	/**
-	 * performs the movement of a set of actors
-	 * @param actors array of actors
-	 * @return
+	 * Move an array of actors by `distanceToGo` pixels in the command direction. Must be called inside the update() method to work properly.
+	 * @param actors actor the actor to be moved by the command.
+	 * @return true if movement is completed, false otherwise. 
 	 */
 	public boolean executeDisplacement(Sprite[] actors) {
 		/*

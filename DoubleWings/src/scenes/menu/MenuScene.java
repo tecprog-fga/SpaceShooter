@@ -1,3 +1,8 @@
+/**
+ * File: MenuScene.java
+ * Purpose: Build the menu scene
+ */
+
 package scenes.menu;
 
 import scenes.ContinueGame;
@@ -12,31 +17,51 @@ import java.util.ArrayList;
 import constants.WindowConstants;
 import jplay.Sprite;
 
-// MenuScene 
+/**
+ * This class build scene for menu screen. It's necessary because 
+ * this feature needs to show the movement scene in the screen.
+ */
 public class MenuScene extends GameScene {
+	/**
+	 * This constant store the result of calculation of distance between buttons
+	 */
 	private static final int DISTANCE_BETWEEN_BUTTONS = WindowConstants.HEIGHT/48;
-
-	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;//Define initial menu option
-
+	/**
+	 * Define initial menu option of selection menu
+	 */
+	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;
+	
+	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	protected void buildInitialScene() {
 
-		//Reset option menu
+		//Reset option menu, when start game is ativated
 		selectedMenuOption = OptionsMenu.START_GAME;
 
-		//Configure up and down keys
+		//Configure up and down keys for detect press
 		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 	}
-
+	/**
+	 * Background object for construct background scenes
+	 */
 	private GameImage background = null;
+	/**
+	 * Title object for construct title sprite
+	 */
 	private Sprite title = null;
+	/**
+	 * Arrow object for construct arrow sprite
+	 */
 	private Sprite arrow = null;
 	
+	//This void method build the sprites for show background and title 
 	protected void viewSetup() {
-		//Define Scene elements
+		
+		//Realize the build for have background image in screen.
 		final String BACKGROUNG_PATH = "src/assets/img/menu/background.png";
 		background = new GameImage(BACKGROUNG_PATH);
 
+		//Realize the build for have title image in screen.
 		final String TITLE_PATH = "src/assets/img/menu/title.png";
 		title = new Sprite(TITLE_PATH);
 		title.x = WindowConstants.WIDTH/2 - title.width/2;
@@ -44,16 +69,25 @@ public class MenuScene extends GameScene {
 
 		//Define buttons position
 		appendButtons();
+		
+		//Realize the build for have arrow image in screen.
 		final String ARROW_PATH = "src/assets/img/menu/arrow.png";
 		arrow = new Sprite(ARROW_PATH);
 		arrow.x = 10;
 		arrow.y = 10;
 	}
 
+	/**
+	 * This object represent a array for build buttons
+	 */
 	private ArrayList<Sprite> buttons = new ArrayList<Sprite>();
 
-	//Add buttons to array
+	/**
+	 * This method create the buttons with the sprites of buttons for define 
+	 * buttons positions.
+	 */
 	private void appendButtons() {
+		//Realize the build for have buttons image in screen.
 		final String START_BUTTON_PATH = "src/assets/img/menu/start_button.png";
 		Sprite startButton = null;
 		startButton = new Sprite(START_BUTTON_PATH);
@@ -67,39 +101,44 @@ public class MenuScene extends GameScene {
 		Sprite quitButton = null;
 		quitButton = new Sprite(QUIT_PATH);
 
+		//Add this images in buttons really
 		buttons.add(startButton);
 		buttons.add(rankingButton);
 		buttons.add(settingsButton);
 		buttons.add(quitButton);
 
 		for(OptionsMenu option : OptionsMenu.values()) {
-			int currentButtonIndex = option.ordinal(); //Integer value of variable option
-
+			//Integer value of variable option
+			int currentButtonIndex = option.ordinal(); 
 			//Define the position of the first element according to the title
 			if(currentButtonIndex == 0) {
 				buttons.get(currentButtonIndex).x = WindowConstants.WIDTH/2 - startButton.width/2;
 				final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
 				buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
+			} else { 
 				//Define the position of the element according to the last element
-			} else {
 				buttons.get(currentButtonIndex).x = buttons.get(currentButtonIndex - 1).x;
 				buttons.get(currentButtonIndex).y = buttons.get(currentButtonIndex - 1).y + buttons.get(currentButtonIndex - 1).height + DISTANCE_BETWEEN_BUTTONS;
 			}
 		}
 	}
 
-	//Check keyboard and update Menu option
+	/**
+	 * This method to check keyboard for control the menu selection.
+	 * It's limited with Down and Up key 
+	 */
 	private void checkMenuOption() {
-		// Down selection
+		//Down selection
 		if (keyboard.keyDown(Keyboard.DOWN_KEY)) {
 			String MSG_DOWN = "down";
 			System.out.println(MSG_DOWN);
+			
 			//Change current menu option
 			selectedMenuOption = selectedMenuOption.next();
 			System.out.println(selectedMenuOption);
 		}
 
-		// Up selection		
+		//Up selection		
 		if (keyboard.keyDown(Keyboard.UP_KEY)) {
 			String MSG_UP = "up";
 			System.out.println(MSG_UP);
@@ -109,7 +148,12 @@ public class MenuScene extends GameScene {
 		}
 	}
 
+	/**
+	 * This method build the objects necessaries for define 
+	 * the current arrow of keyboard.
+	 */
 	private void currentArrow() {
+		//Value of current button index. 0 = start button;1 = ranking buton;2 = settings button;3 = quit button
 		int currentButtonIndex = 0;
 		currentButtonIndex = this.selectedMenuOption.ordinal();
 
@@ -118,10 +162,11 @@ public class MenuScene extends GameScene {
 
 		this.arrow.x = currentButton.x - arrow.width - DISTANCE_BETWEEN_BUTTONS;
 		this.arrow.y = currentButton.y;
-
 	}
 
-	//Draw scene elements
+	/**
+	 * Build design of menu with the union of elements for show on screen.
+	 */
 	private void drawScenes() {
 		background.draw();
 		title.draw();
@@ -132,8 +177,15 @@ public class MenuScene extends GameScene {
 		}
 	}
 
+	/**
+	 * This object represent the first level.
+	 */
 	private static GameScene firstLevel = null;
 
+	/**
+	 * This method build the scene of first stage of game.
+	 * @return object of scene builded of first stage
+	 */
 	public GameScene firstStageScene() {
 		if(firstLevel == null){
 			firstLevel = new FirstStage();
@@ -142,10 +194,12 @@ public class MenuScene extends GameScene {
 		else{
 			return firstLevel;
 		}
-
 	}
 
-	//Check keyboard enter and dispatch new scene
+	/**
+	 * Check keyboard enter for dispatch new scene.
+	 * Depends of selected menu option the scene it's transited.
+	 */
 	private void checkButtonSelection() {
 		if (keyboard.keyDown(Keyboard.ENTER_KEY)){
 
@@ -169,6 +223,7 @@ public class MenuScene extends GameScene {
 		}
 	}
 
+	//Realize the sequence of actions developed.
 	public void updateScene() {
 
 		// Control menu option selection

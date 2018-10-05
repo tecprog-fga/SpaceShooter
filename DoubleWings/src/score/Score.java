@@ -6,16 +6,18 @@
 package score;
 
 /**
- * Class related to the game score
+ * This class represent the increment of score for each destruction meteor. 
+ * It's necessary because the feature needs count the final score.
  */
 public class Score {
 	/**
-	 * Variable that saves the game's current score
+	 * This variable store the value of counter.
+	 * It have unlimited.
 	 */
-	private int currentScore = 0;
+	private int count = 0;
 
 	/**
-	 * Method use to calculate game score
+	 * This method realize the increment of score for to count all score types
 	 * @param score value of player score
 	 */
 	public void increaseScore(ScoreType score) {
@@ -23,10 +25,10 @@ public class Score {
 	}
 
 	/**
-	 * method that returns the game score
-	 * @return currentScore current score value
+	 * This method is used for get the result of count of scores
+	 * @return currentScore a integer with the amount count of scores
 	 */
-	public int getCurrentScore() {
-		return this.currentScore;
+	public int getCount() {
+		return this.count;
 	}
 }
