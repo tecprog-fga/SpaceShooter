@@ -36,11 +36,14 @@ enum OptionsMenu {
 	 */
 	OptionsMenu next() {
 		int chosenOption = currentOption;
-		assert(currentOption <= 3):("Returned unexpected value");
+		assert(currentOption >= 0):("The currentOption dont should be negative");
+		assert(currentOption <= 3):("The currentOption dont should be bigger then 3");
 		if (currentOption <= 3) {
 			chosenOption += 1;
 		}
 		
+		assert(chosenOption >= 0):("The chosenOption dont should be negative");
+		assert(chosenOption <= 3):("The chosenOption dont should be bigger then 3");
 		return defineOption(chosenOption);
 	}
 
@@ -51,11 +54,14 @@ enum OptionsMenu {
 	OptionsMenu back() {
 
 		int chosenOption = currentOption;
-		assert(currentOption >= 0):("Returned unexpected value");
+		assert(currentOption >= 0):("The currentOption dont should be negative");
+		assert(currentOption <= 3):("The currentOption dont should be bigger then 3");
 		if (currentOption >= 0) {
 			chosenOption -= 1;
 		}
 
+		assert(chosenOption >= 0):("The chosenOption dont should be negative");
+		assert(chosenOption <= 3):("The chosenOption dont should be bigger then 3");
 		return defineOption(chosenOption);
 	}
 
@@ -67,23 +73,18 @@ enum OptionsMenu {
 	private OptionsMenu defineOption(int chosenOption) {
 		
 		//Depending of chosen option realize action related
-		assert(chosenOption == 0 || chosenOption <= 3):("Returned unexpected value of chosen option");
+		assert(chosenOption >= 0):("The chosenOption dont should be negative");
+		assert(chosenOption <= 3):("The chosenOption dont should be bigger then 3");
 		switch(chosenOption) {
 			case 0:
-				assert(chosenOption == 0):("Returned unexpected value of chosen option");
 				return OptionsMenu.START_GAME;
 			case 1:
-				assert(chosenOption == 1):("Returned unexpected value of chosen option");
 				return OptionsMenu.RANKING;
 			case 2:
-				assert(chosenOption == 2):("Returned unexpected value of chosen option");
 				return OptionsMenu.SETTINGS;
 			case 3:
-				assert(chosenOption == 3):("Returned unexpected value of chosen option");
 				return OptionsMenu.QUIT;
 		}
-		
-		assert(chosenOption == 0):("Returned unexpected value of chosen option");
 		return OptionsMenu.START_GAME;
 	}
 
