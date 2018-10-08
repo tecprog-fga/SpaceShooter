@@ -38,7 +38,9 @@ public class MenuScene extends GameScene {
 		selectedMenuOption = OptionsMenu.START_GAME;
 
 		//Configure up and down keys for detect press
+		assert(Keyboard.DOWN_KEY == 40):("Returned unexpected value");
 		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
+		assert(Keyboard.DOWN_KEY == 38):("Returned unexpected value");
 		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
 	}
 	/**
@@ -59,10 +61,12 @@ public class MenuScene extends GameScene {
 		
 		//Realize the build for have background image in screen.
 		final String BACKGROUNG_PATH = "src/assets/img/menu/background.png";
+		assert(BACKGROUNG_PATH == "src/assets/img/menu/background.png"):("Invalid path returned");
 		background = new GameImage(BACKGROUNG_PATH);
 
 		//Realize the build for have title image in screen.
 		final String TITLE_PATH = "src/assets/img/menu/title.png";
+		assert(TITLE_PATH == "src/assets/img/menu/title.png"):("Invalid path returned");
 		title = new Sprite(TITLE_PATH);
 		title.x = WindowConstants.WIDTH/2 - title.width/2;
 		title.y = WindowConstants.HEIGHT/3 - title.height/2;
@@ -72,6 +76,7 @@ public class MenuScene extends GameScene {
 		
 		//Realize the build for have arrow image in screen.
 		final String ARROW_PATH = "src/assets/img/menu/arrow.png";
+		assert(ARROW_PATH == "src/assets/img/menu/arrow.png"):("Invalid path returned");
 		arrow = new Sprite(ARROW_PATH);
 		arrow.x = 10;
 		arrow.y = 10;
@@ -87,24 +92,37 @@ public class MenuScene extends GameScene {
 	 * buttons positions.
 	 */
 	private void appendButtons() {
+		
 		//Realize the build for have buttons image in screen.
 		final String START_BUTTON_PATH = "src/assets/img/menu/start_button.png";
+		assert(START_BUTTON_PATH == "src/assets/img/menu/start_button.png"):("Invalid path returned");
 		Sprite startButton = null;
 		startButton = new Sprite(START_BUTTON_PATH);
+		
 		final String RANKING_PATH = "src/assets/img/menu/ranking.png";
+		assert(RANKING_PATH == "src/assets/img/menu/ranking.png"):("Invalid path returned");
 		Sprite rankingButton = null;
-		rankingButton = new Sprite(RANKING_PATH);		
+		rankingButton = new Sprite(RANKING_PATH);
+		
 		final String SETTINGS_PATH = "src/assets/img/menu/settings.png";
+		assert(SETTINGS_PATH == "src/assets/img/menu/settings.png"):("Invalid path returned");
 		Sprite settingsButton = null;
 		settingsButton = new Sprite(SETTINGS_PATH);
+		
 		final String QUIT_PATH = "src/assets/img/menu/quit.png";
+		assert(QUIT_PATH == "src/assets/img/menu/quit.png"):("Invalid path returned");
 		Sprite quitButton = null;
 		quitButton = new Sprite(QUIT_PATH);
 
+		
 		//Add this images in buttons really
+		assert(startButton == null):("Sprite null returned");
 		buttons.add(startButton);
+		assert(rankingButton == null):("Sprite null returned");
 		buttons.add(rankingButton);
+		assert(settingsButton == null):("Sprite null returned");
 		buttons.add(settingsButton);
+		assert(quitButton == null):("Sprite null returned");
 		buttons.add(quitButton);
 
 		for(OptionsMenu option : OptionsMenu.values()) {

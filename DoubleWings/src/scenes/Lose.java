@@ -112,6 +112,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 * @return  value of player's life as number
 	 */
 	public int getLifePlayer() {
+		 assert(this.lifePlayer >= 0 || this.lifePlayer <= 3):("The life player must be greater than 0 and smaller than 3");
 		 return this.lifePlayer;
 	}
 	
@@ -129,6 +130,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		
 		//This constant is value of time for delay on schedule. Unit of measure: Miliseconds
 		long DELAY = 1000;
+		assert(DELAY == 1000):("Returned value different of 1000 miliseconds");
 		
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
@@ -143,6 +145,8 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		final int PIXELS_SIDES = 600;
 		
 		//Responsible for maintaining infinite repetition of the layers
+		assert(PIXELS_DOWN == 800):("The life player's number is incorrect value");
+		assert(PIXELS_SIDES == 600):("The life player's number is incorrect value");
 		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 		
 		//Move the parallax orientation vertically
@@ -154,6 +158,8 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	
 	//Method that after the end of the time transit to the screen to ContinueGame class
 	public void finishScene() {
+		
+		assert(this.game == null):("This game dont should to return null");
 		//Case the game is run
 		if (this.game != null){
 			//Show on console the message when the time is ended

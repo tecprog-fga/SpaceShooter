@@ -5,6 +5,8 @@
 
 package scenes.menu;
 
+import jplay.Keyboard;
+
 /**
  * This Enum create enumerations of options of menu in menu display. 
  * For each code id there is a option for choose.
@@ -22,7 +24,7 @@ enum OptionsMenu {
 
 	/**
 	 * This constructor initialize the current option
-	 * @param currentOption
+	 * @param currentOption defined
 	 */
 	OptionsMenu(int currentOption) {
 		this.currentOption = currentOption;
@@ -33,12 +35,12 @@ enum OptionsMenu {
 	 * @return next option defined
 	 */
 	OptionsMenu next() {
-
 		int chosenOption = currentOption;
-		if (currentOption < 3) {
+		assert(currentOption <= 3):("Returned unexpected value");
+		if (currentOption <= 3) {
 			chosenOption += 1;
 		}
-
+		
 		return defineOption(chosenOption);
 	}
 
@@ -49,7 +51,8 @@ enum OptionsMenu {
 	OptionsMenu back() {
 
 		int chosenOption = currentOption;
-		if (currentOption > 0) {
+		assert(currentOption >= 0):("Returned unexpected value");
+		if (currentOption >= 0) {
 			chosenOption -= 1;
 		}
 
@@ -62,22 +65,25 @@ enum OptionsMenu {
 	 * @return Enumerator related
 	 */
 	private OptionsMenu defineOption(int chosenOption) {
-
+		
 		//Depending of chosen option realize action related
+		assert(chosenOption == 0 || chosenOption <= 3):("Returned unexpected value of chosen option");
 		switch(chosenOption) {
 			case 0:
+				assert(chosenOption == 0):("Returned unexpected value of chosen option");
 				return OptionsMenu.START_GAME;
-	
 			case 1:
+				assert(chosenOption == 1):("Returned unexpected value of chosen option");
 				return OptionsMenu.RANKING;
-	
 			case 2:
+				assert(chosenOption == 2):("Returned unexpected value of chosen option");
 				return OptionsMenu.SETTINGS;
-	
 			case 3:
+				assert(chosenOption == 3):("Returned unexpected value of chosen option");
 				return OptionsMenu.QUIT;
 		}
-
+		
+		assert(chosenOption == 0):("Returned unexpected value of chosen option");
 		return OptionsMenu.START_GAME;
 	}
 
