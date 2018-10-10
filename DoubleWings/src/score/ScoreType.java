@@ -27,6 +27,7 @@ public enum ScoreType {
 	 * @param scoreValue score for each dead enemy
 	 */
 	ScoreType(int scoreValue) {
+		assert(scoreValue >= 0):("Pontuação não pode ser negativa!");
 		this.scoreValue = scoreValue;
 	}
 

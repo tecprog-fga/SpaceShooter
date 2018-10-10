@@ -23,6 +23,7 @@ public class ScriptHandler {
 	 * @param scriptPath
 	 */
 	public ScriptHandler(String scriptPath) {
+		assert(scriptPath != " "):("String scriptPath não é válida!");
 		ScriptHandler.SCRIPT_PATH = Paths.get(scriptPath);
 	}
 
@@ -33,15 +34,19 @@ public class ScriptHandler {
 	 * @throws IOException
 	 */
 	public static ArrayList<Command> receiveInput(String scriptInput) throws IOException {
+		assert(scriptInput != null):("String scriptInput não é válida!");
 		GenerateBehavior parser = null;
 		parser = new GenerateBehavior(SCRIPT_PATH);
+		assert(parser != null):("Objeto parser não é válido!");
 		ArrayList<Command> commandList = parser.processBehavior();
+		assert(commandList != null):("Objeto commandList não é válido!");
 		log("Done.");
 
 		return commandList;
 	}
 
 	private static void log(Object aObject) {
+		assert(aObject != null):("Objeto aObject não é válido!");
 		System.out.println(String.valueOf(aObject));
 	}
 }

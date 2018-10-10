@@ -32,13 +32,14 @@ public class Main {
 		 */
 		Window gameScreen = null;
 		gameScreen = new Window(WindowConstants.WIDTH,WindowConstants.HEIGHT);
-
+		assert(gameScreen != null):("Objeto gameScreen não pode ser nulo");
 		/**
 		 * controls changes in game states
 		 */
 		GameController game = null;
 		game = new GameController();
 		game.keyboard = gameScreen.getKeyboard();
+		assert(game != null):("Objeto game não pode ser nulo");
 
 		/**
 		 * controls the scene changes, the stages of the game
@@ -46,16 +47,16 @@ public class Main {
 		GameScene scene = null;
 		scene = new MenuScene();
 		game.transitTo(scene);
+		assert(scene != null):("Objeto scene não pode ser nulo");
 
 		boolean gameIsRunning = true;
 		
-		/*
-		 * while the game is open, the screen must be loaded and updated constantly
-		 */
+		//while the game is open, the screen must be loaded and updated constantly
 		while(gameIsRunning) {
 			gameScreen.delay(KEEP_FRAMERATE);
 
 			gameScreen.clear(Color.black);
+			assert(Color.black != null):("Objeto não foi recebido!");
 
 			gameIsRunning = game.update();
 
