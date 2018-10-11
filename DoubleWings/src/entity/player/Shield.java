@@ -37,7 +37,9 @@ public class Shield extends GameEntity {
 	public Shield(GameEntity player) {
 		super(SPRITE_FILE_PATH);
 		
+		assert(player != null): "player is receiving null";
 		this.player = player;
+		
 		this.life = maxLife;
 		
 		this.x = player.x;
@@ -94,6 +96,7 @@ public class Shield extends GameEntity {
 
 	@Override
 	public void setLife(int newLife){
+
 		this.life = newLife;
 		
 		if (life <= 0) {
@@ -104,11 +107,11 @@ public class Shield extends GameEntity {
 		/*
 		 * Notifing HUD to update shield life bar
 		 */
-		if (observer != null) {
-			observer.notifyObserver(this);
-		} else {
-			System.out.println("Shield log: HUD is null :(");
-		}
+		
+		assert(observer != null) : "Player log: HUD is null";
+		
+		observer.notifyObserver(this);
+		
 	}
 
 	/**
@@ -120,6 +123,7 @@ public class Shield extends GameEntity {
 	}
 
 	public void setObserver(GameEntityObserver observer) {
+		assert(observer != null): "observer is null";
 		this.observer = observer;
 	}
 

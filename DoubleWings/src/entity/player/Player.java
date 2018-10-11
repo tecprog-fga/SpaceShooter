@@ -75,14 +75,10 @@ public class Player {
 	public void setChances(int chances){
 		this.chances = chances;
 		
-		/*
-		 * Notifying HUD to update the screen
-		 */
-		if (observer != null) {
-			observer.notifyObserver(this);	
-		} else {
-			System.out.println("Player log: HUD is null :(");
-		}
+		// Notifying HUD to update the screen if it isn't null
+		assert(observer != null) : "Player log: HUD is null";		
+		observer.notifyObserver(this);	
+
 	}
 
 	/**
@@ -109,11 +105,9 @@ public class Player {
 
 		this.score += score;
 		
-		if (observer != null) {
-			observer.notifyObserver(this);	
-		} else {
-			System.out.println("Player log: HUD is null :(");
-		}
+		// Notifying HUD to update the screen if it isn't null
+		assert(observer != null) : "Player log: HUD is null";
+		observer.notifyObserver(this);	
 	}
 	
 	/**

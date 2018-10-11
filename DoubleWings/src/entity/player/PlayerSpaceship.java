@@ -47,8 +47,12 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	public PlayerSpaceship(Player player, double x, double y, boolean adjust) {
 		super(SPRITE_IMAGE_PATH);
+		
 		this.life = maxLife;
+		
 		this.shield = new Shield(this);
+		
+		assert(player != null) : "The player is null";
 		this.player = player;
 		
 		/*
@@ -85,6 +89,8 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @return
 	 */
 	public Shield getShield() {
+		
+		assert(this.shield != null):"Shield is returning null";
 		return this.shield;
 	}
 	
@@ -93,6 +99,8 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @return
 	 */
 	public Player getPlayer() {
+		
+		assert(this.player != null):"Player is returning null";
 		return this.player;
 	}
 	
@@ -114,6 +122,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @param shootKey  Makes the spaceship shoot
 	 */
 	public void setKeySet(int upKey, int downKey, int rightKey, int leftKey, int shootKey) {
+		
 		this.upKey = upKey;
 		this.downKey = downKey;
 		this.rightKey = rightKey;
@@ -126,8 +135,6 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * Verify if the player has died
 	 */
 	private boolean didDie = false;
-
-	
 	
 	/* 
 	 * Use the keyboard input to update the game
@@ -207,12 +214,13 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * Action of shooting 
 	 */
 	public void fireBullet(){
-		
 		if (canShoot){
 			canShoot = false;
 			this.shootCDTimer.schedule(this.shootCooldown);	
-			//System.out.println("Fire Bullet!");
+			
 			Bullet bullet = new Bullet();
+			assert(bullet != null): "Bullet is receiving null";
+			
 			bullet.fireBy(this, -10);
 			gameWorld.add(bullet);
 		}

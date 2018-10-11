@@ -15,6 +15,7 @@ public class BulletPool extends ObjectPool<Bullet>{
 
 	public Bullet create(){
 		Bullet bullet = new Bullet();
+		assert(bullet != null): "bullet is receiving null";
 		return bullet;
 	}
 }

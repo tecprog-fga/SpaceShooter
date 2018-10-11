@@ -34,6 +34,8 @@ public abstract class ObjectPool<Type> {
 			int last = objects.size() -1;
 			obj = objects.remove(last);
 		}
+		
+		assert(obj != null): "obj is returning null";
 		return obj;
 	}
 	
