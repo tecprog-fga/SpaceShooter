@@ -117,7 +117,8 @@ public class HUD implements GameEntityObserver {
 	 */
 	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
 		// the number of lives must be within the limit established above
-		assert(playerNumberOfLives >= 0):("Número de vidas do jogador deve ser positivo!");
+		System.out.println("VIDAS: " + playerNumberOfLives);
+		assert(playerNumberOfLives >= -1):("Número de vidas do jogador deve ser positivo!");
 		if (playerNumberOfLives <= MAX_NUMBER_OF_LIVES && playerNumberOfLives >= MIN_NUMBER_OF_LIVES) {
 			this.numberOfLivesImage.setCurrFrame(playerNumberOfLives);
 		} else {

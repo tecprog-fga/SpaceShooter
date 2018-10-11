@@ -30,6 +30,7 @@ public class Behavior {
 	 * @return COMMAND_LIST return the menu
 	 */
 	public static ArrayList<Command> getCommandList() {
+		assert(COMMAND_LIST != null):("COMMAND_LIST não pode ser nulo!");
 		return COMMAND_LIST;
 	}
 
