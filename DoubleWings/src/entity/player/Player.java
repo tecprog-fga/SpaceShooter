@@ -116,9 +116,8 @@ public class Player {
 	public double initialPositionX = 0;
 	public double initialPositionY = 0;
 
-	/**
-	 * Reset the spaceship's position after each death
-	 */
+	
+	// Reset the spaceship's position after each death
 	private void resetSpaceship() {
 		this.spaceship.reborn();
 		this.spaceship.x = initialPositionX;
@@ -150,9 +149,8 @@ public class Player {
 		System.out.println("Player log: life reset to: " + this.chances);
 	}
 	
-	/**
-	 * Decides if the the player can continue playing after losing all lives
-	 */
+	
+	// Decides if the the player can continue playing after losing all lives
 	private boolean canContinue = true;
 	
 	/**

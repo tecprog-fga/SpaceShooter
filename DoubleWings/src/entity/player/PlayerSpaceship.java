@@ -18,24 +18,16 @@ import util.DelayTimer;
  */
 public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 
-	/**
-	 * Sprite of the level 1 spaceship
-	 */
+	// Sprite of the level 1 spaceship
 	private static final String SPRITE_IMAGE_PATH = "src/assets/img/player_lvl1.png";
 	
-	/**
-	 * Spaceship's velocity
-	 */
+	// Spaceship's velocity
 	private static final int DEFAULT_MOVEMENT_VELOCITY = 4;
 	
-	/**
-	 * Build's up the spaceship's Shield
-	 */
+	// Build's up the spaceship's Shield
 	private Shield shield = null;
 	
-	/**
-	 * It's an object that receives the events of the game
-	 */
+	// It's an object that receives the events of the game
 	private Player player = null;
 
 	/**
@@ -47,17 +39,13 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	public PlayerSpaceship(Player player, double x, double y, boolean adjust) {
 		super(SPRITE_IMAGE_PATH);
-		
 		this.life = maxLife;
-		
 		this.shield = new Shield(this);
 		
 		assert(player != null) : "The player is null";
 		this.player = player;
 		
-		/*
-		 * Adjusting x position to fit the sprite
-		 */
+		// Adjusting x position to fit the sprite
 		if (adjust) {
 			this.x = x - this.width / 2;	
 		} else {
@@ -104,9 +92,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		return this.player;
 	}
 	
-	/**
-	 * Set's the controls of the game on the keyboard
-	 */
+	// Set's the controls of the game on the keyboard
 	private int upKey = Keyboard.UP_KEY;
 	private int downKey = Keyboard.DOWN_KEY;
 	private int leftKey = Keyboard.LEFT_KEY;
@@ -131,9 +117,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	}
 	
 	
-	/**
-	 * Verify if the player has died
-	 */
+	// Verify if the player has died
 	private boolean didDie = false;
 	
 	/* 
@@ -200,14 +184,10 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	public int shootCooldown = 100;
 	
-	/**
-	 * Controls if the spaceship can shoot or not 
-	 */
+	// Controls if the spaceship can shoot or not 
 	private boolean canShoot = true;
 	
-	/**
-	 * Delay from the keyboard to the screen
-	 */
+	// Delay from the keyboard to the screen
 	private DelayTimer shootCDTimer = new DelayTimer(this, 1);
 	
 	/**

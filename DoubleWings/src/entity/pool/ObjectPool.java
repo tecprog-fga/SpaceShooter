@@ -13,9 +13,7 @@ import java.util.ArrayList;
  */
 public abstract class ObjectPool<Type> {
 	
-	/**
-	 * Stores the objects, like bullets and enemies
-	 */
+	// Stores the objects, like bullets and enemies
 	private ArrayList<Type> objects = new ArrayList<Type>();
 	
 	/**
@@ -39,9 +37,7 @@ public abstract class ObjectPool<Type> {
 		return obj;
 	}
 	
-	/*
-	 * Create's objects to keep in the ArrayLists objects 
-	 */
+	// Create's objects to keep in the ArrayLists objects 
 	protected abstract Type create();
 	
 	/**
