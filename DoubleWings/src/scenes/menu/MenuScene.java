@@ -102,33 +102,33 @@ public class MenuScene extends GameScene {
 		final String START_BUTTON_PATH = "src/assets/img/menu/start_button.png";
 		Sprite startButton = null;
 		startButton = new Sprite(START_BUTTON_PATH);
-		assert(startButton instanceof Sprite):("Error instantiating Sprite class");
+		assert(startButton != null):("Error instantiating Sprite class");
 		
 		final String RANKING_PATH = "src/assets/img/menu/ranking.png";
 		Sprite rankingButton = null;
 		rankingButton = new Sprite(RANKING_PATH);		
-		assert(rankingButton instanceof Sprite):("Error instantiating Sprite class");
+		assert(rankingButton != null):("Error instantiating Sprite class");
 		
 		final String SETTINGS_PATH = "src/assets/img/menu/settings.png";
 		Sprite settingsButton = null;
 		settingsButton = new Sprite(SETTINGS_PATH);
-		assert(settingsButton instanceof Sprite):("Error instantiating Sprite class");
+		assert(settingsButton != null):("Error instantiating Sprite class");
 		
 		final String QUIT_PATH = "src/assets/img/menu/quit.png";
 		Sprite quitButton = null;
 		quitButton = new Sprite(QUIT_PATH);
-		assert(quitButton instanceof Sprite):("Error instantiating Sprite class");
+		assert(quitButton != null):("Error instantiating Sprite class");
 
 		
 		//Add this images in buttons really
 		assert(startButton != null):("This object returned null");
-		buttons.add(startButton);
+		this.buttons.add(startButton);
 		assert(rankingButton != null):("This object returned null");
-		buttons.add(rankingButton);
+		this.buttons.add(rankingButton);
 		assert(settingsButton != null):("This object returned null");
-		buttons.add(settingsButton);
+		this.buttons.add(settingsButton);
 		assert(quitButton != null):("This object returned null");
-		buttons.add(quitButton);
+		this.buttons.add(quitButton);
 
 		for(OptionsMenu option : OptionsMenu.values()) {
 			//Integer value of variable option
@@ -163,7 +163,7 @@ public class MenuScene extends GameScene {
 			System.out.println(MSG_DOWN);
 			
 			//Change current menu option
-			assert(selectedMenuOption != null):("This object returned null");
+			assert(this.selectedMenuOption != null):("This object returned null");
 			selectedMenuOption = selectedMenuOption.next();
 			System.out.println(selectedMenuOption);
 		}
@@ -174,7 +174,7 @@ public class MenuScene extends GameScene {
 			String MSG_UP = "up";
 			System.out.println(MSG_UP);
 			//Change current menu option
-			assert(selectedMenuOption != null):("This object returned null");
+			assert(this.selectedMenuOption != null):("This object returned null");
 			selectedMenuOption = selectedMenuOption.back();
 			System.out.println(selectedMenuOption);
 		}
@@ -187,7 +187,7 @@ public class MenuScene extends GameScene {
 	private void currentArrow() {
 		//Value of current button index. 0 = start button;1 = ranking button;2 = settings button;3 = quit button
 		int currentButtonIndex = 0;
-		assert(selectedMenuOption != null):("This object returned null");
+		assert(this.selectedMenuOption != null):("This object returned null");
 		currentButtonIndex = this.selectedMenuOption.ordinal();
 
 		Sprite currentButton = null;
@@ -204,13 +204,13 @@ public class MenuScene extends GameScene {
 	 */
 	private void drawScenes() {
 		
-		assert(background != null):("This object returned null");
+		assert(this.background != null):("This object returned null");
 		background.draw();
 		
-		assert(title != null):("This object returned null");
+		assert(this.title != null):("This object returned null");
 		title.draw();
 		
-		assert(arrow != null):("This object returned null");
+		assert(this.arrow != null):("This object returned null");
 		arrow.draw();
 
 		assert(buttons != null):("This object returned null");

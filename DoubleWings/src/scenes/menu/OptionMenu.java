@@ -36,8 +36,8 @@ enum OptionsMenu {
 	 */
 	OptionsMenu next() {
 		int chosenOption = currentOption;
-		assert(currentOption >= 0):("The currentOption dont should be negative");
-		assert(currentOption <= 3):("The currentOption dont should be bigger then 3");
+		assert(this.currentOption >= 0):("The currentOption dont should be negative");
+		assert(this.currentOption <= 3):("The currentOption dont should be bigger then 3");
 		if (currentOption <= 3) {
 			chosenOption += 1;
 		}
@@ -54,8 +54,8 @@ enum OptionsMenu {
 	OptionsMenu back() {
 
 		int chosenOption = currentOption;
-		assert(currentOption >= 0):("The currentOption dont should be negative");
-		assert(currentOption <= 3):("The currentOption dont should be bigger then 3");
+		assert(this.currentOption >= 0):("The currentOption dont should be negative");
+		assert(this.currentOption <= 3):("The currentOption dont should be bigger then 3");
 		if (currentOption >= 0) {
 			chosenOption -= 1;
 		}
