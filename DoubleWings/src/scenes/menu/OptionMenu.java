@@ -37,13 +37,11 @@ enum OptionsMenu {
 	OptionsMenu next() {
 		int chosenOption = currentOption;
 		assert(this.currentOption >= 0):("The currentOption dont should be negative");
-		assert(this.currentOption <= 3):("The currentOption dont should be bigger then 3");
+		assert(currentOption <= 3):("The currentOption dont should be bigger then 3");
 		if (currentOption <= 3) {
 			chosenOption += 1;
 		}
 		
-		assert(chosenOption >= 0):("The chosenOption dont should be negative");
-		assert(chosenOption <= 3):("The chosenOption dont should be bigger then 3");
 		return defineOption(chosenOption);
 	}
 
@@ -59,9 +57,7 @@ enum OptionsMenu {
 		if (currentOption >= 0) {
 			chosenOption -= 1;
 		}
-
-		assert(chosenOption >= 0):("The chosenOption dont should be negative");
-		assert(chosenOption <= 3):("The chosenOption dont should be bigger then 3");
+		
 		return defineOption(chosenOption);
 	}
 
@@ -73,8 +69,6 @@ enum OptionsMenu {
 	private OptionsMenu defineOption(int chosenOption) {
 		
 		//Depending of chosen option realize action related
-		assert(chosenOption >= 0):("The chosenOption dont should be negative");
-		assert(chosenOption <= 3):("The chosenOption dont should be bigger then 3");
 		switch(chosenOption) {
 			case 0:
 				return OptionsMenu.START_GAME;

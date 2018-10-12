@@ -43,6 +43,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		
 		//Creation a object to class Parallax
         this.delpthScene = new Parallax();
+        assert(this.delpthScene != null):("Error instantiating Parallax class");
         
         //The first one added will be the last one to be painted and the last to be added to the list, it will be the main layer. 
         final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
@@ -64,6 +65,8 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		//Define scenes elements position for lose sprite upper-center position
 		final String LOSE_PATH = "src/assets/img/continue/YOU-LOSE.png";
 		this.loseScreen = new Sprite(LOSE_PATH);
+		assert(this.loseScreen != null):("Error instantiating Sprite class");
+		
 		this.loseScreen.x = WindowConstants.WIDTH/2 - this.loseScreen.width/2;
 		this.loseScreen.y = WindowConstants.HEIGHT/500 - this.loseScreen.height/20;
 		
@@ -73,16 +76,19 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		if(getLifePlayer() == 1){
 			final String ONE_LIFE_PATH = "src/assets/img/continue/1life.png";
 			this.lifeRemaining = new Sprite(ONE_LIFE_PATH);
+			assert(this.lifeRemaining != null):("Error instantiating Sprite class");
 		}
 		
 		else if(getLifePlayer() == 2){
 			final String TWO_LIFE_PATH = "src/assets/img/continue/2life.png";
 			this.lifeRemaining = new Sprite(TWO_LIFE_PATH);
+			assert(this.lifeRemaining != null):("Error instantiating Sprite class");
 		}
 		
 		else if(getLifePlayer() == 3){
 			final String THREE_LIFE_PATH = "src/assets/img/continue/3life.png";
 			this.lifeRemaining = new Sprite(THREE_LIFE_PATH);
+			assert(this.lifeRemaining != null):("Error instantiating Sprite class");
 		}
 		
 		
@@ -112,7 +118,9 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 * @return  value of player's life as number
 	 */
 	public int getLifePlayer() {
-		 assert(this.lifePlayer >= 0 || this.lifePlayer <= 3):("The life player must be greater than 0 and smaller than 3");
+		 assert(this.lifePlayer >= 0):("The life player must be greater than 0");
+		 assert(this.lifePlayer <= 3):("The life player must be smaller than 3");
+		 
 		 return this.lifePlayer;
 	}
 	
@@ -122,15 +130,17 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	public void buildWaitScene() {
 		//This object is necessary for schedule at fixed rate.
 		Timer timer = new Timer();
+		assert(timer != null):("Error instantiating Timer class");
 		
 		//This object is necessary for delegate action for count down.
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
-		countDown.delegateAction = this;
+		assert(countDown != null):("Error instantiating CountDownTimer class");
 		
+		countDown.delegateAction = this;
 		//This constant is value of time for delay on schedule. Unit of measure: Miliseconds
 		long DELAY = 1000;
-		assert(DELAY == 1000):("Returned value different of 1000 miliseconds");
+		
 		
 		timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
 	}
@@ -145,8 +155,6 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		final int PIXELS_SIDES = 600;
 		
 		//Responsible for maintaining infinite repetition of the layers
-		assert(PIXELS_DOWN == 800):("The life player's number is incorrect value");
-		assert(PIXELS_SIDES == 600):("The life player's number is incorrect value");
 		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 		
 		//Move the parallax orientation vertically
@@ -159,7 +167,6 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	//Method that after the end of the time transit to the screen to ContinueGame class
 	public void finishScene() {
 		
-		assert(this.game == null):("This game dont should to return null");
 		//Case the game is run
 		if (this.game != null){
 			//Show on console the message when the time is ended
@@ -169,6 +176,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 			//This object build a classic continue screen for transit to this element
 			ContinueGame classicContinue = null;
 			classicContinue = new ContinueGame();
+			assert(classicContinue != null):("Error instantiating ContinueGame class");
 			
 			this.game.transitTo(classicContinue);
 		}

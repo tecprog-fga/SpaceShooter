@@ -62,14 +62,12 @@ public class MenuScene extends GameScene {
 		//Realize the build for have background image in screen.
 		final String BACKGROUNG_PATH = "src/assets/img/menu/background.png";
 		background = new GameImage(BACKGROUNG_PATH);
-		assert(background != null):("This object returned null");
-		assert(background instanceof GameImage):("Error instantiating GameImage class");
+		assert(background != null):("Error instantiating GameImage class");
 		
 		//Realize the build for have title image in screen.
 		final String TITLE_PATH = "src/assets/img/menu/title.png";
 		title = new Sprite(TITLE_PATH);
-		assert(title != null):("This object returned null");
-		assert(title instanceof Sprite):("Error instantiating Sprite class");
+		assert(title != null):("Error instantiating Sprite class");
 		
 		title.x = WindowConstants.WIDTH/2 - title.width/2;
 		title.y = WindowConstants.HEIGHT/3 - title.height/2;
@@ -80,8 +78,7 @@ public class MenuScene extends GameScene {
 		//Realize the build for have arrow image in screen.
 		final String ARROW_PATH = "src/assets/img/menu/arrow.png";
 		arrow = new Sprite(ARROW_PATH);
-		assert(arrow != null):("This object returned null");
-		assert(arrow instanceof Sprite):("Error instantiating Sprite class");
+		assert(arrow != null):("Error instantiating Sprite class");
 		
 		arrow.x = 10;
 		arrow.y = 10;
