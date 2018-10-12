@@ -16,13 +16,18 @@ public class Bullet extends GameEntity {
 	/**
 	 * spaceship bullet sprite
 	 */
-	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";
+	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";{
+		
+	}
+		
 	
 	/**
 	 * builds the bullet sprite on the screen 
 	 */
 	public Bullet() {
 		super(IMAGE_BULLET);
+		
+		assert(IMAGE_BULLET != null): ("Sprite of the bullet is null");
 	}
 	
 	/**
@@ -51,7 +56,9 @@ public class Bullet extends GameEntity {
 	@Override
 	public void reborn() {
 		super.reborn();
-		this.owner = null;
+		
+		assert(owner != null):("owner is null");
+		this.owner = owner;
 	}
 	
 	public GameEntity owner = null; 

@@ -54,9 +54,8 @@ public class GameController {
 		/**
 		 * updates current scene
 		 */
-		if (currentScene != null){
-			currentScene.updateScene();
-		}
+		assert(currentScene != null): ("Error currentScene");
+		currentScene.updateScene();
 		return isRunning; 
 	}
 	
