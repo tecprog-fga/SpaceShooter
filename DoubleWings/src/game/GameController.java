@@ -29,14 +29,10 @@ public class GameController {
 			currentScene.destroyScene();
 		}
 
-		/*
-		 * Run initial setup
-		 */
+		//Run initial setup
 		scene.configureGameScene(this);
 		
-		/*
-		 * Update current scene variable
-		 */
+		//Update current scene variable
 		currentScene = scene;
 	}
 	

@@ -184,6 +184,7 @@ public class World {
 	}
 	
 	private ArrayList<GameEntity> objs = null;
-	private ArrayList<GameEntity> deadObjs = null; /*Array that Handles dead entities*/
+	//Array that Handles dead entities
+	private ArrayList<GameEntity> deadObjs = null; 
 	private GameEvolver evolver = new GameEvolver();
 }
