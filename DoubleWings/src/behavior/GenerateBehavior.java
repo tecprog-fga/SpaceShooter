@@ -25,31 +25,37 @@ public class GenerateBehavior {
 	private final static Charset ENCODING = StandardCharsets.UTF_8;  
 
 	public GenerateBehavior(Path scriptPath) {
+		assert(scriptPath != null):("Objeto scriptPath não foi recebido!");
 		this.SCRIPT_PATH = scriptPath;
 	}
 
 	public final ArrayList<Command> processBehavior() throws IOException {
 		ArrayList<Command> commandsList = null;
 		commandsList = new ArrayList<Command>();
+		assert(commandsList != null):("Objeto commandsList não pode ser nulo!");
 		try (Scanner commands = new Scanner(SCRIPT_PATH, ENCODING.name())) {
 			while (commands.hasNextLine()) {
 				commandsList.add(processLine(commands.nextLine()));
 			}
 		}
 
+		assert(commandsList != null):("Objeto commandsList não pode ser nulo!");
 		return commandsList;
 	}
 
 	protected Command processLine(String commandLine) throws IOException {
+		assert(commandLine != " "):("String commandLine não é válida!");
 		Scanner commandInput = null;
 		commandInput = new Scanner(commandLine);
+		assert(commandInput != null):("Objeto commandInput não foi recebido!");
 		
 		if (commandInput.hasNext()) {
 			String commandOutput = commandInput.next();
 			log("Command received: " + quote(commandOutput.trim()));
 			commandInput.close();
 			Command command = CommandCreator.createPlayerCommand(CommandType.valueOf(commandOutput));
-
+			assert(command != null):("Objeto command não pode ser nulo!");
+			
 			return command;
 
 		} else {
@@ -60,11 +66,13 @@ public class GenerateBehavior {
 	}
 
 	private String quote(String aText) {
+		assert(aText != " "):("String aText não é válida!");
 		String QUOTE = "'";
 		return QUOTE + aText + QUOTE;
 	}
 
 	private static void log(Object aObject) {
+		assert(aObject != null):("Objeto aObject não foi recebido!");
 		System.out.println(String.valueOf(aObject));
 	}
 }

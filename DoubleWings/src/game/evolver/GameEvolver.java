@@ -46,7 +46,6 @@ public class GameEvolver {
 	 * @param event
 	 */
 	public void remove(GameEvent event) {
-		
 		if (event != null) {
 			events.remove(event);
 		}

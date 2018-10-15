@@ -18,6 +18,7 @@ public class EnemyPool extends ObjectPool<Enemy>{
 		 * Enemy sprite directory
 		 */
 		Enemy enemy = new Enemy("src/assets/asteroid.png");
+		assert(enemy != null): "enemy is receing null";
 		return enemy;
 	}
 }

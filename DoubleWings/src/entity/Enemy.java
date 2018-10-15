@@ -14,7 +14,6 @@ import entity.player.PlayerSpaceship;
  */
 public class Enemy extends GameEntity {
 
-	
 	/**
 	 * sprite of the enemy
 	 */
@@ -25,7 +24,9 @@ public class Enemy extends GameEntity {
 	 * @param y y-axis position
 	 */
 	public Enemy(int x, int y) {
-		super(Enemy.IMAGE_TEMP_PLAYER);
+		super(Enemy.IMAGE_TEMP_PLAYER);	
+
+		assert(IMAGE_TEMP_PLAYER != null):("Sprite of the enemy not found");
 		this.x = x;
 		this.y = y;
 	}

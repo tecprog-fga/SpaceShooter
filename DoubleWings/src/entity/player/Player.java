@@ -75,14 +75,10 @@ public class Player {
 	public void setChances(int chances){
 		this.chances = chances;
 		
-		/*
-		 * Notifying HUD to update the screen
-		 */
-		if (observer != null) {
-			observer.notifyObserver(this);	
-		} else {
-			System.out.println("Player log: HUD is null :(");
-		}
+		// Notifying HUD to update the screen if it isn't null
+		assert(observer != null) : "Player log: HUD is null";		
+		observer.notifyObserver(this);	
+
 	}
 
 	/**
@@ -109,11 +105,9 @@ public class Player {
 
 		this.score += score;
 		
-		if (observer != null) {
-			observer.notifyObserver(this);	
-		} else {
-			System.out.println("Player log: HUD is null :(");
-		}
+		// Notifying HUD to update the screen if it isn't null
+		assert(observer != null) : "Player log: HUD is null";
+		observer.notifyObserver(this);	
 	}
 	
 	/**
@@ -122,9 +116,8 @@ public class Player {
 	public double initialPositionX = 0;
 	public double initialPositionY = 0;
 
-	/**
-	 * Reset the spaceship's position after each death
-	 */
+	
+	// Reset the spaceship's position after each death
 	private void resetSpaceship() {
 		this.spaceship.reborn();
 		this.spaceship.x = initialPositionX;
@@ -156,9 +149,8 @@ public class Player {
 		System.out.println("Player log: life reset to: " + this.chances);
 	}
 	
-	/**
-	 * Decides if the the player can continue playing after losing all lives
-	 */
+	
+	// Decides if the the player can continue playing after losing all lives
 	private boolean canContinue = true;
 	
 	/**

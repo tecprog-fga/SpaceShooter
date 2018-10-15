@@ -15,7 +15,9 @@ public class MoveCommand implements Command {
 	/**
 	 * Distance to enemy movimentation in pixels
 	 */
-	private double distanceToMove = 50;
+	private double distanceToMove = 50; {
+	assert(distanceToMove >= 0):("Distância de deslocamento não pode ser negativa!");
+	}
 	private CommandType direction = null;
 	/**
 	 * enemy's on-screen movement of the game, in pixels
@@ -27,6 +29,7 @@ public class MoveCommand implements Command {
 	 * @param type type of player input
 	 */
 	public MoveCommand(CommandType type) {
+		assert(type != null):("Objeto type não foi recebido!");
 		this.direction = type;
 	}
 	
@@ -35,9 +38,9 @@ public class MoveCommand implements Command {
 	 * @param actor the actor
 	 */ 
 	public boolean executeDisplacement(Sprite actor) {
-		/*
-		 * the actor must move on the screen for a distance
-		 */
+		
+		// the actor must move on the screen for a distance 
+		assert(actor != null):("Objeto actor não foi recebido!");
 		if (this.distanceToMove > 0) {
 			moveActor(actor);
 			this.distanceToMove -= UNITARY_DISPLACEMENT;
@@ -53,9 +56,8 @@ public class MoveCommand implements Command {
 	 * @return true if movement is completed, false otherwise. 
 	 */
 	public boolean executeDisplacement(Sprite[] actors) {
-		/*
-		 * actors must move on the screen for a distance limit
-		 */
+		// actors must move on the screen for a distance limit
+		assert(actors != null):("Vetor de objetos actors não foi recebido!");
 		if (this.distanceToMove > 0) {
 			for(Sprite actor: actors) {
 				moveActor(actor);
@@ -72,9 +74,8 @@ public class MoveCommand implements Command {
 	 * @param actor object that will be moved by the screen
 	 */
 	private void moveActor(Sprite actor) {
-		/*
-		 * must move the game object in one of the four main directions
-		 */
+		// must move the game object in one of the four main directions
+		assert(actor != null):("Objeto actor não foi recebido!");
 		switch(this.direction) {
 		case LEFT:
 			actor.x -= UNITARY_DISPLACEMENT;

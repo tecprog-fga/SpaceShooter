@@ -14,13 +14,16 @@ public class Score {
 	 * This variable store the value of counter.
 	 * It have unlimited.
 	 */
-	private int currentScore = 0;
+	private int currentScore = 0; {
+	assert(currentScore == 0):("Pontuação inicial deve ser zero!");
+	}
 
 	/**
 	 * This method realize the increment of score for to count all score types
 	 * @param score value of player score
 	 */
 	public void increaseScore(ScoreType score) {
+		assert(score != null):("Objeto não foi recebido corretamente!");
 		this.currentScore += score.getValue();
 	}
 

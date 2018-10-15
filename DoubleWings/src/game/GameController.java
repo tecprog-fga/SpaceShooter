@@ -29,14 +29,10 @@ public class GameController {
 			currentScene.destroyScene();
 		}
 
-		/*
-		 * Run initial setup
-		 */
+		//Run initial setup
 		scene.configureGameScene(this);
 		
-		/*
-		 * Update current scene variable
-		 */
+		//Update current scene variable
 		currentScene = scene;
 	}
 	
@@ -54,9 +50,8 @@ public class GameController {
 		/**
 		 * updates current scene
 		 */
-		if (currentScene != null){
-			currentScene.updateScene();
-		}
+		assert(currentScene != null): ("Error currentScene");
+		currentScene.updateScene();
 		return isRunning; 
 	}
 	

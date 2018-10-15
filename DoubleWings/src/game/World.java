@@ -157,7 +157,9 @@ public class World {
 		event.setCallback(callback);
 		event.time = time;
 		event.name = name;
-		event.type = type;	
+		event.type = type;
+		
+		assert(event != null):("event cannot be null");
 		return event;
 	}
 	
@@ -168,6 +170,8 @@ public class World {
 	public Enemy createEnemy() {
 		Enemy enemy = enemyPool.release();
 		enemy.reborn();
+		
+		assert(enemy != null): ("enemy cannot be null");
 		return enemy;
 	}
 	
@@ -180,6 +184,7 @@ public class World {
 	}
 	
 	private ArrayList<GameEntity> objs = null;
-	private ArrayList<GameEntity> deadObjs = null; /*Array that Handles dead entities*/
+	//Array that Handles dead entities
+	private ArrayList<GameEntity> deadObjs = null; 
 	private GameEvolver evolver = new GameEvolver();
 }

@@ -21,9 +21,7 @@ public class GameEvent {
 	}
 	
 	public void run() {
-		
-		if (callback != null) {
-			callback.eventCallback(this);
-		}
+		assert(callback != null): ("callback cannot be null");
+		callback.eventCallback(this);
 	}
 }

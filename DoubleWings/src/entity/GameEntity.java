@@ -27,7 +27,9 @@ public class GameEntity extends Sprite {
 	 */
 	public GameEntity(String fileName) {
 		super(fileName);
-		name = fileName;
+		
+		assert(fileName != null):("fileName is receiving null");
+		this.name = fileName;
 	}
 	
 	protected int life = 1;
