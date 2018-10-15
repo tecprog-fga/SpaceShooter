@@ -46,8 +46,14 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	 */
 	private Parallax delpthScene = null;
 
+	/**
+	 * This object its necessary for transit the scene
+	 */
 	private Object transitScene;
 
+	/**
+	 * This object its necessary for transit to menu scene
+	 */
 	private Object menu;	
 	
 	//This void method build sprites for show scenes of class ContinueGame. 
