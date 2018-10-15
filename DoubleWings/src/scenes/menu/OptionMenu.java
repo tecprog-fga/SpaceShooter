@@ -5,6 +5,8 @@
 
 package scenes.menu;
 
+import jplay.Keyboard;
+
 /**
  * This Enum create enumerations of options of menu in menu display. 
  * For each code id there is a option for choose.
@@ -22,7 +24,7 @@ enum OptionsMenu {
 
 	/**
 	 * This constructor initialize the current option
-	 * @param currentOption
+	 * @param currentOption defined
 	 */
 	OptionsMenu(int currentOption) {
 		this.currentOption = currentOption;
@@ -33,12 +35,13 @@ enum OptionsMenu {
 	 * @return next option defined
 	 */
 	OptionsMenu next() {
-
 		int chosenOption = currentOption;
-		if (currentOption < 3) {
+		assert(this.currentOption >= 0):("The currentOption dont should be negative");
+		assert(currentOption <= 3):("The currentOption dont should be bigger then 3");
+		if (currentOption <= 3) {
 			chosenOption += 1;
 		}
-
+		
 		return defineOption(chosenOption);
 	}
 
@@ -49,10 +52,12 @@ enum OptionsMenu {
 	OptionsMenu back() {
 
 		int chosenOption = currentOption;
-		if (currentOption > 0) {
+		assert(this.currentOption >= 0):("The currentOption dont should be negative");
+		assert(this.currentOption <= 3):("The currentOption dont should be bigger then 3");
+		if (currentOption >= 0) {
 			chosenOption -= 1;
 		}
-
+		
 		return defineOption(chosenOption);
 	}
 
@@ -62,22 +67,18 @@ enum OptionsMenu {
 	 * @return Enumerator related
 	 */
 	private OptionsMenu defineOption(int chosenOption) {
-
+		
 		//Depending of chosen option realize action related
 		switch(chosenOption) {
 			case 0:
 				return OptionsMenu.START_GAME;
-	
 			case 1:
 				return OptionsMenu.RANKING;
-	
 			case 2:
 				return OptionsMenu.SETTINGS;
-	
 			case 3:
 				return OptionsMenu.QUIT;
 		}
-
 		return OptionsMenu.START_GAME;
 	}
 

@@ -18,17 +18,19 @@ public class CountDownTimer extends TimerTask {
 	int counterTime = 9; // initializing the variable with value 9
 	public CountDownTimerEnds delegateAction = null;
 
-	// This method is extended of the library java.util.TimerTask. This method cannot be renamed
+	// This method is extended of the library java.util.TimerTask, this method run the counter down 
 	@Override
 	public void run() {
 
 		// Decrementing counterTime one by one to update the screen with a new image
 		counterTime -= 1;
+		assert(counterTime >= -1):("The counter must be greater than 0");
+		assert(counterTime <= 9):("The life player must be smaller or equal than 9");
+		
 		delegateAction.updateImageForIndex(counterTime);
 		
 		// This selection structure is used to show the screen game over if counterTime is less than zero
 		if (counterTime < 0) {
-			
 			delegateAction.finishScene();
 			delegateAction = null;
 			this.cancel();
