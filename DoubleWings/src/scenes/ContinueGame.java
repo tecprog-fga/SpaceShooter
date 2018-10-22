@@ -119,7 +119,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	public static double defineAxis(int window, double windowDividend, Sprite sprite, double screenDividend) {
 		double axis;
 		axis = 0;
-		if(window == WindowConstants.WIDTH) {
+		if (window == WindowConstants.WIDTH) {
 			axis = window/windowDividend - sprite.width/screenDividend;
 		}
 		else {
@@ -185,7 +185,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	//Build final scene for transit on Game over
 	public void finishScene() {
 		
-		if (this.game != null){
+		if (this.game != null) {
 			
 			assert(this.game != null):("Null returned, delpthScene dont should be null");
 			
@@ -198,6 +198,9 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			assert(gameOver != null):("Null returned, gameOver cant transit to new scene");
 			
 			this.game.transitTo(gameOver);
+		}
+		else {
+			//Nothing to do
 		}
 	}
 
@@ -234,12 +237,19 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 				assert(this.transitScene == null):("This object should be null");
 				this.game.transitTo(transitScene.firstStageScene());
 
-			} else if (this.keyboard.keyDown(Keyboard.ESCAPE_KEY)) {
+			} 
+			else if (this.keyboard.keyDown(Keyboard.ESCAPE_KEY)) {
 				GameScene menu = null;
 				menu = new MenuScene();
 				assert(this.menu == null):("This object should be null");
 				this.game.transitTo(menu);
 			}
+			else {
+				//Nothing to do
+			}
+		}
+		else {
+			//Nothing to do
 		}
 	}
 

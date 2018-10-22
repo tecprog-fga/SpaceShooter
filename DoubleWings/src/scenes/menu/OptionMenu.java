@@ -41,6 +41,9 @@ enum OptionsMenu {
 		if (currentOption <= 3) {
 			chosenOption += 1;
 		}
+		else {
+			//Nothing to do
+		}
 		
 		return defineOption(chosenOption);
 	}
@@ -56,6 +59,9 @@ enum OptionsMenu {
 		assert(this.currentOption <= 3):("The currentOption dont should be bigger then 3");
 		if (currentOption >= 0) {
 			chosenOption -= 1;
+		}
+		else {
+			//Nothing to do
 		}
 		
 		return defineOption(chosenOption);
@@ -78,6 +84,8 @@ enum OptionsMenu {
 				return OptionsMenu.SETTINGS;
 			case 3:
 				return OptionsMenu.QUIT;
+			default:
+				//Nothing to do
 		}
 		return OptionsMenu.START_GAME;
 	}

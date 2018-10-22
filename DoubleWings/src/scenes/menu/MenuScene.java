@@ -138,7 +138,8 @@ public class MenuScene extends GameScene {
 				assert(currentButtonIndex >= 0):("The index of button dont should be negative");
 				assert(currentButtonIndex <= 1000):("The index of button dont should be 1000 or more");
 				buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
-			} else { 
+			}
+			else { 
 				//Define the position of the element according to the last element
 				assert(currentButtonIndex >= 0):("The index of button dont should be negative");
 				assert(currentButtonIndex <= 1000):("The index of button dont should be 1000 or more");
@@ -164,6 +165,9 @@ public class MenuScene extends GameScene {
 			selectedMenuOption = selectedMenuOption.next();
 			System.out.println(selectedMenuOption);
 		}
+		else {
+			//Nothing to do
+		}
 
 		//Up selection		
 		assert(Keyboard.UP_KEY == 38):("Returned unexpected value");
@@ -174,6 +178,9 @@ public class MenuScene extends GameScene {
 			assert(this.selectedMenuOption != null):("This object returned null");
 			selectedMenuOption = selectedMenuOption.back();
 			System.out.println(selectedMenuOption);
+		}
+		else {
+			//Nothing to do
 		}
 	}
 
@@ -226,14 +233,13 @@ public class MenuScene extends GameScene {
 	 * @return object of scene builded of first stage
 	 */
 	public GameScene firstStageScene() {
-		if(firstLevel == null){
+		if (firstLevel == null) {
 			firstLevel = new FirstStage();
 			
 			assert(firstLevel != null):("This object returned null");
 			return firstLevel;
 		} 	
-		else{
-			
+		else {			
 			assert(firstLevel != null):("This object returned null");
 			return firstLevel;
 		}
@@ -247,22 +253,24 @@ public class MenuScene extends GameScene {
 		assert(Keyboard.ENTER_KEY == 10):("Returned unexpected value");
 		if (keyboard.keyDown(Keyboard.ENTER_KEY)){
 
-			switch(selectedMenuOption){
+			switch(selectedMenuOption) {
 
-			case START_GAME:
-				//transit to game
-				game.transitTo(firstStageScene());
-				break;
-			case RANKING:
-				//transit to ranking
-				break;
-			case SETTINGS:
-				//transit to settings
-				break;
-			case QUIT:
-				//quit game
-				game.quit();
-				break;
+				case START_GAME:
+					//transit to game
+					game.transitTo(firstStageScene());
+					break;
+				case RANKING:
+					//Nothing to do
+					break;
+				case SETTINGS:
+					//Nothing to do
+					break;
+				case QUIT:
+					//quit game
+					game.quit();
+					break;
+				default:
+					//Nothing to do
 			}
 		}
 	}

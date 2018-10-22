@@ -73,24 +73,26 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		
 		//Check how many lives the player has to instantiate the specific sprite.
 		//Depends of lives is show the sprite related
-		if(getLifePlayer() == 1){
-			final String ONE_LIFE_PATH = "src/assets/img/continue/1life.png";
-			this.lifeRemaining = new Sprite(ONE_LIFE_PATH);
-			assert(this.lifeRemaining != null):("Error instantiating Sprite class");
-		}
-		
-		else if(getLifePlayer() == 2){
-			final String TWO_LIFE_PATH = "src/assets/img/continue/2life.png";
-			this.lifeRemaining = new Sprite(TWO_LIFE_PATH);
-			assert(this.lifeRemaining != null):("Error instantiating Sprite class");
-		}
-		
-		else if(getLifePlayer() == 3){
-			final String THREE_LIFE_PATH = "src/assets/img/continue/3life.png";
-			this.lifeRemaining = new Sprite(THREE_LIFE_PATH);
-			assert(this.lifeRemaining != null):("Error instantiating Sprite class");
-		}
-		
+		switch(getLifePlayer()){
+
+			case 1:
+				final String ONE_LIFE_PATH = "src/assets/img/continue/1life.png";
+				this.lifeRemaining = new Sprite(ONE_LIFE_PATH);
+				assert(this.lifeRemaining != null):("Error instantiating Sprite class");
+				break;
+			case 2:
+				final String TWO_LIFE_PATH = "src/assets/img/continue/2life.png";
+				this.lifeRemaining = new Sprite(TWO_LIFE_PATH);
+				assert(this.lifeRemaining != null):("Error instantiating Sprite class");
+				break;
+			case 3:
+				final String THREE_LIFE_PATH = "src/assets/img/continue/3life.png";
+				this.lifeRemaining = new Sprite(THREE_LIFE_PATH);
+				assert(this.lifeRemaining != null):("Error instantiating Sprite class");
+				break;
+			default:
+				//Nothing to do
+		}		
 		
 		//Define position lifeRemaining on the Screen
 		this.lifeRemaining.x = WindowConstants.WIDTH/2 - this.lifeRemaining.width/2;
@@ -180,6 +182,10 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 			
 			this.game.transitTo(classicContinue);
 		}
+		else {
+			//Nothing to do
+		}
+		
 	}
 	
 	//Nothing to do in this class
