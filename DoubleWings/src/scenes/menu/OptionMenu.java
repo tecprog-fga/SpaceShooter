@@ -26,7 +26,7 @@ enum OptionsMenu {
 	 * This constructor initialize the current option
 	 * @param currentOption defined
 	 */
-	OptionsMenu(int currentOption) {
+	private OptionsMenu(int currentOption) {
 		this.currentOption = currentOption;
 	}
 
@@ -34,7 +34,7 @@ enum OptionsMenu {
 	 * This algorithm build the next option when the current option is less than 3
 	 * @return next option defined
 	 */
-	OptionsMenu next() {
+	protected OptionsMenu next() {
 		int chosenOption = currentOption;
 		assert(this.currentOption >= 0):("The currentOption dont should be negative");
 		assert(currentOption <= 3):("The currentOption dont should be bigger then 3");
@@ -52,7 +52,7 @@ enum OptionsMenu {
 	 * This algorithm build the back option when the current option is greater than 0
 	 * @return back option defined
 	 */
-	OptionsMenu back() {
+	protected OptionsMenu back() {
 
 		int chosenOption = currentOption;
 		assert(this.currentOption >= 0):("The currentOption dont should be negative");

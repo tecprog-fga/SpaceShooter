@@ -116,7 +116,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		buildWaitScene();
 	}
 	
-	public static double defineAxis(int window, double windowDividend, Sprite sprite, double screenDividend) {
+	private static double defineAxis(int window, double windowDividend, Sprite sprite, double screenDividend) {
 		double axis;
 		axis = 0;
 		if (window == WindowConstants.WIDTH) {
@@ -131,7 +131,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	/**
 	 * This method build the scene of waiting countdown.
 	 */
-	public void buildWaitScene(){
+	private void buildWaitScene(){
 
 		//This object is instance of Timer class, this object work with configuration of time of game.
 		Timer timer = null; 

@@ -57,7 +57,7 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	/**
 	 * This method build the scene of waiting countdown
 	 */
-	public void buildWaitScene(){
+	private void buildWaitScene(){
 		
 		//This object is necessary for schedule at fixed rate.
 		Timer timer = null;

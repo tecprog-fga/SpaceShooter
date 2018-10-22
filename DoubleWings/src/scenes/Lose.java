@@ -111,7 +111,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 * Method set created for using in other class to pass remaining life of the player
 	 * @param lifePlayer
 	 */
-	public void setLifePlayer(int lifePlayer) {
+	private void setLifePlayer(int lifePlayer) {
 		 this.lifePlayer = lifePlayer;
 	}
 
@@ -119,7 +119,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 * Get the value of player's life
 	 * @return  value of player's life as number
 	 */
-	public int getLifePlayer() {
+	private int getLifePlayer() {
 		 assert(this.lifePlayer >= 0):("The life player must be greater than 0");
 		 assert(this.lifePlayer <= 3):("The life player must be smaller than 3");
 		 
@@ -129,7 +129,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	/**
 	 * This method build the scene of waiting countdown
 	 */
-	public void buildWaitScene() {
+	private void buildWaitScene() {
 		//This object is necessary for schedule at fixed rate.
 		Timer timer = new Timer();
 		assert(timer != null):("Error instantiating Timer class");
