@@ -92,29 +92,40 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		this.continueScreen = new Sprite(CONTINUE_PATH);
 		
 		assert(this.continueScreen != null):("Null returned, continueScreen cant marked Window constants");
-		this.continueScreen.x = WindowConstants.WIDTH/2 - this.continueScreen.width/2; 
-		this.continueScreen.y = WindowConstants.HEIGHT/2 - this.continueScreen.height;
-
+		this.continueScreen.x = defineAxis(WindowConstants.WIDTH, 2, this.continueScreen, 2);
+		this.continueScreen.y = defineAxis(WindowConstants.HEIGHT, 2, this.continueScreen, 1);
 		
 		//Realize the position of images in countDown screen.
 		final String COUNTDOWN_PATH = "src/assets/img/continue/number_9.png";
 		this.countdownScreen = new Sprite(COUNTDOWN_PATH);
 
 		assert(this.countdownScreen != null):("Null returned, countdownScreen cant marked Window constants");
-		this.countdownScreen.x = WindowConstants.WIDTH/2 - this.countdownScreen.width/2;
-		this.countdownScreen.y = WindowConstants.HEIGHT/1.5 - this.countdownScreen.height/2;
-		
+	
+		this.countdownScreen.x = defineAxis(WindowConstants.WIDTH, 2, this.countdownScreen, 2);
+		this.countdownScreen.y = defineAxis(WindowConstants.HEIGHT, 1.5, this.countdownScreen, 2);
 		
 		//Realize the position of enter sprite displays screen.
 	    final String ENTER_PATH = "src/assets/img/continue/Enter-Download-PNG.png";	 
 		this.enterScreen = new Sprite(ENTER_PATH);
 		
 		assert(this.enterScreen != null):("Null returned, enterScreen cant marked Window constants");
-		this.enterScreen.x = WindowConstants.WIDTH/2 - this.enterScreen.width/2;
-		this.enterScreen.y = WindowConstants.HEIGHT/500 - this.enterScreen.height/20;
+		this.enterScreen.x = defineAxis(WindowConstants.WIDTH, 2, this.enterScreen, 2);
+		this.enterScreen.y = defineAxis(WindowConstants.HEIGHT, 500, this.enterScreen, 20);
 
 		//Finally, build scene of count down
 		buildWaitScene();
+	}
+	
+	public static double defineAxis(int window, double windowDividend, Sprite sprite, double screenDividend) {
+		double axis;
+		axis = 0;
+		if(window == WindowConstants.WIDTH) {
+			axis = window/windowDividend - sprite.width/screenDividend;
+		}
+		else {
+			axis = window/windowDividend - sprite.height/screenDividend;
+		}
+		return axis;
 	}
 
 	/**
