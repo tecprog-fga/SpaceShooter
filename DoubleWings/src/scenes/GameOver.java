@@ -5,12 +5,14 @@
 package scenes;
 
 import java.util.Timer;
+
 import constants.WindowConstants;
 import jplay.GameImage;
 import jplay.Sprite;
 import scenes.menu.MenuScene;
 import util.CountDownTimer;
 import util.CountDownTimerEnds;
+import util.SpritePosition;
 
 /**
  * This class build scene for game over. It's necessary because 
@@ -23,6 +25,11 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	//This object is necessary for build the game over image in screen
 	private Sprite gameOver = null;
 	private Object menu;
+	
+	/**
+	 * This object its necessary for resolve position of sprites features
+	 */
+	private SpritePosition spos = new SpritePosition();
 	
 	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	public void buildInitialScene() {
@@ -42,8 +49,8 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		assert(this.gameOver != null):("NNull returned, gameOver dont should be null");
 
 		//Game over sprite center position
-		this.gameOver.x = WindowConstants.WIDTH/2 - this.gameOver.width/2;
-		this.gameOver.y = WindowConstants.HEIGHT/2 - this.gameOver.height/2;
+		this.gameOver.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.gameOver, 2);
+		this.gameOver.y = spos.calculatePosition(WindowConstants.HEIGHT, 2, this.gameOver, 2);
 
 		buildWaitScene();
 	}

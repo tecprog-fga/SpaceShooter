@@ -35,5 +35,8 @@ public class CountDownTimer extends TimerTask {
 			delegateAction = null;
 			this.cancel();
 		}
+		else {
+			//Nothing to do
+		}
 	}
 }
