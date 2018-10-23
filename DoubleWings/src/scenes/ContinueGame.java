@@ -14,6 +14,7 @@ import jplay.Sprite;
 import scenes.menu.MenuScene;
 import util.CountDownTimer;
 import util.CountDownTimerEnds;
+import util.SpritePosition;
 
 /**
  * This class build scene for continue games. It's necessary because 
@@ -54,7 +55,12 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	/**
 	 * This object its necessary for transit to menu scene
 	 */
-	private Object menu;	
+	private Object menu;
+	
+	/**
+	 * This object its necessary for resolve position of sprites features
+	 */
+	private SpritePosition spos = new SpritePosition();
 	
 	//This void method build sprites for show scenes of class ContinueGame. 
 	//It's necessary for build the initial sprites for universe, continue, count down and enter images.
@@ -84,7 +90,9 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
 		
 		//...Adjusts the speed of all layers from the main layer
-		this.delpthScene.setVelAllLayers(0, 1);
+		final double velMainLayerX = 0;
+		final double velMainLayerY = 1;
+		this.delpthScene.setVelAllLayers(velMainLayerX, velMainLayerY);
 		
 		
 		//Realize the position of images in continue screen, continue sprite upper-center position.
@@ -92,8 +100,8 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		this.continueScreen = new Sprite(CONTINUE_PATH);
 		
 		assert(this.continueScreen != null):("Null returned, continueScreen cant marked Window constants");
-		this.continueScreen.x = defineAxis(WindowConstants.WIDTH, 2, this.continueScreen, 2);
-		this.continueScreen.y = defineAxis(WindowConstants.HEIGHT, 2, this.continueScreen, 1);
+		this.continueScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.continueScreen, 2);
+		this.continueScreen.y = spos.calculatePosition(WindowConstants.HEIGHT, 2, this.continueScreen, 1);
 		
 		//Realize the position of images in countDown screen.
 		final String COUNTDOWN_PATH = "src/assets/img/continue/number_9.png";
@@ -101,31 +109,19 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 
 		assert(this.countdownScreen != null):("Null returned, countdownScreen cant marked Window constants");
 	
-		this.countdownScreen.x = defineAxis(WindowConstants.WIDTH, 2, this.countdownScreen, 2);
-		this.countdownScreen.y = defineAxis(WindowConstants.HEIGHT, 1.5, this.countdownScreen, 2);
+		this.countdownScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.countdownScreen, 2);
+		this.countdownScreen.y = spos.calculatePosition(WindowConstants.HEIGHT, 1.5, this.countdownScreen, 2);
 		
 		//Realize the position of enter sprite displays screen.
 	    final String ENTER_PATH = "src/assets/img/continue/Enter-Download-PNG.png";	 
 		this.enterScreen = new Sprite(ENTER_PATH);
 		
 		assert(this.enterScreen != null):("Null returned, enterScreen cant marked Window constants");
-		this.enterScreen.x = defineAxis(WindowConstants.WIDTH, 2, this.enterScreen, 2);
-		this.enterScreen.y = defineAxis(WindowConstants.HEIGHT, 500, this.enterScreen, 20);
+		this.enterScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.enterScreen, 2);
+		this.enterScreen.y = spos.calculatePosition(WindowConstants.HEIGHT, 500, this.enterScreen, 20);
 
 		//Finally, build scene of count down
 		buildWaitScene();
-	}
-	
-	private static double defineAxis(int window, double windowDividend, Sprite sprite, double screenDividend) {
-		double axis;
-		axis = 0;
-		if (window == WindowConstants.WIDTH) {
-			axis = window/windowDividend - sprite.width/screenDividend;
-		}
-		else {
-			axis = window/windowDividend - sprite.height/screenDividend;
-		}
-		return axis;
 	}
 
 	/**

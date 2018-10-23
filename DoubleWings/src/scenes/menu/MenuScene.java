@@ -5,17 +5,15 @@
 
 package scenes.menu;
 
-import scenes.ContinueGame;
-import scenes.GameScene;
-import scenes.stages.stage1.FirstStage;
-
-import jplay.GameImage;
-import jplay.Keyboard;
-
 import java.util.ArrayList;
 
 import constants.WindowConstants;
+import jplay.GameImage;
+import jplay.Keyboard;
 import jplay.Sprite;
+import scenes.GameScene;
+import scenes.stages.stage1.FirstStage;
+import util.SpritePosition;
 
 /**
  * This class build scene for menu screen. It's necessary because 
@@ -56,6 +54,11 @@ public class MenuScene extends GameScene {
 	 */
 	private Sprite arrow = null;
 	
+	/**
+	 * This object its necessary for resolve position of sprites features
+	 */
+	private SpritePosition spos = new SpritePosition();
+	
 	//This void method build the sprites for show background and title 
 	protected void viewSetup() {
 		
@@ -69,8 +72,8 @@ public class MenuScene extends GameScene {
 		title = new Sprite(TITLE_PATH);
 		assert(title != null):("Error instantiating Sprite class");
 		
-		title.x = WindowConstants.WIDTH/2 - title.width/2;
-		title.y = WindowConstants.HEIGHT/3 - title.height/2;
+		title.x = spos.calculatePosition(WindowConstants.WIDTH, 2, title, 2);
+		title.y = spos.calculatePosition(WindowConstants.HEIGHT, 3, title, 2);
 
 		//Define buttons position
 		appendButtons();

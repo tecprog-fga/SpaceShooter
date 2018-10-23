@@ -6,11 +6,13 @@
 package scenes;
 
 import java.util.Timer;
+
 import constants.WindowConstants;
 import jplay.Parallax;
 import jplay.Sprite;
 import util.CountDownTimer;
 import util.CountDownTimerEnds;
+import util.SpritePosition;
 
 /**
  * This class build scene for lose player using sprites. It's necessary because 
@@ -37,6 +39,11 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 * Variable to check how many lives the player has remain
 	 */
 	private int lifePlayer;
+	
+	/**
+	 * This object its necessary for resolve position of sprites features
+	 */
+	private SpritePosition spos = new SpritePosition();
 	
 	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	public void buildInitialScene() {
@@ -67,8 +74,8 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		this.loseScreen = new Sprite(LOSE_PATH);
 		assert(this.loseScreen != null):("Error instantiating Sprite class");
 		
-		this.loseScreen.x = WindowConstants.WIDTH/2 - this.loseScreen.width/2;
-		this.loseScreen.y = WindowConstants.HEIGHT/500 - this.loseScreen.height/20;
+		this.loseScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.loseScreen, 2);
+		this.loseScreen.y = spos.calculatePosition(WindowConstants.HEIGHT, 500, this.loseScreen, 20);
 		
 		
 		//Check how many lives the player has to instantiate the specific sprite.
@@ -95,8 +102,8 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		}		
 		
 		//Define position lifeRemaining on the Screen
-		this.lifeRemaining.x = WindowConstants.WIDTH/2 - this.lifeRemaining.width/2;
-		this.lifeRemaining.y = WindowConstants.HEIGHT/2 - this.lifeRemaining.height/2;
+		this.lifeRemaining.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.lifeRemaining, 2);
+		this.lifeRemaining.y = spos.calculatePosition(WindowConstants.HEIGHT, 2, this.lifeRemaining, 2);
 		
 		//Finally, build scene of count down
 		buildWaitScene();
