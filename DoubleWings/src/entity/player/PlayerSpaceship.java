@@ -88,7 +88,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	public Player getPlayer() {
 		
-		assert(this.player != null):"Player is returning null"; //$NON-NLS-1$
+		assert(this.player != null):"Player is returning null"; 
 		return this.player;
 	}
 	
