@@ -159,7 +159,7 @@ public class Player {
 	/**
 	 * Delegate the player to game over or continue screen 
 	 */
-	public void loseGame() {
+	private void loseGame() {
 		
 		if (this.canContinue) {
 			useContinue();
@@ -171,7 +171,7 @@ public class Player {
 	/**
 	 * Delegate the player to continue screen
 	 */
-	public void useContinue() {
+	private void useContinue() {
 		this.canContinue = false;
 		resetLife();
 		this.delegate.transitToContinue();

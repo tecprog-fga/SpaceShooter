@@ -181,7 +181,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	/**
 	 * Time of cooldown of the spaceship weapon 
 	 */
-	public int shootCooldown = 100;
+	public final int shootCooldown = 100;
 	
 	// Controls if the spaceship can shoot or not 
 	private boolean canShoot = true;
