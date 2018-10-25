@@ -134,7 +134,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 				this.didDie = true;
 				// Enter here if the spaceship is destroyed
 				this.player.loseLife();
-			} else { /*do nothing*/ }
+			}
 		} else {
 			checkInput();
 		}
