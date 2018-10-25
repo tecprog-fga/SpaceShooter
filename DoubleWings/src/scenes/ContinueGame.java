@@ -181,9 +181,8 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	//Build final scene for transit on Game over
 	public void finishScene() {
 		
+		assert(this.game != null):("Null returned, delpthScene dont should be null");	
 		if (this.game != null) {
-			
-			assert(this.game != null):("Null returned, delpthScene dont should be null");
 			
 			//Message for show witch time ended.
 			final String MSG_TIMER = "Timer Ended";
@@ -220,10 +219,9 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 
 		//This decision structure is necessary for check the button selected. 
 		//If the game execute and keyboard is clicked then execute the algorithm
+		assert(this.game != null):("Null returned, game cant check button selection");
+		assert(this.keyboard != null):("Null returned, keyboard cant check button selection");
 		if(this.game != null && this.keyboard != null){
-
-			assert(this.game != null):("Null returned, game cant check button selection");
-			assert(this.keyboard != null):("Null returned, keyboard cant check button selection");
 			
 			//If selected enter key then transit to a continue state of  the game,
 			//Else, but if selected escape key then transit to a menu scene

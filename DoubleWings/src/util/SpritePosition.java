@@ -43,6 +43,13 @@ public class SpritePosition {
 		return pos;
 	}
 	
+	/**
+	 * This method valid position params
+	 * @param window
+	 * @param windowDividend
+	 * @param screenDividend
+	 * @return position valid
+	 */
 	private boolean validatePosition(int window, double windowDividend, double screenDividend) {
 		boolean posValid;
 		posValid = true;

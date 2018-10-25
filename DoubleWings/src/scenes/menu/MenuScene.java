@@ -236,16 +236,21 @@ public class MenuScene extends GameScene {
 	 * @return object of scene builded of first stage
 	 */
 	public GameScene firstStageScene() {
+		
+		GameScene stage;
+		
 		if (firstLevel == null) {
 			firstLevel = new FirstStage();
 			
 			assert(firstLevel != null):("This object returned null");
-			return firstLevel;
+			stage = firstLevel;
 		} 	
 		else {			
 			assert(firstLevel != null):("This object returned null");
-			return firstLevel;
+			stage = firstLevel;
 		}
+		
+		return stage;
 	}
 
 	/**
@@ -275,6 +280,9 @@ public class MenuScene extends GameScene {
 				default:
 					//Nothing to do
 			}
+		}
+		else {
+			//Nothing to do
 		}
 	}
 

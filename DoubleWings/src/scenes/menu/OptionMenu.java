@@ -36,6 +36,8 @@ enum OptionsMenu {
 	 */
 	protected OptionsMenu next() {
 		int chosenOption = currentOption;
+		OptionsMenu nextOption;
+		
 		assert(this.currentOption >= 0):("The currentOption dont should be negative");
 		assert(currentOption <= 3):("The currentOption dont should be bigger then 3");
 		if (currentOption <= 3) {
@@ -44,8 +46,9 @@ enum OptionsMenu {
 		else {
 			//Nothing to do
 		}
+		nextOption = defineOption(chosenOption);
 		
-		return defineOption(chosenOption);
+		return nextOption;
 	}
 
 	/**
@@ -74,20 +77,27 @@ enum OptionsMenu {
 	 */
 	private OptionsMenu defineOption(int chosenOption) {
 		
+		OptionsMenu selected;
+		
 		//Depending of chosen option realize action related
 		switch(chosenOption) {
 			case 0:
-				return OptionsMenu.START_GAME;
+				selected = OptionsMenu.START_GAME;
+				break;
 			case 1:
-				return OptionsMenu.RANKING;
+				selected = OptionsMenu.RANKING;
+				break;
 			case 2:
-				return OptionsMenu.SETTINGS;
+				selected = OptionsMenu.SETTINGS;
+				break;
 			case 3:
-				return OptionsMenu.QUIT;
+				selected = OptionsMenu.QUIT;
+				break;
 			default:
-				//Nothing to do
+				selected = OptionsMenu.START_GAME;
+				break;
 		}
-		return OptionsMenu.START_GAME;
+		return selected;
 	}
 
 }
