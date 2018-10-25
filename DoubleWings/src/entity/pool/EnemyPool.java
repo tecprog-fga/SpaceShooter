@@ -12,13 +12,14 @@ import entity.Enemy;
  */
 public class EnemyPool extends ObjectPool<Enemy>{
 
+	@Override
 	protected Enemy create(){
 		
 		/**
 		 * Enemy sprite directory
 		 */
-		Enemy enemy = new Enemy("src/assets/asteroid.png");
-		assert(enemy != null): "enemy is receing null";
+		Enemy enemy = new Enemy("src/assets/asteroid.png"); //$NON-NLS-1$
+		assert(enemy != null): "enemy is receing null"; //$NON-NLS-1$
 		return enemy;
 	}
 }
