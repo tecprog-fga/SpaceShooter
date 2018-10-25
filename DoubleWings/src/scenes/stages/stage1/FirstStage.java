@@ -36,10 +36,12 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	public void buildInitialScene() {
 
 		gameWorld = new World();
-		gameWorld.keyboard = this.keyboard;
-
-		// Configuring the up and down keys for player one and for player two
+		assert(gameWorld != null):("gameWorld cannot be null");
 		
+		gameWorld.keyboard = this.keyboard;
+		assert(gameWorld.keyboard != null):("keyboard cannot be null");
+
+		// Configuring the up and down keys for player one and for player two	
 		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_EVERY_PRESS);
 		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_EVERY_PRESS);
 		keyboard.setBehavior(Keyboard.SPACE_KEY, Keyboard.DETECT_EVERY_PRESS);
@@ -64,8 +66,10 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		final String LAYER0_PATH = "src/assets/img/background_layer_0.png"; 
 		final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; 
 		final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; 
+		
 		// Creation a object to class Parallax
 		parallaxEffect = new Parallax();
+		assert(parallaxEffect != null):("parallaxEffect cannot be null");
 
 		// The first one added will be the last one to be painted.
 		parallaxEffect.add(LAYER0_PATH);

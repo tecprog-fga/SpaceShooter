@@ -31,7 +31,11 @@ public abstract class GameScene {
 	public void configureGameScene(GameController game) {
 		
 		this.game = game;
+		assert(this.game != null):("Game cannot be null");
+		
 		this.keyboard = game.keyboard;
+		assert(this.keyboard != null):("Keyboard cannot be null");
+		
 		final String MSG_KEYBOARD = "keyboard: ";
 		System.out.println(MSG_KEYBOARD + this.keyboard); 
 
@@ -49,6 +53,9 @@ public abstract class GameScene {
 	public void destroyScene() {
 		
 		this.game = null;
+		assert(this.game == null):("Game must be null to destroy the scene");
+		
 		this.keyboard = null;
+		assert(this.keyboard == null):("Keyboard must be null to destory the scene");
 	}
 }
