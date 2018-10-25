@@ -62,13 +62,14 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	@Override
 	public void didContact(GameEntity entity){
 		
-		if (entity.getClass() == Shield.class){
-		} else if (entity.getClass() == Enemy.class) {
+		if (entity.getClass() == Enemy.class) {
+			
 			entity.receiveDamage(100); // test purposes
+			
 			if (this.shield.getLife() <= 0) { // security check to avoid double dying bug
+				
 				this.receiveDamage(20); // test purposes	
 			}
-		}else {
 		}
 	}
 
@@ -88,7 +89,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	public Player getPlayer() {
 		
-		assert(this.player != null):"Player is returning null"; 
+		assert(this.player != null):"Player is returning null";  //$NON-NLS-1$
 		return this.player;
 	}
 	
@@ -199,7 +200,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 			this.shootCDTimer.schedule(this.shootCooldown);	
 			
 			Bullet bullet = new Bullet();
-			assert(bullet != null): "Bullet is receiving null";
+			assert(bullet != null): "Bullet is receiving null"; //$NON-NLS-1$
 			
 			bullet.fireBy(this, -10);
 			this.gameWorld.add(bullet);
