@@ -6,7 +6,6 @@
 package entity.pool;
 
 import entity.Bullet;
-import entity.GameEntity;
 
 /**
  * Create lots of the SpaceShip's bullets
