@@ -49,15 +49,9 @@ public class Shield extends GameEntity {
 
 		super.update();
 		
-<<<<<<< HEAD
 		// Shield movement in XY axis according to the player position
 		int horizontalCorrection = (this.width - this.player.width)/2;
 		int verticalCorrection = (this.height - this.player.height)/2;
-=======
-		// Shield movement in XY axis acording to the player position
-		Integer horizontalCorrection = (this.width - this.player.width)/2;
-		Integer verticalCorrection = (this.height - this.player.height)/2;
->>>>>>> parent of de04ec2... #36 #30 #29 Changing type Integer to int to avoid useless convertion
 
 		// Adjusting player position with force shield
 		this.x = this.player.x - horizontalCorrection;
