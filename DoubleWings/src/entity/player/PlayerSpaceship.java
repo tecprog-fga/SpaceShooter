@@ -233,14 +233,14 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @see jplay.Sprite#moveX(int, int, double)
 	 */
 	@Override
-	public void moveX(int leftKey, int rightKey, double vel){
+	public void moveX(int leftKey1, int rightKey1, double vel){
 		
 		if(this.gameWorld != null){
 			if (this.gameWorld.keyboard != null){
-				if(this.gameWorld.keyboard.keyDown(leftKey)){
+				if(this.gameWorld.keyboard.keyDown(leftKey1)){
 					this.x -= vel;
 				}
-				if(this.gameWorld.keyboard.keyDown(rightKey)){
+				if(this.gameWorld.keyboard.keyDown(rightKey1)){
 					this.x += vel;
 				}
 			}
@@ -253,14 +253,14 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @see jplay.Sprite#moveY(int, int, double)
 	 */
 	@Override
-	public void moveY(int upKey, int downKey, double vel){
+	public void moveY(int upKey1, int downKey1, double vel){
 		
 		if(this.gameWorld != null){
 			if (this.gameWorld.keyboard != null){
-				if(this.gameWorld.keyboard.keyDown(upKey)){
+				if(this.gameWorld.keyboard.keyDown(upKey1)){
 					this.y -= vel;
 				}
-				if(this.gameWorld.keyboard.keyDown(downKey)){
+				if(this.gameWorld.keyboard.keyDown(downKey1)){
 					this.y += vel;
 				}
 			}
