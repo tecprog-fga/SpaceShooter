@@ -63,12 +63,10 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	public void didContact(GameEntity entity){
 		
 		if (entity.getClass() == Enemy.class) {
-			
-			entity.receiveDamage(100); // test purposes
+			entity.receiveDamage(100);
 			
 			if (this.shield.getLife() <= 0) { // security check to avoid double dying bug
-				
-				this.receiveDamage(20); // test purposes	
+				this.receiveDamage(20);
 			}
 		}
 	}
