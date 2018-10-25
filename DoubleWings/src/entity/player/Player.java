@@ -184,8 +184,9 @@ public class Player {
 	public PlayerSpaceship getSpaceship() {
 		
 		if (this.spaceship == null){
-			this.spaceship = new PlayerSpaceship(this, this.initialPositionY, this.initialPositionY, true);
+			return this.spaceship = new PlayerSpaceship(this, this.initialPositionY, this.initialPositionY, true);
 		}
 		return this.spaceship;
+		
 	}
 }

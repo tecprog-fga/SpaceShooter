@@ -49,7 +49,7 @@ public class Shield extends GameEntity {
 
 		super.update();
 		
-		// Shield movement in XY axis acording to the player position
+		// Shield movement in XY axis according to the player position
 		int horizontalCorrection = (this.width - this.player.width)/2;
 		int verticalCorrection = (this.height - this.player.height)/2;
 
