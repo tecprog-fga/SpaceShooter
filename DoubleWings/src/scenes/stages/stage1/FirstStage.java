@@ -76,6 +76,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		parallaxEffect.add(LAYER1_PATH);
 		parallaxEffect.add(LAYER2_PATH);
 
+		// Set the transition's speed of the layers
 		parallaxEffect.getLayer(0).setVelY(0.5);
 		parallaxEffect.getLayer(1).setVelY(4.5);
 		parallaxEffect.getLayer(2).setVelY(5);
@@ -88,6 +89,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	private void creatingCommands() {
 		
 		commands = new ArrayList<Command>();
+		assert(commands != null):("commands cannot be null");
 
 		commands.add(CommandCreator.createPlayerCommand(CommandType.LEFT));
 		commands.add(CommandCreator.createPlayerCommand(CommandType.DOWN));
@@ -106,8 +108,10 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		
 		// Create the HUD and adding it as player's observer
 		hud = new HUD();
+		assert(hud != null):("hud cannot be null");
 
 		// Creating player sprite on the center-bottom of the screen
+		assert(player != null):("player cannot be null");
 		player.initialPositionX = WindowConstants.WIDTH / 2;
 		player.initialPositionY = WindowConstants.HEIGHT / 2;
 
@@ -131,6 +135,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		spaceship = player.getSpaceship();
 
 		spaceship.gameWorld = this.gameWorld;
+		assert(spaceship != null):("spaceship cannot be null");
 		spaceship.setKeySet(Keyboard.UP_KEY, Keyboard.DOWN_KEY, Keyboard.RIGHT_KEY, Keyboard.LEFT_KEY,
 				Keyboard.SPACE_KEY);
 
@@ -151,6 +156,8 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 		asteroid = this.gameWorld.createEnemy();
 		asteroid.loadImage(ASTEROID_PATH);
+		assert(asteroid != null):("asteroid cannot be null");
+		
 		asteroid.setLife(LIFES);
 		asteroid.x = Math.random() * (WindowConstants.WIDTH - asteroid.width * 2) + asteroid.width;
 		asteroid.y = -200;
@@ -165,6 +172,8 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	public void createTestAsteroid() {
 		
 		asteroid1 = new Enemy(ASTEROID_PATH);
+		assert(asteroid1 != null):("asteroid1 cannot be null");
+		
 		asteroid1.setLife(LIFES);
 		asteroid1.x = WindowConstants.WIDTH / 2 - asteroid1.width / 2;
 		asteroid1.y = 0;
@@ -219,10 +228,16 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 			commandCount = 0;
 		}
+		else {
+			//Nothing to do
+		}
 
 		if (currentCommand != null) {
 			
 			currentCommand.executeDisplacement(asteroid1);
+		}
+		else {
+			//Nothing to do
 		}
 	}
 	
@@ -290,6 +305,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	public void transitToGameOver() {
 		GameOver gameOver = null;
 		gameOver = new GameOver();
+		assert(gameOver != null):("gameOver cannot be null");
 		this.game.transitTo(gameOver);
 	}
 
@@ -298,6 +314,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	public void transitToContinue() {
 		GameScene scene = null;
 		scene = new ContinueGame();
+		assert(scene != null):("scene cannot be null");
 		this.game.transitTo(scene);
 	}
 }
