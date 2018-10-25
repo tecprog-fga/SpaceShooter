@@ -40,7 +40,6 @@ public class GameController {
 	 * initialize the game 
 	 */
 	private boolean isRunning = true;
-	
 	/**
 	 * updates current scene and control running status
 	 * @return isRunning
@@ -64,5 +63,4 @@ public class GameController {
 	
 	public GameScene currentScene = null;
 	public Keyboard keyboard = null;
-
 }

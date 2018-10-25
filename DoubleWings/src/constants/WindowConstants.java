@@ -19,4 +19,5 @@ public class WindowConstants {
 	 * width of the game screen
 	 */
 	public static final int WIDTH = 800;
+	
 }

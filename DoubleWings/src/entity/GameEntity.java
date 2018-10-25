@@ -96,15 +96,10 @@ public class GameEntity extends Sprite {
 	/**
 	 * elimination of the entity 
 	 */
-	protected void die(){
+	private void die(){
 		isDead = true;
-		destroy();
 	}
 	
-	protected void destroy() {
-		
-	}
-
 	/**
 	 * birth position of the spacecraft sprit
 	 */
@@ -115,7 +110,6 @@ public class GameEntity extends Sprite {
 	 * the number of times you will go through the continue menu
 	 */
 	public int maxLife = 1;		
-	
 	
 	/**
 	 * respawn of the entity 
