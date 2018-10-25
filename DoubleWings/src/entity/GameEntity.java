@@ -101,7 +101,7 @@ public class GameEntity extends Sprite {
 		destroy();
 	}
 	
-	public void destroy() {
+	protected void destroy() {
 		
 	}
 

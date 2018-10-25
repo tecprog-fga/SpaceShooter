@@ -14,7 +14,7 @@ public class WindowConstants {
 	 * height of the game screen
 	 */
 	public static final int HEIGHT = 600;
-	
+
 	/**
 	 * width of the game screen
 	 */

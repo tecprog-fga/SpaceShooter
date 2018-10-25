@@ -29,10 +29,8 @@ public class GameEvolver {
 	 * @param event
 	 */
 	public void add(GameEvent event) {
-		if (event != null){
-			System.out.println("Adding new event: " + event.name);
-			events.add(event);
-		}
+		assert(event != null): ("Adding new event");
+		events.add(event);	
 	}
 	
 	private int iterator = 0;

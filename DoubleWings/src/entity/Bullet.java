@@ -16,10 +16,7 @@ public class Bullet extends GameEntity {
 	/**
 	 * spaceship bullet sprite
 	 */
-	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";{
-		
-	}
-		
+	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";	
 	
 	/**
 	 * builds the bullet sprite on the screen 
