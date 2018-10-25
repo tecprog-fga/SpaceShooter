@@ -17,9 +17,6 @@ public class Shield extends GameEntity {
 	// The spaceship force shield sprite directory
 	private static final String SPRITE_FILE_PATH = "src/assets/img/forceshield.png"; //$NON-NLS-1$
 	
-	// Unused variable
-	private int regeneration = 0;
-	
 	// Creates the player entity, that receives
 	private GameEntity player = null;
 	
