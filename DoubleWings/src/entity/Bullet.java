@@ -16,14 +16,14 @@ public class Bullet extends GameEntity {
 	/**
 	 * spaceship bullet sprite
 	 */
-	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";	
+	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";
+	private int bulletTrajectory;	
 	
 	/**
 	 * builds the bullet sprite on the screen 
 	 */
 	public Bullet() {
 		super(IMAGE_BULLET);
-		
 		assert(IMAGE_BULLET != null): ("Sprite of the bullet is null");
 	}
 	
@@ -35,12 +35,15 @@ public class Bullet extends GameEntity {
 	public void fireBy(GameEntity owner, double vely) {
 		this.owner = owner;
 		this.vely = vely;
-		Integer horizontalCorrection = (this.width - owner.width)/2;
-		this.x = owner.x - horizontalCorrection;
+		this.bulletTrajectory = (this.width - owner.width)/2;
+		this.horizontalCorrection = this.bulletTrajectory;
+		this.x = owner.x - this.horizontalCorrection;
 		
 		if (owner.getClass() == PlayerSpaceship.class) {
 			this.y = owner.y;
-		} else {
+		} 
+		
+		else {
 			this.y = owner.y + owner.height;
 		}
 	}
@@ -51,12 +54,13 @@ public class Bullet extends GameEntity {
 	 * @see entity.GameEntity#reborn()
 	 */
 	@Override
-	public void reborn() {
+	public void reborn() {		
 		super.reborn();
-		
 		assert(owner != null):("owner is null");
 		this.owner = owner;
 	}
 	
-	public GameEntity owner = null; 
+	public GameEntity owner = null;
+	private int trajectoryBullet;
+	private Integer horizontalCorrection; 
 }

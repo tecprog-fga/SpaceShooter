@@ -34,7 +34,6 @@ public class GameEvolver {
 	}
 	
 	private int iterator = 0;
-	
 	public int getCurrentIteration() {
 		return iterator;
 	}

@@ -108,7 +108,8 @@ public class World {
 			 */
 			if (didRemove == true) {
 				System.out.println("Entity removed from the world");
-			} else {
+			} 
+			else {
 				System.out.println("Error removing entity");
 			}
 		}
