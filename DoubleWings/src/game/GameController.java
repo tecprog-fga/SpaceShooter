@@ -27,7 +27,7 @@ public class GameController {
 			return;
 		} 
 		
-		else if(currentScene != null){
+		else if (currentScene != null) {
 			currentScene.destroyScene();
 		}
 

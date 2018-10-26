@@ -17,7 +17,7 @@ public class GameEntity extends Sprite {
 	 * eliminates entity(asteroids) not hit by 
 	 * the ship when they reach the limit 
 	 */
-	private double entityLimit = 1000; 
+	private static final double ENTITYLIMIT = 1000; 
 	public String name = null;
 	
 	/** 
@@ -62,11 +62,11 @@ public class GameEntity extends Sprite {
 	public void update() {
 		super.update();
 		
-		if ( Math.abs(this.x) > this.entityLimit) {
+		if ( Math.abs(this.x) > ENTITYLIMIT) {
 			this.isDead = true;
 		}
 		
-		if ( Math.abs(this.y) > this.entityLimit) {
+		if ( Math.abs(this.y) > ENTITYLIMIT) {
 			this.isDead = true;
 		}
 	}
