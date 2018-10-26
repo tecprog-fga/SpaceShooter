@@ -18,7 +18,6 @@ public class GameEntity extends Sprite {
 	 * the ship when they reach the limit 
 	 */
 	private double entityLimit = 1000; 
-	
 	public String name = null;
 	
 	/** 
@@ -27,7 +26,6 @@ public class GameEntity extends Sprite {
 	 */
 	public GameEntity(String fileName) {
 		super(fileName);
-		
 		assert(fileName != null):("fileName is receiving null");
 		this.name = fileName;
 	}

@@ -24,8 +24,10 @@ public class GameController {
 		 * Leave transition if scene is null
 		 */
 		if (scene == null || keyboard == null) { 
-		  return;
-		} else if(currentScene != null){
+			return;
+		} 
+		
+		else if(currentScene != null){
 			currentScene.destroyScene();
 		}
 

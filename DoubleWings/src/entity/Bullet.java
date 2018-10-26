@@ -23,9 +23,7 @@ public class Bullet extends GameEntity {
 	 * builds the bullet sprite on the screen 
 	 */
 	public Bullet() {
-		
 		super(IMAGE_BULLET);
-		
 		assert(IMAGE_BULLET != null): ("Sprite of the bullet is null");
 	}
 	
@@ -43,7 +41,9 @@ public class Bullet extends GameEntity {
 		
 		if (owner.getClass() == PlayerSpaceship.class) {
 			this.y = owner.y;
-		} else {
+		} 
+		
+		else {
 			this.y = owner.y + owner.height;
 		}
 	}
@@ -54,9 +54,8 @@ public class Bullet extends GameEntity {
 	 * @see entity.GameEntity#reborn()
 	 */
 	@Override
-	public void reborn() {
+	public void reborn() {		
 		super.reborn();
-		
 		assert(owner != null):("owner is null");
 		this.owner = owner;
 	}
