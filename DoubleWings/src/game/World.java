@@ -64,6 +64,9 @@ public class World {
 					obj1.didContact(obj2);
 					obj2.didContact(obj1);
 				}
+				else {
+					//Nothing to do
+				}
 			}
 			
 			/*

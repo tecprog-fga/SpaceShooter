@@ -46,12 +46,18 @@ public class GameEvolver {
 		if (event != null) {
 			events.remove(event);
 		}
+		else {
+			//Nothing to do
+		}
 	}
 	
 	public void update() {
 		if (isPaused == false) {
 			iterator += 1;
 			checkEvents();
+		}
+		else {
+			//Nothing to do
 		}
 	}
 	
@@ -75,6 +81,9 @@ public class GameEvolver {
 				aux.add(e);				
 				System.out.println("GameEvent Callback: " + e.name);
 				e.run();
+			}
+			else {
+				//Nothing to do
 			}
 		}
 		

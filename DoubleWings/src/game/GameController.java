@@ -30,6 +30,10 @@ public class GameController {
 		else if (currentScene != null) {
 			currentScene.destroyScene();
 		}
+		
+		else {
+			//Nothing to do
+		}
 
 		//Run initial setup
 		scene.configureGameScene(this);
