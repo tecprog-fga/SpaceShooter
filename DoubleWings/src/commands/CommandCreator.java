@@ -16,16 +16,33 @@ public class CommandCreator {
 	 * @return MoveCommand
 	 */
 	public static Command createPlayerCommand(CommandType type) {
+		MoveCommand command = null;
 		assert(type != null):("Objeto type não foi recebido!");
 		// executes the command equivalent to the key pressed by the player
 		switch(type) {
 			case SHOOT:
-				assert(CommandType.UP != null):("Comando não recebido!");
-			return new MoveCommand(CommandType.UP);
+				command = new MoveCommand(CommandType.SHOOT);
+				assert(CommandType.SHOOT != null):("Comando SHOOT não recebido!");
+			
+			case UP:
+				command = new MoveCommand(CommandType.UP);
+				assert(CommandType.UP != null):("Comando UP não recebido!");
+			
+			case DOWN:
+				command = new MoveCommand(CommandType.DOWN);
+				assert(CommandType.DOWN != null):("Comando DOWN não recebido!");
+				
+			case LEFT:
+				command = new MoveCommand(CommandType.LEFT);
+				assert(CommandType.LEFT != null):("Comando LEFT não recebido!");
+				
+			case RIGHT:
+				command = new MoveCommand(CommandType.RIGHT);
+				assert(CommandType.RIGHT != null):("Comando RIGHT não recebido!");
 			
 			default:
-				assert(type != null):("Objeto type não recebido!");
-			return new MoveCommand(type);
+				//nothing to do
 		}
+		return command;
 	}
 }

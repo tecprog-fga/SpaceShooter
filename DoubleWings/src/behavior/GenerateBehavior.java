@@ -22,8 +22,7 @@ import java.util.ArrayList;
 public class GenerateBehavior {
 	
 	private final Path SCRIPT_PATH;
-	private final static Charset ENCODING = StandardCharsets.UTF_8;  
-
+	
 	public GenerateBehavior(Path scriptPath) {
 		assert(scriptPath != null):("Objeto scriptPath não foi recebido!");
 		this.SCRIPT_PATH = scriptPath;
@@ -33,6 +32,7 @@ public class GenerateBehavior {
 		ArrayList<Command> commandsList = null;
 		commandsList = new ArrayList<Command>();
 		assert(commandsList != null):("Objeto commandsList não pode ser nulo!");
+		final Charset ENCODING = StandardCharsets.UTF_8;  
 		try (Scanner commands = new Scanner(SCRIPT_PATH, ENCODING.name())) {
 			while (commands.hasNextLine()) {
 				commandsList.add(processLine(commands.nextLine()));

@@ -19,6 +19,7 @@ public class HudScore extends Time {
 	private int screenScore = 0; {
 	assert(screenScore == 0):("Pontuação inicial deve ser zero!");
 	}
+	private static Font hudScoreFont = new Font("Arial",Font.TRUETYPE_FONT, 20);
 
 	/**
 	 * Constructor method of class HudScore
@@ -26,7 +27,7 @@ public class HudScore extends Time {
 	 * @param y
 	 */
 	public HudScore(int x, int y) {
-		super(10, 10, 10, x, y, new Font("Arial",Font.TRUETYPE_FONT, 20),Color.YELLOW, true );
+		super(10, 10, 10, x, y, hudScoreFont,Color.YELLOW, true );
 		assert(x >= 0  && x <= 25):("Score deve estar no canto esquerdo da tela!");
 		assert(y >= 35 && y <= 60):("Score deve estar no canto superior da tela!");
 	}
