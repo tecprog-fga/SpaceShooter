@@ -33,6 +33,7 @@ public class DelayTimer extends Timer implements DelayDelegate {
 		
 		Task task = null;
 		task = new Task(this);
+		assert(task != null):("task cannot be null");
 		this.schedule(task, delay);
 	}
 

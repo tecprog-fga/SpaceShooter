@@ -111,9 +111,14 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		assert(hud != null):("hud cannot be null");
 
 		// Creating player sprite on the center-bottom of the screen
+		
+		final int WIDTH_CENTER = WindowConstants.WIDTH / 2; // Constant to create in the center of the width
+		final int HEIGHT_CENTER = WindowConstants.HEIGHT / 2; // Constant to create in the center of the height
+		
 		assert(player != null):("player cannot be null");
-		player.initialPositionX = WindowConstants.WIDTH / 2;
-		player.initialPositionY = WindowConstants.HEIGHT / 2;
+		
+		player.initialPositionX = WIDTH_CENTER;
+		player.initialPositionY = HEIGHT_CENTER;
 
 		createSpaceShip();
 
