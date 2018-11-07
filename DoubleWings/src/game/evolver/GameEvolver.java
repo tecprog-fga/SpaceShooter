@@ -29,14 +29,11 @@ public class GameEvolver {
 	 * @param event
 	 */
 	public void add(GameEvent event) {
-		if (event != null){
-			System.out.println("Adding new event: " + event.name);
-			events.add(event);
-		}
+		assert(event != null): ("Adding new event");
+		events.add(event);	
 	}
 	
 	private int iterator = 0;
-	
 	public int getCurrentIteration() {
 		return iterator;
 	}
@@ -49,12 +46,18 @@ public class GameEvolver {
 		if (event != null) {
 			events.remove(event);
 		}
+		else {
+			//Nothing to do
+		}
 	}
 	
 	public void update() {
 		if (isPaused == false) {
 			iterator += 1;
 			checkEvents();
+		}
+		else {
+			//Nothing to do
 		}
 	}
 	
@@ -78,6 +81,9 @@ public class GameEvolver {
 				aux.add(e);				
 				System.out.println("GameEvent Callback: " + e.name);
 				e.run();
+			}
+			else {
+				//Nothing to do
 			}
 		}
 		

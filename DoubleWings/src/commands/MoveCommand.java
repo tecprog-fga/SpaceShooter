@@ -92,6 +92,11 @@ public class MoveCommand implements Command {
 		case UP:
 			actor.y -= UNITARY_DISPLACEMENT;
 			break;
+			
+		default:
+			//nothing to do
+			assert(direction != null):("Direcão não foi recebida!");
+		break;
 		}
 	}
 

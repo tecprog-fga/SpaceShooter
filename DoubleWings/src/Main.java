@@ -14,11 +14,7 @@ import game.GameController;
  * This class initialize the game
  */
 public class Main {
-	/**
-	 * variable that indicates how long the game is going to be in sleep mode
-	 */
-	public final static int KEEP_FRAMERATE = 16;
-	
+		
 	/**
 	 * Main method for execute the game
 	 * @param args
@@ -53,6 +49,11 @@ public class Main {
 		
 		//while the game is open, the screen must be loaded and updated constantly
 		while(gameIsRunning) {
+			/**
+			 * variable that indicates how long the game is going to be in sleep mode
+			 */
+			final int KEEP_FRAMERATE = 16;
+			
 			gameScreen.delay(KEEP_FRAMERATE);
 
 			gameScreen.clear(Color.black);

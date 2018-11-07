@@ -19,7 +19,7 @@ import util.DelayTimer;
 public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 
 	// Sprite of the level 1 spaceship
-	private static final String SPRITE_IMAGE_PATH = "src/assets/img/player_lvl1.png";
+	private static final String SPRITE_IMAGE_PATH = "src/assets/img/player_lvl1.png"; //$NON-NLS-1$
 	
 	// Spaceship's velocity
 	private static final int DEFAULT_MOVEMENT_VELOCITY = 4;
@@ -35,14 +35,14 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @param player   Object player to build the spaceship
 	 * @param x        X position in the X axis
 	 * @param y        Y position in the Y axis
-	 * @param adjust   decide if the position needs ajustment
+	 * @param adjust   decide if the position needs adjustment
 	 */
 	public PlayerSpaceship(Player player, double x, double y, boolean adjust) {
 		super(SPRITE_IMAGE_PATH);
-		this.life = maxLife;
+		this.life = this.maxLife;
 		this.shield = new Shield(this);
 		
-		assert(player != null) : "The player is null";
+		assert(player != null) : "The player is null"; //$NON-NLS-1$
 		this.player = player;
 		
 		// Adjusting x position to fit the sprite
@@ -62,13 +62,12 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	@Override
 	public void didContact(GameEntity entity){
 		
-		if (entity.getClass() == Shield.class){
-		} else if (entity.getClass() == Enemy.class) {
-			entity.receiveDamage(100); // test purposes
-			if (shield.getLife() <= 0) { // security check to avoid double dying bug
-				this.receiveDamage(20); // test purposes	
+		if (entity.getClass() == Enemy.class) {
+			entity.receiveDamage(100);
+			
+			if (this.shield.getLife() <= 0) { // security check to avoid double dying bug
+				this.receiveDamage(20);
 			}
-		}else {
 		}
 	}
 
@@ -78,7 +77,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	public Shield getShield() {
 		
-		assert(this.shield != null):"Shield is returning null";
+		assert(this.shield != null):"Shield is returning null"; //$NON-NLS-1$
 		return this.shield;
 	}
 	
@@ -88,7 +87,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	public Player getPlayer() {
 		
-		assert(this.player != null):"Player is returning null";
+		assert(this.player != null):"Player is returning null";  //$NON-NLS-1$
 		return this.player;
 	}
 	
@@ -131,11 +130,11 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		
 		if (this.life <= 0) {
 			// security check to avoid double dying bug
-			if (didDie == false) {
-				didDie = true;
+			if (this.didDie == false) {
+				this.didDie = true;
 				// Enter here if the spaceship is destroyed
 				this.player.loseLife();
-			} else { /*do nothing*/ }
+			}
 		} else {
 			checkInput();
 		}
@@ -182,7 +181,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	/**
 	 * Time of cooldown of the spaceship weapon 
 	 */
-	public int shootCooldown = 100;
+	public final int shootCooldown = 100;
 	
 	// Controls if the spaceship can shoot or not 
 	private boolean canShoot = true;
@@ -194,15 +193,15 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * Action of shooting 
 	 */
 	public void fireBullet(){
-		if (canShoot){
-			canShoot = false;
+		if (this.canShoot){
+			this.canShoot = false;
 			this.shootCDTimer.schedule(this.shootCooldown);	
 			
 			Bullet bullet = new Bullet();
-			assert(bullet != null): "Bullet is receiving null";
+			assert(bullet != null): "Bullet is receiving null"; //$NON-NLS-1$
 			
 			bullet.fireBy(this, -10);
-			gameWorld.add(bullet);
+			this.gameWorld.add(bullet);
 		}
 	}
 	
@@ -216,12 +215,12 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	public void checkInput(){
 		//Player movement
-		moveX(leftKey, rightKey, this.movimentVel);
-		moveY(upKey, downKey, this.movimentVel);
+		moveX(this.leftKey, this.rightKey, this.movimentVel);
+		moveY(this.upKey, this.downKey, this.movimentVel);
 		//shootKey
-		if(gameWorld != null){
-			if (gameWorld.keyboard != null){
-				if(gameWorld.keyboard.keyDown(shootKey)){
+		if(this.gameWorld != null){
+			if (this.gameWorld.keyboard != null){
+				if(this.gameWorld.keyboard.keyDown(this.shootKey)){
 					this.fireBullet();
 				}
 			}
@@ -234,14 +233,14 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @see jplay.Sprite#moveX(int, int, double)
 	 */
 	@Override
-	public void moveX(int leftKey, int rightKey, double vel){
+	public void moveX(int leftKey1, int rightKey1, double vel){
 		
-		if(gameWorld != null){
-			if (gameWorld.keyboard != null){
-				if(gameWorld.keyboard.keyDown(leftKey)){
+		if(this.gameWorld != null){
+			if (this.gameWorld.keyboard != null){
+				if(this.gameWorld.keyboard.keyDown(leftKey1)){
 					this.x -= vel;
 				}
-				if(gameWorld.keyboard.keyDown(rightKey)){
+				if(this.gameWorld.keyboard.keyDown(rightKey1)){
 					this.x += vel;
 				}
 			}
@@ -254,14 +253,14 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @see jplay.Sprite#moveY(int, int, double)
 	 */
 	@Override
-	public void moveY(int upKey, int downKey, double vel){
+	public void moveY(int upKey1, int downKey1, double vel){
 		
-		if(gameWorld != null){
-			if (gameWorld.keyboard != null){
-				if(gameWorld.keyboard.keyDown(upKey)){
+		if(this.gameWorld != null){
+			if (this.gameWorld.keyboard != null){
+				if(this.gameWorld.keyboard.keyDown(upKey1)){
 					this.y -= vel;
 				}
-				if(gameWorld.keyboard.keyDown(downKey)){
+				if(this.gameWorld.keyboard.keyDown(downKey1)){
 					this.y += vel;
 				}
 			}

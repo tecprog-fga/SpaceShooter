@@ -15,10 +15,7 @@ import observer.GameEntityObserver;
 public class Shield extends GameEntity {
 
 	// The spaceship force shield sprite directory
-	private static final String SPRITE_FILE_PATH = "src/assets/img/forceshield.png";
-	
-	// Unused variable
-	private int regeneration = 0;
+	private static final String SPRITE_FILE_PATH = "src/assets/img/forceshield.png"; //$NON-NLS-1$
 	
 	// Creates the player entity, that receives
 	private GameEntity player = null;
@@ -27,10 +24,10 @@ public class Shield extends GameEntity {
 	public Shield(GameEntity player) {
 		super(SPRITE_FILE_PATH);
 		
-		assert(player != null): "player is receiving null";
+		assert(player != null): "player is receiving null"; //$NON-NLS-1$
 		this.player = player;
 		
-		this.life = maxLife;
+		this.life = this.maxLife;
 		
 		this.x = player.x;
 		this.y = player.y;
@@ -41,6 +38,7 @@ public class Shield extends GameEntity {
 	 * (non-Javadoc)
 	 * @see entity.GameEntity#update()
 	 */
+	@Override
 	public void update() {
 		
 		if(this.isCollidable == false){
@@ -51,13 +49,13 @@ public class Shield extends GameEntity {
 
 		super.update();
 		
-		// Shield movement in XY axis acording to the player position
-		Integer horizontalCorrection = (this.width - player.width)/2;
-		Integer verticalCorrection = (this.height - player.height)/2;
+		// Shield movement in XY axis according to the player position
+		int horizontalCorrection = (this.width - this.player.width)/2;
+		int verticalCorrection = (this.height - this.player.height)/2;
 
 		// Adjusting player position with force shield
-		this.x = player.x - horizontalCorrection;
-		this.y = player.y - verticalCorrection;
+		this.x = this.player.x - horizontalCorrection;
+		this.y = this.player.y - verticalCorrection;
 	}
 
 	/*
@@ -71,7 +69,7 @@ public class Shield extends GameEntity {
 		if (entity.getClass() == Enemy.class){
 			entity.receiveDamage(100);
 			this.receiveDamage(10);
-			System.out.println("hit enemy");
+			System.out.println("hit enemy"); //$NON-NLS-1$
 		}
 	}
 	
@@ -83,14 +81,14 @@ public class Shield extends GameEntity {
 
 		this.life = newLife;
 		
-		if (life <= 0) {
-			life = 0;
+		if (this.life <= 0) {
+			this.life = 0;
 			this.isCollidable = false;
 		}
 		
-		// Notifing HUD to update shield life bar
-		assert(observer != null) : "Player log: HUD is null";
-		observer.notifyObserver(this);
+		// Notifying HUD to update shield life bar
+		assert(this.observer != null) : "Player log: HUD is null"; //$NON-NLS-1$
+		this.observer.notifyObserver(this);
 		
 	}
 
@@ -103,7 +101,7 @@ public class Shield extends GameEntity {
 	}
 
 	public void setObserver(GameEntityObserver observer) {
-		assert(observer != null): "observer is null";
+		assert(observer != null): "observer is null"; //$NON-NLS-1$
 		this.observer = observer;
 	}
 
@@ -118,6 +116,6 @@ public class Shield extends GameEntity {
 		this.x = this.player.x;
 		this.y = this.player.y;
 		this.isCollidable = true;
-		observer.notifyObserver(this);
+		this.observer.notifyObserver(this);
 	}
 }

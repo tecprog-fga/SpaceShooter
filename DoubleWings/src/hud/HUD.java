@@ -16,11 +16,6 @@ import entity.player.*;
  * Class for all information displayed on the game screen for the player (HUD)
  */
 public class HUD implements GameEntityObserver {
-	/**
-	 * creates the life bar with the maximum screen width
-	 */
-	private float barSizeMax = WindowConstants.WIDTH; {
-	}
 	
 	/**
 	 * creation of the objects that hold the images displayed on the game screen
@@ -74,12 +69,9 @@ public class HUD implements GameEntityObserver {
 		assert(scoreText != null):("Objeto scoreText não pode ser nulo");
 		scoreText.setColor(Color.WHITE);
 		assert(Color.WHITE != null):("Objeto referente a cor não foi recebido!");
-		scoreText.setFont(new Font("Arial",Font.TRUETYPE_FONT, SCORE_FONT_SIZE));
+		Font scoreTextFont = new Font("Arial",Font.TRUETYPE_FONT, SCORE_FONT_SIZE);
+		scoreText.setFont(scoreTextFont);
 		scoreText.setScreenScore(0);
-	}
-
-	public void update() {
-
 	}
 
 	/**
@@ -99,6 +91,10 @@ public class HUD implements GameEntityObserver {
 	public void updateShieldLifeBar(Shield shield) {
 		float shieldLifeBarProportion = ((float)shield.getLife()/(float)shield.maxLife);
 		assert(shieldLifeBarProportion >= 0 && shieldLifeBarProportion <= 1):("Proporção não está sendo calculada corretamente!");
+		/**
+		 * creates the life bar with the maximum screen width
+		 */
+		final float barSizeMax = WindowConstants.WIDTH;
 		float newLifeBarWidth = shieldLifeBarProportion * barSizeMax;
 		this.shieldLifeBar.width = (int) newLifeBarWidth;
 		this.shieldLifeBar.x = WindowConstants.WIDTH/2 - this.shieldLifeBar.width/2;
@@ -108,8 +104,8 @@ public class HUD implements GameEntityObserver {
 	/**
 	 * number of player lives can not be negative
 	 */
-	final int MAX_NUMBER_OF_LIVES = 3;
-	final int MIN_NUMBER_OF_LIVES = 0;
+	private final int MAX_NUMBER_OF_LIVES = 3;
+	private final int MIN_NUMBER_OF_LIVES = 0;
 	
 	/**
 	 * Method that updates the number of lives
@@ -117,7 +113,6 @@ public class HUD implements GameEntityObserver {
 	 */
 	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
 		// the number of lives must be within the limit established above
-		System.out.println("VIDAS: " + playerNumberOfLives);
 		assert(playerNumberOfLives >= -1):("Número de vidas do jogador deve ser positivo!");
 		if (playerNumberOfLives <= MAX_NUMBER_OF_LIVES && playerNumberOfLives >= MIN_NUMBER_OF_LIVES) {
 			this.numberOfLivesImage.setCurrFrame(playerNumberOfLives);

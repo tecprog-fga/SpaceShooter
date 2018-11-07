@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public abstract class ObjectPool<Type> {
 	
 	// Stores the objects, like bullets and enemies
-	private ArrayList<Type> objects = new ArrayList<Type>();
+	private ArrayList<Type> objects = new ArrayList<>();
 	
 	/**
 	 * Release the objects in the screen when it's empty
@@ -23,17 +23,16 @@ public abstract class ObjectPool<Type> {
 	public Type release(){
 		Type obj = null;
 		
-		/*
-		 * Creation of objects when the screen is empty
-		 */
-		if (objects.isEmpty()){
+		
+		// Creation of objects when the screen is empty
+		if (this.objects.isEmpty()){
 			obj = create();
 		}else{
-			int last = objects.size() -1;
-			obj = objects.remove(last);
+			int last = this.objects.size() -1;
+			obj = this.objects.remove(last);
 		}
 		
-		assert(obj != null): "obj is returning null";
+		assert(obj != null): "obj is returning null"; //$NON-NLS-1$
 		return obj;
 	}
 	
@@ -46,8 +45,8 @@ public abstract class ObjectPool<Type> {
 	 */
 	public void acquire(Type obj){
 		
-		if (objects.contains(obj) == false){
-			objects.add(obj);
+		if (this.objects.contains(obj) == false){
+			this.objects.add(obj);
 		}
 	}
 }

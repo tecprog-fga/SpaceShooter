@@ -64,6 +64,9 @@ public class World {
 					obj1.didContact(obj2);
 					obj2.didContact(obj1);
 				}
+				else {
+					//Nothing to do
+				}
 			}
 			
 			/*
@@ -108,7 +111,8 @@ public class World {
 			 */
 			if (didRemove == true) {
 				System.out.println("Entity removed from the world");
-			} else {
+			} 
+			else {
 				System.out.println("Error removing entity");
 			}
 		}

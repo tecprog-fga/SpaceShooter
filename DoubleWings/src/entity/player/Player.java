@@ -6,9 +6,7 @@
 
 package entity.player;
 
-import entity.Bullet;
 import observer.GameEntityObserver;
-import util.DelayTimer;
 
 /**
  * This class contains builds the player,
@@ -59,7 +57,7 @@ public class Player {
 	 * @param observer to update the game HUD
 	 */
 	public void setObserver(GameEntityObserver observer) {
-		spaceship.getShield().setObserver(observer);
+		this.spaceship.getShield().setObserver(observer);
 		this.observer = observer;
 	}
 	
@@ -76,8 +74,8 @@ public class Player {
 		this.chances = chances;
 		
 		// Notifying HUD to update the screen if it isn't null
-		assert(observer != null) : "Player log: HUD is null";		
-		observer.notifyObserver(this);	
+		assert(this.observer != null) : "Player log: HUD is null";		 //$NON-NLS-1$
+		this.observer.notifyObserver(this);	
 
 	}
 
@@ -94,20 +92,20 @@ public class Player {
 	 * @return
 	 */
 	public int getScore() {
-		return score;
+		return this.score;
 	}
 
 	/**
 	 * Increase the player's score after each enemy destroyed
-	 * @param score
+	 * @param score1
 	 */
-	public void increaseScore(int score) {
+	public void increaseScore(int score1) {
 
-		this.score += score;
+		this.score += score1;
 		
 		// Notifying HUD to update the screen if it isn't null
-		assert(observer != null) : "Player log: HUD is null";
-		observer.notifyObserver(this);	
+		assert(this.observer != null) : "Player log: HUD is null"; //$NON-NLS-1$
+		this.observer.notifyObserver(this);	
 	}
 	
 	/**
@@ -120,8 +118,8 @@ public class Player {
 	// Reset the spaceship's position after each death
 	private void resetSpaceship() {
 		this.spaceship.reborn();
-		this.spaceship.x = initialPositionX;
-		this.spaceship.y = initialPositionY;
+		this.spaceship.x = this.initialPositionX;
+		this.spaceship.y = this.initialPositionY;
 	}
 
 	/**
@@ -130,7 +128,7 @@ public class Player {
 	public void loseLife() {
 		
 		setChances(this.chances - 1);
-		System.out.println("lifes on player: " + this.chances);
+		System.out.println("lifes on player: " + this.chances); //$NON-NLS-1$
 
 		if (this.chances < 0) {
 			loseGame();
@@ -146,7 +144,7 @@ public class Player {
 		
 		setChances(INITIAL_CHANCES);
 		resetSpaceship();
-		System.out.println("Player log: life reset to: " + this.chances);
+		System.out.println("Player log: life reset to: " + this.chances); //$NON-NLS-1$
 	}
 	
 	
@@ -161,7 +159,7 @@ public class Player {
 	/**
 	 * Delegate the player to game over or continue screen 
 	 */
-	public void loseGame() {
+	private void loseGame() {
 		
 		if (this.canContinue) {
 			useContinue();
@@ -173,7 +171,7 @@ public class Player {
 	/**
 	 * Delegate the player to continue screen
 	 */
-	public void useContinue() {
+	private void useContinue() {
 		this.canContinue = false;
 		resetLife();
 		this.delegate.transitToContinue();
@@ -185,9 +183,10 @@ public class Player {
 	 */
 	public PlayerSpaceship getSpaceship() {
 		
-		if (spaceship == null){
-			spaceship = new PlayerSpaceship(this, this.initialPositionY, this.initialPositionY, true);
+		if (this.spaceship == null){
+			return this.spaceship = new PlayerSpaceship(this, this.initialPositionY, this.initialPositionY, true);
 		}
-		return spaceship;
+		return this.spaceship;
+		
 	}
 }

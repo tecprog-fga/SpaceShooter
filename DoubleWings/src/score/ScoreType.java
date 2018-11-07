@@ -20,7 +20,7 @@ public enum ScoreType {
 	 * 50 = Medium
 	 * 100 = High
 	 */
-	int scoreValue = 0;
+	private int scoreValue = 0;
 
 	/**
 	 * This constructor method, create the score that will be used in the game
