@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="jplay_lib"/>
 	<classpathentry kind="lib" path="jplay/Jplay.jar"/>
+	<classpathentry kind="lib" path="log4j/log4j-1.2.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
