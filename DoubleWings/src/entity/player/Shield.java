@@ -89,7 +89,6 @@ public class Shield extends GameEntity {
 		// Notifying HUD to update shield life bar
 		assert(this.observer != null) : "Player log: HUD is null"; //$NON-NLS-1$
 		this.observer.notifyObserver(this);
-		
 	}
 
 	/**
