@@ -120,9 +120,27 @@ public class World {
 		deadObjs.clear();
 	}
 	
-	private BulletPool bulletPool = new BulletPool();
-	private EnemyPool enemyPool = new EnemyPool();
+	/**
+	 * object pool facade
+	 * @return
+	 */
+	public Enemy createEnemy() {
+		Enemy enemy = enemyPool.release();
+		enemy.reborn();
+		
+		assert(enemy != null): ("enemy cannot be null");
+		return enemy;
+	}
 	
+	/**
+	 * immediately launch the enemy on the scene
+	 * @param enemy
+	 */
+	public void releaseEnemy(Enemy enemy) {
+		enemyPool.acquire(enemy);
+	}
+
+
 	/**
 	 * GameEvent facade
 	 * @param callback
@@ -166,29 +184,11 @@ public class World {
 		assert(event != null):("event cannot be null");
 		return event;
 	}
-	
-	/**
-	 * object pool facade
-	 * @return
-	 */
-	public Enemy createEnemy() {
-		Enemy enemy = enemyPool.release();
-		enemy.reborn();
 		
-		assert(enemy != null): ("enemy cannot be null");
-		return enemy;
-	}
-	
-	/**
-	 * immediately launch the enemy on the scene
-	 * @param enemy
-	 */
-	public void releaseEnemy(Enemy enemy) {
-		enemyPool.acquire(enemy);
-	}
-	
-	private ArrayList<GameEntity> objs = null;
-	//Array that Handles dead entities
-	private ArrayList<GameEntity> deadObjs = null; 
+	private BulletPool bulletPool = new BulletPool();
+	private EnemyPool enemyPool = new EnemyPool();
 	private GameEvolver evolver = new GameEvolver();
+	//Array's that Handles dead entities
+	private ArrayList<GameEntity> objs = null;
+	private ArrayList<GameEntity> deadObjs = null; 
 }

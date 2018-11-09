@@ -11,32 +11,7 @@ import java.util.ArrayList;
 /**
  * This class implements interactions with the game interface
  */
-public class GameEvolver {
-
-	private boolean isPaused = true;
-	
-	/**
-	 * game initializer 
-	 */
-	public void start() {
-		isPaused = false;
-	}
-	
-	private ArrayList<GameEvent> events = new ArrayList<GameEvent>();
-	
-	/**
-	 * add event to scene
-	 * @param event
-	 */
-	public void add(GameEvent event) {
-		assert(event != null): ("Adding new event");
-		events.add(event);	
-	}
-	
-	private int iterator = 0;
-	public int getCurrentIteration() {
-		return iterator;
-	}
+public class GameEvolver {	
 	
 	/**
 	 * remove event to scene
@@ -64,7 +39,33 @@ public class GameEvolver {
 	public void pause() {
 		isPaused = true;
 	}
+
+
+	private boolean isPaused = true;
 	
+	/**
+	 * game initializer 
+	 */
+	public void start() {
+		isPaused = false;
+	}
+	
+	private ArrayList<GameEvent> events = new ArrayList<GameEvent>();
+	
+	/**
+	 * add event to scene
+	 * @param event
+	 */
+	public void add(GameEvent event) {
+		assert(event != null): ("Adding new event");
+		events.add(event);	
+	}
+	
+	private int iterator = 0;
+	public int getCurrentIteration() {
+		return iterator;
+	}
+		
 	private ArrayList<GameEvent> history = new ArrayList<GameEvent>();
 	private ArrayList<GameEvent> aux = new ArrayList<GameEvent>();
 	

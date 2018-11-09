@@ -13,12 +13,8 @@ import entity.player.PlayerSpaceship;
  */
 public class Bullet extends GameEntity {
 		
-	/**
-	 * spaceship bullet sprite
-	 */
+	//spaceship bullet sprite
 	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png"; 
-	private int bulletTrajectory;	
-	
 	/**
 	 * builds the bullet sprite on the screen 
 	 */
@@ -27,6 +23,9 @@ public class Bullet extends GameEntity {
 		assert(IMAGE_BULLET != null): ("Sprite of the bullet is null");
 	}
 	
+	public GameEntity owner = null;
+	private int bulletTrajectory;
+	private Integer horizontalCorrection;
 	/**
 	 *  bullet firing position
 	 * @param owner bullet target
@@ -58,9 +57,5 @@ public class Bullet extends GameEntity {
 		super.reborn();
 		assert(owner != null):("owner is null");
 		this.owner = owner;
-	}
-	
-	public GameEntity owner = null;
-	private int trajectoryBullet;
-	private Integer horizontalCorrection; 
+	} 
 }
