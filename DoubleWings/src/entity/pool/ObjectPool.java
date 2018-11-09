@@ -21,8 +21,7 @@ public abstract class ObjectPool<Type> {
 	 * @return
 	 */
 	public Type release(){
-		Type obj = null;
-		
+		Type obj = null;	
 		
 		// Creation of objects when the screen is empty
 		if (this.objects.isEmpty()){

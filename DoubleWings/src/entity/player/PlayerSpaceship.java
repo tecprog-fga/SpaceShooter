@@ -21,9 +21,6 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	// Sprite of the level 1 spaceship
 	private static final String SPRITE_IMAGE_PATH = "src/assets/img/player_lvl1.png"; //$NON-NLS-1$
 	
-	// Spaceship's velocity
-	private static final int DEFAULT_MOVEMENT_VELOCITY = 4;
-	
 	// Build's up the spaceship's Shield
 	private Shield shield = null;
 	
@@ -205,6 +202,9 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		}
 	}
 	
+	// Spaceship's velocity
+	private static final int DEFAULT_MOVEMENT_VELOCITY = 4;
+
 	/**
 	 * Set the movement velocity to the default
 	 */
