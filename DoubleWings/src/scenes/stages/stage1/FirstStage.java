@@ -81,6 +81,118 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		parallaxEffect.getLayer(1).setVelY(4.5);
 		parallaxEffect.getLayer(2).setVelY(5);
 	}
+	
+	// This method creates the spaceship and its configuration
+	public void createSpaceShip() {
+
+		// Creating player sprite
+		PlayerSpaceship spaceship = null;
+
+		spaceship = player.getSpaceship();
+
+		spaceship.gameWorld = this.gameWorld;
+		assert(spaceship != null):("spaceship cannot be null");
+		spaceship.setKeySet(Keyboard.UP_KEY, Keyboard.DOWN_KEY, Keyboard.RIGHT_KEY, Keyboard.LEFT_KEY,
+				Keyboard.SPACE_KEY);
+
+		gameWorld.add(spaceship);
+		gameWorld.add(spaceship.getShield());
+	}
+
+	// This method updates the parallax, updates and draw all entities added in the game
+	@Override
+	public void updateScene() {
+
+		updateParalax();
+
+		gameWorld.update(); // Updates and draw all entities added in game world
+		hud.draw(); // Draw all HUD elements
+
+		executeAsteroidCommand();
+	}
+
+	/**
+	 * The method below is responsible for maintaining infinite 
+	 * repetition of the layers 
+	 */
+
+	public void updateParalax() {
+
+		// Print all layers that have been added
+		parallaxEffect.drawLayers();
+
+		final int PIXELS_DOWN = 800;
+		final int PIXELS_SIDES = 600;
+
+		parallaxEffect.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
+
+		// Move the parallax orientation vertically
+		parallaxEffect.moveLayersStandardY(false);
+	}
+	
+	/**
+	 * This method creates the asteroids and its configuration
+	 * @param velY
+	 */
+	public void createAsteroid(double velY) {
+		
+		Enemy asteroid = null;
+
+		asteroid = this.gameWorld.createEnemy();
+		asteroid.loadImage(ASTEROID_PATH);
+		assert(asteroid != null):("asteroid cannot be null");
+		
+		asteroid.setLife(LIFES);
+		asteroid.x = Math.random() * (WindowConstants.WIDTH - asteroid.width * 2) + asteroid.width;
+		asteroid.y = -200;
+		asteroid.vely = velY;
+
+		gameWorld.add(asteroid);
+	}
+
+	private Enemy asteroid1 = null; //declaring an asteroid of the type enemy
+
+	// This method sets the asteroids in the scenario and its initial position 
+	public void createTestAsteroid() {
+		
+		asteroid1 = new Enemy(ASTEROID_PATH);
+		assert(asteroid1 != null):("asteroid1 cannot be null");
+		
+		asteroid1.setLife(LIFES);
+		asteroid1.x = WindowConstants.WIDTH / 2 - asteroid1.width / 2;
+		asteroid1.y = 0;
+		asteroid1.vely = 2.0;
+
+		gameWorld.add(asteroid1);
+	}
+
+	private int commandCount = 0;
+
+	public final static int MAX_COMMANDS = 50;
+
+	public void executeAsteroidCommand() {
+
+		// Asteroid command execute
+		commandCount += 1;
+
+		if (commandCount >= MAX_COMMANDS && commands.size() > 0) {
+
+			currentCommand = commands.remove(commands.size() - 1); // return removed object
+
+			commandCount = 0;
+		}
+		else {
+			//Nothing to do
+		}
+
+		if (currentCommand != null) {
+			
+			currentCommand.executeDisplacement(asteroid1);
+		}
+		else {
+			//Nothing to do
+		}
+	}
 
 	private ArrayList<Command> commands = null;
 	private Command currentCommand = null;
@@ -131,120 +243,10 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		createTestAsteroid();
 	}
 
-	// This method creates the spaceship and its configuration
-	public void createSpaceShip() {
-		
-		// Creating player sprite
-		PlayerSpaceship spaceship = null;
-		
-		spaceship = player.getSpaceship();
-
-		spaceship.gameWorld = this.gameWorld;
-		assert(spaceship != null):("spaceship cannot be null");
-		spaceship.setKeySet(Keyboard.UP_KEY, Keyboard.DOWN_KEY, Keyboard.RIGHT_KEY, Keyboard.LEFT_KEY,
-				Keyboard.SPACE_KEY);
-
-		gameWorld.add(spaceship);
-		gameWorld.add(spaceship.getShield());
-	}
-
 	public final static int LIFES = 10;
 	final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //Declaring constant with asteroid path
 
-	/**
-	 * This method creates the asteroids and its configuration
-	 * @param velY
-	 */
-	public void createAsteroid(double velY) {
-		
-		Enemy asteroid = null;
-
-		asteroid = this.gameWorld.createEnemy();
-		asteroid.loadImage(ASTEROID_PATH);
-		assert(asteroid != null):("asteroid cannot be null");
-		
-		asteroid.setLife(LIFES);
-		asteroid.x = Math.random() * (WindowConstants.WIDTH - asteroid.width * 2) + asteroid.width;
-		asteroid.y = -200;
-		asteroid.vely = velY;
-
-		gameWorld.add(asteroid);
-	}
-
-	private Enemy asteroid1 = null; //declaring an asteroid of the type enemy
-
-	// This method sets the asteroids in the scenario and its initial position 
-	public void createTestAsteroid() {
-		
-		asteroid1 = new Enemy(ASTEROID_PATH);
-		assert(asteroid1 != null):("asteroid1 cannot be null");
-		
-		asteroid1.setLife(LIFES);
-		asteroid1.x = WindowConstants.WIDTH / 2 - asteroid1.width / 2;
-		asteroid1.y = 0;
-		asteroid1.vely = 2.0;
-
-		gameWorld.add(asteroid1);
-	}
-
-	// This method updates the parallax, updates and draw all entities added in the game
-	@Override
-	public void updateScene() {
-		
-		updateParalax();
-
-		gameWorld.update(); // Updates and draw all entities added in game world
-		hud.draw(); // Draw all HUD elements
-
-		executeAsteroidCommand();
-	}
-
-	/**
-	 * The method below is responsible for maintaining infinite 
-	 * repetition of the layers 
-	 */
 	
-	public void updateParalax() {
-		
-		// Print all layers that have been added
-		parallaxEffect.drawLayers();
-
-		final int PIXELS_DOWN = 800;
-		final int PIXELS_SIDES = 600;
-
-		parallaxEffect.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
-
-		// Move the parallax orientation vertically
-		parallaxEffect.moveLayersStandardY(false);
-	}
-
-	private int commandCount = 0;
-
-	public final static int MAX_COMMANDS = 50;
-
-	public void executeAsteroidCommand() {
-
-		// Asteroid command execute
-		commandCount += 1;
-
-		if (commandCount >= MAX_COMMANDS && commands.size() > 0) {
-
-			currentCommand = commands.remove(commands.size() - 1); // return removed object
-
-			commandCount = 0;
-		}
-		else {
-			//Nothing to do
-		}
-
-		if (currentCommand != null) {
-			
-			currentCommand.executeDisplacement(asteroid1);
-		}
-		else {
-			//Nothing to do
-		}
-	}
 	
 	// Callback event handler. Adding different events for each case
 	@Override
