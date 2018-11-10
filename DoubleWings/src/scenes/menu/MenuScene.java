@@ -1,4 +1,5 @@
 /**
+
  * File: MenuScene.java
  * Purpose: Build the menu scene
  */
@@ -7,10 +8,13 @@ package scenes.menu;
 
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
+
 import constants.WindowConstants;
 import jplay.GameImage;
 import jplay.Keyboard;
 import jplay.Sprite;
+import scenes.ErrorScene;
 import scenes.GameScene;
 import scenes.stages.stage1.FirstStage;
 import util.SpritePosition;
@@ -27,7 +31,12 @@ public class MenuScene extends GameScene {
 	/**
 	 * Define initial menu option of selection menu
 	 */
+	
 	private OptionsMenu selectedMenuOption = OptionsMenu.START_GAME;
+	
+	boolean errorOccurred = false;
+	
+	final static Logger logger = Logger.getLogger(SpritePosition.class);
 	
 	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	protected void buildInitialScene() {
@@ -36,10 +45,17 @@ public class MenuScene extends GameScene {
 		selectedMenuOption = OptionsMenu.START_GAME;
 
 		//Configure up and down keys for detect press
-		assert(Keyboard.DOWN_KEY == 40):("Returned unexpected value");
-		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
-		assert(Keyboard.UP_KEY == 38):("Returned unexpected value");
-		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
+		try {
+			assert(Keyboard.DOWN_KEY == 40);
+			keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
+			assert(Keyboard.UP_KEY == 38);
+			keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
+		}
+		catch(IllegalArgumentException exception) {
+			logger.error("Returned unexpected value", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 	/**
 	 * Background object for construct background scenes
@@ -65,23 +81,29 @@ public class MenuScene extends GameScene {
 		//Realize the build for have background image in screen.
 		final String BACKGROUNG_PATH = "src/assets/img/menu/background.png";
 		background = new GameImage(BACKGROUNG_PATH);
-		assert(background != null):("Error instantiating GameImage class");
+		logger.debug("The sprite was created with path: " + BACKGROUNG_PATH);
 		
 		//Realize the build for have title image in screen.
 		final String TITLE_PATH = "src/assets/img/menu/title.png";
 		title = new Sprite(TITLE_PATH);
-		assert(title != null):("Error instantiating Sprite class");
+		logger.debug("The sprite was created with path: " + TITLE_PATH);
 		
-		title.x = spos.calculatePosition(WindowConstants.WIDTH, 2, title, 2);
-		title.y = spos.calculatePosition(WindowConstants.HEIGHT, 3, title, 2);
-
+		try {
+			title.x = spos.calculatePosition(WindowConstants.WIDTH, 2, title, 2);
+			title.y = spos.calculatePosition(WindowConstants.HEIGHT, 3, title, 2);
+		}
+		catch(IllegalArgumentException exception) {
+			logger.error("Invalid number value ", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 		//Define buttons position
 		appendButtons();
 		
 		//Realize the build for have arrow image in screen.
 		final String ARROW_PATH = "src/assets/img/menu/arrow.png";
 		arrow = new Sprite(ARROW_PATH);
-		assert(arrow != null):("Error instantiating Sprite class");
+		logger.debug("The sprite was created with path: " + TITLE_PATH);
 		
 		arrow.x = 10;
 		arrow.y = 10;
@@ -102,53 +124,61 @@ public class MenuScene extends GameScene {
 		final String START_BUTTON_PATH = "src/assets/img/menu/start_button.png";
 		Sprite startButton = null;
 		startButton = new Sprite(START_BUTTON_PATH);
-		assert(startButton != null):("Error instantiating Sprite class");
+		logger.debug("The sprite was created with path: " + START_BUTTON_PATH);
 		
 		final String RANKING_PATH = "src/assets/img/menu/ranking.png";
 		Sprite rankingButton = null;
 		rankingButton = new Sprite(RANKING_PATH);		
-		assert(rankingButton != null):("Error instantiating Sprite class");
+		logger.debug("The sprite was created with path: " + RANKING_PATH);
 		
 		final String SETTINGS_PATH = "src/assets/img/menu/settings.png";
 		Sprite settingsButton = null;
 		settingsButton = new Sprite(SETTINGS_PATH);
-		assert(settingsButton != null):("Error instantiating Sprite class");
+		logger.debug("The sprite was created with path: " + SETTINGS_PATH);
 		
 		final String QUIT_PATH = "src/assets/img/menu/quit.png";
 		Sprite quitButton = null;
 		quitButton = new Sprite(QUIT_PATH);
-		assert(quitButton != null):("Error instantiating Sprite class");
-
+		logger.debug("The sprite was created with path: " + QUIT_PATH);
 		
 		//Add this images in buttons really
-		assert(startButton != null):("This object returned null");
-		this.buttons.add(startButton);
-		assert(rankingButton != null):("This object returned null");
-		this.buttons.add(rankingButton);
-		assert(settingsButton != null):("This object returned null");
-		this.buttons.add(settingsButton);
-		assert(quitButton != null):("This object returned null");
-		this.buttons.add(quitButton);
+		try {
+			this.buttons.add(startButton);
+			this.buttons.add(rankingButton);
+			this.buttons.add(settingsButton);
+			this.buttons.add(quitButton);
+		}
+		catch(NullPointerException exception) {
+			logger.error("This object returned null", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 
 		for(OptionsMenu option : OptionsMenu.values()) {
 			//Integer value of variable option
-			int currentButtonIndex = option.ordinal(); 
+			int currentButtonIndex = 0; 
 			//Define the position of the first element according to the title
-			if(currentButtonIndex == 0) {
-				buttons.get(currentButtonIndex).x = WindowConstants.WIDTH/2 - startButton.width/2;
-				final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
-				
-				assert(currentButtonIndex >= 0):("The index of button dont should be negative");
-				assert(currentButtonIndex <= 1000):("The index of button dont should be 1000 or more");
-				buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
+			try {
+				currentButtonIndex = option.ordinal();
+				assert(currentButtonIndex >= 0);
+				assert(currentButtonIndex <= 1000);				
+				if(currentButtonIndex == 0) {
+					buttons.get(currentButtonIndex).x = WindowConstants.WIDTH/2 - startButton.width/2;
+					final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
+					buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
+				}
+				else { 
+					//Define the position of the element according to the last element
+					buttons.get(currentButtonIndex).x = buttons.get(currentButtonIndex - 1).x;
+					buttons.get(currentButtonIndex).y = buttons.get(currentButtonIndex - 1).y + buttons.get(currentButtonIndex - 1).height + DISTANCE_BETWEEN_BUTTONS;
+				}
 			}
-			else { 
-				//Define the position of the element according to the last element
-				assert(currentButtonIndex >= 0):("The index of button dont should be negative");
-				assert(currentButtonIndex <= 1000):("The index of button dont should be 1000 or more");
-				buttons.get(currentButtonIndex).x = buttons.get(currentButtonIndex - 1).x;
-				buttons.get(currentButtonIndex).y = buttons.get(currentButtonIndex - 1).y + buttons.get(currentButtonIndex - 1).height + DISTANCE_BETWEEN_BUTTONS;
+			catch(IllegalArgumentException exception) {
+				logger.error("The index of button is invalid ", exception);
+				exception.printStackTrace();
+				errorOccurred = true;
 			}
+			
 		}
 	}
 
@@ -158,32 +188,39 @@ public class MenuScene extends GameScene {
 	 */
 	private void checkMenuOption() {
 		//Down selection
-		assert(Keyboard.DOWN_KEY == 40):("Returned unexpected value");
-		if (keyboard.keyDown(Keyboard.DOWN_KEY)) {
-			String MSG_DOWN = "down";
-			System.out.println(MSG_DOWN);
-			
-			//Change current menu option
-			assert(this.selectedMenuOption != null):("This object returned null");
-			selectedMenuOption = selectedMenuOption.next();
-			System.out.println(selectedMenuOption);
+		try {
+			assert(Keyboard.DOWN_KEY == 40);
+			if (keyboard.keyDown(Keyboard.DOWN_KEY)) {
+				String MSG_DOWN = "down";
+				System.out.println(MSG_DOWN);
+				
+				//Change current menu option
+				assert(this.selectedMenuOption != null):("This object returned null");
+				selectedMenuOption = selectedMenuOption.next();
+				System.out.println(selectedMenuOption);
+			}
+			else {
+				//Nothing to do
+			}
+	
+			//Up selection		
+			assert(Keyboard.UP_KEY == 38);
+			if (keyboard.keyDown(Keyboard.UP_KEY)) {
+				String MSG_UP = "up";
+				System.out.println(MSG_UP);
+				//Change current menu option
+				assert(this.selectedMenuOption != null):("This object returned null");
+				selectedMenuOption = selectedMenuOption.back();
+				System.out.println(selectedMenuOption);
+			}
+			else {
+				//Nothing to do
+			}
 		}
-		else {
-			//Nothing to do
-		}
-
-		//Up selection		
-		assert(Keyboard.UP_KEY == 38):("Returned unexpected value");
-		if (keyboard.keyDown(Keyboard.UP_KEY)) {
-			String MSG_UP = "up";
-			System.out.println(MSG_UP);
-			//Change current menu option
-			assert(this.selectedMenuOption != null):("This object returned null");
-			selectedMenuOption = selectedMenuOption.back();
-			System.out.println(selectedMenuOption);
-		}
-		else {
-			//Nothing to do
+		catch(IllegalArgumentException exception) {
+			logger.error("Returned unexpected value ", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
 		}
 	}
 
@@ -194,38 +231,50 @@ public class MenuScene extends GameScene {
 	private void currentArrow() {
 		//Value of current button index. 0 = start button;1 = ranking button;2 = settings button;3 = quit button
 		int currentButtonIndex = 0;
-		assert(this.selectedMenuOption != null):("This object returned null");
-		currentButtonIndex = this.selectedMenuOption.ordinal();
-
-		Sprite currentButton = null;
-		assert(currentButtonIndex >= 0):("The index of button dont should be negative");
-		currentButton = this.buttons.get(currentButtonIndex);
-
-		assert(currentButtonIndex >= 0):("The current of button dont should be negative");
-		this.arrow.x = currentButton.x - arrow.width - DISTANCE_BETWEEN_BUTTONS;
-		this.arrow.y = currentButton.y;
+		try {
+			assert(this.selectedMenuOption != null);
+			currentButtonIndex = this.selectedMenuOption.ordinal();
+	
+			Sprite currentButton = null;
+			assert(currentButtonIndex >= 0);
+			
+			currentButton = this.buttons.get(currentButtonIndex);
+			this.arrow.x = currentButton.x - arrow.width - DISTANCE_BETWEEN_BUTTONS;
+			this.arrow.y = currentButton.y;
+		}
+		catch(NullPointerException exception) {
+			logger.error("This object returned null", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+		catch(IllegalArgumentException exception) {
+			logger.error("The current of button dont should be negative", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 
 	/**
 	 * Build design of menu with the union of elements for show on screen.
 	 */
 	private void drawScenes() {
-		
-		assert(this.background != null):("This object returned null");
-		background.draw();
-		
-		assert(this.title != null):("This object returned null");
-		title.draw();
-		
-		assert(this.arrow != null):("This object returned null");
-		arrow.draw();
-
-		assert(buttons != null):("This object returned null");
-		for(Sprite button: this.buttons) {
-			button.draw();
+		if(!errorOccurred) {
+			background.draw();
+			title.draw();
+			arrow.draw();	
+			for(Sprite button: this.buttons) {
+				button.draw();
+			}
+		}
+		else {
+			transitErrorScene();
 		}
 	}
 
+	private void transitErrorScene() {
+		GameScene errorScene = new ErrorScene();
+		this.game.transitTo(errorScene);		
+	}
 	/**
 	 * This object represent the first level.
 	 */
@@ -241,12 +290,9 @@ public class MenuScene extends GameScene {
 		
 		if (firstLevel == null) {
 			firstLevel = new FirstStage();
-			
-			assert(firstLevel != null):("This object returned null");
 			stage = firstLevel;
 		} 	
-		else {			
-			assert(firstLevel != null):("This object returned null");
+		else {
 			stage = firstLevel;
 		}
 		
@@ -258,7 +304,7 @@ public class MenuScene extends GameScene {
 	 * Depends of selected menu option the scene it's transited.
 	 */
 	private void checkButtonSelection() {
-		assert(Keyboard.ENTER_KEY == 10):("Returned unexpected value");
+		
 		if (keyboard.keyDown(Keyboard.ENTER_KEY)){
 
 			switch(selectedMenuOption) {

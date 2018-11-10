@@ -52,6 +52,12 @@ public class SpritePosition {
 				exception.printStackTrace();
 				errorOccurred = true;
 			}
+			catch(ArithmeticException exception) {
+				logger.error("No its possible zero division", exception);
+				exception.printStackTrace();
+				errorOccurred = true;
+			}
+			
 		}
 		return pos;
 	}

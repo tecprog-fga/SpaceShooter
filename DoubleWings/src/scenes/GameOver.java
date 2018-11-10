@@ -52,10 +52,14 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		//Creation image background
 		final String BACKGROUND_PATH = "src/assets/img/temp_background.png";
 		this.background = new GameImage(BACKGROUND_PATH);
-
+		logger.debug("The sprite was created with path: " + BACKGROUND_PATH);
+		
 		//Creation image Game Over
 		final String GAME_OVER_PATH = "src/assets/img/continue/3540295891_logo.jpg";
 		this.gameOver = new Sprite(GAME_OVER_PATH);
+		logger.debug("The sprite was created with path: " + GAME_OVER_PATH);
+		logger.info("The game is over");
+		
 		try {
 			assert(this.gameOver != null);
 			//Game over sprite center position
@@ -129,7 +133,7 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	public void finishScene() {
 		//Show on console the message when the time is ended
 		final String MSG_TIMER = "Timer Ended";
-		System.out.println(MSG_TIMER);
+		logger.info(MSG_TIMER);
 
 		//This object build a menu scene for transit to menu
 		GameScene menu = null;

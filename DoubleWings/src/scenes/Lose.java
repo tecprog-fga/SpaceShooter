@@ -70,7 +70,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
         	this.delpthScene.add(DELPTH_UNIVERSE4_PATH);	
         }
         catch(NullPointerException exception) {
-        	logger.error("Error instantiating Parallax class", exception);
+        	logger.error("Error instantiating Parallax class ", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
         }
@@ -82,6 +82,8 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		//Define scenes elements position for lose sprite upper-center position
 		final String LOSE_PATH = "src/assets/img/continue/YOU-LOSE.png";
 		this.loseScreen = new Sprite(LOSE_PATH);
+		logger.debug("The sprite was created with path: " + LOSE_PATH);
+		
 		try {
 			assert(this.loseScreen != null);
 			this.loseScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.loseScreen, 2);
@@ -92,54 +94,38 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
-		
-		
-		//Check how many lives the player has to instantiate the specific sprite.
-		//Depends of lives is show the sprite related
-		switch(getLifePlayer()){
-
-			case 1:
-				final String ONE_LIFE_PATH = "src/assets/img/continue/1life.png";
-				try {
+		try {
+			//Check how many lives the player has to instantiate the specific sprite.
+			//Depends of lives is show the sprite related
+			switch(getLifePlayer()){
+				case 1:
+					final String ONE_LIFE_PATH = "src/assets/img/continue/1life.png";
 					assert(this.lifeRemaining != null):("Error instantiating Sprite class");
-					this.lifeRemaining = new Sprite(ONE_LIFE_PATH);	
-				}
-				catch(NullPointerException exception) {
-					logger.error("Error instantiating Sprite class", exception);
-					exception.printStackTrace();
-					errorOccurred = true;
-				}				
-				break;
-			case 2:
-				final String TWO_LIFE_PATH = "src/assets/img/continue/2life.png";
-				try {
+					this.lifeRemaining = new Sprite(ONE_LIFE_PATH);
+					logger.debug("The sprite was created with path: " + ONE_LIFE_PATH);			
+					break;
+				case 2:
+					final String TWO_LIFE_PATH = "src/assets/img/continue/2life.png";
 					assert(this.lifeRemaining != null):("Error instantiating Sprite class");
 					this.lifeRemaining = new Sprite(TWO_LIFE_PATH);
-				}
-				catch(NullPointerException exception) {
-					logger.error("Error instantiating Sprite class", exception);
-					exception.printStackTrace();
-					errorOccurred = true;
-				}
-				break;
-			case 3:
-				final String THREE_LIFE_PATH = "src/assets/img/continue/3life.png";
-				try {
+					logger.debug("The sprite was created with path: " + TWO_LIFE_PATH);				
+					break;
+				case 3:
+					final String THREE_LIFE_PATH = "src/assets/img/continue/3life.png";
 					assert(this.lifeRemaining != null):("Error instantiating Sprite class");
 					this.lifeRemaining = new Sprite(THREE_LIFE_PATH);
-				}
-				catch(NullPointerException exception) {
-					logger.error("Error instantiating Sprite class", exception);
-					exception.printStackTrace();
-					errorOccurred = true;
-				}
-				break;
-			default:
-				//Nothing to do
+					logger.debug("The sprite was created with path: " + THREE_LIFE_PATH);
+					break;
+				default:
+					//Nothing to do
+			}	
+			
 		}		
-		
-		
-		
+		catch(NullPointerException exception) {
+			logger.error("Error instantiating Sprite class", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 		try {
 			assert(this.lifeRemaining != null);
 			//Define position lifeRemaining on the Screen
@@ -148,7 +134,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 			
 		}
 		catch(NullPointerException exception) {
-			logger.error("Error instantiating Sprite class", exception);
+			logger.error(lifeRemaining + "returned null", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
@@ -172,7 +158,12 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 * @param lifePlayer
 	 */
 	private void setLifePlayer(int lifePlayer) {
-		 this.lifePlayer = lifePlayer;
+		if(lifePlayer < 0 || lifePlayer >3) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			this.lifePlayer = lifePlayer;			
+		}
 	}
 
 	/**
@@ -234,19 +225,14 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		
 		//Responsible for maintaining infinite repetition of the layers
 		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
+		logger.debug("The parallax was set with " + PIXELS_DOWN + "x" + PIXELS_SIDES + " pixels");
+
 		
 		//Move the parallax orientation vertically
 		this.delpthScene.moveLayersStandardY(false);
 		if(!errorOccurred) {
-			try {
-				this.loseScreen.draw();		
-				this.lifeRemaining.draw();
-			}
-			catch(NullPointerException exception) {
-				logger.error("The sprite returned null", exception);
-				exception.printStackTrace();
-				errorOccurred = true;
-			}
+			this.loseScreen.draw();		
+			this.lifeRemaining.draw();
 		}
 		else {
 			transitErrorScene();
@@ -260,7 +246,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		if (this.game != null){
 			//Show on console the message when the time is ended
 			final String END_TIMER = "Timer Ended";
-			System.out.println(END_TIMER);
+			logger.info(END_TIMER);
 			
 			//This object build a classic continue screen for transit to this element
 			ContinueGame classicContinue = null;

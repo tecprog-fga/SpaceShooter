@@ -110,11 +110,12 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		final double velMainLayerX = 0;
 		final double velMainLayerY = 1;
 		this.delpthScene.setVelAllLayers(velMainLayerX, velMainLayerY);
-		
+		logger.debug("The parallax was set with " + velMainLayerX + " in x axys and " + velMainLayerY+ " in y axys");
 		
 		//Realize the position of images in continue screen, continue sprite upper-center position.
 	    final String CONTINUE_PATH = "src/assets/img/continue/continue.png";
 		this.continueScreen = new Sprite(CONTINUE_PATH);
+		logger.debug("The sprite was created with path: " + CONTINUE_PATH);
 		
 		try {
 			assert(this.continueScreen != null);
@@ -126,9 +127,12 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
+		
 		//Realize the position of images in countDown screen.
 		final String COUNTDOWN_PATH = "src/assets/img/continue/number_9.png";
 		this.countdownScreen = new Sprite(COUNTDOWN_PATH);
+		logger.debug("The sprite was created with path: " + COUNTDOWN_PATH);
+		
 		try {
 			assert(this.countdownScreen != null);
 			this.countdownScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.countdownScreen, 2);
@@ -139,9 +143,12 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
+		
 		//Realize the position of enter sprite displays screen.
 	    final String ENTER_PATH = "src/assets/img/continue/Enter-Download-PNG.png";	 
 		this.enterScreen = new Sprite(ENTER_PATH);
+		logger.debug("The sprite was created with path: " + ENTER_PATH);
+		
 		try {			
 			assert(this.enterScreen != null);
 			this.enterScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.enterScreen, 2);
@@ -167,7 +174,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		timer = new Timer();
 		
 		//This object is instance of CountDown class, realize count down instruments in timer configuration.
-		
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
 		
@@ -189,6 +195,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		try {
 			assert(timer != null);
 			timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
+			logger.debug("The timer was set with delay: " + DELAY);
 		}
 		catch(NullPointerException exception) {
 			logger.error("Null returned, timer dont should be null", exception);
@@ -220,6 +227,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		
 		// The method below is responsible for maintaining infinite repetition of the layers.
 		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
+		logger.debug("The parallax was set with " + PIXELS_DOWN + "x" + PIXELS_SIDES + " pixels");
 
 		//Move the parallax orientation vertically
 		this.delpthScene.moveLayersStandardY(false);
@@ -242,7 +250,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		if (this.game != null) {
 			//Message for show witch time ended.
 			final String MSG_TIMER = "Timer Ended";
-			System.out.println(MSG_TIMER);
+			logger.debug(MSG_TIMER);
 
 			GameScene gameOver = null;
 			gameOver = new GameOver();
@@ -277,8 +285,16 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		//This constant define the final path of LOAD_IMAGE_PATH
 		final String PNG_EXTENSION = ".png";
 		
-		assert(this.countdownScreen != null):("Null returned, countdownScreen cant loadImage");
-		this.countdownScreen.loadImage(LOAD_IMAGE_PATH + String.valueOf(index) + PNG_EXTENSION); 
+		try {
+			assert(this.countdownScreen != null);
+			this.countdownScreen.loadImage(LOAD_IMAGE_PATH + String.valueOf(index) + PNG_EXTENSION); 
+			logger.info("The count down was started");
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, countdownScreen cant loadImage", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 	
 	/**
@@ -289,12 +305,16 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		//This decision structure is necessary for check the button selected. 
 		//If the game execute and keyboard is clicked then execute the algorithm
 		if(this.game != null && this.keyboard != null){
-			
+					
 			//If selected enter key then transit to a continue state of  the game,
 			//Else, but if selected escape key then transit to a menu scene
 			if (this.keyboard.keyDown(Keyboard.ENTER_KEY)) {
+				logger.info("The state of the game and the keyboard is ok");
+				logger.info("Enter key was pressed");
+				
 				MenuScene transitScene = null;
 				transitScene = new MenuScene();
+				
 				try {
 					assert(this.transitScene == null):("This object should be null");
 					this.game.transitTo(transitScene.firstStageScene());
@@ -306,8 +326,12 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 				}	
 			} 
 			else if (this.keyboard.keyDown(Keyboard.ESCAPE_KEY)) {
+				
+				logger.info("Scape key was pressed");
+				
 				GameScene menu = null;
 				menu = new MenuScene();
+				
 				try {
 					assert(this.menu == null);
 					this.game.transitTo(menu);
