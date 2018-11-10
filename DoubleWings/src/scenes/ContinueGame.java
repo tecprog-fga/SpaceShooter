@@ -71,7 +71,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	//This void method build sprites for show scenes of class ContinueGame. 
 	//It's necessary for build the initial sprites for universe, continue, count down and enter images.
 	public void buildInitialScene() {
-
 		try{
 			assert(this.keyboard != null);
 			//It's necessary set behavior this buttons for to go initial scene
@@ -82,7 +81,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			logger.error("Null returned, keyboard can not set value", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
-			transitErrorScene();
 		}
 		
 		//Creation a object to class Parallax
@@ -107,7 +105,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			logger.error("Null returned, delpthScene cant add value", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
-			transitErrorScene();
 		}
 		//...Adjusts the speed of all layers from the main layer
 		final double velMainLayerX = 0;
@@ -128,7 +125,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			logger.error("Null returned, continueScreen cant marked Window constants", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
-			transitErrorScene();
 		}
 		//Realize the position of images in countDown screen.
 		final String COUNTDOWN_PATH = "src/assets/img/continue/number_9.png";
@@ -142,7 +138,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			logger.error("Null returned, continueScreen cant marked Window constants", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
-			transitErrorScene();
 		}
 		//Realize the position of enter sprite displays screen.
 	    final String ENTER_PATH = "src/assets/img/continue/Enter-Download-PNG.png";	 
@@ -156,7 +151,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			logger.error("Null returned, enterScreen cant marked Window constants", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
-			transitErrorScene();
 		}
 
 		//Finally, build scene of count down
@@ -186,7 +180,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			logger.error("Null returned, countDown dont should be null", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
-			transitErrorScene();
 		}
 
 		//Define the time in milliseconds.
@@ -201,7 +194,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			logger.error("Null returned, timer dont should be null", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
-			transitErrorScene();
 		}		
 	}
 
@@ -217,7 +209,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			logger.error("Null returned, delpthScene dont should be null", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
-			transitErrorScene();
 		}	
 		
 		
@@ -263,7 +254,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 				logger.error("Null returned, delpthScene dont should be null", exception);
 				exception.printStackTrace();
 				errorOccurred = true;
-				transitErrorScene();
 			}
 			
 		}
@@ -313,7 +303,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 					logger.error("Null returned, delpthScene dont should be null", exception);
 					exception.printStackTrace();
 					errorOccurred = true;
-					transitErrorScene();
 				}	
 			} 
 			else if (this.keyboard.keyDown(Keyboard.ESCAPE_KEY)) {
@@ -327,7 +316,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 					logger.error("This object should be null", exception);
 					exception.printStackTrace();
 					errorOccurred = true;
-					transitErrorScene();
 				}	
 			}
 			else {
