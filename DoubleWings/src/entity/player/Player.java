@@ -6,6 +6,8 @@
 
 package entity.player;
 
+import org.apache.log4j.Logger;
+
 import observer.GameEntityObserver;
 
 /**
@@ -109,6 +111,8 @@ public class Player {
 		return this.spaceship;
 		
 	}
+	
+	final static Logger logger = Logger.getLogger(Player.class);
 
 	/**
 	 * Lose one life. Handle losing life and game over scenarios. 
@@ -116,7 +120,8 @@ public class Player {
 	public void loseLife() {
 		
 		setChances(this.chances - 1);
-		System.out.println("lifes on player: " + this.chances); //$NON-NLS-1$
+		
+		logger.debug("Player's lives: " + this.chances);
 
 		if (this.chances < 0) {
 			loseGame();
@@ -132,7 +137,7 @@ public class Player {
 		
 		setChances(INITIAL_CHANCES);
 		resetSpaceship();
-		System.out.println("Player log: life reset to: " + this.chances); //$NON-NLS-1$
+		logger.debug("Player's initial lives reset to: " + this.chances);
 	}
 	
 	

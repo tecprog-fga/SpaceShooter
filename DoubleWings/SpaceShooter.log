@@ -1,0 +1,20 @@
+11-11-2018 03:42:04 DEBUG Player:123 - teste
+ 11-11-2018 03:42:10 DEBUG Player:123 - teste
+ 11-11-2018 03:42:17 DEBUG Player:123 - teste
+ 11-11-2018 03:42:19 DEBUG Player:123 - teste
+ 11-11-2018 03:46:22 DEBUG Player:124 - Player's lives: 2
+ 11-11-2018 03:47:26 DEBUG Player:124 - Player's lives: 2
+ 11-11-2018 03:47:30 DEBUG Player:124 - Player's lives: 1
+ 11-11-2018 03:48:38 DEBUG Player:124 - Player's lives: 2
+ 11-11-2018 03:48:40 DEBUG Player:124 - Player's lives: 1
+ 11-11-2018 03:48:46 DEBUG Player:124 - Player's lives: 0
+ 11-11-2018 03:48:48 DEBUG Player:124 - Player's lives: -1
+ 11-11-2018 03:48:48 DEBUG Player:140 - Player's initial lives reset to: 3
+ 11-11-2018 03:48:54 DEBUG Player:124 - Player's lives: 2
+ 11-11-2018 03:49:01 DEBUG Player:124 - Player's lives: 1
+ 11-11-2018 03:49:05 DEBUG Player:124 - Player's lives: 0
+ 11-11-2018 03:49:10 DEBUG Player:124 - Player's lives: -1
+ 11-11-2018 03:49:59 DEBUG Player:124 - Player's lives: 2
+ 11-11-2018 03:50:03 DEBUG Player:124 - Player's lives: 1
+ 11-11-2018 03:50:09 DEBUG Player:124 - Player's lives: 0
+ 
