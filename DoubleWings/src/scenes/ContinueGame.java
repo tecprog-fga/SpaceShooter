@@ -164,46 +164,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		buildWaitScene();
 	}
 
-	/**
-	 * This method build the scene of waiting countdown.
-	 */
-	private void buildWaitScene(){
-
-		//This object is instance of Timer class, this object work with configuration of time of game.
-		Timer timer = null; 
-		timer = new Timer();
-		
-		//This object is instance of CountDown class, realize count down instruments in timer configuration.
-		CountDownTimer countDown = null;
-		countDown = new CountDownTimer();
-		
-		try {			
-			assert(countDown != null);
-			//Delegate action for count down to execute
-			countDown.delegateAction = this;
-		}
-		catch(NullPointerException exception) {
-			logger.error("Null returned, countDown dont should be null", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}
-
-		//Define the time in milliseconds.
-		final int DELAY = 1000; 
-		
-		//Realize count with count down and delay of 1000 milliseconds
-		try {
-			assert(timer != null);
-			timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
-			logger.debug("The timer was set with delay: " + DELAY);
-		}
-		catch(NullPointerException exception) {
-			logger.error("Null returned, timer dont should be null", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}		
-	}
-
 	//Build the update image of sprite on screen for repeat layers
 	public void updateScene() {
 
@@ -269,12 +229,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			//Nothing to do 
 		}
 	}
-	
-	//Transit for error scene when fire an exception 
-	public void transitErrorScene() {
-		GameScene errorScene = new ErrorScene();
-		this.game.transitTo(errorScene);
-	}
 
 	//Given index update the image and build scene.
 	public void updateImageForIndex(int index) {
@@ -295,6 +249,12 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
+	}
+	
+	//Transit for error scene when fire an exception 
+	public void transitErrorScene() {
+		GameScene errorScene = new ErrorScene();
+		this.game.transitTo(errorScene);
 	}
 	
 	/**
@@ -350,5 +310,44 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			//Nothing to do
 		}
 	}
+	
+	/**
+	 * This method build the scene of waiting countdown.
+	 */
+	private void buildWaitScene(){
 
+		//This object is instance of Timer class, this object work with configuration of time of game.
+		Timer timer = null; 
+		timer = new Timer();
+		
+		//This object is instance of CountDown class, realize count down instruments in timer configuration.
+		CountDownTimer countDown = null;
+		countDown = new CountDownTimer();
+		
+		try {			
+			assert(countDown != null);
+			//Delegate action for count down to execute
+			countDown.delegateAction = this;
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, countDown dont should be null", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+
+		//Define the time in milliseconds.
+		final int DELAY = 1000; 
+		
+		//Realize count with count down and delay of 1000 milliseconds
+		try {
+			assert(timer != null);
+			timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
+			logger.debug("The timer was set with delay: " + DELAY);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, timer dont should be null", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}		
+	}
 }

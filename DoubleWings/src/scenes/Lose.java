@@ -143,14 +143,65 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		buildWaitScene();
 	}
 	
+	//Build the update image of sprite on screen
+	public void updateScene() {		
+		//Print all layers that have been added
+		this.delpthScene.drawLayers();
+		
+		//This constants is responsible for store of pixels value of screen. Unit of measure: Pixels
+		final int PIXELS_DOWN = 800; 
+		final int PIXELS_SIDES = 600;
+		
+		//Responsible for maintaining infinite repetition of the layers
+		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
+		logger.debug("The parallax was set with " + PIXELS_DOWN + "x" + PIXELS_SIDES + " pixels");
+			
+		//Move the parallax orientation vertically
+		this.delpthScene.moveLayersStandardY(false);
+		if(!errorOccurred) {
+			this.loseScreen.draw();		
+			this.lifeRemaining.draw();
+		}
+		else {
+			transitErrorScene();
+		}
+	}
+	
+	//Method that after the end of the time transit to the screen to ContinueGame class
+	public void finishScene() {
+		
+		//Case the game is run
+		if (this.game != null){
+			//Show on console the message when the time is ended
+			final String END_TIMER = "Timer Ended";
+			logger.info(END_TIMER);
+			
+			//This object build a classic continue screen for transit to this element
+			ContinueGame classicContinue = null;
+			classicContinue = new ContinueGame();
+			try {
+				this.game.transitTo(classicContinue);				
+			}
+			catch(NullPointerException exception) {
+				logger.error("The sprite returned null", exception);
+				exception.printStackTrace();
+				errorOccurred = true;
+			}
+		}
+		else {
+			//Nothing to do
+		}
+		
+	}
+	
+	//Nothing to do in this class
+	public void updateImageForIndex(int index) {
+		//Nothing to do
+	}	
+
 	private void transitErrorScene() {
 		GameScene errorScene = new ErrorScene();
 		this.game.transitTo(errorScene);		
-	}
-
-	//This void method build all sprites for show scenes of class 
-	protected void viewSetup() {
-		//Nothing to do
 	}
 	
 	/**
@@ -214,60 +265,8 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		}
 	}
 	
-	//Build the update image of sprite on screen
-	public void updateScene() {		
-		//Print all layers that have been added
-		this.delpthScene.drawLayers();
-		
-		//This constants is responsible for store of pixels value of screen. Unit of measure: Pixels
-		final int PIXELS_DOWN = 800; 
-		final int PIXELS_SIDES = 600;
-		
-		//Responsible for maintaining infinite repetition of the layers
-		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
-		logger.debug("The parallax was set with " + PIXELS_DOWN + "x" + PIXELS_SIDES + " pixels");
-
-		
-		//Move the parallax orientation vertically
-		this.delpthScene.moveLayersStandardY(false);
-		if(!errorOccurred) {
-			this.loseScreen.draw();		
-			this.lifeRemaining.draw();
-		}
-		else {
-			transitErrorScene();
-		}
-	}
-	
-	//Method that after the end of the time transit to the screen to ContinueGame class
-	public void finishScene() {
-		
-		//Case the game is run
-		if (this.game != null){
-			//Show on console the message when the time is ended
-			final String END_TIMER = "Timer Ended";
-			logger.info(END_TIMER);
-			
-			//This object build a classic continue screen for transit to this element
-			ContinueGame classicContinue = null;
-			classicContinue = new ContinueGame();
-			try {
-				this.game.transitTo(classicContinue);				
-			}
-			catch(NullPointerException exception) {
-				logger.error("The sprite returned null", exception);
-				exception.printStackTrace();
-				errorOccurred = true;
-			}
-		}
-		else {
-			//Nothing to do
-		}
-		
-	}
-	
-	//Nothing to do in this class
-	public void updateImageForIndex(int index) {
+	//This void method build all sprites for show scenes of class 
+	protected void viewSetup() {
 		//Nothing to do
 	}
 

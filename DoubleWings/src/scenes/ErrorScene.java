@@ -40,6 +40,22 @@ public class ErrorScene extends GameScene{
 		this.errorScene.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.errorScene, 2);
 		this.errorScene.y = spos.calculatePosition(WindowConstants.HEIGHT, 2, this.errorScene, 2);
 	}
+	
+	//Build the update image of sprite on screen
+	public void updateScene() {
+		this.background.draw();
+		this.errorScene.draw();
+	}
+	
+	//This method return to main Menu
+	public void finishScene() {
+		//Nothing to do
+	}
+	
+	//Given index update the image and build scene for this
+	public void updateImageForIndex(int index) {
+		//Nothing to do
+	}
 
 	//This void method build all sprites for show scenes of class 
 	protected void viewSetup() {
@@ -53,21 +69,4 @@ public class ErrorScene extends GameScene{
 	private void buildWaitScene(){
 		//Nothing to do
 	}
-
-	//Build the update image of sprite on screen
-	public void updateScene() {
-		this.background.draw();
-		this.errorScene.draw();
-	}
-
-	//This method return to main Menu
-	public void finishScene() {
-		//Nothing to do
-	}
-
-	//Given index update the image and build scene for this
-	public void updateImageForIndex(int index) {
-		//Nothing to do
-	}
-
 }

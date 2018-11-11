@@ -39,7 +39,7 @@ public class MenuScene extends GameScene {
 	final static Logger logger = Logger.getLogger(SpritePosition.class);
 	
 	//This void method was declarated in GameScene abstract class, it used for configurated the scene
-	protected void buildInitialScene() {
+	public void buildInitialScene() {
 
 		//Reset option menu, when start game is ativated
 		selectedMenuOption = OptionsMenu.START_GAME;
@@ -56,6 +56,34 @@ public class MenuScene extends GameScene {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
+	}
+	//Realize the sequence of actions developed.
+	public void updateScene() {
+		// Control menu option selection
+		checkMenuOption();
+		//Define current arrow position
+		currentArrow();
+		checkButtonSelection();
+		// Draw menu elements
+		drawScenes();
+	}	
+	/**
+	 * This method build the scene of first stage of game.
+	 * @return object of scene builded of first stage
+	 */
+	public GameScene firstStageScene() {
+		
+		GameScene stage;
+		
+		if (firstLevel == null) {
+			firstLevel = new FirstStage();
+			stage = firstLevel;
+		} 	
+		else {
+			stage = firstLevel;
+		}
+		
+		return stage;
 	}
 	/**
 	 * Background object for construct background scenes
@@ -114,6 +142,86 @@ public class MenuScene extends GameScene {
 	 */
 	private ArrayList<Sprite> buttons = new ArrayList<Sprite>();
 
+	/**
+	 * This method to check keyboard for control the menu selection.
+	 * It's limited with Down and Up key 
+	 */
+	private void checkMenuOption() {
+		//Down selection
+		try {
+			assert(Keyboard.DOWN_KEY == 40);
+			if (keyboard.keyDown(Keyboard.DOWN_KEY)) {
+				String MSG_DOWN = "down";
+				System.out.println(MSG_DOWN);
+				
+				//Change current menu option
+				assert(this.selectedMenuOption != null):("This object returned null");
+				selectedMenuOption = selectedMenuOption.next();
+				System.out.println(selectedMenuOption);
+			}
+			else {
+				//Nothing to do
+			}
+	
+			//Up selection		
+			assert(Keyboard.UP_KEY == 38);
+			if (keyboard.keyDown(Keyboard.UP_KEY)) {
+				String MSG_UP = "up";
+				System.out.println(MSG_UP);
+				//Change current menu option
+				assert(this.selectedMenuOption != null):("This object returned null");
+				selectedMenuOption = selectedMenuOption.back();
+				System.out.println(selectedMenuOption);
+			}
+			else {
+				//Nothing to do
+			}
+		}
+		catch(IllegalArgumentException exception) {
+			logger.error("Returned unexpected value ", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+	}
+	
+	/**
+	 * This object represent the first level.
+	 */
+	private static GameScene firstLevel = null;
+
+	/**
+	 * Check keyboard enter for dispatch new scene.
+	 * Depends of selected menu option the scene it's transited.
+	 */
+	private void checkButtonSelection() {
+		
+		if (keyboard.keyDown(Keyboard.ENTER_KEY)){
+
+			switch(selectedMenuOption) {
+
+				case START_GAME:
+					//transit to game
+					game.transitTo(firstStageScene());
+					break;
+				case RANKING:
+					//Nothing to do
+					break;
+				case SETTINGS:
+					//Nothing to do
+					break;
+				case QUIT:
+					//quit game
+					game.quit();
+					break;
+				default:
+					//Nothing to do
+			}
+		}
+		else {
+			//Nothing to do
+		}
+	}
+	
 	/**
 	 * This method create the buttons with the sprites of buttons for define 
 	 * buttons positions.
@@ -183,48 +291,6 @@ public class MenuScene extends GameScene {
 	}
 
 	/**
-	 * This method to check keyboard for control the menu selection.
-	 * It's limited with Down and Up key 
-	 */
-	private void checkMenuOption() {
-		//Down selection
-		try {
-			assert(Keyboard.DOWN_KEY == 40);
-			if (keyboard.keyDown(Keyboard.DOWN_KEY)) {
-				String MSG_DOWN = "down";
-				System.out.println(MSG_DOWN);
-				
-				//Change current menu option
-				assert(this.selectedMenuOption != null):("This object returned null");
-				selectedMenuOption = selectedMenuOption.next();
-				System.out.println(selectedMenuOption);
-			}
-			else {
-				//Nothing to do
-			}
-	
-			//Up selection		
-			assert(Keyboard.UP_KEY == 38);
-			if (keyboard.keyDown(Keyboard.UP_KEY)) {
-				String MSG_UP = "up";
-				System.out.println(MSG_UP);
-				//Change current menu option
-				assert(this.selectedMenuOption != null):("This object returned null");
-				selectedMenuOption = selectedMenuOption.back();
-				System.out.println(selectedMenuOption);
-			}
-			else {
-				//Nothing to do
-			}
-		}
-		catch(IllegalArgumentException exception) {
-			logger.error("Returned unexpected value ", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}
-	}
-
-	/**
 	 * This method build the objects necessaries for define 
 	 * the current arrow of keyboard.
 	 */
@@ -274,76 +340,5 @@ public class MenuScene extends GameScene {
 	private void transitErrorScene() {
 		GameScene errorScene = new ErrorScene();
 		this.game.transitTo(errorScene);		
-	}
-	/**
-	 * This object represent the first level.
-	 */
-	private static GameScene firstLevel = null;
-
-	/**
-	 * This method build the scene of first stage of game.
-	 * @return object of scene builded of first stage
-	 */
-	public GameScene firstStageScene() {
-		
-		GameScene stage;
-		
-		if (firstLevel == null) {
-			firstLevel = new FirstStage();
-			stage = firstLevel;
-		} 	
-		else {
-			stage = firstLevel;
-		}
-		
-		return stage;
-	}
-
-	/**
-	 * Check keyboard enter for dispatch new scene.
-	 * Depends of selected menu option the scene it's transited.
-	 */
-	private void checkButtonSelection() {
-		
-		if (keyboard.keyDown(Keyboard.ENTER_KEY)){
-
-			switch(selectedMenuOption) {
-
-				case START_GAME:
-					//transit to game
-					game.transitTo(firstStageScene());
-					break;
-				case RANKING:
-					//Nothing to do
-					break;
-				case SETTINGS:
-					//Nothing to do
-					break;
-				case QUIT:
-					//quit game
-					game.quit();
-					break;
-				default:
-					//Nothing to do
-			}
-		}
-		else {
-			//Nothing to do
-		}
-	}
-
-	//Realize the sequence of actions developed.
-	public void updateScene() {
-
-		// Control menu option selection
-		checkMenuOption();
-
-		//Define current arrow position
-		currentArrow();
-
-		checkButtonSelection();
-
-		// Draw menu elements
-		drawScenes();
 	}
 }
