@@ -14,16 +14,15 @@ public class SpritePositionTest {
 	final String PATH = "src/assets/img/continue/continue.png";
 	private SpritePosition spos;
 	private static final double DELTA = 1e-15;
-	double windowDividend = 2;
-	double screeDividend = 1;
+	double windowDividend;
+	double screenDividend;
 	
 	@Before
 	public void setup() {
 		sprite = new Sprite(PATH);
 		spos = new SpritePosition();
-		
-		sprite.x = spos.calculatePosition(WindowConstants.WIDTH, windowDividend, this.sprite, screeDividend);
-		sprite.y = spos.calculatePosition(WindowConstants.HEIGHT, windowDividend, this.sprite, screeDividend);
+		windowDividend = 2;
+		screenDividend = 1;
 	}
 	
 	@Test
@@ -35,9 +34,11 @@ public class SpritePositionTest {
 	@Test
 	public void calculatePositionTest() {
 		Sprite spriteTest = new Sprite(PATH);
+		sprite.x = 31.00;
+		sprite.y = 199.00;
 		
-		spriteTest.x = spos.calculatePosition(WindowConstants.WIDTH, windowDividend, spriteTest, screeDividend);
-		spriteTest.y = spos.calculatePosition(WindowConstants.HEIGHT, windowDividend, spriteTest, screeDividend);
+		spriteTest.x = spos.calculatePosition(WindowConstants.WIDTH, windowDividend, spriteTest, screenDividend);
+		spriteTest.y = spos.calculatePosition(WindowConstants.HEIGHT, windowDividend, spriteTest, screenDividend);
 		
 		assertEquals(sprite.x, spriteTest.x, DELTA);
 		assertEquals(sprite.y, spriteTest.y, DELTA);
@@ -48,7 +49,7 @@ public class SpritePositionTest {
 		boolean validPosition = true;
 		boolean validPositionTest;
 		
-		validPositionTest = this.spos.validatePosition(WindowConstants.WIDTH, windowDividend, screeDividend);
+		validPositionTest = this.spos.validatePosition(WindowConstants.WIDTH, windowDividend, screenDividend);
 		
 		assertEquals(validPosition, validPositionTest);	
 	}
