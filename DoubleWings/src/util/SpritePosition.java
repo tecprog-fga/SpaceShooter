@@ -57,7 +57,6 @@ public class SpritePosition {
 				exception.printStackTrace();
 				errorOccurred = true;
 			}
-			
 		}
 		return pos;
 	}
@@ -69,7 +68,7 @@ public class SpritePosition {
 	 * @param screenDividend
 	 * @return position valid
 	 */
-	private boolean validatePosition(int window, double windowDividend, double screenDividend) {
+	public boolean validatePosition(int window, double windowDividend, double screenDividend) {
 		boolean posValid;
 		posValid = true;
 		

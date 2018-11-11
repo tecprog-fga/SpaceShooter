@@ -2,23 +2,27 @@ package test;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import jplay.Parallax;
 import jplay.Sprite;
 
 public class LoseTest {
-	private Parallax delpthScene;
-	private Sprite loseScreen;
+	private Sprite sprite;
+	private Parallax parallax;
+	final String PATH = "src/assets/img/continue/continue.png";
+	
+	@Before
+	public void setup() {
+		sprite = new Sprite(PATH);
+		parallax = new Parallax();
+	}
 	
 	@Test
 	public void buildInitialSceneTest() {
-		this.delpthScene = new Parallax();
-		final String LOSE_PATH = "path";
-		this.loseScreen = new Sprite(LOSE_PATH);
-		
-		assertTrue(this.delpthScene != null);
-		assertTrue(this.loseScreen != null);
+		assertNotNull(sprite);
+		assertNotNull(parallax);
 	}
 
 }

@@ -7,7 +7,6 @@ package scenes;
 import constants.WindowConstants;
 import jplay.GameImage;
 import jplay.Sprite;
-import scenes.menu.MenuScene;
 import util.SpritePosition;
 
 /**
@@ -20,7 +19,6 @@ public class ErrorScene extends GameScene{
 	private GameImage background = null;
 	//This object is necessary for build the error image in screen
 	private Sprite errorScene = null;
-	private Object menu;
 	
 	/**
 	 * This object its necessary for resolve position of sprites features
