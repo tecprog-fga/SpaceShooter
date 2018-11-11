@@ -13,8 +13,6 @@ import util.*;
 import entity.Enemy;
 import entity.GameEntity;
 import jplay.Keyboard;
-import scenes.ErrorScene;
-import scenes.GameScene;
 import util.DelayTimer;
 
 /**

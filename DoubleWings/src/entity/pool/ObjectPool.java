@@ -47,5 +47,8 @@ public abstract class ObjectPool<Type> {
 		if (this.objects.contains(obj) == false){
 			this.objects.add(obj);
 		}
+		else {
+			// Nothing to do
+		}
 	}
 }

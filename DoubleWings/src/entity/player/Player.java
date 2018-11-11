@@ -64,9 +64,14 @@ public class Player {
 	public void setChances(int chances){
 		this.chances = chances;
 		
-		// Notifying HUD to update the screen if it isn't null
-		assert(this.observer != null) : "Player log: HUD is null";		 //$NON-NLS-1$
-		this.observer.notifyObserver(this);	
+		try {
+			// Notifying HUD to update the screen if it isn't null
+			assert(this.observer != null) : "Player log: HUD is null";
+			this.observer.notifyObserver(this);				
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+			logger.error("HUD is receiving Null", e);
+		}
 
 	}
 
@@ -95,9 +100,15 @@ public class Player {
 		this.score += score1;
 		logger.debug("Incriased score");
 		
-		// Notifying HUD to update the screen if it isn't null
-		assert(this.observer != null) : "Player log: HUD is null"; //$NON-NLS-1$
-		this.observer.notifyObserver(this);	
+		
+		try {
+			// Notifying HUD to update the screen if it isn't null
+			assert(this.observer != null) : "Player log: HUD is null"; //$NON-NLS-1$
+			this.observer.notifyObserver(this);				
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+			logger.error("HUD is receiving Null", e);
+		}
 	}
 
 	/**
@@ -110,7 +121,6 @@ public class Player {
 			return this.spaceship = new PlayerSpaceship(this, this.initialPositionY, this.initialPositionY, true);
 		}
 		return this.spaceship;
-		
 	}
 	
 	final static Logger logger = Logger.getLogger(Player.class);
@@ -136,7 +146,8 @@ public class Player {
 	 */
 	public void resetLife() {
 		
-		setChances(INITIAL_CHANCES);
+		setChances(INITIAL_CHANCES);			
+		
 		logger.debug("Player's initial lives reset to: " + this.chances);
 		resetSpaceship();
 	}
