@@ -93,6 +93,7 @@ public class Player {
 	public void increaseScore(int score1) {
 
 		this.score += score1;
+		logger.debug("Incriased score");
 		
 		// Notifying HUD to update the screen if it isn't null
 		assert(this.observer != null) : "Player log: HUD is null"; //$NON-NLS-1$
@@ -136,8 +137,8 @@ public class Player {
 	public void resetLife() {
 		
 		setChances(INITIAL_CHANCES);
-		resetSpaceship();
 		logger.debug("Player's initial lives reset to: " + this.chances);
+		resetSpaceship();
 	}
 	
 	
@@ -152,10 +153,11 @@ public class Player {
 	
 	// Delegate the player to game over or continue screen 
 	private void loseGame() {
-		
+		logger.debug("Lost the game!");
 		if (this.canContinue) {
 			useContinue();
 		} else {
+			
 			this.delegate.transitToGameOver();
 		}
 	}
@@ -169,6 +171,7 @@ public class Player {
 	
 	// Reset the spaceship's position after each death
 	private void resetSpaceship() {
+		logger.debug("Reseting spaceship's position!");
 		this.spaceship.reborn();
 		this.spaceship.x = this.initialPositionX;
 		this.spaceship.y = this.initialPositionY;
@@ -176,6 +179,7 @@ public class Player {
 	
 	// Delegate the player to continue screen
 	private void useContinue() {
+		logger.debug("Using continnue game!");
 		this.canContinue = false;
 		resetLife();
 		this.delegate.transitToContinue();
