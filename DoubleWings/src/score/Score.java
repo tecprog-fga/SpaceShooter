@@ -5,11 +5,18 @@
 
 package score;
 
+import org.apache.log4j.Logger;
+
+import hud.HudScore;
+
 /**
  * This class represent the increment of score for each destruction meteor. 
  * It's necessary because the feature needs count the final score.
  */
 public class Score {
+	
+	boolean errorOcurred = false;
+	final static Logger logger = Logger.getLogger(Score.class);
 	/**
 	 * This variable store the value of counter.
 	 * It have unlimited.
@@ -23,8 +30,15 @@ public class Score {
 	 * @param score value of player score
 	 */
 	public void increaseScore(ScoreType score) {
-		assert(score != null):("Objeto não foi recebido corretamente!");
-		this.currentScore += score.getValue();
+		try {
+			assert(score != null);
+			this.currentScore += score.getValue();
+		}
+		catch(NullPointerException exception) {
+			logger.error("Score object can't be null!", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 	}
 
 	/**

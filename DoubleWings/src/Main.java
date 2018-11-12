@@ -9,11 +9,15 @@ import constants.WindowConstants;
 import scenes.GameScene;
 import scenes.menu.MenuScene;
 import game.GameController;
+import org.apache.log4j.Logger;
 
 /**
  * This class initialize the game
  */
 public class Main {
+	
+	static boolean errorOcurred = false;
+	final static Logger logger = Logger.getLogger(Main.class);
 		
 	/**
 	 * Main method for execute the game
@@ -21,30 +25,52 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 
-		System.out.println("It's running!");
+		logger.info("Game is running!");
 		
 		/**
 		 * creates the game screen with the default dimensions
 		 */
 		Window gameScreen = null;
-		gameScreen = new Window(WindowConstants.WIDTH,WindowConstants.HEIGHT);
-		assert(gameScreen != null):("Objeto gameScreen não pode ser nulo");
+		try {
+			gameScreen = new Window(WindowConstants.WIDTH,WindowConstants.HEIGHT);
+			assert(gameScreen != null);
+		}
+		catch(NullPointerException exception) {
+			logger.error("GameScreen object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
+		
 		/**
 		 * controls changes in game states
 		 */
 		GameController game = null;
 		game = new GameController();
-		game.keyboard = gameScreen.getKeyboard();
-		assert(game != null):("Objeto game não pode ser nulo");
+		try {
+			game.keyboard = gameScreen.getKeyboard();
+			assert(game != null);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Game object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 
 		/**
 		 * controls the scene changes, the stages of the game
 		 */
 		GameScene scene = null;
 		scene = new MenuScene();
-		game.transitTo(scene);
-		assert(scene != null):("Objeto scene não pode ser nulo");
-
+		try {
+			game.transitTo(scene);
+			assert(scene != null):("Objeto scene não pode ser nulo");
+		}
+		catch(NullPointerException exception) {
+			logger.error("Scene object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
+		
 		boolean gameIsRunning = true;
 		
 		//while the game is open, the screen must be loaded and updated constantly
@@ -57,8 +83,7 @@ public class Main {
 			gameScreen.delay(KEEP_FRAMERATE);
 
 			gameScreen.clear(Color.black);
-			assert(Color.black != null):("Objeto não foi recebido!");
-
+			
 			gameIsRunning = game.update();
 
 			gameScreen.update();

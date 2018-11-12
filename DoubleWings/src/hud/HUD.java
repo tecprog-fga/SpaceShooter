@@ -7,8 +7,13 @@ package hud;
 
 import jplay.Sprite;
 import observer.GameEntityObserver;
+import scenes.GameScene;
+
 import java.awt.Color;
 import java.awt.Font;
+
+import org.apache.log4j.Logger;
+
 import constants.WindowConstants;
 import entity.player.*;
 
@@ -16,6 +21,9 @@ import entity.player.*;
  * Class for all information displayed on the game screen for the player (HUD)
  */
 public class HUD implements GameEntityObserver {
+	
+	boolean errorOcurred = false;
+	final static Logger logger = Logger.getLogger(HUD.class);
 	
 	/**
 	 * creation of the objects that hold the images displayed on the game screen
@@ -51,13 +59,20 @@ public class HUD implements GameEntityObserver {
 	 * @param playerNumberOfLives goes from zero to three, can be changed up
 	 */
 	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
-		// the number of lives must be within the limit established above
-		assert(playerNumberOfLives >= -1):("Número de vidas do jogador deve ser positivo!");
-		if (playerNumberOfLives <= MAX_NUMBER_OF_LIVES && playerNumberOfLives >= MIN_NUMBER_OF_LIVES) {
-			this.numberOfLivesImage.setCurrFrame(playerNumberOfLives);
-		} else {
-			System.out.println("HUD log: Player chances number is out of range.");
-			this.numberOfLivesImage.setCurrFrame(0);
+		try {
+			// the number of lives must be within the limit established above
+			assert(playerNumberOfLives >= -1);
+			if (playerNumberOfLives <= MAX_NUMBER_OF_LIVES && playerNumberOfLives >= MIN_NUMBER_OF_LIVES) {
+				this.numberOfLivesImage.setCurrFrame(playerNumberOfLives);
+			} else {
+				logger.debug("Player chances number is out of range.");
+				this.numberOfLivesImage.setCurrFrame(0);
+			}
+		}
+		catch(IllegalArgumentException exception) {
+			logger.error("Number of player lives must be positive!", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
 		}
 	}
 	
@@ -67,32 +82,59 @@ public class HUD implements GameEntityObserver {
 	public HUD() {
 		// positions the life bar on the screen
 		shieldLifeBar = new Sprite(ENERGY);
-		assert(shieldLifeBar != null):("Objeto shieldLifeBar não pode ser nulo");
-		this.shieldLifeBar.x = WindowConstants.WIDTH/2 - this.shieldLifeBar.width/2;
-		this.shieldLifeBar.y = WindowConstants.HEIGHT - this.shieldLifeBar.height;
+		try {
+			assert(shieldLifeBar != null);
+			this.shieldLifeBar.x = WindowConstants.WIDTH/2 - this.shieldLifeBar.width/2;
+			this.shieldLifeBar.y = WindowConstants.HEIGHT - this.shieldLifeBar.height;
+		}
+		catch(NullPointerException exception) {
+			logger.error("ShieldLifebar object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 		
 		// positions the life bar ornament on the screen
 		shieldLifeBarOrnament = new Sprite(SHIELD_BAR_ORNAMENT);
-		assert(shieldLifeBarOrnament != null):("Objeto shieldLifeBarOrnament não pode ser nulo");
-		this.shieldLifeBarOrnament.x = 0;
-		this.shieldLifeBarOrnament.y = WindowConstants.HEIGHT - this.shieldLifeBarOrnament.height;
+		try {
+			assert(shieldLifeBarOrnament != null);
+			this.shieldLifeBarOrnament.x = 0;
+			this.shieldLifeBarOrnament.y = WindowConstants.HEIGHT - this.shieldLifeBarOrnament.height;
+		}
+		catch(NullPointerException exception) {
+			logger.error("ShieldLifebarOrnament object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 		
 		// positions the number of lives on the screen
 		numberOfLivesImage = new Sprite(LIVES, 4);
-		assert(numberOfLivesImage != null):("Objeto numberOfLivesImage não pode ser nulo");
-		this.numberOfLivesImage.setCurrFrame(3);
-		this.numberOfLivesImage.x = WindowConstants.WIDTH - numberOfLivesImage.width;
-		this.numberOfLivesImage.y = 0;
+		try {
+			assert(numberOfLivesImage != null);
+			this.numberOfLivesImage.setCurrFrame(3);
+			this.numberOfLivesImage.x = WindowConstants.WIDTH - numberOfLivesImage.width;
+			this.numberOfLivesImage.y = 0;
+		}
+		catch(NullPointerException exception) {
+			logger.error("NumberOfLivesImage object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 		
 
 		// formats the score and positions it on the screen
 		scoreText = new HudScore(10, 40);
-		assert(scoreText != null):("Objeto scoreText não pode ser nulo");
-		scoreText.setColor(Color.WHITE);
-		assert(Color.WHITE != null):("Objeto referente a cor não foi recebido!");
-		Font scoreTextFont = new Font("Arial",Font.TRUETYPE_FONT, SCORE_FONT_SIZE);
-		scoreText.setFont(scoreTextFont);
-		scoreText.setScreenScore(0);
+		try {
+			assert(scoreText != null);
+			scoreText.setColor(Color.WHITE);
+			Font scoreTextFont = new Font("Arial",Font.TRUETYPE_FONT, SCORE_FONT_SIZE);
+			scoreText.setFont(scoreTextFont);
+			scoreText.setScreenScore(0);
+		}
+		catch(NullPointerException exception) {
+			logger.error("ScoreText object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 	}
 
 	/**
@@ -111,7 +153,14 @@ public class HUD implements GameEntityObserver {
 	 */
 	public void updateShieldLifeBar(Shield shield) {
 		float shieldLifeBarProportion = ((float)shield.getLife()/(float)shield.maxLife);
-		assert(shieldLifeBarProportion >= 0 && shieldLifeBarProportion <= 1):("Proporção não está sendo calculada corretamente!");
+		try {
+			assert(shieldLifeBarProportion >= 0 && shieldLifeBarProportion <= 1);
+		}
+		catch(IllegalArgumentException exception) {
+			logger.error("Error in proportion calculate!", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 		/**
 		 * creates the life bar with the maximum screen width
 		 */
@@ -127,31 +176,44 @@ public class HUD implements GameEntityObserver {
 	 * @param score the player score at match
 	 */
 	public void updateScoreOnScreen(int score) {
-		scoreText.setScreenScore(score);
-		assert(score >= 0):("Pontuação não pode ser negativa!");
+		try {
+			scoreText.setScreenScore(score);
+			assert(score >= 0);
+		}
+		catch(IllegalArgumentException exception) {
+			logger.error("Score can't be negative!", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 	}
 
 	/**
 	 * Method that shows the updated information of shield on the console
 	 */
 	public void notifyObserver(Object entity) {
-
-		/* should display the log on the console to make it easier
-		 to verify that the shield is working as it should */
-		assert(entity != null):("Objeto não foi recebido corretamente!");
-		if (entity instanceof Shield) {
-			Shield shield = (Shield) entity;
-			assert(shield != null):("Objeto escudo não pode ser nulo!");
-			System.out.println("HUD log: Shield class identified." + shield.getLife() + " " + shield.maxLife);
-			updateShieldLifeBar(shield);
-		} else if (entity instanceof Player) {
-			Player player = (Player) entity;
-			assert(player != null):("Objeto jogador não pode ser nulo!");
-			updateNumberOfLivesOnScreen(player.getChances());
-			updateScoreOnScreen(player.getScore());
-		} else {
-			System.out.println("HUD log: No class identified.");
+		try {
+			/* should display the log on the console to make it easier
+			 to verify that the shield is working as it should */
+			assert(entity != null);
+			if (entity instanceof Shield) {
+				Shield shield = (Shield) entity;
+				assert(shield != null):("Shield object can't be null!");
+				logger.debug("Shield class identified." + shield.getLife() 
+					+ " " + shield.maxLife);
+				updateShieldLifeBar(shield);
+			} else if (entity instanceof Player) {
+				Player player = (Player) entity;
+				assert(player != null):("Player object can't be null!");
+				updateNumberOfLivesOnScreen(player.getChances());
+				updateScoreOnScreen(player.getScore());
+			} else {
+				logger.debug("No class identified.");
+			}
+		}
+		catch(NullPointerException exception) {
+			logger.error("Entity object can't be null!", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
 		}	
 	}
-
 }

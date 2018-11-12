@@ -5,6 +5,8 @@
 
 package commands;
 
+import org.apache.log4j.Logger;
+
 import entity.Enemy;
 import jplay.Sprite;
 
@@ -12,6 +14,9 @@ import jplay.Sprite;
  * class that manages the movements of objects on the screen
  */
 public class MoveCommand implements Command {
+	
+	boolean errorOcurred = false;
+	final static Logger logger = Logger.getLogger(MoveCommand.class);
 	/**
 	 * Distance to enemy movimentation in pixels
 	 */
@@ -29,34 +34,48 @@ public class MoveCommand implements Command {
 	 * @param type type of player input
 	 */
 	public MoveCommand(CommandType type) {
-		assert(type != null):("Objeto type não foi recebido!");
-		this.direction = type;
+		try {
+			assert(type != null);
+			this.direction = type;
+		}
+		catch(NullPointerException exception) {
+			logger.error("Type object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 	}
 	
 	private void moveActor(Sprite actor) {
-		// must move the game object in one of the four main directions
-		assert(actor != null):("Objeto actor não foi recebido!");
-		switch(this.direction) {
-		case LEFT:
-			actor.x -= UNITARY_DISPLACEMENT;
+		try {
+			// must move the game object in one of the four main directions
+			assert(actor != null);
+			switch(this.direction) {
+			case LEFT:
+				actor.x -= UNITARY_DISPLACEMENT;
+				break;
+				
+			case DOWN:
+				actor.y += UNITARY_DISPLACEMENT;
+				break;
+				
+			case RIGHT:
+				actor.x += UNITARY_DISPLACEMENT;
+				break;
+				
+			case UP:
+				actor.y -= UNITARY_DISPLACEMENT;
+				break;
+				
+			default:
+				//nothing to do
+				assert(direction != null):("Direction can't be null!");
 			break;
-			
-		case DOWN:
-			actor.y += UNITARY_DISPLACEMENT;
-			break;
-			
-		case RIGHT:
-			actor.x += UNITARY_DISPLACEMENT;
-			break;
-			
-		case UP:
-			actor.y -= UNITARY_DISPLACEMENT;
-			break;
-			
-		default:
-			//nothing to do
-			assert(direction != null):("Direcão não foi recebida!");
-		break;
+			}
+		}
+		catch(NullPointerException exception) {
+			logger.error("Actor object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
 		}
 	}
 	
@@ -66,15 +85,24 @@ public class MoveCommand implements Command {
 	 */ 
 	public boolean executeDisplacement(Sprite actor) {
 		
-		// the actor must move on the screen for a distance 
-		assert(actor != null):("Objeto actor não foi recebido!");
-		if (this.distanceToMove > 0) {
-			moveActor(actor);
-			this.distanceToMove -= UNITARY_DISPLACEMENT;
-			return false;
-		} else {
-			return true;
+		boolean displacement = false;
+		try {
+			// the actor must move on the screen for a distance 
+			assert(actor != null);
+			if (this.distanceToMove > 0) {
+				moveActor(actor);
+				this.distanceToMove -= UNITARY_DISPLACEMENT;
+				displacement = false;
+			} else {
+				displacement = true;
+			}
 		}
+		catch(NullPointerException exception) {
+			logger.error("Actor object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
+			return displacement;
 	}
 
 	/**
@@ -83,22 +111,25 @@ public class MoveCommand implements Command {
 	 * @return true if movement is completed, false otherwise. 
 	 */
 	public boolean executeDisplacement(Sprite[] actors) {
-		// actors must move on the screen for a distance limit
-		assert(actors != null):("Vetor de objetos actors não foi recebido!");
-		if (this.distanceToMove > 0) {
-			for(Sprite actor: actors) {
-				moveActor(actor);
-			}
-			this.distanceToMove -= UNITARY_DISPLACEMENT;
-			return false;
-		} else {
-			return true;
-		  }
+		boolean displacement = false;
+		try {
+			// actors must move on the screen for a distance limit
+			assert(actors != null);
+			if (this.distanceToMove > 0) {
+				for(Sprite actor: actors) {
+					moveActor(actor);
+				}
+				this.distanceToMove -= UNITARY_DISPLACEMENT;
+				displacement = false;
+			} else {
+				displacement = true;
+			  }
+		}
+		catch(NullPointerException exception) {
+			logger.error("Actor object array can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
+		return displacement;
 	}
-
-	/**
-	 * move the actor across the screen
-	 * @param actor object that will be moved by the screen
-	 */
-
 }
