@@ -127,4 +127,1200 @@
  12-11-2018 08:08:05 DEBUG Shield:77 - Enemy hitted
  12-11-2018 08:08:06 DEBUG Player:135 - Player's lives: -1
  12-11-2018 08:08:06 DEBUG Player:167 - Lost the game!
+ 12-11-2018 08:41:04 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 08:41:07 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:41:09 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:41:10 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:41:15 DEBUG Player:135 - Player's lives: 2
+ 12-11-2018 08:41:15 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 08:41:15 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 08:41:22 DEBUG Player:135 - Player's lives: 1
+ 12-11-2018 08:41:22 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 08:41:32 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:47:07 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:47:07 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:47:08 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:48:13 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:48:14 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:48:16 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:48:50 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:48:54 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:48:56 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:49:28 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:49:31 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:49:35 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:05:37 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:05:37 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:05:38 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:05:39 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:05:41 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:05:45 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 10:05:55 DEBUG Player:135 - Player's lives: 2
+ 12-11-2018 10:05:55 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 10:05:55 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:05:57 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 10:05:58 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:06:01 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:06:07 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:06:31 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:06:49 DEBUG Player:135 - Player's lives: 1
+ 12-11-2018 10:06:49 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 10:07:01 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 10:07:19 DEBUG Player:135 - Player's lives: 0
+ 12-11-2018 10:07:19 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 10:07:20 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 10:07:24 DEBUG Player:135 - Player's lives: -1
+ 12-11-2018 10:07:24 DEBUG Player:167 - Lost the game!
+ 12-11-2018 10:07:24 DEBUG Player:193 - Using continnue game!
+ 12-11-2018 10:07:24 DEBUG Player:151 - Player's initial lives reset to: 3
+ 12-11-2018 10:07:24 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 10:11:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:12 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:11:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:13 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:13 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:11:13 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:13 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:13 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:13 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:13 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:13 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:13 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:13 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:14 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:14 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:14 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:14 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:14 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:14 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:11:14 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:40 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:40 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:41 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:41 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:41 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:41 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:41 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:41 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:41 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:29:41 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:41 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:41 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:41 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:29:41 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:29:42 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:42 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:42 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:42 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:42 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:29:42 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:42 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:42 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:42 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:42 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:42 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:43 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:43 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:43 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:43 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:43 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:43 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:43 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:43 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:43 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:44 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:44 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:44 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:44 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:44 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:29:44 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:44 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:44 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:44 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:44 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:44 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:45 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:45 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:29:45 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:45 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:45 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:45 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:45 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:45 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:45 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:45 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:46 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:46 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:46 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:46 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:46 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:46 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:46 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:29:46 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:46 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:46 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:47 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:47 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:47 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:47 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:47 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:47 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:47 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:47 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:47 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:29:47 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:47 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:48 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:48 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:48 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:48 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:48 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:48 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:48 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:48 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:48 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:49 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:49 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:49 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:49 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:49 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:49 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:49 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:49 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:49 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:49 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:50 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:50 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:50 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:50 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:50 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:50 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:50 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:50 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:50 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:50 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:51 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:51 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:29:51 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:35:58 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:35:59 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:35:59 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:35:59 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:35:59 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:35:59 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:35:59 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:35:59 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:35:59 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:35:59 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:35:59 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:35:59 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:35:59 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:00 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:00 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:00 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:00 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:00 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:00 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:00 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:00 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:00 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:01 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:01 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:01 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:01 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:01 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:02 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:02 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:02 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:02 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:02 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:02 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:02 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:02 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:02 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:02 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:03 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:03 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:03 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:03 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:03 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:03 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:03 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:03 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:03 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:04 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:04 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:04 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:04 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:04 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:04 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:04 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:04 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:04 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:04 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:05 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:06 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:36:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:06 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:07 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:36:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:07 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:36:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:07 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:08 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:08 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:08 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:08 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:08 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:08 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:08 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:36:08 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:08 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:08 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:08 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:09 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:09 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:09 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:09 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:09 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:09 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:09 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:09 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:09 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:09 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:10 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:11 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:12 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:36:13 DEBUG Bullet:46 - Shot
+ 12-11-2018 10:37:27 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:27 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:27 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:27 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:27 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:27 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:28 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:28 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:28 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:28 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:28 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:28 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:28 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:28 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:28 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:37:28 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:29 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:29 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:29 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:29 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:29 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:29 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:29 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:29 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:29 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:29 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:30 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:30 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:30 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:30 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:30 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:30 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:30 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:37:30 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:30 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:37:30 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:30 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:31 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:31 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:31 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:31 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:31 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:31 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:31 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:31 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:31 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:32 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:32 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:32 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:32 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:32 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:32 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:32 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:32 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:32 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:32 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:33 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:33 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:33 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:33 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:33 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:33 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:33 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:33 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:33 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:34 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:37:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:37:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:03 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:03 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:03 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:03 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:03 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:03 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:03 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:42:03 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:04 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:04 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:04 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:04 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:04 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:04 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:04 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:04 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:04 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:04 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:05 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:05 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:05 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:05 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:05 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:05 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:05 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:05 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:05 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:06 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:06 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:06 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:06 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:06 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:06 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:06 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:06 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:06 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:07 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:07 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:07 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:07 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:07 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:07 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:07 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:07 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:07 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:07 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:08 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:08 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:08 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:08 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:08 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:08 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:08 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:08 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:08 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:09 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:09 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:09 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:09 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:09 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:42:09 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:09 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:42:09 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:34 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 12-11-2018 10:50:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 12-11-2018 10:50:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:35 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:36 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 12-11-2018 10:50:37 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:37 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:38 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:38 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 12-11-2018 10:50:39 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:39 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:40 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 12-11-2018 10:50:41 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:41 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:41 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:42 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:42 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:43 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:43 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:44 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 12-11-2018 10:50:45 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:45 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 12-11-2018 10:50:46 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 12-11-2018 10:50:46 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEvolver:89 - GameEvent Callback: Recursive script
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:46 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:47 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 12-11-2018 10:50:47 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:47 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:47 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:48 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:48 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:49 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 12-11-2018 10:50:50 DEBUG Player:101 - Incriased score
+ 12-11-2018 10:50:50 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:50 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 12-11-2018 10:50:51 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG Bullet:29 - Shot
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 12-11-2018 10:50:51 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
  

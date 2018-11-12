@@ -160,14 +160,6 @@ public class World {
 		this.evolver.add(event);
 	}
 	
-	/**
-	 * GameEvent facade
-	 * @param callback
-	 * @param time
-	 * @param type
-	 * @param name
-	 * @return
-	 */
 	private GameEvent createNewEvent(GameEventCallback callback, int time, int type, String name){
 		GameEvent event = new GameEvent();
 		event.setCallback(callback);

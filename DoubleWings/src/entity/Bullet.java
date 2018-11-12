@@ -5,6 +5,9 @@
 
 package entity;
 
+
+import org.apache.log4j.Logger;
+
 import entity.player.PlayerSpaceship;
 
 /**
@@ -13,6 +16,8 @@ import entity.player.PlayerSpaceship;
  */
 public class Bullet extends GameEntity {
 		
+	private static Logger logger = Logger.getLogger(Bullet.class);
+	
 	//spaceship bullet sprite
 	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png"; 
 	/**
@@ -21,8 +26,10 @@ public class Bullet extends GameEntity {
 	public Bullet() {
 		super(IMAGE_BULLET);
 		assert(IMAGE_BULLET != null): ("Sprite of the bullet is null");
+		logger.debug("Shot");
 	}
 	
+
 	public GameEntity owner = null;
 	private int bulletTrajectory;
 	private Integer horizontalCorrection;
