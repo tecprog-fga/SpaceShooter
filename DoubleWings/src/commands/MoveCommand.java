@@ -45,40 +45,6 @@ public class MoveCommand implements Command {
 		}
 	}
 	
-	private void moveActor(Sprite actor) {
-		try {
-			// must move the game object in one of the four main directions
-			assert(actor != null);
-			switch(this.direction) {
-			case LEFT:
-				actor.x -= UNITARY_DISPLACEMENT;
-				break;
-				
-			case DOWN:
-				actor.y += UNITARY_DISPLACEMENT;
-				break;
-				
-			case RIGHT:
-				actor.x += UNITARY_DISPLACEMENT;
-				break;
-				
-			case UP:
-				actor.y -= UNITARY_DISPLACEMENT;
-				break;
-				
-			default:
-				//nothing to do
-				assert(direction != null):("Direction can't be null!");
-			break;
-			}
-		}
-		catch(NullPointerException exception) {
-			logger.error("Actor object can't be null", exception);
-			exception.printStackTrace();
-			errorOcurred = true;
-		}
-	}
-	
 	/**
 	 * performs the displacement of the actor
 	 * @param actor the actor
@@ -131,5 +97,39 @@ public class MoveCommand implements Command {
 			errorOcurred = true;
 		}
 		return displacement;
+	}
+	
+	private void moveActor(Sprite actor) {
+		try {
+			// must move the game object in one of the four main directions
+			assert(actor != null);
+			switch(this.direction) {
+			case LEFT:
+				actor.x -= UNITARY_DISPLACEMENT;
+				break;
+				
+			case DOWN:
+				actor.y += UNITARY_DISPLACEMENT;
+				break;
+				
+			case RIGHT:
+				actor.x += UNITARY_DISPLACEMENT;
+				break;
+				
+			case UP:
+				actor.y -= UNITARY_DISPLACEMENT;
+				break;
+				
+			default:
+				//nothing to do
+				assert(direction != null):("Direction can't be null!");
+			break;
+			}
+		}
+		catch(NullPointerException exception) {
+			logger.error("Actor object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 	}
 }

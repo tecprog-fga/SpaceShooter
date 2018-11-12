@@ -25,14 +25,6 @@ public class HUD implements GameEntityObserver {
 	boolean errorOcurred = false;
 	final static Logger logger = Logger.getLogger(HUD.class);
 	
-	/**
-	 * creation of the objects that hold the images displayed on the game screen
-	 */
-	private Sprite shieldLifeBar = null;
-	private Sprite shieldLifeBarOrnament = null;
-	private Sprite numberOfLivesImage = null;
-	private HudScore scoreText = null;
-	
 	// path of shield, shield ornament and lives images
 	final String ENERGY = "src/assets/img/hud/energy.png"; { //$NON-NLS-1$
 	assert(ENERGY != null):("Sprite de barra de vida não foi achada corretamente!");
@@ -47,6 +39,14 @@ public class HUD implements GameEntityObserver {
 	assert(SCORE_FONT_SIZE >= 20):("A fonte do score está muito pequena!");
 	assert(SCORE_FONT_SIZE <= 80):("A fonte do score está muito grande!");
 	}
+	
+	/**
+	 * creation of the objects that hold the images displayed on the game screen
+	 */
+	private Sprite shieldLifeBar = null;
+	private Sprite shieldLifeBarOrnament = null;
+	private Sprite numberOfLivesImage = null;
+	private HudScore scoreText = null;
 	
 	/**
 	 * number of player lives can not be negative
@@ -138,16 +138,6 @@ public class HUD implements GameEntityObserver {
 	}
 
 	/**
-	 * Method that draws the HUD information on the screen
-	 */
-	public void draw() {
-		shieldLifeBar.draw();
-		shieldLifeBarOrnament.draw();
-		numberOfLivesImage.draw();
-		scoreText.draw();
-	}
-
-	/**
 	 * Method that updates the shield life bar
 	 * @param shield object of class shield
 	 */
@@ -215,5 +205,15 @@ public class HUD implements GameEntityObserver {
 			exception.printStackTrace();
 			errorOcurred = true;
 		}	
+	}
+	
+	/**
+	 * Method that draws the HUD information on the screen
+	 */
+	public void draw() {
+		shieldLifeBar.draw();
+		shieldLifeBarOrnament.draw();
+		numberOfLivesImage.draw();
+		scoreText.draw();
 	}
 }
