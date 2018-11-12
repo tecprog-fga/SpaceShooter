@@ -21,6 +21,7 @@ import scenes.GameOver;
 import scenes.GameScene;
 import game.evolver.GameEvent;
 import game.evolver.GameEventCallback;
+import org.apache.log4j.Logger;
 
 /**
  * This class is responsible to create the scenario, 
@@ -30,27 +31,39 @@ import game.evolver.GameEventCallback;
 public class FirstStage extends GameScene implements GameEventCallback, PlayerSceneDelegate {
 
 	private World gameWorld = null;
+	
+	boolean errorOccurred = false;
+	
+	final static Logger logger = Logger.getLogger(FirstStage.class);
 
 	// This method set the keys to control the spaceship and configure the entities
 	@Override
 	public void buildInitialScene() {
 
-		gameWorld = new World();
-		assert(gameWorld != null):("gameWorld cannot be null");
+		try {
+			gameWorld = new World();
+			assert(gameWorld != null):("gameWorld cannot be null");
+			
+			gameWorld.keyboard = this.keyboard;
+			assert(gameWorld.keyboard != null):("keyboard cannot be null");
+
+			// Configuring the up and down keys for player one and for player two	
+			keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_EVERY_PRESS);
+			keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_EVERY_PRESS);
+			keyboard.setBehavior(Keyboard.SPACE_KEY, Keyboard.DETECT_EVERY_PRESS);
+
+			keyboard.addKey(KeyEvent.VK_A, Keyboard.DETECT_EVERY_PRESS);
+			keyboard.addKey(KeyEvent.VK_S, Keyboard.DETECT_EVERY_PRESS);
+			keyboard.addKey(KeyEvent.VK_D, Keyboard.DETECT_EVERY_PRESS);
+			keyboard.addKey(KeyEvent.VK_W, Keyboard.DETECT_EVERY_PRESS);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, gameWorld cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 		
-		gameWorld.keyboard = this.keyboard;
-		assert(gameWorld.keyboard != null):("keyboard cannot be null");
-
-		// Configuring the up and down keys for player one and for player two	
-		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_EVERY_PRESS);
-		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_EVERY_PRESS);
-		keyboard.setBehavior(Keyboard.SPACE_KEY, Keyboard.DETECT_EVERY_PRESS);
-
-		keyboard.addKey(KeyEvent.VK_A, Keyboard.DETECT_EVERY_PRESS);
-		keyboard.addKey(KeyEvent.VK_S, Keyboard.DETECT_EVERY_PRESS);
-		keyboard.addKey(KeyEvent.VK_D, Keyboard.DETECT_EVERY_PRESS);
-		keyboard.addKey(KeyEvent.VK_W, Keyboard.DETECT_EVERY_PRESS);
-
 		configureEntities();
 
 		// Creating commands and configuring events that will be added
@@ -67,19 +80,27 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; 
 		final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; 
 		
-		// Creation a object to class Parallax
-		parallaxEffect = new Parallax();
-		assert(parallaxEffect != null):("parallaxEffect cannot be null");
+		try {
+			// Creation a object to class Parallax
+			parallaxEffect = new Parallax();
+			assert(parallaxEffect != null):("parallaxEffect cannot be null");
 
-		// The first one added will be the last one to be painted.
-		parallaxEffect.add(LAYER0_PATH);
-		parallaxEffect.add(LAYER1_PATH);
-		parallaxEffect.add(LAYER2_PATH);
+			// The first one added will be the last one to be painted.
+			parallaxEffect.add(LAYER0_PATH);
+			parallaxEffect.add(LAYER1_PATH);
+			parallaxEffect.add(LAYER2_PATH);
 
-		// Set the transition's speed of the layers
-		parallaxEffect.getLayer(0).setVelY(0.5);
-		parallaxEffect.getLayer(1).setVelY(4.5);
-		parallaxEffect.getLayer(2).setVelY(5);
+			// Set the transition's speed of the layers
+			parallaxEffect.getLayer(0).setVelY(0.5);
+			parallaxEffect.getLayer(1).setVelY(4.5);
+			parallaxEffect.getLayer(2).setVelY(5);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, parallaxEffect cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 	
 	// This method creates the spaceship and its configuration
@@ -89,14 +110,21 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		PlayerSpaceship spaceship = null;
 
 		spaceship = player.getSpaceship();
-
 		spaceship.gameWorld = this.gameWorld;
-		assert(spaceship != null):("spaceship cannot be null");
-		spaceship.setKeySet(Keyboard.UP_KEY, Keyboard.DOWN_KEY, Keyboard.RIGHT_KEY, Keyboard.LEFT_KEY,
-				Keyboard.SPACE_KEY);
+		try {
+			assert(spaceship != null):("spaceship cannot be null");
+			spaceship.setKeySet(Keyboard.UP_KEY, Keyboard.DOWN_KEY, Keyboard.RIGHT_KEY, Keyboard.LEFT_KEY,
+					Keyboard.SPACE_KEY);
 
-		gameWorld.add(spaceship);
-		gameWorld.add(spaceship.getShield());
+			gameWorld.add(spaceship);
+			gameWorld.add(spaceship.getShield());
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, spaceship cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 
 	// This method updates the parallax, updates and draw all entities added in the game
