@@ -48,6 +48,9 @@ public class GameEntity extends Sprite {
 		}
 	}
 	
+	//eliminates entity(asteroids) not hit by the ship when they reach the limit
+	private static final double ENTITYLIMIT = 1000;
+	
 	/* 
 	 * resurgence of the instance if it reaches the limit
 	 * (non-Javadoc)
@@ -113,15 +116,7 @@ public class GameEntity extends Sprite {
 	public boolean isCollidable = true;
 	public World gameWorld = null;
 	
-	/**
-	 * eliminates entity(asteroids) not hit by 
-	 * the ship when they reach the limit 
-	 */
-	private static final double ENTITYLIMIT = 1000;
-	
-	/**
-	 * elimination of the entity 
-	 */
+	//elimination of the entity
 	private void die(){
 		isDead = true;
 	}

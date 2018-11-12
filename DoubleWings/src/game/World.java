@@ -69,21 +69,15 @@ public class World {
 				}
 			}
 			
-			/*
-			 * draw and update all objects
-			 */
+			//draw and update all objects
 			obj1.draw();
 			obj1.update();
 			
-			/*
-			 * update object position
-			 */
+			//update object position
 			obj1.x += obj1.velx;
 			obj1.y += obj1.vely;
 			
-			/**
-			 * check if entity is dead
-			 */
+			//check if entity is dead
 			if (obj1.isDead()) {
 				deadObjs.add(obj1);
 			}

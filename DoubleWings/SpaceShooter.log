@@ -84,4 +84,47 @@
  11-11-2018 15:10:38 DEBUG Player:125 - Player's lives: 1
  11-11-2018 15:10:38 DEBUG Player:174 - Reseting spaceship's position!
  11-11-2018 15:10:38 DEBUG Shield:77 - Enemy hitted
+ 11-11-2018 18:49:17 DEBUG Player:101 - Incriased score
+ 11-11-2018 18:49:18 DEBUG Player:101 - Incriased score
+ 11-11-2018 18:49:20 DEBUG Player:101 - Incriased score
+ 11-11-2018 18:49:20 DEBUG Player:101 - Incriased score
+ 11-11-2018 18:49:20 DEBUG Player:101 - Incriased score
+ 12-11-2018 04:50:18 DEBUG Player:101 - Incriased score
+ 12-11-2018 07:56:11 DEBUG Player:101 - Incriased score
+ 12-11-2018 07:56:15 DEBUG Player:101 - Incriased score
+ 12-11-2018 07:56:16 DEBUG Player:101 - Incriased score
+ 12-11-2018 07:56:17 DEBUG Player:101 - Incriased score
+ 12-11-2018 07:56:26 DEBUG Player:101 - Incriased score
+ 12-11-2018 07:56:27 DEBUG Player:101 - Incriased score
+ 12-11-2018 07:56:31 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:07:41 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:07:41 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:07:42 DEBUG Player:101 - Incriased score
+ 12-11-2018 08:07:43 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 08:07:46 DEBUG Player:135 - Player's lives: 2
+ 12-11-2018 08:07:46 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 08:07:47 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 08:07:49 DEBUG Player:135 - Player's lives: 1
+ 12-11-2018 08:07:49 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 08:07:50 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 08:07:52 DEBUG Player:135 - Player's lives: 0
+ 12-11-2018 08:07:52 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 08:07:53 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 08:07:55 DEBUG Player:135 - Player's lives: -1
+ 12-11-2018 08:07:55 DEBUG Player:167 - Lost the game!
+ 12-11-2018 08:07:55 DEBUG Player:193 - Using continnue game!
+ 12-11-2018 08:07:55 DEBUG Player:151 - Player's initial lives reset to: 3
+ 12-11-2018 08:07:55 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 08:07:57 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 08:07:58 DEBUG Player:135 - Player's lives: 2
+ 12-11-2018 08:07:58 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 08:07:58 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 08:07:59 DEBUG Player:135 - Player's lives: 1
+ 12-11-2018 08:07:59 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 08:08:03 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 08:08:04 DEBUG Player:135 - Player's lives: 0
+ 12-11-2018 08:08:04 DEBUG Player:185 - Reseting spaceship's position!
+ 12-11-2018 08:08:05 DEBUG Shield:77 - Enemy hitted
+ 12-11-2018 08:08:06 DEBUG Player:135 - Player's lives: -1
+ 12-11-2018 08:08:06 DEBUG Player:167 - Lost the game!
  
