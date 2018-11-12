@@ -21,6 +21,7 @@ import scenes.GameOver;
 import scenes.GameScene;
 import game.evolver.GameEvent;
 import game.evolver.GameEventCallback;
+import org.apache.log4j.Logger;
 
 /**
  * This class is responsible to create the scenario, 
@@ -30,27 +31,39 @@ import game.evolver.GameEventCallback;
 public class FirstStage extends GameScene implements GameEventCallback, PlayerSceneDelegate {
 
 	private World gameWorld = null;
+	
+	boolean errorOccurred = false;
+	
+	final static Logger logger = Logger.getLogger(FirstStage.class);
 
 	// This method set the keys to control the spaceship and configure the entities
 	@Override
 	public void buildInitialScene() {
 
-		gameWorld = new World();
-		assert(gameWorld != null):("gameWorld cannot be null");
+		try {
+			gameWorld = new World();
+			assert(gameWorld != null):("gameWorld cannot be null");
+			
+			gameWorld.keyboard = this.keyboard;
+			assert(gameWorld.keyboard != null):("keyboard cannot be null");
+
+			// Configuring the up and down keys for player one and for player two	
+			keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_EVERY_PRESS);
+			keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_EVERY_PRESS);
+			keyboard.setBehavior(Keyboard.SPACE_KEY, Keyboard.DETECT_EVERY_PRESS);
+
+			keyboard.addKey(KeyEvent.VK_A, Keyboard.DETECT_EVERY_PRESS);
+			keyboard.addKey(KeyEvent.VK_S, Keyboard.DETECT_EVERY_PRESS);
+			keyboard.addKey(KeyEvent.VK_D, Keyboard.DETECT_EVERY_PRESS);
+			keyboard.addKey(KeyEvent.VK_W, Keyboard.DETECT_EVERY_PRESS);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, gameWorld cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 		
-		gameWorld.keyboard = this.keyboard;
-		assert(gameWorld.keyboard != null):("keyboard cannot be null");
-
-		// Configuring the up and down keys for player one and for player two	
-		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_EVERY_PRESS);
-		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_EVERY_PRESS);
-		keyboard.setBehavior(Keyboard.SPACE_KEY, Keyboard.DETECT_EVERY_PRESS);
-
-		keyboard.addKey(KeyEvent.VK_A, Keyboard.DETECT_EVERY_PRESS);
-		keyboard.addKey(KeyEvent.VK_S, Keyboard.DETECT_EVERY_PRESS);
-		keyboard.addKey(KeyEvent.VK_D, Keyboard.DETECT_EVERY_PRESS);
-		keyboard.addKey(KeyEvent.VK_W, Keyboard.DETECT_EVERY_PRESS);
-
 		configureEntities();
 
 		// Creating commands and configuring events that will be added
@@ -67,19 +80,146 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		final String LAYER1_PATH = "src/assets/img/background_layer_1.png"; 
 		final String LAYER2_PATH = "src/assets/img/background_layer_2.png"; 
 		
-		// Creation a object to class Parallax
-		parallaxEffect = new Parallax();
-		assert(parallaxEffect != null):("parallaxEffect cannot be null");
+		try {
+			// Creation a object to class Parallax
+			parallaxEffect = new Parallax();
+			assert(parallaxEffect != null):("parallaxEffect cannot be null");
 
-		// The first one added will be the last one to be painted.
-		parallaxEffect.add(LAYER0_PATH);
-		parallaxEffect.add(LAYER1_PATH);
-		parallaxEffect.add(LAYER2_PATH);
+			// The first one added will be the last one to be painted.
+			parallaxEffect.add(LAYER0_PATH);
+			parallaxEffect.add(LAYER1_PATH);
+			parallaxEffect.add(LAYER2_PATH);
 
-		// Set the transition's speed of the layers
-		parallaxEffect.getLayer(0).setVelY(0.5);
-		parallaxEffect.getLayer(1).setVelY(4.5);
-		parallaxEffect.getLayer(2).setVelY(5);
+			// Set the transition's speed of the layers
+			parallaxEffect.getLayer(0).setVelY(0.5);
+			parallaxEffect.getLayer(1).setVelY(4.5);
+			parallaxEffect.getLayer(2).setVelY(5);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, parallaxEffect cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+	}
+	
+	// This method creates the spaceship and its configuration
+	public void createSpaceShip() {
+
+		// Creating player sprite
+		PlayerSpaceship spaceship = null;
+
+		spaceship = player.getSpaceship();
+		spaceship.gameWorld = this.gameWorld;
+		try {
+			assert(spaceship != null):("spaceship cannot be null");
+			spaceship.setKeySet(Keyboard.UP_KEY, Keyboard.DOWN_KEY, Keyboard.RIGHT_KEY, Keyboard.LEFT_KEY,
+					Keyboard.SPACE_KEY);
+
+			gameWorld.add(spaceship);
+			gameWorld.add(spaceship.getShield());
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, spaceship cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+	}
+
+	// This method updates the parallax, updates and draw all entities added in the game
+	@Override
+	public void updateScene() {
+
+		updateParalax();
+
+		gameWorld.update(); // Updates and draw all entities added in game world
+		hud.draw(); // Draw all HUD elements
+
+		executeAsteroidCommand();
+	}
+
+	/**
+	 * The method below is responsible for maintaining infinite 
+	 * repetition of the layers 
+	 */
+
+	public void updateParalax() {
+
+		// Print all layers that have been added
+		parallaxEffect.drawLayers();
+
+		final int PIXELS_DOWN = 800;
+		final int PIXELS_SIDES = 600;
+
+		parallaxEffect.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
+
+		// Move the parallax orientation vertically
+		parallaxEffect.moveLayersStandardY(false);
+	}
+	
+	/**
+	 * This method creates the asteroids and its configuration
+	 * @param velY
+	 */
+	public void createAsteroid(double velY) {
+		
+		Enemy asteroid = null;
+
+		asteroid = this.gameWorld.createEnemy();
+		asteroid.loadImage(ASTEROID_PATH);
+		assert(asteroid != null):("asteroid cannot be null");
+		
+		asteroid.setLife(LIFES);
+		asteroid.x = Math.random() * (WindowConstants.WIDTH - asteroid.width * 2) + asteroid.width;
+		asteroid.y = -200;
+		asteroid.vely = velY;
+
+		gameWorld.add(asteroid);
+	}
+
+	private Enemy asteroid1 = null; //declaring an asteroid of the type enemy
+
+	// This method sets the asteroids in the scenario and its initial position 
+	public void createTestAsteroid() {
+		
+		asteroid1 = new Enemy(ASTEROID_PATH);
+		assert(asteroid1 != null):("asteroid1 cannot be null");
+		
+		asteroid1.setLife(LIFES);
+		asteroid1.x = WindowConstants.WIDTH / 2 - asteroid1.width / 2;
+		asteroid1.y = 0;
+		asteroid1.vely = 2.0;
+
+		gameWorld.add(asteroid1);
+	}
+
+	private int commandCount = 0;
+
+	public final static int MAX_COMMANDS = 50;
+
+	public void executeAsteroidCommand() {
+
+		// Asteroid command execute
+		commandCount += 1;
+
+		if (commandCount >= MAX_COMMANDS && commands.size() > 0) {
+
+			currentCommand = commands.remove(commands.size() - 1); // return removed object
+
+			commandCount = 0;
+		}
+		else {
+			//Nothing to do
+		}
+
+		if (currentCommand != null) {
+			
+			currentCommand.executeDisplacement(asteroid1);
+		}
+		else {
+			//Nothing to do
+		}
 	}
 
 	private ArrayList<Command> commands = null;
@@ -131,120 +271,10 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		createTestAsteroid();
 	}
 
-	// This method creates the spaceship and its configuration
-	public void createSpaceShip() {
-		
-		// Creating player sprite
-		PlayerSpaceship spaceship = null;
-		
-		spaceship = player.getSpaceship();
-
-		spaceship.gameWorld = this.gameWorld;
-		assert(spaceship != null):("spaceship cannot be null");
-		spaceship.setKeySet(Keyboard.UP_KEY, Keyboard.DOWN_KEY, Keyboard.RIGHT_KEY, Keyboard.LEFT_KEY,
-				Keyboard.SPACE_KEY);
-
-		gameWorld.add(spaceship);
-		gameWorld.add(spaceship.getShield());
-	}
-
 	public final static int LIFES = 10;
 	final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //Declaring constant with asteroid path
 
-	/**
-	 * This method creates the asteroids and its configuration
-	 * @param velY
-	 */
-	public void createAsteroid(double velY) {
-		
-		Enemy asteroid = null;
-
-		asteroid = this.gameWorld.createEnemy();
-		asteroid.loadImage(ASTEROID_PATH);
-		assert(asteroid != null):("asteroid cannot be null");
-		
-		asteroid.setLife(LIFES);
-		asteroid.x = Math.random() * (WindowConstants.WIDTH - asteroid.width * 2) + asteroid.width;
-		asteroid.y = -200;
-		asteroid.vely = velY;
-
-		gameWorld.add(asteroid);
-	}
-
-	private Enemy asteroid1 = null; //declaring an asteroid of the type enemy
-
-	// This method sets the asteroids in the scenario and its initial position 
-	public void createTestAsteroid() {
-		
-		asteroid1 = new Enemy(ASTEROID_PATH);
-		assert(asteroid1 != null):("asteroid1 cannot be null");
-		
-		asteroid1.setLife(LIFES);
-		asteroid1.x = WindowConstants.WIDTH / 2 - asteroid1.width / 2;
-		asteroid1.y = 0;
-		asteroid1.vely = 2.0;
-
-		gameWorld.add(asteroid1);
-	}
-
-	// This method updates the parallax, updates and draw all entities added in the game
-	@Override
-	public void updateScene() {
-		
-		updateParalax();
-
-		gameWorld.update(); // Updates and draw all entities added in game world
-		hud.draw(); // Draw all HUD elements
-
-		executeAsteroidCommand();
-	}
-
-	/**
-	 * The method below is responsible for maintaining infinite 
-	 * repetition of the layers 
-	 */
 	
-	public void updateParalax() {
-		
-		// Print all layers that have been added
-		parallaxEffect.drawLayers();
-
-		final int PIXELS_DOWN = 800;
-		final int PIXELS_SIDES = 600;
-
-		parallaxEffect.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
-
-		// Move the parallax orientation vertically
-		parallaxEffect.moveLayersStandardY(false);
-	}
-
-	private int commandCount = 0;
-
-	public final static int MAX_COMMANDS = 50;
-
-	public void executeAsteroidCommand() {
-
-		// Asteroid command execute
-		commandCount += 1;
-
-		if (commandCount >= MAX_COMMANDS && commands.size() > 0) {
-
-			currentCommand = commands.remove(commands.size() - 1); // return removed object
-
-			commandCount = 0;
-		}
-		else {
-			//Nothing to do
-		}
-
-		if (currentCommand != null) {
-			
-			currentCommand.executeDisplacement(asteroid1);
-		}
-		else {
-			//Nothing to do
-		}
-	}
 	
 	// Callback event handler. Adding different events for each case
 	@Override

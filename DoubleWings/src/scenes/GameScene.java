@@ -7,6 +7,7 @@ package scenes;
 
 import game.GameController;
 import jplay.Keyboard;
+import org.apache.log4j.Logger;
 
 /**
  * This class build the game main scene and 
@@ -22,6 +23,11 @@ public abstract class GameScene {
 		
 	// Object for control keyboard game
 	protected Keyboard keyboard = null;
+	
+	boolean errorOcurred = false;
+	
+	// Object to set the log for this class
+	final static Logger logger = Logger.getLogger(GameScene.class);
 
 	/**
 	 * This method Configure the controls in the keyboard and
@@ -30,11 +36,19 @@ public abstract class GameScene {
 	 */
 	public void configureGameScene(GameController game) {
 		
-		this.game = game;
-		assert(this.game != null):("Game cannot be null");
-		
-		this.keyboard = game.keyboard;
-		assert(this.keyboard != null):("Keyboard cannot be null");
+		try {
+			this.game = game;
+			assert(this.game != null):("Game cannot be null");
+			
+			this.keyboard = game.keyboard;
+			assert(this.keyboard != null):("Keyboard cannot be null");
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, game cannot set value", exception);
+			
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 		
 		final String MSG_KEYBOARD = "keyboard: ";
 		System.out.println(MSG_KEYBOARD + this.keyboard); 
