@@ -74,43 +74,6 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		buildWaitScene();
 	}
 
-	private void transitErrorScene() {
-		GameScene errorScene = new ErrorScene();
-		this.game.transitTo(errorScene);
-	}
-
-	//This void method build all sprites for show scenes of class 
-	protected void viewSetup() {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * This method build the scene of waiting countdown
-	 */
-	private void buildWaitScene(){
-		
-		//This object is necessary for schedule at fixed rate.
-		Timer timer = null;
-		timer = new Timer();
-
-		//This object is necessary for delegate action for count down.
-		CountDownTimer countDown = null;
-		countDown = new CountDownTimer();
-		//This constant is value of time for delay on schedule. Unit of measure: Miliseconds
-		final int DELAY = 1000;
-		try {
-			assert(countDown != null);
-			//Delegate action for count down to execute
-			countDown.delegateAction = this;
-			timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
-		}
-		catch(NullPointerException exception) {
-			logger.error("Null returned, countDown dont should be null", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}
-	}
-
 	//Build the update image of sprite on screen
 	public void updateScene() {
 		if(!errorOccurred) {
@@ -154,4 +117,40 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		//Nothing to do
 	}
 
+	//This void method build all sprites for show scenes of class 
+	protected void viewSetup() {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * This method build the scene of waiting countdown
+	 */
+	private void buildWaitScene(){
+		
+		//This object is necessary for schedule at fixed rate.
+		Timer timer = null;
+		timer = new Timer();
+
+		//This object is necessary for delegate action for count down.
+		CountDownTimer countDown = null;
+		countDown = new CountDownTimer();
+		//This constant is value of time for delay on schedule. Unit of measure: Miliseconds
+		final int DELAY = 1000;
+		try {
+			assert(countDown != null);
+			//Delegate action for count down to execute
+			countDown.delegateAction = this;
+			timer.scheduleAtFixedRate(countDown, DELAY, DELAY);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, countDown dont should be null", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+	}
+	
+	private void transitErrorScene() {
+		GameScene errorScene = new ErrorScene();
+		this.game.transitTo(errorScene);
+	}
 }

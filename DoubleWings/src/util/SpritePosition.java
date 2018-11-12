@@ -48,12 +48,12 @@ public class SpritePosition {
 				assert(validatePosition(window, windowDividend, screenDividend));				
 			}
 			catch(IllegalArgumentException exception) {
-				logger.error("Invalid position", exception);
+				logger.error("Error, an exception occurred:", exception);
 				exception.printStackTrace();
 				errorOccurred = true;
 			}
 			catch(ArithmeticException exception) {
-				logger.error("No its possible zero division", exception);
+				logger.error("Error, an exception occurred:", exception);
 				exception.printStackTrace();
 				errorOccurred = true;
 			}
