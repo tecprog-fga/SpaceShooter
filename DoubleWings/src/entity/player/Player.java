@@ -6,6 +6,8 @@
 
 package entity.player;
 
+import org.apache.log4j.Logger;
+
 import observer.GameEntityObserver;
 
 /**
@@ -14,16 +16,8 @@ import observer.GameEntityObserver;
  */
 public class Player {
 	
-	/**
-	 * The initial lives of the player, in the beginning of the game
-	 */
-	private static final int INITIAL_CHANCES = 3;
-	
-	/**
-	 * The score variable to be increased as the player scores
-	 */
+	// The score variable to be increased as the player scores
 	private int score = 0;
-
 	
 	/**
 	 * Constructor method to set the player scores to zero
@@ -33,9 +27,7 @@ public class Player {
 		this.score = 0;
 	}
 
-	/**
-	 * The Observer object receives the game live updates
-	 */
+	// The Observer object receives the game live updates	
 	private GameEntityObserver observer = null;
 	
 	/**
@@ -46,10 +38,7 @@ public class Player {
 		return this.observer;
 	}
 	
-	
-	/**
-	 * This object builds the spaceship of the game
-	 */
+	// This object builds the spaceship of the game
 	private PlayerSpaceship spaceship = null;
 
 	/**
@@ -61,9 +50,11 @@ public class Player {
 		this.observer = observer;
 	}
 	
-	/**
-	 * Reset the player chances to 3
-	 */
+	// The initial lives of the player, in the beginning of the game
+	private static final int INITIAL_CHANCES = 3;
+	
+	
+	// Reset the player chances to 3
 	private int chances = INITIAL_CHANCES;
 
 	/**
@@ -73,9 +64,14 @@ public class Player {
 	public void setChances(int chances){
 		this.chances = chances;
 		
-		// Notifying HUD to update the screen if it isn't null
-		assert(this.observer != null) : "Player log: HUD is null";		 //$NON-NLS-1$
-		this.observer.notifyObserver(this);	
+		try {
+			// Notifying HUD to update the screen if it isn't null
+			assert(this.observer != null) : "Player log: HUD is null";
+			this.observer.notifyObserver(this);				
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+			logger.error("HUD is receiving Null", e);
+		}
 
 	}
 
@@ -102,25 +98,32 @@ public class Player {
 	public void increaseScore(int score1) {
 
 		this.score += score1;
+		logger.debug("Incriased score");
 		
-		// Notifying HUD to update the screen if it isn't null
-		assert(this.observer != null) : "Player log: HUD is null"; //$NON-NLS-1$
-		this.observer.notifyObserver(this);	
+		
+		try {
+			// Notifying HUD to update the screen if it isn't null
+			assert(this.observer != null) : "Player log: HUD is null"; //$NON-NLS-1$
+			this.observer.notifyObserver(this);				
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+			logger.error("HUD is receiving Null", e);
+		}
 	}
-	
-	/**
-	 * Sets the initial position of the spaceship in the XY axis
-	 */
-	public double initialPositionX = 0;
-	public double initialPositionY = 0;
 
-	
-	// Reset the spaceship's position after each death
-	private void resetSpaceship() {
-		this.spaceship.reborn();
-		this.spaceship.x = this.initialPositionX;
-		this.spaceship.y = this.initialPositionY;
+	/**
+	 * Constructs the spaceship and in it's initial position
+	 * @return
+	 */
+	public PlayerSpaceship getSpaceship() {
+		
+		if (this.spaceship == null){
+			return this.spaceship = new PlayerSpaceship(this, this.initialPositionY, this.initialPositionY, true);
+		}
+		return this.spaceship;
 	}
+	
+	final static Logger logger = Logger.getLogger(Player.class);
 
 	/**
 	 * Lose one life. Handle losing life and game over scenarios. 
@@ -128,7 +131,8 @@ public class Player {
 	public void loseLife() {
 		
 		setChances(this.chances - 1);
-		System.out.println("lifes on player: " + this.chances); //$NON-NLS-1$
+		
+		logger.debug("Player's lives: " + this.chances);
 
 		if (this.chances < 0) {
 			loseGame();
@@ -142,9 +146,10 @@ public class Player {
 	 */
 	public void resetLife() {
 		
-		setChances(INITIAL_CHANCES);
+		setChances(INITIAL_CHANCES);			
+		
+		logger.debug("Player's initial lives reset to: " + this.chances);
 		resetSpaceship();
-		System.out.println("Player log: life reset to: " + this.chances); //$NON-NLS-1$
 	}
 	
 	
@@ -156,37 +161,40 @@ public class Player {
 	 */
 	public PlayerSceneDelegate delegate = null;
 	
-	/**
-	 * Delegate the player to game over or continue screen 
-	 */
+	
+	// Delegate the player to game over or continue screen 
 	private void loseGame() {
-		
+		logger.debug("Lost the game!");
 		if (this.canContinue) {
 			useContinue();
 		} else {
+			
 			this.delegate.transitToGameOver();
 		}
 	}
 
 	/**
-	 * Delegate the player to continue screen
+	 * Sets the initial position of the spaceship in the XY axis
 	 */
+	public double initialPositionX = 0;
+	public double initialPositionY = 0;
+	
+	
+	// Reset the spaceship's position after each death
+	private void resetSpaceship() {
+		logger.debug("Reseting spaceship's position!");
+		this.spaceship.reborn();
+		this.spaceship.x = this.initialPositionX;
+		this.spaceship.y = this.initialPositionY;
+	}
+	
+	// Delegate the player to continue screen
 	private void useContinue() {
+		logger.debug("Using continnue game!");
 		this.canContinue = false;
 		resetLife();
 		this.delegate.transitToContinue();
 	}
 
-	/**
-	 * Constructs the spaceship and in it's initial position
-	 * @return
-	 */
-	public PlayerSpaceship getSpaceship() {
-		
-		if (this.spaceship == null){
-			return this.spaceship = new PlayerSpaceship(this, this.initialPositionY, this.initialPositionY, true);
-		}
-		return this.spaceship;
-		
-	}
+	
 }

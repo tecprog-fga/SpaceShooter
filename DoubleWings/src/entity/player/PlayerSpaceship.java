@@ -5,6 +5,9 @@
 
 package entity.player;
 
+
+import org.apache.log4j.Logger;
+
 import entity.Bullet;
 import util.*;
 import entity.Enemy;
@@ -115,6 +118,8 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		this.shootKey = shootKey;
 	}
 	
+	public PlayerSceneDelegate delegate = null;
+
 	
 	// Verify if the player has died
 	private boolean didDie = false;
@@ -127,17 +132,21 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	@Override
 	public void update() {
 		super.update();
-		
-		if (this.life <= 0) {
-			// security check to avoid double dying bug
-			if (this.didDie == false) {
-				this.didDie = true;
-				// Enter here if the spaceship is destroyed
-				this.player.loseLife();
+
+			if (this.life <= 0) {
+				// security check to avoid double dying bug
+				if (this.didDie == false) {
+					this.didDie = true;
+					// Enter here if the spaceship is destroyed
+					this.player.loseLife();
+				}
+				else {
+					// Nothing to do
+				}
+			} 
+			else {
+				checkInput();
 			}
-		} else {
-			checkInput();
-		}
 	}
 	
 	/* 
@@ -178,6 +187,8 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		return false;
 	}
 	
+	private static Logger logger = Logger.getLogger(PlayerSpaceship.class);
+	
 	/**
 	 * Time of cooldown of the spaceship weapon 
 	 */
@@ -198,10 +209,17 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 			this.shootCDTimer.schedule(this.shootCooldown);	
 			
 			Bullet bullet = new Bullet();
-			assert(bullet != null): "Bullet is receiving null"; //$NON-NLS-1$
 			
-			bullet.fireBy(this, -10);
-			this.gameWorld.add(bullet);
+			try {
+				assert(bullet != null): "Bullet is receiving null";
+				bullet.fireBy(this, -10);
+				this.gameWorld.add(bullet);				
+			}
+			catch(NullPointerException exception) {
+				logger.error("Null returned, verify the Bullets", exception);
+				exception.printStackTrace();
+			}
+			
 		}
 	}
 	
@@ -217,13 +235,29 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		//Player movement
 		moveX(this.leftKey, this.rightKey, this.movimentVel);
 		moveY(this.upKey, this.downKey, this.movimentVel);
-		//shootKey
-		if(this.gameWorld != null){
-			if (this.gameWorld.keyboard != null){
-				if(this.gameWorld.keyboard.keyDown(this.shootKey)){
-					this.fireBullet();
+
+		try {
+			assert(this.gameWorld != null): "teste";
+			if(this.gameWorld != null){
+				assert(this.gameWorld.keyboard != null): "teste";
+				if (this.gameWorld.keyboard != null){
+					if(this.gameWorld.keyboard.keyDown(this.shootKey)){
+						this.fireBullet();
+					}
+					else {
+						// Nothing to do
+					}
+				}
+				else {
+					//Nothing to do
 				}
 			}
+			else {
+				// Nothing to do
+			}			
+		}catch(NullPointerException e) {
+			logger.error("Null return for the Keyboard", e);
+			e.printStackTrace();
 		}
 	}
 	

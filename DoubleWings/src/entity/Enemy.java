@@ -14,9 +14,33 @@ import entity.player.PlayerSpaceship;
  */
 public class Enemy extends GameEntity {
 
-	/**
-	 * sprite of the enemy
+	/* 
+	 * Damage done by the enemy
+	 * (non-Javadoc)
+	 * @see entity.GameEntity#didContact(entity.GameEntity)
 	 */
+	@Override
+	public void didContact(GameEntity entity){
+		if (entity.getClass() == Bullet.class) {
+			// test purposes
+			entity.receiveDamage(100); 
+			this.receiveDamage(20);
+			Bullet bullet = (Bullet) entity;
+			PlayerSpaceship spaceship = (PlayerSpaceship) bullet.owner;
+			//Increase Player Score
+			spaceship.getPlayer().increaseScore(100);
+		}
+	}
+	
+	/** 
+	 * builds the enemy
+	 * @param fileName
+	 */
+	public Enemy(String fileName) {
+		super(fileName);
+	}
+	
+	//sprite of the enemy
 	static private final String IMAGE_TEMP_PLAYER = "src/assets/img/temp_player.png";
 
 	/** build the sprite of the enemy and define your position
@@ -53,30 +77,4 @@ public class Enemy extends GameEntity {
 		}
 	}
 	
-	
-	/** 
-	 * builds the enemy
-	 * @param fileName
-	 */
-	public Enemy(String fileName) {
-		super(fileName);
-	}
-
-	/* 
-	 * Damage done by the enemy
-	 * (non-Javadoc)
-	 * @see entity.GameEntity#didContact(entity.GameEntity)
-	 */
-	@Override
-	public void didContact(GameEntity entity){
-		if (entity.getClass() == Bullet.class) {
-			// test purposes
-			entity.receiveDamage(100); 
-			this.receiveDamage(20);
-			Bullet bullet = (Bullet) entity;
-			PlayerSpaceship spaceship = (PlayerSpaceship) bullet.owner;
-			//Increase Player Score
-			spaceship.getPlayer().increaseScore(100);
-		}
-	}
 }

@@ -33,6 +33,33 @@ public class MoveCommand implements Command {
 		this.direction = type;
 	}
 	
+	private void moveActor(Sprite actor) {
+		// must move the game object in one of the four main directions
+		assert(actor != null):("Objeto actor não foi recebido!");
+		switch(this.direction) {
+		case LEFT:
+			actor.x -= UNITARY_DISPLACEMENT;
+			break;
+			
+		case DOWN:
+			actor.y += UNITARY_DISPLACEMENT;
+			break;
+			
+		case RIGHT:
+			actor.x += UNITARY_DISPLACEMENT;
+			break;
+			
+		case UP:
+			actor.y -= UNITARY_DISPLACEMENT;
+			break;
+			
+		default:
+			//nothing to do
+			assert(direction != null):("Direcão não foi recebida!");
+		break;
+		}
+	}
+	
 	/**
 	 * performs the displacement of the actor
 	 * @param actor the actor
@@ -73,31 +100,5 @@ public class MoveCommand implements Command {
 	 * move the actor across the screen
 	 * @param actor object that will be moved by the screen
 	 */
-	private void moveActor(Sprite actor) {
-		// must move the game object in one of the four main directions
-		assert(actor != null):("Objeto actor não foi recebido!");
-		switch(this.direction) {
-		case LEFT:
-			actor.x -= UNITARY_DISPLACEMENT;
-			break;
-			
-		case DOWN:
-			actor.y += UNITARY_DISPLACEMENT;
-			break;
-			
-		case RIGHT:
-			actor.x += UNITARY_DISPLACEMENT;
-			break;
-			
-		case UP:
-			actor.y -= UNITARY_DISPLACEMENT;
-			break;
-			
-		default:
-			//nothing to do
-			assert(direction != null):("Direcão não foi recebida!");
-		break;
-		}
-	}
 
 }

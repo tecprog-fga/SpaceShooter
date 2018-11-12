@@ -12,12 +12,7 @@ import game.World;
  * This class defines the entity that damages the spaceship
  */
 public class GameEntity extends Sprite {
-	
-	/**
-	 * eliminates entity(asteroids) not hit by 
-	 * the ship when they reach the limit 
-	 */
-	private static final double ENTITYLIMIT = 1000; 
+	 
 	public String name = null;
 	
 	/** 
@@ -52,6 +47,9 @@ public class GameEntity extends Sprite {
 			die();
 		}
 	}
+	
+	//eliminates entity(asteroids) not hit by the ship when they reach the limit
+	private static final double ENTITYLIMIT = 1000;
 	
 	/* 
 	 * resurgence of the instance if it reaches the limit
@@ -92,13 +90,6 @@ public class GameEntity extends Sprite {
 	}
 	
 	/**
-	 * elimination of the entity 
-	 */
-	private void die(){
-		isDead = true;
-	}
-	
-	/**
 	 * birth position of the spacecraft sprit
 	 */
 	public Double velx = 0.0;
@@ -121,7 +112,12 @@ public class GameEntity extends Sprite {
 		this.setLife(maxLife);
 		this.name = "empty entity";
 	}
-
+	
 	public boolean isCollidable = true;
 	public World gameWorld = null;
+	
+	//elimination of the entity
+	private void die(){
+		isDead = true;
+	}
 }

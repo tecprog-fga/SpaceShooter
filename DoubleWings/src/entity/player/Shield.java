@@ -5,6 +5,8 @@
 
 package entity.player;
 
+import org.apache.log4j.Logger;
+
 import entity.Enemy;
 import entity.GameEntity;
 import observer.GameEntityObserver;
@@ -58,6 +60,9 @@ public class Shield extends GameEntity {
 		this.y = this.player.y - verticalCorrection;
 	}
 
+	final static Logger logger = Logger.getLogger(Shield.class);
+	
+
 	/*
 	 * Handle when contact happen
 	 * (non-Javadoc)
@@ -69,7 +74,7 @@ public class Shield extends GameEntity {
 		if (entity.getClass() == Enemy.class){
 			entity.receiveDamage(100);
 			this.receiveDamage(10);
-			System.out.println("hit enemy"); //$NON-NLS-1$
+			logger.debug("Enemy hitted");
 		}
 	}
 	
@@ -89,7 +94,6 @@ public class Shield extends GameEntity {
 		// Notifying HUD to update shield life bar
 		assert(this.observer != null) : "Player log: HUD is null"; //$NON-NLS-1$
 		this.observer.notifyObserver(this);
-		
 	}
 
 	/**

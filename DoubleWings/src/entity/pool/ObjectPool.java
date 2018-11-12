@@ -21,8 +21,7 @@ public abstract class ObjectPool<Type> {
 	 * @return
 	 */
 	public Type release(){
-		Type obj = null;
-		
+		Type obj = null;	
 		
 		// Creation of objects when the screen is empty
 		if (this.objects.isEmpty()){
@@ -47,6 +46,9 @@ public abstract class ObjectPool<Type> {
 		
 		if (this.objects.contains(obj) == false){
 			this.objects.add(obj);
+		}
+		else {
+			// Nothing to do
 		}
 	}
 }

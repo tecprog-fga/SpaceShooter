@@ -41,6 +41,27 @@ public class HUD implements GameEntityObserver {
 	}
 	
 	/**
+	 * number of player lives can not be negative
+	 */
+	private final int MAX_NUMBER_OF_LIVES = 3;
+	private final int MIN_NUMBER_OF_LIVES = 0;
+	
+	/**
+	 * Method that updates the number of lives
+	 * @param playerNumberOfLives goes from zero to three, can be changed up
+	 */
+	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
+		// the number of lives must be within the limit established above
+		assert(playerNumberOfLives >= -1):("Número de vidas do jogador deve ser positivo!");
+		if (playerNumberOfLives <= MAX_NUMBER_OF_LIVES && playerNumberOfLives >= MIN_NUMBER_OF_LIVES) {
+			this.numberOfLivesImage.setCurrFrame(playerNumberOfLives);
+		} else {
+			System.out.println("HUD log: Player chances number is out of range.");
+			this.numberOfLivesImage.setCurrFrame(0);
+		}
+	}
+	
+	/**
 	 * Constructor method of class HUD
 	 */
 	public HUD() {
@@ -99,27 +120,6 @@ public class HUD implements GameEntityObserver {
 		this.shieldLifeBar.width = (int) newLifeBarWidth;
 		this.shieldLifeBar.x = WindowConstants.WIDTH/2 - this.shieldLifeBar.width/2;
 		assert(shield != null):("Objeto shield não foi passado corretamente!");
-	}
-	
-	/**
-	 * number of player lives can not be negative
-	 */
-	private final int MAX_NUMBER_OF_LIVES = 3;
-	private final int MIN_NUMBER_OF_LIVES = 0;
-	
-	/**
-	 * Method that updates the number of lives
-	 * @param playerNumberOfLives goes from zero to three, can be changed up
-	 */
-	public void updateNumberOfLivesOnScreen(int playerNumberOfLives) {
-		// the number of lives must be within the limit established above
-		assert(playerNumberOfLives >= -1):("Número de vidas do jogador deve ser positivo!");
-		if (playerNumberOfLives <= MAX_NUMBER_OF_LIVES && playerNumberOfLives >= MIN_NUMBER_OF_LIVES) {
-			this.numberOfLivesImage.setCurrFrame(playerNumberOfLives);
-		} else {
-			System.out.println("HUD log: Player chances number is out of range.");
-			this.numberOfLivesImage.setCurrFrame(0);
-		}
 	}
 
 	/**

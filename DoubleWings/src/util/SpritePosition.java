@@ -5,14 +5,20 @@
 
 package util;
 
+import org.apache.log4j.Logger;
+
 import constants.WindowConstants;
 import jplay.Sprite;
+import scenes.ErrorScene;
 
 /**
  * This class represent the axis of any sprite object
  */
 public class SpritePosition {
 
+	boolean errorOccurred = false;
+	final static Logger logger = Logger.getLogger(SpritePosition.class);
+	
 	//constructor empty
 	public SpritePosition() {
 	}
@@ -38,7 +44,19 @@ public class SpritePosition {
 			}
 		}
 		else {
-			assert(validatePosition(window, windowDividend, screenDividend)):("Position is not valid");
+			try {
+				assert(validatePosition(window, windowDividend, screenDividend));				
+			}
+			catch(IllegalArgumentException exception) {
+				logger.error("Error, an exception occurred:", exception);
+				exception.printStackTrace();
+				errorOccurred = true;
+			}
+			catch(ArithmeticException exception) {
+				logger.error("Error, an exception occurred:", exception);
+				exception.printStackTrace();
+				errorOccurred = true;
+			}
 		}
 		return pos;
 	}
@@ -50,7 +68,7 @@ public class SpritePosition {
 	 * @param screenDividend
 	 * @return position valid
 	 */
-	private boolean validatePosition(int window, double windowDividend, double screenDividend) {
+	public boolean validatePosition(int window, double windowDividend, double screenDividend) {
 		boolean posValid;
 		posValid = true;
 		
