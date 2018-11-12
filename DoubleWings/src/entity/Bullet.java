@@ -26,7 +26,7 @@ public class Bullet extends GameEntity {
 	public Bullet() {
 		super(IMAGE_BULLET);
 		assert(IMAGE_BULLET != null): ("Sprite of the bullet is null");
-		logger.debug("Shot");
+		logger.info("Sprite of the Bullet");
 	}
 	
 
