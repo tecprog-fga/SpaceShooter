@@ -53,6 +53,7 @@ public class Player {
 	// The initial lives of the player, in the beginning of the game
 	private static final int INITIAL_CHANCES = 3;
 	
+	boolean errorOccured = false;
 	
 	// Reset the player chances to 3
 	private int chances = INITIAL_CHANCES;
@@ -71,6 +72,7 @@ public class Player {
 		}catch(NullPointerException e) {
 			e.printStackTrace();
 			logger.error("HUD is receiving Null", e);
+			this.errorOccured = true;
 		}
 
 	}
@@ -108,6 +110,7 @@ public class Player {
 		}catch(NullPointerException e) {
 			e.printStackTrace();
 			logger.error("HUD is receiving Null", e);
+			this.errorOccured = true;
 		}
 	}
 
