@@ -7,12 +7,14 @@ package util;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import org.apache.log4j.Logger;
 
 // This class is responsible to to delay the timer if is necessary
 public class DelayTimer extends Timer implements DelayDelegate {
 
 	private DelayDelegate delegate = null;
 	private int type = 0;
+	final static Logger logger = Logger.getLogger(DelayTimer.class);
 
 	/**
 	 * This method is responsible to delegate the delay and the type
@@ -21,10 +23,22 @@ public class DelayTimer extends Timer implements DelayDelegate {
 	 */
 	public DelayTimer(DelayDelegate delegate, int type) {
 		
-		this.type = type;
-		this.delegate = delegate;
+		try {
+			this.type = type;
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, type cannot be null", exception);
+			exception.printStackTrace();
+		}
+		try {
+			this.delegate = delegate;
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, delegate cannot be null", exception);
+			exception.printStackTrace();
+		}		
 	}
-
+	
 	/**
 	 * This void method is responsible to take the task and delay
 	 * @param delay
@@ -33,8 +47,15 @@ public class DelayTimer extends Timer implements DelayDelegate {
 		
 		Task task = null;
 		task = new Task(this);
-		assert(task != null):("task cannot be null");
-		this.schedule(task, delay);
+		
+		try {
+			assert(task != null):("task cannot be null");
+			this.schedule(task, delay);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, delegate cannot be null", exception);
+			exception.printStackTrace();
+		}
 	}
 
 	/**
@@ -44,7 +65,13 @@ public class DelayTimer extends Timer implements DelayDelegate {
 	@Override
 	public void delayEnded(DelayTimer timer) {
 		
-		delegate.delayEnded(this);
+		try {
+			delegate.delayEnded(this);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, delegate cannot be null", exception);
+			exception.printStackTrace();
+		}
 	}
 
 	public int getType() {
