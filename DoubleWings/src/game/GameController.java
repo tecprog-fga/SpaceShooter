@@ -7,6 +7,10 @@ package game;
 
 import scenes.GameScene;
 import scenes.stages.stage1.FirstStage;
+
+import org.apache.log4j.Logger;
+
+import entity.Enemy;
 import jplay.Keyboard;
 
 /**
@@ -44,7 +48,9 @@ public class GameController {
 		this.currentScene = scene;
 	}
 	
-	//initialize the game 
+	private static Logger logger = Logger.getLogger(GameController.class);
+
+	//Initialize the game 
 	private boolean isRunning = true;
 	/**
 	 * updates current scene and control running status
@@ -52,12 +58,16 @@ public class GameController {
 	 */
 	public boolean update() {
 		
-		/**
-		 * updates current scene
-		 */
-		assert(this.currentScene != null): ("GameController.0"); //$NON-NLS-1$
-		this.currentScene.updateScene();
-		return this.isRunning; 
+		try {
+			//Updates current scene
+			assert(this.currentScene != null) : ("GameController is receiveing null");
+			this.currentScene.updateScene();				
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+			logger.error("GameController is receiveing null", e);
+		}
+		return isRunning;
+	
 	}
 	
 	/**

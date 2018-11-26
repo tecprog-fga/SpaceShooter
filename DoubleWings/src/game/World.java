@@ -7,6 +7,9 @@
 package game;
 
 import java.util.ArrayList;
+
+import org.apache.log4j.Logger;
+
 import entity.pool.*;
 import game.evolver.*;
 import jplay.Keyboard;
@@ -83,6 +86,8 @@ public class World {
 			}
 		}
 		
+		Logger logger = Logger.getLogger(World.class);
+		
 		for (GameEntity deadObj : deadObjs){
 			boolean didRemove = objs.remove(deadObj);
 			
@@ -104,10 +109,10 @@ public class World {
 			 * message stating the elimination of the entity from the game scene
 			 */
 			if (didRemove == true) {
-				System.out.println("Entity removed from the world");
+				logger.info("Entity removed from the world");
 			} 
 			else {
-				System.out.println("Error removing entity");
+				logger.error("Error removing entity");
 			}
 		}
 		
@@ -160,14 +165,6 @@ public class World {
 		this.evolver.add(event);
 	}
 	
-	/**
-	 * GameEvent facade
-	 * @param callback
-	 * @param time
-	 * @param type
-	 * @param name
-	 * @return
-	 */
 	private GameEvent createNewEvent(GameEventCallback callback, int time, int type, String name){
 		GameEvent event = new GameEvent();
 		event.setCallback(callback);

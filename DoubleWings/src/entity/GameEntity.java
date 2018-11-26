@@ -6,6 +6,9 @@
 package entity;
 
 import jplay.Sprite;
+
+import org.apache.log4j.Logger;
+
 import game.World;
 
 /**
@@ -73,12 +76,13 @@ public class GameEntity extends Sprite {
 		return isDead;
 	}
 	
+	private static Logger logger = Logger.getLogger(GameEntity.class);
 	/**
 	 * Trigger an event when contact happens
 	 * @param entity
 	 */
 	public void didContact(GameEntity entity) {
-		System.out.println(this.name + " contact: " + entity.name);
+		logger.debug(this.name + " contact: " + entity.name);
 	}
 	
 	/**

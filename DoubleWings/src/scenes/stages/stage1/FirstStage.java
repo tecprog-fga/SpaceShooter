@@ -130,13 +130,18 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	// This method updates the parallax, updates and draw all entities added in the game
 	@Override
 	public void updateScene() {
-
-		updateParalax();
-
-		gameWorld.update(); // Updates and draw all entities added in game world
-		hud.draw(); // Draw all HUD elements
-
-		executeAsteroidCommand();
+		try {
+			updateParalax();
+			gameWorld.update(); // Updates and draw all entities added in game world
+			hud.draw(); // Draw all HUD elements
+			executeAsteroidCommand();
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 
 	/**
@@ -146,16 +151,25 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 
 	public void updateParalax() {
 
-		// Print all layers that have been added
-		parallaxEffect.drawLayers();
-
 		final int PIXELS_DOWN = 800;
 		final int PIXELS_SIDES = 600;
+		
+		try {
+			// Print all layers that have been added
+			assert(parallaxEffect != null):("spaceship cannot be null");
+			parallaxEffect.drawLayers();
 
-		parallaxEffect.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
+			parallaxEffect.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
 
-		// Move the parallax orientation vertically
-		parallaxEffect.moveLayersStandardY(false);
+			// Move the parallax orientation vertically
+			parallaxEffect.moveLayersStandardY(false);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, parallaxEffect cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}	
 	}
 	
 	/**
@@ -166,32 +180,49 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		
 		Enemy asteroid = null;
 
-		asteroid = this.gameWorld.createEnemy();
-		asteroid.loadImage(ASTEROID_PATH);
-		assert(asteroid != null):("asteroid cannot be null");
-		
-		asteroid.setLife(LIFES);
-		asteroid.x = Math.random() * (WindowConstants.WIDTH - asteroid.width * 2) + asteroid.width;
-		asteroid.y = -200;
-		asteroid.vely = velY;
+		try {
+			asteroid = this.gameWorld.createEnemy();
+			asteroid.loadImage(ASTEROID_PATH);
+			assert(asteroid != null):("asteroid cannot be null");
 
-		gameWorld.add(asteroid);
+			asteroid.setLife(LIFES);
+			asteroid.x = Math.random() * (WindowConstants.WIDTH - asteroid.width * 2) + asteroid.width;
+			asteroid.y = -200;
+			asteroid.vely = velY;
+
+			gameWorld.add(asteroid);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, asteroid cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 
 	private Enemy asteroid1 = null; //declaring an asteroid of the type enemy
 
 	// This method sets the asteroids in the scenario and its initial position 
 	public void createTestAsteroid() {
-		
-		asteroid1 = new Enemy(ASTEROID_PATH);
-		assert(asteroid1 != null):("asteroid1 cannot be null");
-		
-		asteroid1.setLife(LIFES);
-		asteroid1.x = WindowConstants.WIDTH / 2 - asteroid1.width / 2;
-		asteroid1.y = 0;
-		asteroid1.vely = 2.0;
 
-		gameWorld.add(asteroid1);
+		try {
+			asteroid1 = new Enemy(ASTEROID_PATH);
+			assert(asteroid1 != null):("asteroid1 cannot be null");
+
+			asteroid1.setLife(LIFES);
+			asteroid1.x = WindowConstants.WIDTH / 2 - asteroid1.width / 2;
+			asteroid1.y = 0;
+			asteroid1.vely = 2.0;
+
+			gameWorld.add(asteroid1);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, asteroid1 cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+		
 	}
 
 	private int commandCount = 0;
@@ -228,16 +259,24 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	// This method create the commands left, down and right
 	private void creatingCommands() {
 		
-		commands = new ArrayList<Command>();
-		assert(commands != null):("commands cannot be null");
+		try {
+			commands = new ArrayList<Command>();
+			assert(commands != null):("commands cannot be null");
 
-		commands.add(CommandCreator.createPlayerCommand(CommandType.LEFT));
-		commands.add(CommandCreator.createPlayerCommand(CommandType.DOWN));
-		commands.add(CommandCreator.createPlayerCommand(CommandType.RIGHT));
-		commands.add(CommandCreator.createPlayerCommand(CommandType.RIGHT));
-		commands.add(CommandCreator.createPlayerCommand(CommandType.RIGHT));
+			commands.add(CommandCreator.createPlayerCommand(CommandType.LEFT));
+			commands.add(CommandCreator.createPlayerCommand(CommandType.DOWN));
+			commands.add(CommandCreator.createPlayerCommand(CommandType.RIGHT));
+			commands.add(CommandCreator.createPlayerCommand(CommandType.RIGHT));
+			commands.add(CommandCreator.createPlayerCommand(CommandType.RIGHT));
 
-		currentCommand = commands.remove(commands.size() - 1); // return removed object
+			currentCommand = commands.remove(commands.size() - 1); // return removed object
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, asteroid1 cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 
 	private HUD hud = null;
@@ -246,35 +285,40 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	// This method creates the hud, the initial position of the spaceship and the asteroids 
 	private void configureEntities() {
 		
-		// Create the HUD and adding it as player's observer
-		hud = new HUD();
-		assert(hud != null):("hud cannot be null");
+		try {
+			// Create the HUD and adding it as player's observer
+			hud = new HUD();
+			assert(hud != null):("hud cannot be null");
 
-		// Creating player sprite on the center-bottom of the screen
+			// Creating player sprite on the center-bottom of the screen
 		
-		final int WIDTH_CENTER = WindowConstants.WIDTH / 2; // Constant to create in the center of the width
-		final int HEIGHT_CENTER = WindowConstants.HEIGHT / 2; // Constant to create in the center of the height
+			final int WIDTH_CENTER = WindowConstants.WIDTH / 2; // Constant to create in the center of the width
+			final int HEIGHT_CENTER = WindowConstants.HEIGHT / 2; // Constant to create in the center of the height
 		
-		assert(player != null):("player cannot be null");
+			assert(player != null):("player cannot be null");
 		
-		player.initialPositionX = WIDTH_CENTER;
-		player.initialPositionY = HEIGHT_CENTER;
+			player.initialPositionX = WIDTH_CENTER;
+			player.initialPositionY = HEIGHT_CENTER;
 
-		createSpaceShip();
+			createSpaceShip();
 
-		player.setObserver(hud);
-		player.delegate = this;
+			player.setObserver(hud);
+			player.delegate = this;
 
-		createAsteroid(2.0);
-		createAsteroid(4.0);
-
-		createTestAsteroid();
+			createAsteroid(2.0);
+			createAsteroid(4.0);
+			createTestAsteroid();
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, player cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}	
 	}
 
 	public final static int LIFES = 10;
 	final String ASTEROID_PATH = "src/assets/img/asteroid.png"; //Declaring constant with asteroid path
-
-	
 	
 	// Callback event handler. Adding different events for each case
 	@Override
@@ -296,19 +340,43 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	//Creating the first type of enemy
 	public void launchEnemyDown() {
 		
-		this.createAsteroid(2.0);
+		try {
+			this.createAsteroid(2.0);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, player cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 
 	//Creating the second type of enemy
 	public void launchEnemyCrazy() {
 		
-		this.createAsteroid(4.0);
+		try {
+			this.createAsteroid(4.0);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, player cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 	
 	// Adding the events created
 	public void configureEvents() {
 		
-		this.addEvents();
+		try {
+			this.addEvents();
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, player cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 
 	public void addEvents() {
@@ -338,18 +406,38 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	// Transition to game over screen
 	@Override
 	public void transitToGameOver() {
+		
 		GameOver gameOver = null;
 		gameOver = new GameOver();
-		assert(gameOver != null):("gameOver cannot be null");
-		this.game.transitTo(gameOver);
+		
+		try {
+			assert(gameOver != null):("gameOver cannot be null");
+			this.game.transitTo(gameOver);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, player cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 
 	//Transition to the Continue screen
 	@Override
 	public void transitToContinue() {
+		
 		GameScene scene = null;
 		scene = new ContinueGame();
-		assert(scene != null):("scene cannot be null");
-		this.game.transitTo(scene);
+		
+		try {
+			assert(scene != null):("scene cannot be null");
+			this.game.transitTo(scene);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, player cannot be null", exception);
+			
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 }
