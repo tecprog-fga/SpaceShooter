@@ -24,8 +24,6 @@ public abstract class GameScene {
 	// Object for control keyboard game
 	protected Keyboard keyboard = null;
 	
-	boolean errorOcurred = false;
-	
 	// Object to set the log for this class
 	final static Logger logger = Logger.getLogger(GameScene.class);
 
@@ -39,15 +37,18 @@ public abstract class GameScene {
 		try {
 			this.game = game;
 			assert(this.game != null):("Game cannot be null");
-			
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, game cannot set value", exception);
+			exception.printStackTrace();
+		}
+		try {
 			this.keyboard = game.keyboard;
 			assert(this.keyboard != null):("Keyboard cannot be null");
 		}
 		catch(NullPointerException exception) {
-			logger.error("Null returned, game cannot set value", exception);
-			
+			logger.error("Null returned, keyboard cannot set value", exception);		
 			exception.printStackTrace();
-			errorOcurred = true;
 		}
 		
 		final String MSG_KEYBOARD = "keyboard: ";
