@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+
+import org.apache.log4j.Logger;
+
 import behavior.GenerateBehavior;
 import commands.Command;
 
@@ -17,14 +20,23 @@ import commands.Command;
  */
 public class ScriptHandler {
 
+	boolean errorOcurred = false;
+	final static Logger logger = Logger.getLogger(ScriptHandler.class);
 	private static Path SCRIPT_PATH;
 	/**
 	 * Constructor of ScriptHandler class
 	 * @param scriptPath
 	 */
 	public ScriptHandler(String scriptPath) {
-		assert(scriptPath != " "):("String scriptPath não é válida!");
-		ScriptHandler.SCRIPT_PATH = Paths.get(scriptPath);
+		try {
+			assert(scriptPath != " ");
+			ScriptHandler.SCRIPT_PATH = Paths.get(scriptPath);
+		}
+		catch(NullPointerException exception) {
+			logger.error("ScriptPath string can't be empty", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 	}
 
 	/**
@@ -40,13 +52,12 @@ public class ScriptHandler {
 		assert(parser != null):("Objeto parser não é válido!");
 		ArrayList<Command> commandList = parser.processBehavior();
 		assert(commandList != null):("Objeto commandList não é válido!");
-		log("Done.");
 
 		return commandList;
 	}
 
 	private static void log(Object aObject) {
 		assert(aObject != null):("Objeto aObject não é válido!");
-		System.out.println(String.valueOf(aObject));
+		logger.debug(String.valueOf(aObject));
 	}
 }

@@ -5,6 +5,8 @@
 
 package entity;
 
+import org.apache.log4j.Logger;
+
 import commands.Command;
 import entity.player.Player;
 import entity.player.PlayerSpaceship;
@@ -58,7 +60,7 @@ public class Enemy extends GameEntity {
 	 * initialization for the movements of the enemy
 	 */
 	private int commandCount = 0;
-	
+	private static Logger logger = Logger.getLogger(Enemy.class);
 	/** 
 	 * command executed by the enemy
 	 * @param commands 
@@ -72,8 +74,7 @@ public class Enemy extends GameEntity {
 			else {
 				//Nothing to do
 			}
-			
-			System.out.println("x: " + this.x + " y: " + this.y);
+			logger.debug("x: " + this.x + " y: " + this.y);
 		}
 	}
 	

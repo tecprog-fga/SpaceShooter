@@ -10,6 +10,9 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+
 import commands.Command;
 import commands.CommandCreator;
 import commands.CommandType;
@@ -21,11 +24,20 @@ import java.util.ArrayList;
  */
 public class GenerateBehavior {
 	
-	private final Path SCRIPT_PATH;
+	private Path SCRIPT_PATH;
+	static boolean errorOcurred = false;
+	final static Logger logger = Logger.getLogger(GenerateBehavior.class);
 	
 	public GenerateBehavior(Path scriptPath) {
-		assert(scriptPath != null):("Objeto scriptPath não foi recebido!");
-		this.SCRIPT_PATH = scriptPath;
+		try {
+			assert(scriptPath != null);
+			this.SCRIPT_PATH = scriptPath;
+		}
+		catch(NullPointerException exception) {
+			logger.error("ScriptPath object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 	}
 
 	public final ArrayList<Command> processBehavior() throws IOException {
@@ -51,7 +63,7 @@ public class GenerateBehavior {
 		
 		if (commandInput.hasNext()) {
 			String commandOutput = commandInput.next();
-			log("Command received: " + quote(commandOutput.trim()));
+			logger.debug("Command received: " + quote(commandOutput.trim()));
 			commandInput.close();
 			Command command = CommandCreator.createPlayerCommand(CommandType.valueOf(commandOutput));
 			assert(command != null):("Objeto command não pode ser nulo!");
@@ -59,7 +71,7 @@ public class GenerateBehavior {
 			return command;
 
 		} else {
-			log("Empty or invalid line. Unable to process.");
+			logger.debug("Empty or invalid line. Unable to process.");
 			commandInput.close();
 			throw new IOException();
 		}
@@ -72,7 +84,14 @@ public class GenerateBehavior {
 	}
 
 	private static void log(Object aObject) {
-		assert(aObject != null):("Objeto aObject não foi recebido!");
-		System.out.println(String.valueOf(aObject));
+		try {
+			assert(aObject != null);
+		}
+		catch(NullPointerException exception) {
+			logger.error("aObject object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
+		logger.debug(String.valueOf(aObject));
 	}
 }
