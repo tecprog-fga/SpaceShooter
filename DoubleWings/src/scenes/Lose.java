@@ -169,16 +169,15 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		//Print all layers that have been added
 		this.delpthScene.drawLayers();
 		
-		//This constants is responsible for store of pixels value of screen. Unit of measure: Pixels
-		final int PIXELS_DOWN = 800; 
-		final int PIXELS_SIDES = 600;
-		
-		//Responsible for maintaining infinite repetition of the layers
-		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
-		logger.debug("The parallax was set with " + PIXELS_DOWN + "x" + PIXELS_SIDES + " pixels");
+		setDefaultPixels();
 			
 		//Move the parallax orientation vertically
 		this.delpthScene.moveLayersStandardY(false);
+		
+		checkErrorOccurred();
+	}
+
+	private void checkErrorOccurred() {
 		if(!errorOccurred) {
 			this.loseScreen.draw();		
 			this.lifeRemaining.draw();
@@ -186,6 +185,16 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 		else {
 			transitErrorScene();
 		}
+	}
+
+	private void setDefaultPixels() {
+		//This constants is responsible for store of pixels value of screen. Unit of measure: Pixels
+		final int PIXELS_DOWN = 800; 
+		final int PIXELS_SIDES = 600;
+		
+		//Responsible for maintaining infinite repetition of the layers
+		this.delpthScene.repeatLayers(PIXELS_DOWN, PIXELS_SIDES, false);
+		logger.debug("The parallax was set with " + PIXELS_DOWN + "x" + PIXELS_SIDES + " pixels");
 	}
 	
 	//Method that after the end of the time transit to the screen to ContinueGame class
@@ -259,10 +268,29 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	 * This method build the scene of waiting countdown
 	 */
 	private void buildWaitScene() {
-		//This object is necessary for schedule at fixed rate.
+		//This object is necessary for schedule at fixed rate and apply delay.
 		Timer timer = new Timer();
 		
 		//This object is necessary for delegate action for count down.
+		CountDownTimer countDown = delegateActionForCountDown();
+		
+		//This constant is value of time for delay on schedule. Unit of measure: Miliseconds
+		applyDelay(timer, countDown);
+	}
+
+	private void applyDelay(Timer timer, CountDownTimer countDown) {
+		try {
+			long DELAY = 1000; 
+			timer.scheduleAtFixedRate(countDown, DELAY, DELAY);			
+		}
+		catch(NullPointerException exception) {
+			logger.error("The life player is invalid value", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+	}
+
+	private CountDownTimer delegateActionForCountDown() {
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
 		try {
@@ -274,16 +302,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
-		//This constant is value of time for delay on schedule. Unit of measure: Miliseconds
-		try {
-			long DELAY = 1000; 
-			timer.scheduleAtFixedRate(countDown, DELAY, DELAY);			
-		}
-		catch(NullPointerException exception) {
-			logger.error("The life player is invalid value", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}
+		return countDown;
 	}
 	
 	//This void method build all sprites for show scenes of class 
