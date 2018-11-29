@@ -32,22 +32,15 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 	 * This object its necessary for resolve position of sprites features
 	 */
 	private SpritePosition spos = new SpritePosition();
+	
 	boolean errorOccurred = false;
+	
 	final static Logger logger = Logger.getLogger(GameOver.class);
 	
 	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	public void buildInitialScene() {
 
-		//Set game controller elements
-		try {
-			assert(this.keyboard != null):("Null returned, keyboard cant set value");
-			this.keyboard = this.game.keyboard;
-		}
-		catch(NullPointerException exception) {
-			logger.error("Null returned, keyboard can not set value", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}
+		setGameControllerElements();
 		
 		//Creation image background
 		final String BACKGROUND_PATH = "src/assets/img/temp_background.png";
@@ -60,6 +53,12 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		logger.debug("The sprite was created with path: " + GAME_OVER_PATH);
 		logger.info("The game is over");
 		
+		calculateGameOverSpritePosition();
+		
+		buildWaitScene();
+	}
+
+	private void calculateGameOverSpritePosition() {
 		try {
 			assert(this.gameOver != null);
 			//Game over sprite center position
@@ -71,7 +70,18 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
-		buildWaitScene();
+	}
+
+	private void setGameControllerElements() {
+		try {
+			assert(this.keyboard != null):("Null returned, keyboard cant set value");
+			this.keyboard = this.game.keyboard;
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, keyboard can not set value", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 
 	//Build the update image of sprite on screen
@@ -101,6 +111,10 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		//This object build a menu scene for transit to menu
 		GameScene menu = null;
 		menu = new MenuScene();
+		transitToMenu(menu);
+	}
+
+	private void transitToMenu(GameScene menu) {
 		try {
 			assert(this.menu != null);
 			this.game.transitTo(menu);	
@@ -134,8 +148,14 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		//This object is necessary for delegate action for count down.
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
+		
+		applyDelay(timer, countDown);
+	}
+
+	private void applyDelay(Timer timer, CountDownTimer countDown) {
 		//This constant is value of time for delay on schedule. Unit of measure: Miliseconds
 		final int DELAY = 1000;
+		
 		try {
 			assert(countDown != null);
 			//Delegate action for count down to execute

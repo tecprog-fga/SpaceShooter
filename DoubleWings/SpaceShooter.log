@@ -127,4 +127,11 @@
  12-11-2018 08:08:05 DEBUG Shield:77 - Enemy hitted
  12-11-2018 08:08:06 DEBUG Player:135 - Player's lives: -1
  12-11-2018 08:08:06 DEBUG Player:167 - Lost the game!
+ 29-11-2018 16:22:10 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 29-11-2018 16:22:10 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 16:22:10 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 29-11-2018 16:22:10 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 29-11-2018 16:22:10 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 29-11-2018 16:22:10 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 29-11-2018 16:22:10 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
  
