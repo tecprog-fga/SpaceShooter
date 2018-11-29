@@ -50,6 +50,9 @@ public class Player {
 		this.observer = observer;
 	}
 	
+	//Logger debbuger declaration
+	final static Logger logger = Logger.getLogger(Player.class);
+	
 	// The initial lives of the player, in the beginning of the game
 	private static final int INITIAL_CHANCES = 3;
 	
@@ -64,7 +67,6 @@ public class Player {
 	 */
 	public void setChances(int chances){
 		this.chances = chances;
-		
 		try {
 			// Notifying HUD to update the screen if it isn't null
 			assert(this.observer != null) : "Player log: HUD is null";
@@ -125,8 +127,6 @@ public class Player {
 		}
 		return this.spaceship;
 	}
-	
-	final static Logger logger = Logger.getLogger(Player.class);
 
 	/**
 	 * Lose one life. Handle losing life and game over scenarios. 
@@ -193,7 +193,7 @@ public class Player {
 	
 	// Delegate the player to continue screen
 	private void useContinue() {
-		logger.debug("Using continnue game!");
+		logger.debug("Using continue game!");
 		this.canContinue = false;
 		resetLife();
 		this.delegate.transitToContinue();

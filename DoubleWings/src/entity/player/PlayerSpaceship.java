@@ -45,7 +45,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		this.life = this.maxLife;
 		this.shield = new Shield(this);
 		
-		assert(player != null) : "The player is null"; //$NON-NLS-1$
+		assert(player != null) : "The player is null";
 		this.player = player;
 		
 		// Adjusting x position to fit the sprite
@@ -71,6 +71,12 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 			if (this.shield.getLife() <= 0) { // security check to avoid double dying bug
 				this.receiveDamage(20);
 			}
+			else {
+				//Nothing to do
+			}
+		}
+		else {
+			//Nothing to to
 		}
 	}
 
@@ -134,18 +140,19 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		super.update();
 
 			if (this.life <= 0) {
+				
 				// security check to avoid double dying bug
 				if (this.didDie == false) {
+					// Enter here if the spaceship is destroyed					
 					this.didDie = true;
-					// Enter here if the spaceship is destroyed
 					this.player.loseLife();
-				}
-				else {
+				} else {
 					// Nothing to do
 				}
-			} 
-			else {
-				checkInput();
+			} else {
+				checkInputHorizontal();
+				checkInputVertical();
+				checkShootKeyInput();
 			}
 	}
 	
@@ -229,32 +236,41 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	public double movimentVel = DEFAULT_MOVEMENT_VELOCITY; // default value
 	
 	/**
-	 * Checks the keyboard input
+	 * Checks the horizontal keyboard input 
 	 */
-	public void checkInput(){
-		//Player movement
-		moveX(this.leftKey, this.rightKey, this.movimentVel);
-		moveY(this.upKey, this.downKey, this.movimentVel);
-
+	public void checkInputHorizontal(){
+		
+		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+		moveRight(this.rightKey, this.movimentVel);
+		moveLeft(this.leftKey, this.movimentVel);
+		
+	}
+	
+	/**
+	 * Checks the vertical keyboard input 
+	 */
+	public void checkInputVertical() {
+		
+		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+		moveDown(this.downKey, this.movimentVel);
+		moveUp(this.upKey, this.movimentVel);
+	}
+	
+	/**
+	 * Checks the shootkey input
+	 */
+	public void checkShootKeyInput() {
 		try {
-			assert(this.gameWorld != null): "teste";
-			if(this.gameWorld != null){
-				assert(this.gameWorld.keyboard != null): "teste";
-				if (this.gameWorld.keyboard != null){
-					if(this.gameWorld.keyboard.keyDown(this.shootKey)){
-						this.fireBullet();
-					}
-					else {
-						// Nothing to do
-					}
-				}
-				else {
-					//Nothing to do
-				}
+			assert(this.gameWorld != null): "The gameWorld is receiving null";		
+			assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+			
+			//Verify is the key pressed was the shoot key
+			if(this.gameWorld.keyboard.keyDown(this.shootKey)){
+				this.fireBullet();
 			}
 			else {
-				// Nothing to do
-			}			
+				//Nothing to do
+			}
 		}catch(NullPointerException e) {
 			logger.error("Null return for the Keyboard", e);
 			e.printStackTrace();
@@ -263,41 +279,35 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	
 	/* 
 	 * Move in the X axis when receiving an input
-	 * (non-Javadoc)
-	 * @see jplay.Sprite#moveX(int, int, double)
 	 */
-	@Override
-	public void moveX(int leftKey1, int rightKey1, double vel){
-		
-		if(this.gameWorld != null){
-			if (this.gameWorld.keyboard != null){
-				if(this.gameWorld.keyboard.keyDown(leftKey1)){
-					this.x -= vel;
-				}
-				if(this.gameWorld.keyboard.keyDown(rightKey1)){
-					this.x += vel;
-				}
-			}
+	public void moveLeft(int leftKey1, double vel) {
+		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+		if(this.gameWorld.keyboard.keyDown(leftKey1)){
+			this.x -= vel;
+		}
+	}
+
+	public void moveRight(int rightKey1, double vel) {
+		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+		if(this.gameWorld.keyboard.keyDown(rightKey1)){
+			this.x += vel;
 		}
 	}
 	
 	/* 
 	 * Move in the Y axis when receiving an input
-	 * (non-Javadoc)
-	 * @see jplay.Sprite#moveY(int, int, double)
 	 */
-	@Override
-	public void moveY(int upKey1, int downKey1, double vel){
-		
-		if(this.gameWorld != null){
-			if (this.gameWorld.keyboard != null){
-				if(this.gameWorld.keyboard.keyDown(upKey1)){
-					this.y -= vel;
-				}
-				if(this.gameWorld.keyboard.keyDown(downKey1)){
-					this.y += vel;
-				}
-			}
+	public void moveUp(int upKey1, double vel) {
+		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+		if(this.gameWorld.keyboard.keyDown(upKey1)) {
+			this.y -= vel;
+		}
+	}
+	
+	public void moveDown(int downKey1, double vel) {
+		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+		if(this.gameWorld.keyboard.keyDown(downKey1)) {
+			this.y += vel;
 		}
 	}
 
@@ -311,6 +321,8 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		
 		if (timer.getType() == 1){
 			this.canShoot = true;
+		} else {
+			this.canShoot = false;
 		}
 	}
 }
