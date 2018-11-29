@@ -52,4 +52,4 @@ local.properties
 .scala_dependencies
 .worksheet
 
-DoubleWings/SpaceShooter\.log
+*.log
