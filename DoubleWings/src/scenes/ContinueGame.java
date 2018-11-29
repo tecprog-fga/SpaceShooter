@@ -77,12 +77,8 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		this.delpthScene = new Parallax();
 		
 		addUniverseParallax();
-		
-		//...Adjusts the speed of all layers from the main layer
-		final double velMainLayerX = 0;
-		final double velMainLayerY = 1;
-		this.delpthScene.setVelAllLayers(velMainLayerX, velMainLayerY);
-		logger.debug("The parallax was set with " + velMainLayerX + " in x axys and " + velMainLayerY+ " in y axys");
+	
+		adjustSpeedMainLayer();
 		
 		//Realize the position of images in continue screen, continue sprite upper-center position.
 	    final String CONTINUE_PATH = "src/assets/img/continue/continue.png";
@@ -107,6 +103,14 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 
 		//Finally, build scene of count down
 		buildWaitScene();
+	}
+
+	//...Adjusts the speed of all layers from the main layer
+	private void adjustSpeedMainLayer() {
+		final double velMainLayerX = 0;
+		final double velMainLayerY = 1;
+		this.delpthScene.setVelAllLayers(velMainLayerX, velMainLayerY);
+		logger.debug("The parallax was set with " + velMainLayerX + " in x axys and " + velMainLayerY+ " in y axys");
 	}
 
 	private void calculateEnterScreenPosition() {
@@ -153,22 +157,26 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
 		
 		try {
-			assert(this.delpthScene != null);
-			this.delpthScene.add(DELPTH_BACKGROUND_PATH);
-			final String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png";
-			this.delpthScene.add(DELPTH_UNIVERSE1_PATH);
-			final String DELPTH_UNIVERSE2_PATH = "src/assets/img/universe2.jpg";
-			this.delpthScene.add(DELPTH_UNIVERSE2_PATH);
-		    final String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg";
-			this.delpthScene.add(DELPTH_UNIVERSE3_PATH);
-		    final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
-			this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
+			addBackgroundPaths(DELPTH_BACKGROUND_PATH);
 		}
 		catch(NullPointerException exception) {
 			logger.error("Null returned, delpthScene cant add value", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
+	}
+
+	private void addBackgroundPaths(final String DELPTH_BACKGROUND_PATH) {
+		assert(this.delpthScene != null);
+		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
+		final String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png";
+		this.delpthScene.add(DELPTH_UNIVERSE1_PATH);
+		final String DELPTH_UNIVERSE2_PATH = "src/assets/img/universe2.jpg";
+		this.delpthScene.add(DELPTH_UNIVERSE2_PATH);
+		final String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg";
+		this.delpthScene.add(DELPTH_UNIVERSE3_PATH);
+		final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
+		this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
 	}
 
 	private void setBehaviorKeyboard() {
@@ -212,6 +220,14 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 
 		//Move the parallax orientation vertically
 		this.delpthScene.moveLayersStandardY(false);
+		
+		checkErrorOccurred();
+		
+		//Check button for decision of transit screen
+		checkButtonSelection();
+	}
+
+	private void checkErrorOccurred() {
 		if(!errorOccurred) {
 			//Draw on screen with the continue, count down and enter images.
 			this.continueScreen.draw();
@@ -221,8 +237,6 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		else {
 			transitErrorScene();
 		}
-		//Check button for decision of transit screen
-		checkButtonSelection();
 	}
 	
 	//Build final scene for transit on Game over
@@ -235,19 +249,23 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 
 			GameScene gameOver = null;
 			gameOver = new GameOver();
-			try {
-				assert(gameOver != null):("Null returned, gameOver cant transit to new scene");
-				this.game.transitTo(gameOver);
-			}
-			catch(NullPointerException exception) {
-				logger.error("Null returned, delpthScene dont should be null", exception);
-				exception.printStackTrace();
-				errorOccurred = true;
-			}
+			transitToGameOver(gameOver);
 			
 		}
 		else {
 			//Nothing to do 
+		}
+	}
+
+	private void transitToGameOver(GameScene gameOver) {
+		try {
+			assert(gameOver != null):("Null returned, gameOver cant transit to new scene");
+			this.game.transitTo(gameOver);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, delpthScene dont should be null", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
 		}
 	}
 

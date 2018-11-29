@@ -143,25 +143,29 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	private void addUniverseParallax() {
 		this.delpthScene = new Parallax();
         try {
-        	assert(this.delpthScene != null);
-        	//The first one added will be the last one to be painted and the last to be added to the list, it will be the main layer. 
-        	final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
-        	this.delpthScene.add(DELPTH_BACKGROUND_PATH);
-        	this.delpthScene.add(DELPTH_BACKGROUND_PATH);
-        	final String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png";
-        	this.delpthScene.add(DELPTH_UNIVERSE1_PATH);
-        	final String DELPTH_UNIVERSE2_PATH = "src/assets/img/universe2.jpg";
-        	this.delpthScene.add(DELPTH_UNIVERSE2_PATH);
-        	final String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg";
-        	this.delpthScene.add(DELPTH_UNIVERSE3_PATH);
-        	final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
-        	this.delpthScene.add(DELPTH_UNIVERSE4_PATH);	
+        	addBackgroundPaths();	
         }
         catch(NullPointerException exception) {
         	logger.error("Error instantiating Parallax class ", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
         }
+	}
+
+	private void addBackgroundPaths() {
+		assert(this.delpthScene != null);
+		//The first one added will be the last one to be painted and the last to be added to the list, it will be the main layer. 
+		final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
+		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
+		this.delpthScene.add(DELPTH_BACKGROUND_PATH);
+		final String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png";
+		this.delpthScene.add(DELPTH_UNIVERSE1_PATH);
+		final String DELPTH_UNIVERSE2_PATH = "src/assets/img/universe2.jpg";
+		this.delpthScene.add(DELPTH_UNIVERSE2_PATH);
+		final String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg";
+		this.delpthScene.add(DELPTH_UNIVERSE3_PATH);
+		final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
+		this.delpthScene.add(DELPTH_UNIVERSE4_PATH);
 	}
 	
 	//Build the update image of sprite on screen
