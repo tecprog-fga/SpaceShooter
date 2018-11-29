@@ -44,7 +44,10 @@ public class MenuScene extends GameScene {
 		//Reset option menu, when start game is ativated
 		selectedMenuOption = OptionsMenu.START_GAME;
 
-		//Configure up and down keys for detect press
+		configureKeyButtons();
+	}
+	
+	private void configureKeyButtons() {
 		try {
 			assert(Keyboard.DOWN_KEY == 40);
 			keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_INITIAL_PRESS_ONLY);
@@ -57,12 +60,14 @@ public class MenuScene extends GameScene {
 			errorOccurred = true;
 		}
 	}
+	
 	//Realize the sequence of actions developed.
 	public void updateScene() {
 		// Control menu option selection
 		checkMenuOption();
 		//Define current arrow position
 		currentArrow();
+		
 		checkButtonSelection();
 		// Draw menu elements
 		drawScenes();
@@ -116,6 +121,25 @@ public class MenuScene extends GameScene {
 		title = new Sprite(TITLE_PATH);
 		logger.debug("The sprite was created with path: " + TITLE_PATH);
 		
+		calculateTitleSpritePosition();
+		
+		//Define buttons position
+		appendButtons();
+		
+		//Realize the build for have arrow image in screen.
+		final String ARROW_PATH = "src/assets/img/menu/arrow.png";
+		arrow = new Sprite(ARROW_PATH);
+		logger.debug("The sprite was created with path: " + TITLE_PATH);
+		
+		setArrowPosition();
+	}
+
+	private void setArrowPosition() {
+		arrow.x = 10;
+		arrow.y = 10;
+	}
+
+	private void calculateTitleSpritePosition() {
 		try {
 			title.x = spos.calculatePosition(WindowConstants.WIDTH, 2, title, 2);
 			title.y = spos.calculatePosition(WindowConstants.HEIGHT, 3, title, 2);
@@ -125,16 +149,6 @@ public class MenuScene extends GameScene {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
-		//Define buttons position
-		appendButtons();
-		
-		//Realize the build for have arrow image in screen.
-		final String ARROW_PATH = "src/assets/img/menu/arrow.png";
-		arrow = new Sprite(ARROW_PATH);
-		logger.debug("The sprite was created with path: " + TITLE_PATH);
-		
-		arrow.x = 10;
-		arrow.y = 10;
 	}
 
 	/**
@@ -147,41 +161,55 @@ public class MenuScene extends GameScene {
 	 * It's limited with Down and Up key 
 	 */
 	private void checkMenuOption() {
-		//Down selection
+		
 		try {
-			assert(Keyboard.DOWN_KEY == 40);
-			if (keyboard.keyDown(Keyboard.DOWN_KEY)) {
-				String MSG_DOWN = "down";
-				System.out.println(MSG_DOWN);
-				
-				//Change current menu option
-				assert(this.selectedMenuOption != null):("This object returned null");
-				selectedMenuOption = selectedMenuOption.next();
-				System.out.println(selectedMenuOption);
-			}
-			else {
-				//Nothing to do
-			}
-	
-			//Up selection		
-			assert(Keyboard.UP_KEY == 38);
-			if (keyboard.keyDown(Keyboard.UP_KEY)) {
-				String MSG_UP = "up";
-				System.out.println(MSG_UP);
-				//Change current menu option
-				assert(this.selectedMenuOption != null):("This object returned null");
-				selectedMenuOption = selectedMenuOption.back();
-				System.out.println(selectedMenuOption);
-			}
-			else {
-				//Nothing to do
-			}
+			clickDownButton();
+			clickUpButton();
 		}
 		catch(IllegalArgumentException exception) {
 			logger.error("Returned unexpected value ", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
+	}
+
+	private void clickUpButton() {
+		assert(Keyboard.UP_KEY == 38);
+		if (keyboard.keyDown(Keyboard.UP_KEY)) {
+			String MSG_UP = "Up clicked";
+			logger.debug(MSG_UP);
+			focusOptionBack();
+		}
+		else {
+			//Nothing to do
+		}
+	}
+
+	private void focusOptionBack() {
+		//Change current menu option
+		assert(this.selectedMenuOption != null):("This object returned null");
+		selectedMenuOption = selectedMenuOption.back();
+		logger.debug("Option "+ selectedMenuOption +" focused");
+	}
+
+	private void clickDownButton() {
+		assert(Keyboard.DOWN_KEY == 40);
+		if (keyboard.keyDown(Keyboard.DOWN_KEY)) {
+			String MSG_DOWN = "Down clicked";
+			logger.debug(MSG_DOWN);
+			
+			//Change current menu option
+			focusOptionNext();
+		}
+		else {
+			//Nothing to do
+		}
+	}
+
+	private void focusOptionNext() {
+		assert(this.selectedMenuOption != null):("This object returned null");
+		selectedMenuOption = selectedMenuOption.next();
+		logger.debug("Option "+ selectedMenuOption +" focused");
 	}
 	
 	/**
@@ -229,27 +257,50 @@ public class MenuScene extends GameScene {
 	private void appendButtons() {
 		
 		//Realize the build for have buttons image in screen.
-		final String START_BUTTON_PATH = "src/assets/img/menu/start_button.png";
-		Sprite startButton = null;
-		startButton = new Sprite(START_BUTTON_PATH);
-		logger.debug("The sprite was created with path: " + START_BUTTON_PATH);
-		
-		final String RANKING_PATH = "src/assets/img/menu/ranking.png";
-		Sprite rankingButton = null;
-		rankingButton = new Sprite(RANKING_PATH);		
-		logger.debug("The sprite was created with path: " + RANKING_PATH);
-		
-		final String SETTINGS_PATH = "src/assets/img/menu/settings.png";
-		Sprite settingsButton = null;
-		settingsButton = new Sprite(SETTINGS_PATH);
-		logger.debug("The sprite was created with path: " + SETTINGS_PATH);
-		
-		final String QUIT_PATH = "src/assets/img/menu/quit.png";
-		Sprite quitButton = null;
-		quitButton = new Sprite(QUIT_PATH);
-		logger.debug("The sprite was created with path: " + QUIT_PATH);
+		Sprite startButton = createStartButtonSprite();
+		Sprite rankingButton = createRankingButtonSprite();
+		Sprite settingsButton = createSettingsButtonSprite();
+		Sprite quitButton = createQuitButtonSprite();
 		
 		//Add this images in buttons really
+		createButtons(startButton, rankingButton, settingsButton, quitButton);
+
+		defineOptionsByButton(startButton);
+	}
+
+	private void defineOptionsByButton(Sprite startButton) {
+		for(OptionsMenu option : OptionsMenu.values()) {
+			//Integer value of variable option
+			int currentButtonIndex = 0; 
+			//Define the position of the first element according to the title
+			try {
+				currentButtonIndex = option.ordinal();
+				assert(currentButtonIndex >= 0);
+				assert(currentButtonIndex <= 1000);				
+				verifyCurrentButtonIndex(startButton, currentButtonIndex);
+			}
+			catch(IllegalArgumentException exception) {
+				logger.error("The index of button is invalid ", exception);
+				exception.printStackTrace();
+				errorOccurred = true;
+			}	
+		}
+	}
+
+	private void verifyCurrentButtonIndex(Sprite startButton, int currentButtonIndex) {
+		if(currentButtonIndex == 0) {
+			buttons.get(currentButtonIndex).x = WindowConstants.WIDTH/2 - startButton.width/2;
+			final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
+			buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
+		}
+		else { 
+			//Define the position of the element according to the last element
+			buttons.get(currentButtonIndex).x = buttons.get(currentButtonIndex - 1).x;
+			buttons.get(currentButtonIndex).y = buttons.get(currentButtonIndex - 1).y + buttons.get(currentButtonIndex - 1).height + DISTANCE_BETWEEN_BUTTONS;
+		}
+	}
+
+	private void createButtons(Sprite startButton, Sprite rankingButton, Sprite settingsButton, Sprite quitButton) {
 		try {
 			this.buttons.add(startButton);
 			this.buttons.add(rankingButton);
@@ -261,33 +312,38 @@ public class MenuScene extends GameScene {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
+	}
 
-		for(OptionsMenu option : OptionsMenu.values()) {
-			//Integer value of variable option
-			int currentButtonIndex = 0; 
-			//Define the position of the first element according to the title
-			try {
-				currentButtonIndex = option.ordinal();
-				assert(currentButtonIndex >= 0);
-				assert(currentButtonIndex <= 1000);				
-				if(currentButtonIndex == 0) {
-					buttons.get(currentButtonIndex).x = WindowConstants.WIDTH/2 - startButton.width/2;
-					final int DISTANCE_TITLE_BUTTON = WindowConstants.HEIGHT/24;
-					buttons.get(currentButtonIndex).y = title.y + title.height + DISTANCE_TITLE_BUTTON;
-				}
-				else { 
-					//Define the position of the element according to the last element
-					buttons.get(currentButtonIndex).x = buttons.get(currentButtonIndex - 1).x;
-					buttons.get(currentButtonIndex).y = buttons.get(currentButtonIndex - 1).y + buttons.get(currentButtonIndex - 1).height + DISTANCE_BETWEEN_BUTTONS;
-				}
-			}
-			catch(IllegalArgumentException exception) {
-				logger.error("The index of button is invalid ", exception);
-				exception.printStackTrace();
-				errorOccurred = true;
-			}
-			
-		}
+	private Sprite createQuitButtonSprite() {
+		final String QUIT_PATH = "src/assets/img/menu/quit.png";
+		Sprite quitButton = null;
+		quitButton = new Sprite(QUIT_PATH);
+		logger.debug("The sprite was created with path: " + QUIT_PATH);
+		return quitButton;
+	}
+
+	private Sprite createSettingsButtonSprite() {
+		final String SETTINGS_PATH = "src/assets/img/menu/settings.png";
+		Sprite settingsButton = null;
+		settingsButton = new Sprite(SETTINGS_PATH);
+		logger.debug("The sprite was created with path: " + SETTINGS_PATH);
+		return settingsButton;
+	}
+
+	private Sprite createRankingButtonSprite() {
+		final String RANKING_PATH = "src/assets/img/menu/ranking.png";
+		Sprite rankingButton = null;
+		rankingButton = new Sprite(RANKING_PATH);		
+		logger.debug("The sprite was created with path: " + RANKING_PATH);
+		return rankingButton;
+	}
+
+	private Sprite createStartButtonSprite() {
+		final String START_BUTTON_PATH = "src/assets/img/menu/start_button.png";
+		Sprite startButton = null;
+		startButton = new Sprite(START_BUTTON_PATH);
+		logger.debug("The sprite was created with path: " + START_BUTTON_PATH);
+		return startButton;
 	}
 
 	/**
@@ -304,9 +360,7 @@ public class MenuScene extends GameScene {
 			Sprite currentButton = null;
 			assert(currentButtonIndex >= 0);
 			
-			currentButton = this.buttons.get(currentButtonIndex);
-			this.arrow.x = currentButton.x - arrow.width - DISTANCE_BETWEEN_BUTTONS;
-			this.arrow.y = currentButton.y;
+			defineArrowPosition(currentButtonIndex);
 		}
 		catch(NullPointerException exception) {
 			logger.error("This object returned null", exception);
@@ -318,6 +372,13 @@ public class MenuScene extends GameScene {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
+	}
+
+	private void defineArrowPosition(int currentButtonIndex) {
+		Sprite currentButton;
+		currentButton = this.buttons.get(currentButtonIndex);
+		this.arrow.x = currentButton.x - arrow.width - DISTANCE_BETWEEN_BUTTONS;
+		this.arrow.y = currentButton.y;
 	}
 
 	/**

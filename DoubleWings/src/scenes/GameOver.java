@@ -43,19 +43,27 @@ public class GameOver extends GameScene implements CountDownTimerEnds {
 		setGameControllerElements();
 		
 		//Creation image background
-		final String BACKGROUND_PATH = "src/assets/img/temp_background.png";
-		this.background = new GameImage(BACKGROUND_PATH);
-		logger.debug("The sprite was created with path: " + BACKGROUND_PATH);
+		createBackgoundSprite();
 		
 		//Creation image Game Over
-		final String GAME_OVER_PATH = "src/assets/img/continue/3540295891_logo.jpg";
-		this.gameOver = new Sprite(GAME_OVER_PATH);
-		logger.debug("The sprite was created with path: " + GAME_OVER_PATH);
-		logger.info("The game is over");
+		createGameOverSprite();
 		
 		calculateGameOverSpritePosition();
 		
 		buildWaitScene();
+	}
+
+	private void createBackgoundSprite() {
+		final String BACKGROUND_PATH = "src/assets/img/temp_background.png";
+		this.background = new GameImage(BACKGROUND_PATH);
+		logger.debug("The sprite was created with path: " + BACKGROUND_PATH);
+	}
+
+	private void createGameOverSprite() {
+		final String GAME_OVER_PATH = "src/assets/img/continue/3540295891_logo.jpg";
+		this.gameOver = new Sprite(GAME_OVER_PATH);
+		logger.debug("The sprite was created with path: " + GAME_OVER_PATH);
+		logger.info("The game is over");
 	}
 
 	private void calculateGameOverSpritePosition() {

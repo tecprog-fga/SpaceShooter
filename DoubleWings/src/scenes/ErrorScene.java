@@ -36,6 +36,10 @@ public class ErrorScene extends GameScene{
 		final String GAME_OVER_PATH = "src/assets/img/erro.png";
 		this.errorScene = new Sprite(GAME_OVER_PATH);
 
+		calculateErrorSceneSpritePosition();
+	}
+
+	private void calculateErrorSceneSpritePosition() {
 		//Game over sprite center position
 		this.errorScene.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.errorScene, 2);
 		this.errorScene.y = spos.calculatePosition(WindowConstants.HEIGHT, 2, this.errorScene, 2);

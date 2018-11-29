@@ -134,4 +134,271 @@
  29-11-2018 16:22:10 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
  29-11-2018 16:22:10 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
  29-11-2018 16:22:10 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 16:46:41 DEBUG SpritePosition:119 - The sprite was created with path: src/assets/img/menu/background.png
+ 29-11-2018 16:46:41 DEBUG SpritePosition:124 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 16:46:41 DEBUG SpritePosition:258 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 29-11-2018 16:46:41 DEBUG SpritePosition:263 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 29-11-2018 16:46:41 DEBUG SpritePosition:268 - The sprite was created with path: src/assets/img/menu/settings.png
+ 29-11-2018 16:46:41 DEBUG SpritePosition:273 - The sprite was created with path: src/assets/img/menu/quit.png
+ 29-11-2018 16:46:41 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 16:46:41 DEBUG SpritePosition:172 - Down selected
+ 29-11-2018 16:46:41 DEBUG SpritePosition:172 - Down selected
+ 29-11-2018 16:46:42 DEBUG SpritePosition:172 - Down selected
+ 29-11-2018 16:46:42 DEBUG SpritePosition:183 - Up selected
+ 29-11-2018 16:46:42 DEBUG SpritePosition:183 - Up selected
+ 29-11-2018 16:46:43 DEBUG SpritePosition:172 - Down selected
+ 29-11-2018 16:46:43 DEBUG SpritePosition:172 - Down selected
+ 29-11-2018 16:47:14 DEBUG SpritePosition:119 - The sprite was created with path: src/assets/img/menu/background.png
+ 29-11-2018 16:47:14 DEBUG SpritePosition:124 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 16:47:14 DEBUG SpritePosition:257 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 29-11-2018 16:47:14 DEBUG SpritePosition:262 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 29-11-2018 16:47:14 DEBUG SpritePosition:267 - The sprite was created with path: src/assets/img/menu/settings.png
+ 29-11-2018 16:47:14 DEBUG SpritePosition:272 - The sprite was created with path: src/assets/img/menu/quit.png
+ 29-11-2018 16:47:14 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 16:47:15 DEBUG SpritePosition:172 - Down selected
+ 29-11-2018 16:47:15 DEBUG SpritePosition:172 - Down selected
+ 29-11-2018 16:47:15 DEBUG SpritePosition:172 - Down selected
+ 29-11-2018 16:47:15 DEBUG SpritePosition:183 - Up selected
+ 29-11-2018 16:49:42 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/background.png
+ 29-11-2018 16:49:42 DEBUG SpritePosition:122 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 16:49:42 DEBUG SpritePosition:256 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 29-11-2018 16:49:42 DEBUG SpritePosition:261 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 29-11-2018 16:49:42 DEBUG SpritePosition:266 - The sprite was created with path: src/assets/img/menu/settings.png
+ 29-11-2018 16:49:42 DEBUG SpritePosition:271 - The sprite was created with path: src/assets/img/menu/quit.png
+ 29-11-2018 16:49:42 DEBUG SpritePosition:132 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 16:49:42 DEBUG SpritePosition:196 - Down clicked
+ 29-11-2018 16:49:42 DEBUG SpritePosition:196 - Down clicked
+ 29-11-2018 16:49:42 DEBUG SpritePosition:180 - up
+ 29-11-2018 16:49:42 DEBUG SpritePosition:180 - up
+ 29-11-2018 16:49:43 DEBUG SpritePosition:196 - Down clicked
+ 29-11-2018 16:49:43 DEBUG SpritePosition:196 - Down clicked
+ 29-11-2018 16:49:43 DEBUG SpritePosition:196 - Down clicked
+ 29-11-2018 16:53:02 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/background.png
+ 29-11-2018 16:53:02 DEBUG SpritePosition:122 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 16:53:02 DEBUG SpritePosition:256 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 29-11-2018 16:53:02 DEBUG SpritePosition:261 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 29-11-2018 16:53:02 DEBUG SpritePosition:266 - The sprite was created with path: src/assets/img/menu/settings.png
+ 29-11-2018 16:53:02 DEBUG SpritePosition:271 - The sprite was created with path: src/assets/img/menu/quit.png
+ 29-11-2018 16:53:02 DEBUG SpritePosition:132 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 16:53:04 DEBUG SpritePosition:196 - Down clicked
+ 29-11-2018 16:53:04 DEBUG SpritePosition:201 - Option RANKING focused
+ 29-11-2018 16:53:06 DEBUG SpritePosition:196 - Down clicked
+ 29-11-2018 16:53:06 DEBUG SpritePosition:201 - Option SETTINGS focused
+ 29-11-2018 16:53:08 DEBUG SpritePosition:180 - Up clicked
+ 29-11-2018 16:53:08 DEBUG SpritePosition:185 - Option RANKING focused
+ 29-11-2018 16:53:08 DEBUG SpritePosition:180 - Up clicked
+ 29-11-2018 16:53:08 DEBUG SpritePosition:185 - Option START_GAME focused
+ 29-11-2018 16:53:09 DEBUG SpritePosition:196 - Down clicked
+ 29-11-2018 16:53:09 DEBUG SpritePosition:201 - Option RANKING focused
+ 29-11-2018 16:53:11 DEBUG SpritePosition:196 - Down clicked
+ 29-11-2018 16:53:11 DEBUG SpritePosition:201 - Option SETTINGS focused
+ 29-11-2018 16:53:12 DEBUG SpritePosition:196 - Down clicked
+ 29-11-2018 16:53:12 DEBUG SpritePosition:201 - Option QUIT focused
+ 29-11-2018 17:23:44 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/background.png
+ 29-11-2018 17:23:44 DEBUG SpritePosition:122 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 17:23:44 DEBUG SpritePosition:345 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 29-11-2018 17:23:44 DEBUG SpritePosition:337 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 29-11-2018 17:23:44 DEBUG SpritePosition:329 - The sprite was created with path: src/assets/img/menu/settings.png
+ 29-11-2018 17:23:44 DEBUG SpritePosition:321 - The sprite was created with path: src/assets/img/menu/quit.png
+ 29-11-2018 17:23:44 DEBUG SpritePosition:132 - The sprite was created with path: src/assets/img/menu/title.png
+ 29-11-2018 17:23:45 DEBUG SpritePosition:199 - Down clicked
+ 29-11-2018 17:23:45 DEBUG SpritePosition:212 - Option RANKING focused
+ 29-11-2018 17:23:45 DEBUG SpritePosition:199 - Down clicked
+ 29-11-2018 17:23:45 DEBUG SpritePosition:212 - Option SETTINGS focused
+ 29-11-2018 17:23:45 DEBUG SpritePosition:199 - Down clicked
+ 29-11-2018 17:23:45 DEBUG SpritePosition:212 - Option QUIT focused
+ 29-11-2018 17:23:46 DEBUG SpritePosition:180 - Up clicked
+ 29-11-2018 17:23:46 DEBUG SpritePosition:192 - Option SETTINGS focused
+ 29-11-2018 17:23:46 DEBUG SpritePosition:180 - Up clicked
+ 29-11-2018 17:23:46 DEBUG SpritePosition:192 - Option RANKING focused
+ 29-11-2018 17:23:46 DEBUG SpritePosition:180 - Up clicked
+ 29-11-2018 17:23:46 DEBUG SpritePosition:192 - Option START_GAME focused
+ 29-11-2018 17:23:49 DEBUG Shield:77 - Enemy hitted
+ 29-11-2018 17:23:49 DEBUG Player:135 - Player's lives: 2
+ 29-11-2018 17:23:49 DEBUG Player:185 - Reseting spaceship's position!
+ 29-11-2018 17:23:51 DEBUG Shield:77 - Enemy hitted
+ 29-11-2018 17:23:57 DEBUG Player:101 - Incriased score
+ 29-11-2018 17:23:57 DEBUG Player:101 - Incriased score
+ 29-11-2018 17:24:00 DEBUG Player:135 - Player's lives: 1
+ 29-11-2018 17:24:00 DEBUG Player:185 - Reseting spaceship's position!
+ 29-11-2018 17:24:01 DEBUG Shield:77 - Enemy hitted
+ 29-11-2018 17:24:02 DEBUG Player:135 - Player's lives: 0
+ 29-11-2018 17:24:02 DEBUG Player:185 - Reseting spaceship's position!
+ 29-11-2018 17:24:07 DEBUG Shield:77 - Enemy hitted
+ 29-11-2018 17:24:09 DEBUG Player:135 - Player's lives: -1
+ 29-11-2018 17:24:09 DEBUG Player:167 - Lost the game!
+ 29-11-2018 17:24:09 DEBUG Player:193 - Using continnue game!
+ 29-11-2018 17:24:09 DEBUG Player:151 - Player's initial lives reset to: 3
+ 29-11-2018 17:24:09 DEBUG Player:185 - Reseting spaceship's position!
+ 29-11-2018 17:24:09 DEBUG ContinueGame:113 - The parallax was set with 0.0 in x axys and 1.0 in y axys
+ 29-11-2018 17:24:09 DEBUG ContinueGame:86 - The sprite was created with path: src/assets/img/continue/continue.png
+ 29-11-2018 17:24:09 DEBUG ContinueGame:93 - The sprite was created with path: src/assets/img/continue/number_9.png
+ 29-11-2018 17:24:09 DEBUG ContinueGame:100 - The sprite was created with path: src/assets/img/continue/Enter-Download-PNG.png
+ 29-11-2018 17:24:09 DEBUG ContinueGame:391 - The timer was set with delay: 1000
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:09 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 INFO  ContinueGame:288 - The count down was started
+ 29-11-2018 17:24:10 DEBUG Lose:37 - It was delegated the index 8 in counter
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:10 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 INFO  ContinueGame:288 - The count down was started
+ 29-11-2018 17:24:11 DEBUG Lose:37 - It was delegated the index 7 in counter
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:11 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 INFO  ContinueGame:288 - The count down was started
+ 29-11-2018 17:24:12 DEBUG Lose:37 - It was delegated the index 6 in counter
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:12 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 DEBUG ContinueGame:219 - The parallax was set with 800x600 pixels
+ 29-11-2018 17:24:13 INFO  ContinueGame:315 - The state of the game and the keyboard is ok
+ 29-11-2018 17:24:13 INFO  ContinueGame:316 - Enter key was pressed
+ 29-11-2018 17:24:13 INFO  ContinueGame:288 - The count down was started
+ 29-11-2018 17:24:13 DEBUG Lose:37 - It was delegated the index 5 in counter
+ 29-11-2018 17:24:14 INFO  ContinueGame:288 - The count down was started
+ 29-11-2018 17:24:14 DEBUG Lose:37 - It was delegated the index 4 in counter
+ 29-11-2018 17:24:15 INFO  ContinueGame:288 - The count down was started
+ 29-11-2018 17:24:15 DEBUG Lose:37 - It was delegated the index 3 in counter
  
