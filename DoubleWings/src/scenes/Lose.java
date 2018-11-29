@@ -51,39 +51,40 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	
 	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	public void buildInitialScene() {
-		
-		//Creation a object to class Parallax
-        this.delpthScene = new Parallax();
-        try {
-        	assert(this.delpthScene != null);
-        	//The first one added will be the last one to be painted and the last to be added to the list, it will be the main layer. 
-        	final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
-        	this.delpthScene.add(DELPTH_BACKGROUND_PATH);
-        	this.delpthScene.add(DELPTH_BACKGROUND_PATH);
-        	final String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png";
-        	this.delpthScene.add(DELPTH_UNIVERSE1_PATH);
-        	final String DELPTH_UNIVERSE2_PATH = "src/assets/img/universe2.jpg";
-        	this.delpthScene.add(DELPTH_UNIVERSE2_PATH);
-        	final String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg";
-        	this.delpthScene.add(DELPTH_UNIVERSE3_PATH);
-        	final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
-        	this.delpthScene.add(DELPTH_UNIVERSE4_PATH);	
-        }
-        catch(NullPointerException exception) {
-        	logger.error("Error instantiating Parallax class ", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-        }
-		
+	
+        createObjectParallax();
 		
 		//Adjusts the speed of all layers from the main layer
 		this.delpthScene.setVelAllLayers(0, 1);
 		
-		//Define scenes elements position for lose sprite upper-center position
-		final String LOSE_PATH = "src/assets/img/continue/YOU-LOSE.png";
-		this.loseScreen = new Sprite(LOSE_PATH);
-		logger.debug("The sprite was created with path: " + LOSE_PATH);
+		defineLoseScene();
 		
+		calculateLoseSpritePosition();
+		
+		checkLivesPlayer();
+		
+		calculateLifeRemainingSpritePosition();
+		
+		//Finally, build scene of count down
+		buildWaitScene();
+	}
+
+	private void calculateLifeRemainingSpritePosition() {
+		try {
+			assert(this.lifeRemaining != null);
+			//Define position lifeRemaining on the Screen
+			this.lifeRemaining.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.lifeRemaining, 2);
+			this.lifeRemaining.y = spos.calculatePosition(WindowConstants.HEIGHT, 2, this.lifeRemaining, 2);
+			
+		}
+		catch(NullPointerException exception) {
+			logger.error(lifeRemaining + "returned null", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+	}
+
+	private void calculateLoseSpritePosition() {
 		try {
 			assert(this.loseScreen != null);
 			this.loseScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.loseScreen, 2);
@@ -94,6 +95,9 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
+	}
+	
+	private void checkLivesPlayer() {
 		try {
 			//Check how many lives the player has to instantiate the specific sprite.
 			//Depends of lives is show the sprite related
@@ -126,21 +130,38 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
-		try {
-			assert(this.lifeRemaining != null);
-			//Define position lifeRemaining on the Screen
-			this.lifeRemaining.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.lifeRemaining, 2);
-			this.lifeRemaining.y = spos.calculatePosition(WindowConstants.HEIGHT, 2, this.lifeRemaining, 2);
-			
-		}
-		catch(NullPointerException exception) {
-			logger.error(lifeRemaining + "returned null", exception);
+	}
+
+	//Define scenes elements position for lose sprite upper-center position
+	private void defineLoseScene() {
+		final String LOSE_PATH = "src/assets/img/continue/YOU-LOSE.png";
+		this.loseScreen = new Sprite(LOSE_PATH);
+		logger.debug("The sprite was created with path: " + LOSE_PATH);
+	}
+
+	//Creation a object to class Parallax
+	private void createObjectParallax() {
+		this.delpthScene = new Parallax();
+        try {
+        	assert(this.delpthScene != null);
+        	//The first one added will be the last one to be painted and the last to be added to the list, it will be the main layer. 
+        	final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
+        	this.delpthScene.add(DELPTH_BACKGROUND_PATH);
+        	this.delpthScene.add(DELPTH_BACKGROUND_PATH);
+        	final String DELPTH_UNIVERSE1_PATH = "src/assets/img/universe1.png";
+        	this.delpthScene.add(DELPTH_UNIVERSE1_PATH);
+        	final String DELPTH_UNIVERSE2_PATH = "src/assets/img/universe2.jpg";
+        	this.delpthScene.add(DELPTH_UNIVERSE2_PATH);
+        	final String DELPTH_UNIVERSE3_PATH = "src/assets/img/universe3.jpg";
+        	this.delpthScene.add(DELPTH_UNIVERSE3_PATH);
+        	final String DELPTH_UNIVERSE4_PATH = "src/assets/img/universe4.jpg";
+        	this.delpthScene.add(DELPTH_UNIVERSE4_PATH);	
+        }
+        catch(NullPointerException exception) {
+        	logger.error("Error instantiating Parallax class ", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
-		}
-		
-		//Finally, build scene of count down
-		buildWaitScene();
+        }
 	}
 	
 	//Build the update image of sprite on screen
