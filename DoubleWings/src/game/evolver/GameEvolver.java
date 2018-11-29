@@ -7,6 +7,10 @@ package game.evolver;
 
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
+
+
+
 
 /**
  * This class implements interactions with the game interface
@@ -65,7 +69,9 @@ public class GameEvolver {
 	public int getCurrentIteration() {
 		return iterator;
 	}
-		
+	
+	private static Logger logger = Logger.getLogger(GameEvolver.class);
+	
 	private ArrayList<GameEvent> history = new ArrayList<GameEvent>();
 	private ArrayList<GameEvent> aux = new ArrayList<GameEvent>();
 	
@@ -79,8 +85,8 @@ public class GameEvolver {
 			
 			if (e.time == iterator) {
 				history.add(e);
-				aux.add(e);				
-				System.out.println("GameEvent Callback: " + e.name);
+				aux.add(e);
+				logger.debug("GameEvent Callback: " + e.name);
 				e.run();
 			}
 			else {

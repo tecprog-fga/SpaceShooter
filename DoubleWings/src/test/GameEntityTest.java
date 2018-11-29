@@ -2,13 +2,14 @@ package test;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
  
 public class GameEntityTest {
 
 	public String name = null;
 	
-	@Test
+	@Before
 	public void gameEntityTest() {
 		assertNull(this.name);
 	}
@@ -32,7 +33,7 @@ public class GameEntityTest {
 	
 	@Test
 	public void testEntity() {
-	 assertNotNull(ENTITYLIMIT);	
+	 assertTrue(this.ENTITYLIMIT == 1000);	
 	}
 	
 }

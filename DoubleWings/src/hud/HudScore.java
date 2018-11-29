@@ -7,12 +7,19 @@ package hud;
 
 import java.awt.Color;
 import java.awt.Font;
+
+import org.apache.log4j.Logger;
+
 import jplay.Time;
+import scenes.GameScene;
 
 /**
  * class that controls the score that will be displayed on the HUD
  */
 public class HudScore extends Time {
+	
+	boolean errorOcurred = false;
+	final static Logger logger = Logger.getLogger(HudScore.class);
 	/**
 	 * Variable used to save the score information that will be displayed in hud
 	 */
@@ -45,7 +52,14 @@ public class HudScore extends Time {
 	 * @return screenScore
 	 */
 	public int getScreenScore() {
-		assert(screenScore >= 0):("Pontuação inválida!");
+		try {
+			assert(screenScore >= 0);
+		}
+		catch(IllegalArgumentException exception) {
+			logger.error("Score must be positive!", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 		return screenScore;
 	}
 
@@ -54,7 +68,14 @@ public class HudScore extends Time {
 	 * @param score current player score
 	 */
 	public void setScreenScore(int score) {
-		assert(score >= 0):("Pontuação inválida!");
-		this.screenScore = score;
+		try {
+			assert(score >= 0);
+			this.screenScore = score;
+		}
+		catch(IllegalArgumentException exception) {
+			logger.error("Score must be positive!", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
 	}
 }

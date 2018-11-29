@@ -2,22 +2,49 @@ package test;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
-import entity.player.PlayerSceneDelegate;
 import entity.player.PlayerSpaceship;
 import observer.GameEntityObserver;
 
 public class PlayerTest {
-	
-	private static final int INITIAL_CHANCES = 3;
-	private boolean canContinue = true;
-	public PlayerSceneDelegate delegate = null;
 
+	@Before
+	public void setUp() throws Exception {
+		assertTrue(this.score <= 0);
+	}
+	
+	private int score = 0;
+	
 	
 	@Test
-	public void loseGameTest() {
-		assertNull(this.delegate);
+	public void testPlayer() {
+		assertTrue(this.score == 0);
+	}
+
+	private GameEntityObserver observer = null;
+	
+	@Test
+	public void testGetObserver() {
+		assertNull(this.observer);
+	}
+		
+	@Test
+	public void testSetObserver() {
+		/* Nothing to do */
+	}
+	private int chances = 3;
+
+	@Test
+	public void testSetChances() {
+		assertTrue(this.chances == 3);
+		
+	}
+
+	@Test
+	public void testGetScore() {
+		assertTrue(this.score == 0);
 	}
 	
 	private PlayerSpaceship spaceship = null;
