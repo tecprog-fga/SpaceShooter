@@ -52,7 +52,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	//This void method was declarated in GameScene abstract class, it used for configurated the scene
 	public void buildInitialScene() {
 	
-        createObjectParallax();
+        addUniverseParallax();
 		
 		//Adjusts the speed of all layers from the main layer
 		this.delpthScene.setVelAllLayers(0, 1);
@@ -140,7 +140,7 @@ public class Lose extends GameScene implements CountDownTimerEnds {
 	}
 
 	//Creation a object to class Parallax
-	private void createObjectParallax() {
+	private void addUniverseParallax() {
 		this.delpthScene = new Parallax();
         try {
         	assert(this.delpthScene != null);

@@ -71,22 +71,85 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 	//This void method build sprites for show scenes of class ContinueGame. 
 	//It's necessary for build the initial sprites for universe, continue, count down and enter images.
 	public void buildInitialScene() {
-		try{
-			assert(this.keyboard != null);
-			//It's necessary set behavior this buttons for to go initial scene
-			this.keyboard.setBehavior(Keyboard.ENTER_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
-			this.keyboard.setBehavior(Keyboard.ESCAPE_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
-		}
-		catch(NullPointerException exception){
-			logger.error("Null returned, keyboard can not set value", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}
+		setBehaviorKeyboard();
 		
 		//Creation a object to class Parallax
 		this.delpthScene = new Parallax();
 		
-		//The first one added will be the last one to be painted and the last to be added to the list, it will be the main layer. 
+		addUniverseParallax();
+		
+		//...Adjusts the speed of all layers from the main layer
+		final double velMainLayerX = 0;
+		final double velMainLayerY = 1;
+		this.delpthScene.setVelAllLayers(velMainLayerX, velMainLayerY);
+		logger.debug("The parallax was set with " + velMainLayerX + " in x axys and " + velMainLayerY+ " in y axys");
+		
+		//Realize the position of images in continue screen, continue sprite upper-center position.
+	    final String CONTINUE_PATH = "src/assets/img/continue/continue.png";
+		this.continueScreen = new Sprite(CONTINUE_PATH);
+		logger.debug("The sprite was created with path: " + CONTINUE_PATH);
+		
+		calculateContinueScreenSpritePosition();
+		
+		//Realize the position of images in countDown screen.
+		final String COUNTDOWN_PATH = "src/assets/img/continue/number_9.png";
+		this.countdownScreen = new Sprite(COUNTDOWN_PATH);
+		logger.debug("The sprite was created with path: " + COUNTDOWN_PATH);
+		
+		calculateCountDownScreenPosition();
+		
+		//Realize the position of enter sprite displays screen.
+	    final String ENTER_PATH = "src/assets/img/continue/Enter-Download-PNG.png";	 
+		this.enterScreen = new Sprite(ENTER_PATH);
+		logger.debug("The sprite was created with path: " + ENTER_PATH);
+		
+		calculateEnterScreenPosition();
+
+		//Finally, build scene of count down
+		buildWaitScene();
+	}
+
+	private void calculateEnterScreenPosition() {
+		try {			
+			assert(this.enterScreen != null);
+			this.enterScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.enterScreen, 2);
+			this.enterScreen.y = spos.calculatePosition(WindowConstants.HEIGHT, 500, this.enterScreen, 20);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, enterScreen cant marked Window constants", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+	}
+
+	private void calculateCountDownScreenPosition() {
+		try {
+			assert(this.countdownScreen != null);
+			this.countdownScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.countdownScreen, 2);
+			this.countdownScreen.y = spos.calculatePosition(WindowConstants.HEIGHT, 1.5, this.countdownScreen, 2);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, continueScreen cant marked Window constants", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+	}
+
+	private void calculateContinueScreenSpritePosition() {
+		try {
+			assert(this.continueScreen != null);
+			this.continueScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.continueScreen, 2);
+			this.continueScreen.y = spos.calculatePosition(WindowConstants.HEIGHT, 2, this.continueScreen, 1);
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, continueScreen cant marked Window constants", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+	}
+
+	//The first one added will be the last one to be painted and the last to be added to the list, it will be the main layer.
+	private void addUniverseParallax() {
 		final String DELPTH_BACKGROUND_PATH = "src/assets/img/temp_background.png";
 		
 		try {
@@ -106,62 +169,20 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
-		//...Adjusts the speed of all layers from the main layer
-		final double velMainLayerX = 0;
-		final double velMainLayerY = 1;
-		this.delpthScene.setVelAllLayers(velMainLayerX, velMainLayerY);
-		logger.debug("The parallax was set with " + velMainLayerX + " in x axys and " + velMainLayerY+ " in y axys");
-		
-		//Realize the position of images in continue screen, continue sprite upper-center position.
-	    final String CONTINUE_PATH = "src/assets/img/continue/continue.png";
-		this.continueScreen = new Sprite(CONTINUE_PATH);
-		logger.debug("The sprite was created with path: " + CONTINUE_PATH);
-		
-		try {
-			assert(this.continueScreen != null);
-			this.continueScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.continueScreen, 2);
-			this.continueScreen.y = spos.calculatePosition(WindowConstants.HEIGHT, 2, this.continueScreen, 1);
-		}
-		catch(NullPointerException exception) {
-			logger.error("Null returned, continueScreen cant marked Window constants", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}
-		
-		//Realize the position of images in countDown screen.
-		final String COUNTDOWN_PATH = "src/assets/img/continue/number_9.png";
-		this.countdownScreen = new Sprite(COUNTDOWN_PATH);
-		logger.debug("The sprite was created with path: " + COUNTDOWN_PATH);
-		
-		try {
-			assert(this.countdownScreen != null);
-			this.countdownScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.countdownScreen, 2);
-			this.countdownScreen.y = spos.calculatePosition(WindowConstants.HEIGHT, 1.5, this.countdownScreen, 2);
-		}
-		catch(NullPointerException exception) {
-			logger.error("Null returned, continueScreen cant marked Window constants", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}
-		
-		//Realize the position of enter sprite displays screen.
-	    final String ENTER_PATH = "src/assets/img/continue/Enter-Download-PNG.png";	 
-		this.enterScreen = new Sprite(ENTER_PATH);
-		logger.debug("The sprite was created with path: " + ENTER_PATH);
-		
-		try {			
-			assert(this.enterScreen != null);
-			this.enterScreen.x = spos.calculatePosition(WindowConstants.WIDTH, 2, this.enterScreen, 2);
-			this.enterScreen.y = spos.calculatePosition(WindowConstants.HEIGHT, 500, this.enterScreen, 20);
-		}
-		catch(NullPointerException exception) {
-			logger.error("Null returned, enterScreen cant marked Window constants", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}
+	}
 
-		//Finally, build scene of count down
-		buildWaitScene();
+	private void setBehaviorKeyboard() {
+		try{
+			assert(this.keyboard != null);
+			//It's necessary set behavior this buttons for to go initial scene
+			this.keyboard.setBehavior(Keyboard.ENTER_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
+			this.keyboard.setBehavior(Keyboard.ESCAPE_KEY, InputBase.DETECT_INITIAL_PRESS_ONLY);
+		}
+		catch(NullPointerException exception){
+			logger.error("Null returned, keyboard can not set value", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 
 	//Build the update image of sprite on screen for repeat layers
@@ -239,6 +260,10 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		//This constant define the final path of LOAD_IMAGE_PATH
 		final String PNG_EXTENSION = ".png";
 		
+		startCountDown(index, LOAD_IMAGE_PATH, PNG_EXTENSION);
+	}
+
+	private void startCountDown(int index, final String LOAD_IMAGE_PATH, final String PNG_EXTENSION) {
 		try {
 			assert(this.countdownScreen != null);
 			this.countdownScreen.loadImage(LOAD_IMAGE_PATH + String.valueOf(index) + PNG_EXTENSION); 
@@ -275,15 +300,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 				MenuScene transitScene = null;
 				transitScene = new MenuScene();
 				
-				try {
-					assert(this.transitScene == null):("This object should be null");
-					this.game.transitTo(transitScene.firstStageScene());
-				}
-				catch(NullPointerException exception) {
-					logger.error("Null returned, delpthScene dont should be null", exception);
-					exception.printStackTrace();
-					errorOccurred = true;
-				}	
+				transitSceneToFirstStage(transitScene);	
 			} 
 			else if (this.keyboard.keyDown(Keyboard.ESCAPE_KEY)) {
 				
@@ -292,15 +309,7 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 				GameScene menu = null;
 				menu = new MenuScene();
 				
-				try {
-					assert(this.menu == null);
-					this.game.transitTo(menu);
-				}
-				catch(NullPointerException exception) {
-					logger.error("This object should be null", exception);
-					exception.printStackTrace();
-					errorOccurred = true;
-				}	
+				transitSceneToMenu(menu);	
 			}
 			else {
 				//Nothing to do
@@ -308,6 +317,30 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		}
 		else {
 			//Nothing to do
+		}
+	}
+
+	private void transitSceneToMenu(GameScene menu) {
+		try {
+			assert(this.menu == null);
+			this.game.transitTo(menu);
+		}
+		catch(NullPointerException exception) {
+			logger.error("This object should be null", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
+	}
+
+	private void transitSceneToFirstStage(MenuScene transitScene) {
+		try {
+			assert(this.transitScene == null):("This object should be null");
+			this.game.transitTo(transitScene.firstStageScene());
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, delpthScene dont should be null", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
 		}
 	}
 	
@@ -324,20 +357,15 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 		CountDownTimer countDown = null;
 		countDown = new CountDownTimer();
 		
-		try {			
-			assert(countDown != null);
-			//Delegate action for count down to execute
-			countDown.delegateAction = this;
-		}
-		catch(NullPointerException exception) {
-			logger.error("Null returned, countDown dont should be null", exception);
-			exception.printStackTrace();
-			errorOccurred = true;
-		}
+		delegateCountDownAction(countDown);
 
 		//Define the time in milliseconds.
 		final int DELAY = 1000; 
 		
+		applyDelay(timer, countDown, DELAY);		
+	}
+
+	private void applyDelay(Timer timer, CountDownTimer countDown, final int DELAY) {
 		//Realize count with count down and delay of 1000 milliseconds
 		try {
 			assert(timer != null);
@@ -348,6 +376,19 @@ public class ContinueGame extends GameScene implements CountDownTimerEnds {
 			logger.error("Null returned, timer dont should be null", exception);
 			exception.printStackTrace();
 			errorOccurred = true;
-		}		
+		}
+	}
+
+	private void delegateCountDownAction(CountDownTimer countDown) {
+		try {			
+			assert(countDown != null);
+			//Delegate action for count down to execute
+			countDown.delegateAction = this;
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, countDown dont should be null", exception);
+			exception.printStackTrace();
+			errorOccurred = true;
+		}
 	}
 }
