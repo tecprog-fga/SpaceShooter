@@ -36,12 +36,7 @@ public class SpritePosition {
 		pos = 0;
 		
 		if(validatePosition(window, windowDividend, screenDividend)) {
-			if (window == WindowConstants.WIDTH) {
-				pos = window/windowDividend - sprite.width/screenDividend;
-			}
-			else {
-				pos = window/windowDividend - sprite.height/screenDividend;
-			}
+			pos = checkDimension(window, windowDividend, sprite, screenDividend);
 		}
 		else {
 			try {
@@ -57,6 +52,17 @@ public class SpritePosition {
 				exception.printStackTrace();
 				errorOccurred = true;
 			}
+		}
+		return pos;
+	}
+
+	private double checkDimension(int window, double windowDividend, Sprite sprite, double screenDividend) {
+		double pos;
+		if (window == WindowConstants.WIDTH) {
+			pos = window/windowDividend - sprite.width/screenDividend;
+		}
+		else {
+			pos = window/windowDividend - sprite.height/screenDividend;
 		}
 		return pos;
 	}

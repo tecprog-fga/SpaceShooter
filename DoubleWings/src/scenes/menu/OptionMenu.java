@@ -38,6 +38,14 @@ enum OptionsMenu {
 		int chosenOption = currentOption;
 		OptionsMenu nextOption;
 		
+		chosenOption = checkCurrentOption(chosenOption);
+		
+		nextOption = defineOption(chosenOption);
+		
+		return nextOption;
+	}
+
+	private int checkCurrentOption(int chosenOption) {
 		assert(this.currentOption >= 0):("The currentOption dont should be negative");
 		assert(currentOption <= 3):("The currentOption dont should be bigger then 3");
 		if (currentOption <= 3) {
@@ -46,9 +54,7 @@ enum OptionsMenu {
 		else {
 			//Nothing to do
 		}
-		nextOption = defineOption(chosenOption);
-		
-		return nextOption;
+		return chosenOption;
 	}
 
 	/**
