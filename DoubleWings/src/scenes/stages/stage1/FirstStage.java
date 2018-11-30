@@ -39,6 +39,12 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 	@Override
 	public void buildInitialScene() {
 
+		configureGameWorld();	
+		buildComammands();
+	}
+
+	//Setting up a new world and configuring the keyboard
+	public void configureGameWorld() {
 		try {
 			gameWorld = new World();
 			assert(gameWorld != null):("gameWorld cannot be null");
@@ -54,8 +60,6 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 			exception.printStackTrace();
 			errorOccurred = true;
 		}
-		
-		buildComammands();
 	}
 
 	// Configuring the up and down keys for player one and for player two
@@ -408,15 +412,11 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		 *  2 = second type enemy
 		 */
 		this.gameWorld.addEventAfterCurrentTime(this, 700, 200, "Recursive script");
-
 		this.gameWorld.addEventAfterCurrentTime(this, 200, 1, "Enemy down");
-
 		this.gameWorld.addEventAfterCurrentTime(this, 400, 2, "Enemy Crazy bastard");
-
 		this.gameWorld.addEventAfterCurrentTime(this, 250, 1, "Enemy down");
 		this.gameWorld.addEventAfterCurrentTime(this, 300, 1, "Enemy down");
 		this.gameWorld.addEventAfterCurrentTime(this, 400, 1, "Enemy down");
-
 		this.gameWorld.addEventAfterCurrentTime(this, 50, 2, "Enemy Crazy bastard");
 		this.gameWorld.addEventAfterCurrentTime(this, 620, 2, "Enemy Crazy bastard");
 		this.gameWorld.addEventAfterCurrentTime(this, 660, 2, "Enemy Crazy bastard");

@@ -23,6 +23,21 @@ public class DelayTimer extends Timer implements DelayDelegate {
 	 */
 	public DelayTimer(DelayDelegate delegate, int type) {
 		
+		configureType(type);
+		configureDelegate(delegate);		
+	}
+
+	public void configureDelegate(DelayDelegate delegate) {
+		try {
+			this.delegate = delegate;
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, delegate cannot be null", exception);
+			exception.printStackTrace();
+		}
+	}
+
+	public void configureType(int type) {
 		try {
 			this.type = type;
 		}
@@ -30,13 +45,6 @@ public class DelayTimer extends Timer implements DelayDelegate {
 			logger.error("Null returned, type cannot be null", exception);
 			exception.printStackTrace();
 		}
-		try {
-			this.delegate = delegate;
-		}
-		catch(NullPointerException exception) {
-			logger.error("Null returned, delegate cannot be null", exception);
-			exception.printStackTrace();
-		}		
 	}
 	
 	/**
@@ -48,6 +56,10 @@ public class DelayTimer extends Timer implements DelayDelegate {
 		Task task = null;
 		task = new Task(this);
 		
+		configureSchedule(delay, task);
+	}
+
+	public void configureSchedule(long delay, Task task) {
 		try {
 			assert(task != null):("task cannot be null");
 			this.schedule(task, delay);
