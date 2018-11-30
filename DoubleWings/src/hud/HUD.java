@@ -129,7 +129,7 @@ public class HUD implements GameEntityObserver {
 			} else if (entity instanceof Player) {
 				Player player = (Player) entity;
 				assert(player != null):("Player object can't be null!");
-				updateNumberOfLivesOnScreen(player.getChances());
+				updateNumberOfLivesOnScreen(player.getPlayerChances());
 				updateScoreOnScreen(player.getScore());
 			} else {
 				logger.debug("No class identified.");

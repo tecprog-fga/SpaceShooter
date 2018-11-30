@@ -297,8 +297,8 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 		
 			assert(player != null):("player cannot be null");
 		
-			player.initialPositionX = WIDTH_CENTER;
-			player.initialPositionY = HEIGHT_CENTER;
+			player.spaceshipInitialPositionX = WIDTH_CENTER;
+			player.spaceshipInitialPositionY = HEIGHT_CENTER;
 
 			createSpaceShip();
 
