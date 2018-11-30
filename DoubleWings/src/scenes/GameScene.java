@@ -34,14 +34,21 @@ public abstract class GameScene {
 	 */
 	public void configureGameScene(GameController game) {
 		
-		try {
-			this.game = game;
-			assert(this.game != null):("Game cannot be null");
-		}
-		catch(NullPointerException exception) {
-			logger.error("Null returned, game cannot set value", exception);
-			exception.printStackTrace();
-		}
+		configureGame(game);
+		configureKeyboard(game);
+		configureMessage(); 
+		buildInitialScene();
+		viewSetup();
+	}
+
+	public void configureMessage() {
+		
+		final String MSG_KEYBOARD = "keyboard: ";
+		System.out.println(MSG_KEYBOARD + this.keyboard);
+	}
+
+	public void configureKeyboard(GameController game) {
+		
 		try {
 			this.keyboard = game.keyboard;
 			assert(this.keyboard != null):("Keyboard cannot be null");
@@ -50,12 +57,18 @@ public abstract class GameScene {
 			logger.error("Null returned, keyboard cannot set value", exception);		
 			exception.printStackTrace();
 		}
-		
-		final String MSG_KEYBOARD = "keyboard: ";
-		System.out.println(MSG_KEYBOARD + this.keyboard); 
+	}
 
-		buildInitialScene();
-		viewSetup();
+	public void configureGame(GameController game) {
+		
+		try {
+			this.game = game;
+			assert(this.game != null):("Game cannot be null");
+		}
+		catch(NullPointerException exception) {
+			logger.error("Null returned, game cannot set value", exception);
+			exception.printStackTrace();
+		}
 	}
 	
 	// This method build all initial sprites for show scenes. 
@@ -64,13 +77,20 @@ public abstract class GameScene {
 	// This is a void method used for configure the scene.	 
 	protected abstract void viewSetup();
 	
+	public void destroyKeyboard() {
+		this.keyboard = null;
+		assert(this.keyboard == null):("Keyboard must be null to destory the scene");
+	}
+
+	public void destroyGame() {
+		this.game = null;
+		assert(this.game == null):("Game must be null to destroy the scene");
+	}
+	
 	// This method Destroy the current scene to show another scene  
 	public void destroyScene() {
 		
-		this.game = null;
-		assert(this.game == null):("Game must be null to destroy the scene");
-		
-		this.keyboard = null;
-		assert(this.keyboard == null):("Keyboard must be null to destory the scene");
+		destroyGame();
+		destroyKeyboard();
 	}
 }
