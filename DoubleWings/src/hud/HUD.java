@@ -25,21 +25,6 @@ public class HUD implements GameEntityObserver {
 	boolean errorOcurred = false;
 	final static Logger logger = Logger.getLogger(HUD.class);
 	
-	// path of shield, shield ornament and lives images
-	final String ENERGY = "src/assets/img/hud/energy.png"; { //$NON-NLS-1$
-	assert(ENERGY != null):("Sprite de barra de vida não foi achada corretamente!");
-	}
-	final String SHIELD_BAR_ORNAMENT = "src/assets/img/hud/shield_bar_ornament.png"; { //$NON-NLS-1$
-	assert(SHIELD_BAR_ORNAMENT != null):("Sprite de ornamento não foi achada corretamente!");
-	}
-	final String LIVES = "src/assets/img/hud/chances.png"; { //$NON-NLS-1$
-	assert(LIVES != null):("Sprite de quantidade de vidas não foi achada corretamente!");
-	}
-	final int SCORE_FONT_SIZE = 40; {
-	assert(SCORE_FONT_SIZE >= 20):("A fonte do score está muito pequena!");
-	assert(SCORE_FONT_SIZE <= 80):("A fonte do score está muito grande!");
-	}
-	
 	/**
 	 * creation of the objects that hold the images displayed on the game screen
 	 */
@@ -53,6 +38,17 @@ public class HUD implements GameEntityObserver {
 	 */
 	private final int MAX_NUMBER_OF_LIVES = 3;
 	private final int MIN_NUMBER_OF_LIVES = 0;
+	
+	/**
+	 * Constructor method of class HUD
+	 */
+	public HUD() {
+		
+		Sprite shieldLifeBar = generateShieldLifeBar();
+		Sprite shieldLifeBarOrnament = generateShieldLifeBarOrnament();
+		Sprite numberOfLivesImage = generateNumberOfLivesImage();
+		HudScore scoreText = generateHudScore();
+	}
 	
 	/**
 	 * Method that updates the number of lives
@@ -71,67 +67,6 @@ public class HUD implements GameEntityObserver {
 		}
 		catch(IllegalArgumentException exception) {
 			logger.error("Number of player lives must be positive!", exception);
-			exception.printStackTrace();
-			errorOcurred = true;
-		}
-	}
-	
-	/**
-	 * Constructor method of class HUD
-	 */
-	public HUD() {
-		// positions the life bar on the screen
-		shieldLifeBar = new Sprite(ENERGY);
-		try {
-			assert(shieldLifeBar != null);
-			this.shieldLifeBar.x = WindowConstants.WIDTH/2 - this.shieldLifeBar.width/2;
-			this.shieldLifeBar.y = WindowConstants.HEIGHT - this.shieldLifeBar.height;
-		}
-		catch(NullPointerException exception) {
-			logger.error("ShieldLifebar object can't be null", exception);
-			exception.printStackTrace();
-			errorOcurred = true;
-		}
-		
-		// positions the life bar ornament on the screen
-		shieldLifeBarOrnament = new Sprite(SHIELD_BAR_ORNAMENT);
-		try {
-			assert(shieldLifeBarOrnament != null);
-			this.shieldLifeBarOrnament.x = 0;
-			this.shieldLifeBarOrnament.y = WindowConstants.HEIGHT - this.shieldLifeBarOrnament.height;
-		}
-		catch(NullPointerException exception) {
-			logger.error("ShieldLifebarOrnament object can't be null", exception);
-			exception.printStackTrace();
-			errorOcurred = true;
-		}
-		
-		// positions the number of lives on the screen
-		numberOfLivesImage = new Sprite(LIVES, 4);
-		try {
-			assert(numberOfLivesImage != null);
-			this.numberOfLivesImage.setCurrFrame(3);
-			this.numberOfLivesImage.x = WindowConstants.WIDTH - numberOfLivesImage.width;
-			this.numberOfLivesImage.y = 0;
-		}
-		catch(NullPointerException exception) {
-			logger.error("NumberOfLivesImage object can't be null", exception);
-			exception.printStackTrace();
-			errorOcurred = true;
-		}
-		
-
-		// formats the score and positions it on the screen
-		scoreText = new HudScore(10, 40);
-		try {
-			assert(scoreText != null);
-			scoreText.setColor(Color.WHITE);
-			Font scoreTextFont = new Font("Arial",Font.TRUETYPE_FONT, SCORE_FONT_SIZE);
-			scoreText.setFont(scoreTextFont);
-			scoreText.setScreenScore(0);
-		}
-		catch(NullPointerException exception) {
-			logger.error("ScoreText object can't be null", exception);
 			exception.printStackTrace();
 			errorOcurred = true;
 		}
@@ -215,5 +150,101 @@ public class HUD implements GameEntityObserver {
 		shieldLifeBarOrnament.draw();
 		numberOfLivesImage.draw();
 		scoreText.draw();
+	}
+	
+	/**
+	 * method responsible for generating the HUD score
+	 * @return HudScore
+	 */
+	private HudScore generateHudScore() {
+		final int SCORE_FONT_SIZE = 40;
+		assert(SCORE_FONT_SIZE >= 20):("A fonte do score está muito pequena!");
+		assert(SCORE_FONT_SIZE <= 80):("A fonte do score está muito grande!");
+			
+		// formats the score and positions it on the screen
+		scoreText = new HudScore(10, 40);
+		try {
+			assert(scoreText != null);
+			scoreText.setColor(Color.WHITE);
+			Font scoreTextFont = new Font("Arial",Font.TRUETYPE_FONT, SCORE_FONT_SIZE);
+			scoreText.setFont(scoreTextFont);
+			scoreText.setScreenScore(0);
+		}
+		catch(NullPointerException exception) {
+			logger.error("ScoreText object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
+		return scoreText;
+	}
+	
+	/**
+	 * method responsible for generating the number of lives image
+	 * @return numberOfLivesImage
+	 */
+	private Sprite generateNumberOfLivesImage() {
+		final String LIVES = "src/assets/img/hud/chances.png";
+		assert(LIVES != null):("Sprite de quantidade de vidas não foi achada corretamente!");
+			
+		// positions the number of lives on the screen
+		numberOfLivesImage = new Sprite(LIVES, 4);
+		try {
+			assert(numberOfLivesImage != null);
+			this.numberOfLivesImage.setCurrFrame(3);
+			this.numberOfLivesImage.x = WindowConstants.WIDTH - numberOfLivesImage.width;
+			this.numberOfLivesImage.y = 0;
+		}
+		catch(NullPointerException exception) {
+			logger.error("NumberOfLivesImage object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
+		return numberOfLivesImage;
+	}
+	
+	/**
+	 * method responsible for generating the shield life bar ornament
+	 * @return shieldLifeBarOrnament
+	 */
+	private Sprite generateShieldLifeBarOrnament() {
+		final String SHIELD_BAR_ORNAMENT = "src/assets/img/hud/shield_bar_ornament.png";
+		assert(SHIELD_BAR_ORNAMENT != null):("Sprite de ornamento não foi achada corretamente!");
+			
+		// positions the life bar ornament on the screen
+		shieldLifeBarOrnament = new Sprite(SHIELD_BAR_ORNAMENT);
+		try {
+			assert(shieldLifeBarOrnament != null);
+			this.shieldLifeBarOrnament.x = 0;
+			this.shieldLifeBarOrnament.y = WindowConstants.HEIGHT - this.shieldLifeBarOrnament.height;
+		}
+		catch(NullPointerException exception) {
+			logger.error("ShieldLifebarOrnament object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
+		return shieldLifeBarOrnament;
+	}
+	
+	/**
+	 * method responsible for generating the shield life bar
+	 * @return shieldLifeBar
+	 */
+	private Sprite generateShieldLifeBar() {
+		final String ENERGY = "src/assets/img/hud/energy.png";
+		assert(ENERGY != null):("Sprite de barra de vida não foi achada corretamente!");
+			
+		// positions the life bar on the screen
+		shieldLifeBar = new Sprite(ENERGY);
+		try {
+			assert(shieldLifeBar != null);
+			this.shieldLifeBar.x = WindowConstants.WIDTH/2 - this.shieldLifeBar.width/2;
+			this.shieldLifeBar.y = WindowConstants.HEIGHT - this.shieldLifeBar.height;
+		}
+		catch(NullPointerException exception) {
+			logger.error("ShieldLifebar object can't be null", exception);
+			exception.printStackTrace();
+			errorOcurred = true;
+		}
+		return shieldLifeBar;
 	}
 }
