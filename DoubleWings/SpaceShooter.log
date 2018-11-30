@@ -3379,4 +3379,53 @@
  12-11-2018 21:05:27 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
  12-11-2018 21:05:27 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
  12-11-2018 21:05:27 INFO  World:112 - Entity removed from the world
+ 30-11-2018 13:23:55 INFO  Main:28 - Game is running!
+ 30-11-2018 13:23:56 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 13:23:56 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 13:23:56 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 13:23:56 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 13:23:56 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 13:23:56 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 13:23:56 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 13:23:57 INFO  Bullet:29 - Sprite of the Bullet
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 INFO  Bullet:29 - Sprite of the Bullet
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 INFO  Bullet:29 - Sprite of the Bullet
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:58 INFO  Bullet:29 - Sprite of the Bullet
+ 30-11-2018 13:23:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 13:23:58 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 13:23:58 DEBUG HUD:126 - Shield class identified.0 1
+ 30-11-2018 13:23:58 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 13:23:58 INFO  World:112 - Entity removed from the world
+ 30-11-2018 13:23:58 DEBUG Player:96 - Incriased score
+ 30-11-2018 13:23:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 13:23:58 INFO  World:112 - Entity removed from the world
+ 30-11-2018 13:23:58 INFO  World:112 - Entity removed from the world
+ 30-11-2018 13:24:00 DEBUG Player:125 - Player's lives: 2
+ 30-11-2018 13:24:00 DEBUG Player:138 - Reseting spaceship's position!
+ 30-11-2018 13:24:00 DEBUG HUD:126 - Shield class identified.1 1
+ 30-11-2018 13:24:00 DEBUG HUD:126 - Shield class identified.1 1
+ 30-11-2018 13:24:00 DEBUG HUD:126 - Shield class identified.0 1
+ 30-11-2018 13:24:00 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 13:24:00 INFO  World:112 - Entity removed from the world
+ 30-11-2018 13:24:00 INFO  World:112 - Entity removed from the world
+ 30-11-2018 13:24:01 INFO  World:112 - Entity removed from the world
+ 30-11-2018 13:24:01 INFO  World:112 - Entity removed from the world
+ 30-11-2018 13:24:01 INFO  World:112 - Entity removed from the world
+ 30-11-2018 13:24:02 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 13:24:03 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
  
