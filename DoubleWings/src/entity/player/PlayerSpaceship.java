@@ -48,7 +48,10 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		assert(player != null) : "The player is null";
 		this.player = player;
 		
-		// Adjusting x position to fit the sprite
+		adjustSpaceshipSpritePosition(x, y, adjust);
+	}
+
+	private void adjustSpaceshipSpritePosition(double x, double y, boolean adjust) {
 		if (adjust) {
 			this.x = x - this.width / 2;	
 		} else {
@@ -64,11 +67,10 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 */
 	@Override
 	public void didContact(GameEntity entity){
-		
 		if (entity.getClass() == Enemy.class) {
 			entity.receiveDamage(100);
-			
-			if (this.shield.getLife() <= 0) { // security check to avoid double dying bug
+			// security check to avoid double dying bug
+			if (this.shield.getLife() <= 0) {
 				this.receiveDamage(20);
 			}
 			else {
@@ -85,7 +87,6 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @return
 	 */
 	public Shield getShield() {
-		
 		assert(this.shield != null):"Shield is returning null"; //$NON-NLS-1$
 		return this.shield;
 	}
@@ -95,7 +96,6 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @return
 	 */
 	public Player getPlayer() {
-		
 		assert(this.player != null):"Player is returning null";  //$NON-NLS-1$
 		return this.player;
 	}
@@ -116,7 +116,6 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	 * @param shootKey  Makes the spaceship shoot
 	 */
 	public void setKeySet(int upKey, int downKey, int rightKey, int leftKey, int shootKey) {
-		
 		this.upKey = upKey;
 		this.downKey = downKey;
 		this.rightKey = rightKey;
@@ -138,22 +137,24 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	@Override
 	public void update() {
 		super.update();
-
 			if (this.life <= 0) {
-				
-				// security check to avoid double dying bug
-				if (this.didDie == false) {
-					// Enter here if the spaceship is destroyed					
-					this.didDie = true;
-					this.player.loseLife();
-				} else {
-					// Nothing to do
-				}
+				spaceshipDidDie();
 			} else {
 				checkInputHorizontal();
 				checkInputVertical();
 				checkShootKeyInput();
 			}
+	}
+
+	private void spaceshipDidDie() {
+		// security check to avoid double dying bug
+		if (this.didDie == false) {
+			// Enter here if the spaceship is destroyed					
+			this.didDie = true;
+			this.player.loseLife();
+		} else {
+			// Nothing to do
+		}
 	}
 	
 	/* 
@@ -199,7 +200,7 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	/**
 	 * Time of cooldown of the spaceship weapon 
 	 */
-	public final int shootCooldown = 100;
+	public final int spaceshipShootCooldown = 100;
 	
 	// Controls if the spaceship can shoot or not 
 	private boolean canShoot = true;
@@ -207,13 +208,24 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 	// Delay from the keyboard to the screen
 	private DelayTimer shootCDTimer = new DelayTimer(this, 1);
 	
-	/**
-	 * Action of shooting 
+	/* 
+	 * The spaceship can shoot again when the delay ends
+	 * (non-Javadoc)
+	 * @see util.DelayDelegate#delayEnded(util.DelayTimer)
 	 */
+	@Override
+	public void delayEnded(DelayTimer timer) {
+		if (timer.getType() == 1){
+			this.canShoot = true;
+		} else {
+			this.canShoot = false;
+		}
+	}
+	
 	public void fireBullet(){
 		if (this.canShoot){
 			this.canShoot = false;
-			this.shootCDTimer.schedule(this.shootCooldown);	
+			this.shootCDTimer.schedule(this.spaceshipShootCooldown);	
 			
 			Bullet bullet = new Bullet();
 			
@@ -230,99 +242,54 @@ public class PlayerSpaceship extends GameEntity implements DelayDelegate{
 		}
 	}
 	
-	/**
-	 * Set the movement velocity to the default
-	 */
+	// Set the movement velocity to the default
 	public double movimentVel = DEFAULT_MOVEMENT_VELOCITY; // default value
+
 	
-	/**
-	 * Checks the horizontal keyboard input 
-	 */
+	// Checks the movement and shooting input
 	public void checkInputHorizontal(){
-		
+		assert(this.gameWorld != null): "The game World is receiving null";
 		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
-		moveRight(this.rightKey, this.movimentVel);
-		moveLeft(this.leftKey, this.movimentVel);
+		moveSpaceshipRight(this.rightKey, this.movimentVel);
+		moveSpaceshipLeft(this.leftKey, this.movimentVel);
 		
 	}
-	
-	/**
-	 * Checks the vertical keyboard input 
-	 */
 	public void checkInputVertical() {
-		
+		assert(this.gameWorld != null): "The game World is receiving null";
 		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
-		moveDown(this.downKey, this.movimentVel);
-		moveUp(this.upKey, this.movimentVel);
+		moveSpaceshipDown(this.downKey, this.movimentVel);
+		moveSpaceshipUp(this.upKey, this.movimentVel);
 	}
 	
-	/**
-	 * Checks the shootkey input
-	 */
 	public void checkShootKeyInput() {
-		try {
-			assert(this.gameWorld != null): "The gameWorld is receiving null";		
-			assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
-			
-			//Verify is the key pressed was the shoot key
-			if(this.gameWorld.keyboard.keyDown(this.shootKey)){
-				this.fireBullet();
-			}
-			else {
-				//Nothing to do
-			}
-		}catch(NullPointerException e) {
-			logger.error("Null return for the Keyboard", e);
-			e.printStackTrace();
+		// Verify is the key pressed was the shoot key
+		if (this.gameWorld.keyboard.keyDown(this.shootKey)) {
+			this.fireBullet();
+		} else {
+			// Nothing to do
 		}
 	}
-	
-	/* 
-	 * Move in the X axis when receiving an input
-	 */
-	public void moveLeft(int leftKey1, double vel) {
-		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+
+	// Move in the XY axis when receiving an input
+	public void moveSpaceshipLeft(int leftKey1, double vel) {
 		if(this.gameWorld.keyboard.keyDown(leftKey1)){
 			this.x -= vel;
 		}
 	}
-
-	public void moveRight(int rightKey1, double vel) {
-		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+	public void moveSpaceshipRight(int rightKey1, double vel) {
 		if(this.gameWorld.keyboard.keyDown(rightKey1)){
 			this.x += vel;
 		}
 	}
-	
-	/* 
-	 * Move in the Y axis when receiving an input
-	 */
-	public void moveUp(int upKey1, double vel) {
-		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+	public void moveSpaceshipUp(int upKey1, double vel) {
 		if(this.gameWorld.keyboard.keyDown(upKey1)) {
 			this.y -= vel;
 		}
 	}
-	
-	public void moveDown(int downKey1, double vel) {
-		assert(this.gameWorld.keyboard != null): "the keyboard is receiving null";
+	public void moveSpaceshipDown(int downKey1, double vel) {
 		if(this.gameWorld.keyboard.keyDown(downKey1)) {
 			this.y += vel;
 		}
 	}
 
-	/* 
-	 * The spaceship can shoot again when the delay ends
-	 * (non-Javadoc)
-	 * @see util.DelayDelegate#delayEnded(util.DelayTimer)
-	 */
-	@Override
-	public void delayEnded(DelayTimer timer) {
-		
-		if (timer.getType() == 1){
-			this.canShoot = true;
-		} else {
-			this.canShoot = false;
-		}
-	}
 }
