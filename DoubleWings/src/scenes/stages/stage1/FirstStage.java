@@ -310,14 +310,8 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 			player.initialPositionX = WIDTH_CENTER;
 			player.initialPositionY = HEIGHT_CENTER;
 
-			createSpaceShip();
-
-			player.setObserver(hud);
-			player.delegate = this;
-
-			createAsteroid(2.0);
-			createAsteroid(4.0);
-			createTestAsteroid();
+			configurePlayer();
+			configureAsteroid();
 		}
 		catch(NullPointerException exception) {
 			logger.error("Null returned, player cannot be null", exception);
@@ -325,6 +319,22 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 			exception.printStackTrace();
 			errorOccurred = true;
 		}	
+	}
+
+	// Method to configure the asteroids in the stage
+	public void configureAsteroid() {
+		
+		createAsteroid(2.0);
+		createAsteroid(4.0);
+		createTestAsteroid();
+	}
+
+	// Method to set up the player configuration
+	public void configurePlayer() {
+		
+		createSpaceShip();
+		player.setObserver(hud);
+		player.delegate = this;
 	}
 
 	public final static int LIFES = 10;
