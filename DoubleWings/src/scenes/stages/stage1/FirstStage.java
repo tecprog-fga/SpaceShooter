@@ -7,7 +7,6 @@ package scenes.stages.stage1;
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-import jplay.GameImage;
 import jplay.Keyboard;
 import jplay.Parallax;
 import game.World;
@@ -47,15 +46,7 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 			gameWorld.keyboard = this.keyboard;
 			assert(gameWorld.keyboard != null):("keyboard cannot be null");
 
-			// Configuring the up and down keys for player one and for player two	
-			keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_EVERY_PRESS);
-			keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_EVERY_PRESS);
-			keyboard.setBehavior(Keyboard.SPACE_KEY, Keyboard.DETECT_EVERY_PRESS);
-
-			keyboard.addKey(KeyEvent.VK_A, Keyboard.DETECT_EVERY_PRESS);
-			keyboard.addKey(KeyEvent.VK_S, Keyboard.DETECT_EVERY_PRESS);
-			keyboard.addKey(KeyEvent.VK_D, Keyboard.DETECT_EVERY_PRESS);
-			keyboard.addKey(KeyEvent.VK_W, Keyboard.DETECT_EVERY_PRESS);
+			configureKeyboard();
 		}
 		catch(NullPointerException exception) {
 			logger.error("Null returned, gameWorld cannot be null", exception);
@@ -64,9 +55,28 @@ public class FirstStage extends GameScene implements GameEventCallback, PlayerSc
 			errorOccurred = true;
 		}
 		
-		configureEntities();
+		buildComammands();
+	}
 
-		// Creating commands and configuring events that will be added
+	// Configuring the up and down keys for player one and for player two
+	public void configureKeyboard() {
+		
+		// Configuring keys for player one
+		keyboard.setBehavior(Keyboard.DOWN_KEY, Keyboard.DETECT_EVERY_PRESS);
+		keyboard.setBehavior(Keyboard.UP_KEY, Keyboard.DETECT_EVERY_PRESS);
+		keyboard.setBehavior(Keyboard.SPACE_KEY, Keyboard.DETECT_EVERY_PRESS);
+
+		// Configuring keys for player two
+		keyboard.addKey(KeyEvent.VK_A, Keyboard.DETECT_EVERY_PRESS);
+		keyboard.addKey(KeyEvent.VK_S, Keyboard.DETECT_EVERY_PRESS);
+		keyboard.addKey(KeyEvent.VK_D, Keyboard.DETECT_EVERY_PRESS);
+		keyboard.addKey(KeyEvent.VK_W, Keyboard.DETECT_EVERY_PRESS);
+	}
+
+	// This method calls entities and configure commands and events that will be added
+	public void buildComammands() {
+		
+		configureEntities();
 		creatingCommands();
 		this.configureEvents();
 	}
