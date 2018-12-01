@@ -76,6 +76,7 @@ public class GameEntity extends Sprite {
 		return isDead;
 	}
 	
+	//Logger debbuger declaration
 	private static Logger logger = Logger.getLogger(GameEntity.class);
 	/**
 	 * Trigger an event when contact happens

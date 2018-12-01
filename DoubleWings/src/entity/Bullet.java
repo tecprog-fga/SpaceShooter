@@ -15,11 +15,13 @@ import entity.player.PlayerSpaceship;
  * It's necessary because it defines the position in which it should exit
  */
 public class Bullet extends GameEntity {
-		
+	
+	//Logger info declaration
 	private static Logger logger = Logger.getLogger(Bullet.class);
 	
-	//spaceship bullet sprite
-	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png"; 
+	//Spaceship bullet sprite
+	private static final String IMAGE_BULLET = "src/assets/img/bullet_player.png";
+	
 	/**
 	 * builds the bullet sprite on the screen 
 	 */
@@ -28,11 +30,9 @@ public class Bullet extends GameEntity {
 		assert(IMAGE_BULLET != null): ("Sprite of the bullet is null");
 		logger.info("Sprite of the Bullet");
 	}
-	
 
 	public GameEntity owner = null;
 	private int bulletTrajectory;
-	private Integer horizontalCorrection;
 	/**
 	 *  bullet firing position
 	 * @param owner bullet target
@@ -42,13 +42,11 @@ public class Bullet extends GameEntity {
 		this.owner = owner;
 		this.vely = vely;
 		this.bulletTrajectory = (this.width - owner.width)/2;
-		this.horizontalCorrection = this.bulletTrajectory;
-		this.x = owner.x - this.horizontalCorrection;
+		this.x = owner.x - this.bulletTrajectory;
 		
 		if (owner.getClass() == PlayerSpaceship.class) {
 			this.y = owner.y;
 		} 
-		
 		else {
 			//Nothing to do
 		}

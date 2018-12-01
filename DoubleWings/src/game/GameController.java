@@ -20,15 +20,29 @@ public class GameController {
 
 	public GameScene currentScene = null;
 	public Keyboard keyboard = null;
+	
 	/**
 	 * transit to another scene
 	 * @param scene
 	 */
 	public void transitTo(GameScene scene) {	
+	
+		sceneTransition(scene);
+
+		//Run initial setup
+		scene.configureGameScene(this);
 		
-		/**
-		 * Leave transition if scene is null
-		 */
+		//Update current scene variable
+		this.currentScene = scene;
+	}
+
+	
+	/**
+	 * Leave transition if scene is null
+	 */
+	private void sceneTransition(GameScene scene) {
+		assert(scene != null):"The secene is receiving null";
+		assert(this.keyboard != null):"The keyboard is receiving null";
 		if (scene == null || this.keyboard == null) { 
 			return;
 		} 
@@ -40,14 +54,9 @@ public class GameController {
 		else {
 			//Nothing to do
 		}
-
-		//Run initial setup
-		scene.configureGameScene(this);
-		
-		//Update current scene variable
-		this.currentScene = scene;
 	}
 	
+	//Logger error declaretion
 	private static Logger logger = Logger.getLogger(GameController.class);
 
 	//Initialize the game 

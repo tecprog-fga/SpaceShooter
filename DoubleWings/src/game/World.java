@@ -60,17 +60,7 @@ public class World {
 			/**
 			 * object crash test
 			 */
-			for (int k = i + 1; k < objs.size(); k++) {
-				GameEntity obj2 = objs.get(k);
-				
-				if (obj1.collided(obj2) && obj1.isCollidable && obj2.isCollidable) {
-					obj1.didContact(obj2);
-					obj2.didContact(obj1);
-				}
-				else {
-					//Nothing to do
-				}
-			}
+			collision(i, obj1);
 			
 			//draw and update all objects
 			obj1.draw();
@@ -86,6 +76,7 @@ public class World {
 			}
 		}
 		
+		//Logger info declaration
 		Logger logger = Logger.getLogger(World.class);
 		
 		for (GameEntity deadObj : deadObjs){
@@ -117,6 +108,20 @@ public class World {
 		}
 		
 		deadObjs.clear();
+	}
+
+	private void collision(int i, GameEntity obj1) {
+		for (int k = i + 1; k < objs.size(); k++) {
+			GameEntity obj2 = objs.get(k);
+			
+			if (obj1.collided(obj2) && obj1.isCollidable && obj2.isCollidable) {
+				obj1.didContact(obj2);
+				obj2.didContact(obj1);
+			}
+			else {
+				//Nothing to do
+			}
+		}
 	}
 	
 	/**

@@ -3379,4 +3379,2172 @@
  12-11-2018 21:05:27 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
  12-11-2018 21:05:27 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
  12-11-2018 21:05:27 INFO  World:112 - Entity removed from the world
+ 30-11-2018 16:56:45 INFO  Main:28 - Game is running!
+ 30-11-2018 16:56:46 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 16:56:46 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 16:56:46 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 16:56:46 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 16:56:46 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 16:56:46 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 16:56:46 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 16:58:20 INFO  Main:28 - Game is running!
+ 30-11-2018 16:58:21 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 16:58:21 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 16:58:21 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 16:58:21 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 16:58:21 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 16:58:21 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 16:58:21 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 16:58:50 INFO  Main:28 - Game is running!
+ 30-11-2018 16:58:51 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 16:58:51 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 16:58:51 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 16:58:51 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 16:58:51 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 16:58:51 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 16:58:51 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 17:00:12 INFO  Main:28 - Game is running!
+ 30-11-2018 17:00:12 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 17:00:12 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 17:00:12 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 17:00:12 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 17:00:12 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 17:00:12 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 17:00:12 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 17:00:14 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 17:00:14 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG Player:103 - Incriased score
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:00:15 INFO  World:112 - Entity removed from the world
+ 30-11-2018 17:00:15 INFO  World:112 - Entity removed from the world
+ 30-11-2018 17:00:15 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG Player:103 - Incriased score
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:00:15 INFO  World:112 - Entity removed from the world
+ 30-11-2018 17:00:15 INFO  World:112 - Entity removed from the world
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG Player:103 - Incriased score
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:00:15 INFO  World:112 - Entity removed from the world
+ 30-11-2018 17:00:15 INFO  World:112 - Entity removed from the world
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:15 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:16 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:16 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:16 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:16 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:16 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:16 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:16 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:16 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:16 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:00:16 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:16 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:16 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:00:16 INFO  World:112 - Entity removed from the world
+ 30-11-2018 17:07:55 INFO  Main:28 - Game is running!
+ 30-11-2018 17:07:56 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 17:07:56 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 17:07:56 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 17:07:56 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 17:07:56 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 17:07:56 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 17:07:56 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 17:07:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 17:07:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:07:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:55 INFO  Main:28 - Game is running!
+ 30-11-2018 17:11:55 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 17:11:55 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 17:11:55 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 17:11:55 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 17:11:55 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 17:11:55 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 17:11:55 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 17:11:57 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:57 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:57 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:11:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:11:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 17:11:58 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 17:11:58 DEBUG GameEntity:85 - empty entity contact: src/assets/img/forceshield.png
+ 30-11-2018 17:11:58 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:11:58 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:59 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 17:11:59 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/asteroid.png contact: src/assets/img/player_lvl1.png
+ 30-11-2018 17:11:59 DEBUG Player:138 - Player's lives: 2
+ 30-11-2018 17:11:59 DEBUG Player:188 - Reseting spaceship's position!
+ 30-11-2018 17:11:59 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 17:11:59 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 17:11:59 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:11:59 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:11:59 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 17:11:59 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:11:59 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:11:59 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:11:59 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:59 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:11:59 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:11:59 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:00 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:00 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:00 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:00 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:00 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:00 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:00 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:00 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:00 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:00 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:00 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:01 DEBUG Player:138 - Player's lives: 1
+ 30-11-2018 17:12:01 DEBUG Player:188 - Reseting spaceship's position!
+ 30-11-2018 17:12:01 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 17:12:01 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 17:12:01 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:01 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:01 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:02 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:02 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:02 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:02 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:02 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:02 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:02 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:02 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:02 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:02 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:02 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:03 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:03 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:03 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:03 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:03 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:03 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:03 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 17:12:04 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 17:12:04 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:04 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:04 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:05 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:06 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:06 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 17:12:07 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:07 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:07 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:08 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:08 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:08 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:08 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:08 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEvolver:89 - GameEvent Callback: Recursive script
+ 30-11-2018 17:12:09 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:09 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:09 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 17:12:10 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:10 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:10 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:11 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:11 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:11 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:11 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:11 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:11 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:12 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:12 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:12 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:12 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:12 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:12 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:13 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - empty entity contact: empty entity
+ 30-11-2018 17:12:13 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 17:12:13 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:13 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:14 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:14 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:14 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:14 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:14 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:14 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:14 DEBUG GameEntity:85 - empty entity contact: src/assets/img/bullet_player.png
+ 30-11-2018 17:12:14 DEBUG GameEntity:85 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 17:12:14 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:14 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:14 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:14 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 17:12:14 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:14 INFO  World:102 - Entity removed from the world
+ 30-11-2018 17:12:14 INFO  World:102 - Entity removed from the world
+ 30-11-2018 21:29:04 INFO  Main:28 - Game is running!
+ 30-11-2018 21:29:04 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 21:29:04 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 21:29:04 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 21:29:04 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 21:29:04 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 21:29:04 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 21:29:04 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 21:30:33 INFO  Main:28 - Game is running!
+ 30-11-2018 21:30:34 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 21:30:34 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 21:30:34 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 21:30:34 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 21:30:34 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 21:30:34 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 21:30:34 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 21:30:42 INFO  Main:28 - Game is running!
+ 30-11-2018 21:30:43 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 21:30:43 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 21:30:43 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 21:30:43 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 21:30:43 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 21:30:43 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 21:30:43 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 21:30:45 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG Player:103 - Incriased score
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 21:30:45 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:45 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:45 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:45 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG Player:103 - Incriased score
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 21:30:46 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:46 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:46 DEBUG Player:103 - Incriased score
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 21:30:46 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:46 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:46 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG Player:103 - Incriased score
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 21:30:46 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:46 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:46 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:47 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 21:30:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:48 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 21:30:49 DEBUG Player:103 - Incriased score
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 DEBUG Player:103 - Incriased score
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:49 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 21:30:50 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:50 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:50 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:50 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:30:50 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:46 INFO  Main:28 - Game is running!
+ 30-11-2018 21:39:47 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 21:39:47 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 21:39:47 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 21:39:47 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 21:39:47 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 21:39:47 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 21:39:47 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 21:39:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 21:39:48 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:48 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG Player:103 - Incriased score
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 21:39:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:49 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG Player:103 - Incriased score
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 21:39:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:49 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:49 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG Player:103 - Incriased score
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 21:39:50 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:50 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:50 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:50 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:50 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:50 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:50 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:50 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:51 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:51 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:51 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:51 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:51 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:51 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 21:39:51 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:51 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:51 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:51 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:52 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:52 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:52 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:52 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:52 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:52 INFO  Bullet:30 - Sprite of the Bullet
+ 30-11-2018 21:39:52 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:52 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:52 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 21:39:52 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:52 DEBUG Player:103 - Incriased score
+ 30-11-2018 21:39:52 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 21:39:52 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:52 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:52 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:52 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 21:39:52 INFO  World:103 - Entity removed from the world
+ 30-11-2018 21:39:52 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:36 INFO  Main:28 - Game is running!
+ 30-11-2018 22:07:36 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 22:07:36 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 22:07:36 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 22:07:36 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 22:07:36 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 22:07:36 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 22:07:36 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 22:07:38 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:38 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:07:38 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:38 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG Player:103 - Incriased score
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 22:07:39 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:39 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:39 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:39 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG Player:103 - Incriased score
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 22:07:40 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:40 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:40 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:40 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:40 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:40 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:07:40 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 22:07:40 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 22:07:40 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:41 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:41 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:07:41 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:41 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:41 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:41 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:41 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:41 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:07:41 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:41 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:41 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:42 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:42 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:42 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:42 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:07:42 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:42 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:42 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:42 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:42 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:43 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:43 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:43 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:43 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:43 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:07:43 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:45 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:07:45 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:07:45 DEBUG Player:138 - Player's lives: 2
+ 30-11-2018 22:07:45 DEBUG Player:188 - Reseting spaceship's position!
+ 30-11-2018 22:07:45 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:45 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:45 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:46 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 22:07:46 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 22:07:46 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:46 DEBUG Player:138 - Player's lives: 1
+ 30-11-2018 22:07:46 DEBUG Player:188 - Reseting spaceship's position!
+ 30-11-2018 22:07:46 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:46 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:46 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:48 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 22:07:48 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 22:07:48 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:48 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:07:49 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:07:50 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:07:50 DEBUG GameEvolver:89 - GameEvent Callback: Recursive script
+ 30-11-2018 22:07:51 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:07:51 DEBUG Player:138 - Player's lives: 0
+ 30-11-2018 22:07:51 DEBUG Player:188 - Reseting spaceship's position!
+ 30-11-2018 22:07:51 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:51 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:51 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:51 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:52 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 22:07:52 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 22:07:52 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:53 DEBUG HUD:68 - Player chances number is out of range.
+ 30-11-2018 22:07:53 DEBUG Player:138 - Player's lives: -1
+ 30-11-2018 22:07:53 DEBUG Player:170 - Lost the game!
+ 30-11-2018 22:07:53 DEBUG Player:196 - Using continnue game!
+ 30-11-2018 22:07:53 DEBUG Player:154 - Player's initial lives reset to: 3
+ 30-11-2018 22:07:53 DEBUG Player:188 - Reseting spaceship's position!
+ 30-11-2018 22:07:53 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:53 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:53 DEBUG ContinueGame:113 - The parallax was set with 0.0 in x axys and 1.0 in y axys
+ 30-11-2018 22:07:53 DEBUG ContinueGame:118 - The sprite was created with path: src/assets/img/continue/continue.png
+ 30-11-2018 22:07:53 DEBUG ContinueGame:134 - The sprite was created with path: src/assets/img/continue/number_9.png
+ 30-11-2018 22:07:54 DEBUG ContinueGame:150 - The sprite was created with path: src/assets/img/continue/Enter-Download-PNG.png
+ 30-11-2018 22:07:54 DEBUG ContinueGame:345 - The timer was set with delay: 1000
+ 30-11-2018 22:07:54 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 DEBUG ContinueGame:190 - The parallax was set with 800x600 pixels
+ 30-11-2018 22:07:54 INFO  ContinueGame:272 - The state of the game and the keyboard is ok
+ 30-11-2018 22:07:54 INFO  ContinueGame:273 - Enter key was pressed
+ 30-11-2018 22:07:55 INFO  ContinueGame:245 - The count down was started
+ 30-11-2018 22:07:55 DEBUG Lose:37 - It was delegated the index 8 in counter
+ 30-11-2018 22:07:55 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:07:55 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 22:07:55 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 22:07:55 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:56 INFO  ContinueGame:245 - The count down was started
+ 30-11-2018 22:07:56 DEBUG Lose:37 - It was delegated the index 7 in counter
+ 30-11-2018 22:07:56 DEBUG Player:138 - Player's lives: 2
+ 30-11-2018 22:07:56 DEBUG Player:188 - Reseting spaceship's position!
+ 30-11-2018 22:07:56 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:56 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:56 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 22:07:56 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 22:07:56 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:56 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:57 INFO  ContinueGame:245 - The count down was started
+ 30-11-2018 22:07:57 DEBUG Lose:37 - It was delegated the index 6 in counter
+ 30-11-2018 22:07:57 DEBUG Player:138 - Player's lives: 1
+ 30-11-2018 22:07:57 DEBUG Player:188 - Reseting spaceship's position!
+ 30-11-2018 22:07:57 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:57 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:07:57 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:07:58 INFO  ContinueGame:245 - The count down was started
+ 30-11-2018 22:07:58 DEBUG Lose:37 - It was delegated the index 5 in counter
+ 30-11-2018 22:07:58 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:07:59 INFO  ContinueGame:245 - The count down was started
+ 30-11-2018 22:07:59 DEBUG Lose:37 - It was delegated the index 4 in counter
+ 30-11-2018 22:07:59 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:07:59 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:08:00 INFO  ContinueGame:245 - The count down was started
+ 30-11-2018 22:08:00 DEBUG Lose:37 - It was delegated the index 3 in counter
+ 30-11-2018 22:08:00 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 22:08:00 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 22:08:00 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:08:01 INFO  ContinueGame:245 - The count down was started
+ 30-11-2018 22:08:01 DEBUG Lose:37 - It was delegated the index 2 in counter
+ 30-11-2018 22:08:01 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:08:01 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:08:01 DEBUG Player:138 - Player's lives: 0
+ 30-11-2018 22:08:01 DEBUG Player:188 - Reseting spaceship's position!
+ 30-11-2018 22:08:01 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:08:01 DEBUG HUD:191 - Shield class identified.1 1
+ 30-11-2018 22:08:01 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:08:02 INFO  ContinueGame:245 - The count down was started
+ 30-11-2018 22:08:02 DEBUG Lose:37 - It was delegated the index 1 in counter
+ 30-11-2018 22:08:02 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 22:08:02 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 22:08:02 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:08:03 INFO  ContinueGame:245 - The count down was started
+ 30-11-2018 22:08:03 DEBUG Lose:37 - It was delegated the index 0 in counter
+ 30-11-2018 22:08:03 DEBUG HUD:68 - Player chances number is out of range.
+ 30-11-2018 22:08:03 DEBUG Player:138 - Player's lives: -1
+ 30-11-2018 22:08:03 DEBUG Player:170 - Lost the game!
+ 30-11-2018 22:08:03 DEBUG GameOver:55 - The sprite was created with path: src/assets/img/temp_background.png
+ 30-11-2018 22:08:03 DEBUG GameOver:60 - The sprite was created with path: src/assets/img/continue/3540295891_logo.jpg
+ 30-11-2018 22:08:03 INFO  GameOver:61 - The game is over
+ 30-11-2018 22:08:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:08:04 INFO  ContinueGame:245 - The count down was started
+ 30-11-2018 22:08:04 DEBUG Lose:37 - It was delegated the index -1 in counter
+ 30-11-2018 22:08:04 INFO  Lose:49 - The scene was finished
+ 30-11-2018 22:08:04 DEBUG Lose:37 - It was delegated the index 8 in counter
+ 30-11-2018 22:08:05 DEBUG Lose:37 - It was delegated the index 7 in counter
+ 30-11-2018 22:10:11 INFO  Main:28 - Game is running!
+ 30-11-2018 22:10:42 INFO  Main:28 - Game is running!
+ 30-11-2018 22:10:57 INFO  Main:28 - Game is running!
+ 30-11-2018 22:10:57 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 22:10:57 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 22:10:57 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 22:10:57 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 22:10:57 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 22:10:57 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 22:10:57 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 22:10:59 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:10:59 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:10:59 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:10:59 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:10:59 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:10:59 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:10:59 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:10:59 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:10:59 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:10:59 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:10:59 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:10:59 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG Player:103 - Incriased score
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/asteroid.png
+ 30-11-2018 22:11:00 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:00 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:00 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: src/assets/img/forceshield.png
+ 30-11-2018 22:11:01 DEBUG HUD:191 - Shield class identified.0 1
+ 30-11-2018 22:11:01 DEBUG Shield:77 - Enemy hitted
+ 30-11-2018 22:11:01 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:01 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:01 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:01 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:01 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:01 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:01 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:01 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:01 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:01 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:02 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:02 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:02 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:02 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:02 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:02 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:02 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:02 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:02 DEBUG Player:103 - Incriased score
+ 30-11-2018 22:11:02 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 22:11:02 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:02 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:02 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:02 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:02 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:11:02 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:02 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:02 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:02 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:02 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:02 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 DEBUG Player:103 - Incriased score
+ 30-11-2018 22:11:03 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:11:03 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:03 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:03 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:04 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:04 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:04 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:04 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:04 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:04 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:04 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:11:04 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:04 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:04 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:04 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:04 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:04 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:04 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:04 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:04 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:04 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:04 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:04 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:05 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:05 DEBUG Player:103 - Incriased score
+ 30-11-2018 22:11:05 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:05 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:05 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:06 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:11:06 DEBUG GameEvolver:89 - GameEvent Callback: Enemy down
+ 30-11-2018 22:11:06 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 22:11:06 DEBUG Player:103 - Incriased score
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:06 DEBUG Player:103 - Incriased score
+ 30-11-2018 22:11:06 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:06 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:06 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:07 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:07 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:07 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:07 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:07 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:07 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:07 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:07 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:07 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:07 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:07 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:07 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:07 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:07 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:07 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:07 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:07 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:08 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:08 DEBUG Player:103 - Incriased score
+ 30-11-2018 22:11:08 DEBUG GameEntity:86 - src/assets/img/bullet_player.png contact: empty entity
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:08 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:08 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:09 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:09 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:09 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:09 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:09 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:09 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:09 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:09 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:09 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:09 INFO  Bullet:31 - Sprite of the Bullet
+ 30-11-2018 22:11:09 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:09 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:09 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:09 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:11:09 DEBUG GameEvolver:89 - GameEvent Callback: Enemy Crazy bastard
+ 30-11-2018 22:11:10 INFO  World:103 - Entity removed from the world
+ 30-11-2018 22:33:34 INFO  Main:28 - Game is running!
+ 30-11-2018 22:33:34 DEBUG SpritePosition:112 - The sprite was created with path: src/assets/img/menu/background.png
+ 30-11-2018 22:33:34 DEBUG SpritePosition:117 - The sprite was created with path: src/assets/img/menu/title.png
+ 30-11-2018 22:33:34 DEBUG SpritePosition:235 - The sprite was created with path: src/assets/img/menu/start_button.png
+ 30-11-2018 22:33:34 DEBUG SpritePosition:240 - The sprite was created with path: src/assets/img/menu/ranking.png
+ 30-11-2018 22:33:34 DEBUG SpritePosition:245 - The sprite was created with path: src/assets/img/menu/settings.png
+ 30-11-2018 22:33:34 DEBUG SpritePosition:250 - The sprite was created with path: src/assets/img/menu/quit.png
+ 30-11-2018 22:33:34 DEBUG SpritePosition:134 - The sprite was created with path: src/assets/img/menu/title.png
  

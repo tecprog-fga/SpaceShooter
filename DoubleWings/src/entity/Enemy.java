@@ -56,10 +56,9 @@ public class Enemy extends GameEntity {
 		this.y = y;
 	}
 	
-	/**
-	 * initialization for the movements of the enemy
-	 */
-	private int commandCount = 0;
+	//initialization for the movements of the enemy
+	 int commandCount = 0;
+	//Logger debbuger declaration
 	private static Logger logger = Logger.getLogger(Enemy.class);
 	/** 
 	 * command executed by the enemy
@@ -67,14 +66,18 @@ public class Enemy extends GameEntity {
 	 */
 	public void executeBehavior(Command[] commands) {
 		if (commandCount < commands.length) {
-			if (commands[commandCount].executeDisplacement(this)) {
-				commandCount += 1;
-			}
-			
-			else {
-				//Nothing to do
-			}
+			commandCount(commands);
 			logger.debug("x: " + this.x + " y: " + this.y);
+		}
+	}
+
+	private void commandCount(Command[] commands) {
+		if (commands[commandCount].executeDisplacement(this)) {
+			commandCount += 1;
+		}
+		
+		else {
+			//Nothing to do
 		}
 	}
 	
